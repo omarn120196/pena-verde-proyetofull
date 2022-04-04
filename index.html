@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso | Prevención de lavado de dinero</title>
+</head>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="build/css/app.css">
+
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/1cc726461f.js" crossorigin="anonymous"></script>
+
+    <!-- JQUERY -->
+    <script src="build/js/jquery.min.js"></script>
+    <script src="build/js/jquery-ui.min.js"></script>
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="icon__menu">
+            <i class="fa-solid fa-bars" id="hamburger"></i>
+        </div>
+
+        <h1>Bienvenida</h1>
+
+        <figure id="nav-logo" class="logo">
+            <img src="build/img/logos/logo.png" alt="">
+        </figure>
+    </header>
+
+    <!-- Menu lateral -->
+    <aside id="menu__side" class="menu__side">
+        <div class="name__page">
+            <i class="fa-solid fa-landmark"></i>
+            <h4>Prevención de Lavado de Dinero</h4>
+        </div>
+
+        <div class="barra__progreso">
+            <div class="barra">
+                <div class="porcentaje"></div>
+            </div>
+            <p id="progreso__mensaje"><i class="fa-light fa-percent" title="Progreso"></i></p>
+        </div>
+
+        <div class="options__menu">
+            <a href="#" class="select enlacesPaginas" data-pagina="0">
+                <div class="option">
+                    <i class="fa-solid fa-house" title="Bienvenida"></i>
+                    <h4>Bienvenida</h4>
+                </div>
+            </a>
+            <a href="#" class="enlacesPaginas" data-pagina="1">
+                <div class="option">
+                    <i class="fa-solid fa-file" title="Antecedentes y conceptos PLD y CFT"></i>
+                    <h4>Antecedentes y conceptos PLD y CFT</h4>
+                </div>
+            </a>
+            <a href="#" class="enlacesPaginas" data-pagina="2">
+                <div class="option">
+                    <i class="fa-solid fa-pencil" title="Actividad de reforzamiento"></i>
+                    <h4>Actividad de reforzamiento</h4>
+                </div>
+            </a>
+            <a href="#" class="enlacesPaginas" data-pagina="3">
+                <div class="option">
+                    <i class="fa-solid fa-file-lines" title="Evaluación final"></i>
+                    <h4>Evaluación final</h4>
+                </div>
+            </a>
+        </div>
+    </aside>
+
+    <!-- contenedor de las paginas -->
+    <div class="contenido">
+        <div class="contenedor" id="cont-paginas">
+            
+        </div>
+    </div>
+    
+    <!-- Botones de navegacion -->
+    <div class="btn_nav">
+        <i class="fa-solid fa-circle-arrow-left" id="atras"></i>
+        <i class="fa-solid fa-house" id="home"></i>
+        <i class="fa-solid fa-circle-arrow-right" id="adelante"></i>
+    </div>
+
+    <script src="build/js/bundle.js"></script>
+</body>
+</html>
