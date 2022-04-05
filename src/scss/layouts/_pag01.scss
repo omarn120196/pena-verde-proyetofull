@@ -1,0 +1,209 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+#seccion01{
+    position: relative;
+    overflow: hidden;
+
+    .texto01{
+        @include m.resaltar(v.$colorFuente, 600);
+        margin-left: 40rem;
+
+        @include m.tablet{
+            margin-left: 1rem;
+        }
+        .texto02{
+            margin-left: 40rem;
+            margin-top: 2rem;
+            font-size: 2rem;
+            @include m.resaltar(v.$azulRey, 800);
+
+            @include m.tablet{
+                margin-left: 20rem;
+                text-align: center;
+            }
+            @include m.telefono{
+                margin-left: 2rem;
+            }
+        }
+    }
+    #cont-billetes{
+        height: 30rem;
+        margin-top: 3rem;
+        background: v.$azulClaro1;
+
+        @include m.telefono{
+            height: 20rem;
+        }
+    }
+
+    #cont-boton{
+        height: 15rem;
+        position: relative;
+        background: v.$azulClaro2;
+
+        .boton{
+            position: absolute;
+            top: 6rem;
+            margin-left: 50rem;
+
+            @include m.escritorioHD{
+                margin-left: 47rem;
+            }
+
+            @include m.tablet{
+                margin-left: 12rem;
+            }
+
+            @include m.telefono{
+                margin-left: 2rem;
+            }
+
+        }
+
+        #texto{
+            position: relative;
+            display: flex;
+            top: 3rem;
+            left: 53rem;
+            border-radius: 2rem;
+            width: 40rem;
+            padding: 2rem 2rem 2rem 2rem;
+            background: v.$azulClaro1;
+            @include m.resaltar(v.$colorFuente, 400);
+
+            @include m.escritorioHD{
+                left: 50rem;
+            }
+
+            @include m.tablet{
+                left: 15rem;
+            }
+
+            @include m.telefono{
+                background: v.$azulClaro2;
+                margin-top: 1rem;
+                top: 1rem;
+                width: 25rem;
+                left: 5rem;
+                
+            }
+        }
+
+    }
+    .personaje1{
+        position: absolute;
+        height: 35rem;
+        width: auto;
+        top: 4rem;
+        left: 10rem;
+
+        @include m.escritorioHD{
+            height: 40rem;
+        }
+        @include m.tablet{
+            left: 2rem;
+        }
+        @include m.telefono{
+            height: 22rem;
+            top: 9rem;
+        }
+
+    }
+
+}
+
+#seccion02{
+    height: auto;
+    background: v.$blanco;
+
+    #texto{
+        @include m.resaltar(v.$verde, 700);
+        position: relative;
+        top: 4rem;
+        left: 3rem;
+    }
+    
+    #contenedor{
+        position: relative;
+        height: 40rem;
+        margin-top: 7rem;
+        background: v.$rosa;
+
+        @include m.telefono{
+            height: 50rem;
+        }
+
+        .circulo{
+            position: absolute;
+            height: 25rem;
+            top: 2rem;
+            margin-left: 65rem;
+
+            @include m.escritorioHD{
+                margin-left: 60rem;
+            }
+            @include m.tablet{
+                margin-left: 43rem;
+                top: 5rem;
+            }
+            @include m.telefono{
+                margin-left: 2rem;
+                height: 20rem;
+                top: 20rem;
+            }
+        }
+
+        #lista{
+            width: 40rem;
+            position: relative;
+            top: 15rem;
+            left: 5rem;
+            @include m.resaltar(v.$colorFuente, 700);
+
+            @include m.tablet{
+                width: 30rem;
+            }
+            @include m.telefono{
+                width: 30rem;
+                left: 2rem;
+                top: 7rem;
+            }
+        }
+
+        .personaje2{
+            position: absolute;
+            height: 37rem;
+            top: 6rem;
+            left: 70rem;
+
+            @include m.escritorioHD{
+                left: 65rem;
+            }
+            @include m.tablet{
+                height: 70%;
+                left: 50rem;
+                top: 13rem;
+            }
+            @include m.telefono{
+                left: 10rem;
+                height: 25rem;
+                top: 25rem;
+            }
+        }
+    }
+
+    #cont-verde{
+        position: relative;
+        width: 100%;
+        height: 10rem;
+        margin-top: 2.6rem;
+        background-color: v.$verdeClaro;
+
+        @include m.tablet{
+            margin-top: 0;
+        }
+
+    }
+}
