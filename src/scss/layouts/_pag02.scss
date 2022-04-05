@@ -1,0 +1,254 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+#intro04{
+
+    width: 100%;
+    height: 20rem;
+    @include m.grid(3, 1rem);
+
+    @include m.escritorioHD{
+        @include m.fondo('/build/img/contenido/Pag02/ventanasFondo.svg');
+    }
+
+    .cont-imagen{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #cont-parrafo{
+        grid-column: 2/4;
+
+        #globo04{
+            @include m.globo(v.$gris2, izquierda);
+
+            p{
+                @include m.tablet{
+                    font-size: 1.4rem;
+                }
+
+                @include m.telefono{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+#linea-tiempo{
+    width: 100%;
+    height: 55rem;
+    overflow: hidden;
+    @include m.fondo('/build/img/contenido/Pag02/ventanasFondo.svg');
+
+    @include m.escritorioHD{
+        background: v.$blanco;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    @include m.tablet{
+        background: v.$gris3;
+    }
+
+    #linea-elementos{
+
+        @include m.grid(6, .5rem);
+        height: 100%;
+        padding: 10rem 2rem 0 2rem;
+
+        @include m.escritorioHD{
+            @include m.grid(1, 2rem);
+        }
+
+        .cont-fecha{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+
+            
+            @include m.escritorioHD{
+                flex-direction: row;
+                justify-content: space-evenly;
+                border-radius: 2rem;
+                margin-bottom: 4rem;
+
+                &#cont-fecha1{
+                    background: lighten(v.$azulCielo, 20);
+                }
+
+                &#cont-fecha2{
+                    background: lighten(v.$naranja, 20);
+                }
+
+                &#cont-fecha3{
+                    background: lighten(v.$amarillo, 20);
+                }
+
+                &#cont-fecha4{
+                    background: lighten(v.$verde, 50);
+                }
+
+                &#cont-fecha5{
+                    background: lighten(v.$morado, 30);
+                }
+
+                &#cont-fecha6{
+                    background: lighten(v.$moradoOscuro, 50);
+                }
+            }
+
+            @include m.tablet{
+                padding: 0;
+            }
+
+            &#cont-fecha2, &#cont-fecha4, &#cont-fecha6{
+                flex-direction: column-reverse;
+
+                @include m.escritorioHD{
+                    flex-direction: row;
+                }
+            }
+
+            
+
+            .fecha{
+                width: 12rem;
+                height: 12rem;
+                border-radius: 50%;
+                background: v.$azul2;
+                color: v.$blanco;
+                font-weight: 700;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include m.tablet{
+                    width: 9rem;
+                    height: 9rem;
+                    font-size: 1.2rem;
+                }
+
+                &#fecha1{
+                    @include m.circulosLinea(v.$azulCielo);
+                }
+
+                &#fecha2{
+                    @include m.circulosLinea(v.$naranja);
+                }
+
+                &#fecha3{
+                    @include m.circulosLinea(v.$amarillo);
+                }
+
+                &#fecha4{
+                    @include m.circulosLinea(v.$verde);
+                }
+
+                &#fecha5{
+                    @include m.circulosLinea(v.$morado);
+                }
+
+                &#fecha6{
+                    @include m.circulosLinea(v.$moradoOscuro);
+                }
+            }
+            
+
+            .cont-info{
+                text-align: center;
+                padding: 2rem;
+                position: relative;
+
+                @include m.escritorioHD{
+                    width: 80%;
+                    min-height: 12rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    p{
+                        text-align: justify;
+                    }
+                }
+
+                @include m.tablet{
+                    width: 70%;
+                }
+
+                .cont-imagen{
+                    width: 4rem;
+                    height: 8rem;
+                    position: absolute;
+                    top: 70%;
+                    left: -2rem;
+
+                    @include m.escritorioHD{
+                        position: static;
+                        width: 30%;
+                        margin-right: 2rem;
+                    }
+
+                    @include m.tablet{
+                        width: 40%;
+                    }
+
+                    @include m.telefono{
+                        width: 60%;
+                        height: 4rem;
+                    }
+                }
+
+                &#cont-info1{
+                    @include m.fondoInfo(v.$azulCielo, 20);
+
+                    .cont-imagen{
+                        top: 0;    
+                    }
+                }
+
+                &#cont-info2{
+                    @include m.fondoInfo(v.$naranja, 20);
+                }
+
+                &#cont-info3{
+                    @include m.fondoInfo(v.$amarillo, 20);
+                }
+
+                &#cont-info4{
+                    @include m.fondoInfo(v.$verde, 50);
+
+                    .cont-imagen{
+                        top: 0;
+                    }
+                }
+
+                &#cont-info5{
+                    @include m.fondoInfo(v.$morado, 30);
+                }
+
+                &#cont-info6{
+                    @include m.fondoInfo(v.$moradoOscuro, 50);
+                }
+            }
+
+            .flecha{
+                width: 2rem;
+                position: absolute;
+                left: 95%;
+                top: 40%;
+
+                @include m.escritorioHD{
+                    top: 105%;
+                    left: 55%;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}

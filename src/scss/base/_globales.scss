@@ -9,6 +9,7 @@ body{
     font-size: 1.6rem;
     font-family: v.$roboto;
     transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    color: v.$colorFuente;
 }
 
 .contenedor{
@@ -22,7 +23,7 @@ a{
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
     height: 100%;
 }
 
@@ -50,7 +51,7 @@ i{
         width: 100%;
     }
     
-    @include m.telefono{
+    @include m.tablet{
 
         &.redimensionar{
             left: 0;
@@ -79,4 +80,9 @@ i{
     @include m.telefono{
         height: 80vh;
     }
+}
+
+.resaltar{
+    font-weight: 700;
+    color: lighten(v.$colorFuente, 4);
 }

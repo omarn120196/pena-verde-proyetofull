@@ -1,0 +1,29 @@
+<svg id="ventanasFondo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="745.574" viewBox="0 0 1920 745.574">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_98" data-name="Rectángulo 98" width="1920" height="745.574" fill="none"/>
+    </clipPath>
+  </defs>
+  <rect id="Rectángulo_83" data-name="Rectángulo 83" width="1919.923" height="745.572" transform="translate(0.049 0.002)" fill="#eff1f7"/>
+  <rect id="Rectángulo_84" data-name="Rectángulo 84" width="1919.915" height="473.957" transform="translate(0.052 205.547)" fill="#f9fcf4"/>
+  <path id="Trazado_217" data-name="Trazado 217" d="M20.137,363.334H148.995V198.092H20.137Zm38.319-19.925H30.3V326.094H58.456Zm0-21.015H30.3V305.079H58.456Zm0-21.017H30.3V284.062H58.456Zm0-21.015H30.3V263.047H58.456Zm0-21.015H30.3V242.031H58.456Zm0-21.015H30.3V221.016H58.456ZM98.644,343.409H70.488V326.094H98.644Zm0-21.015H70.488V305.079H98.644Zm0-21.017H70.488V284.062H98.644Zm0-42.031H70.488V242.031H98.644Zm0-21.015H70.488V221.016H98.644Zm40.188,105.078H110.677V326.094h28.154Zm0-42.032H110.677V284.062h28.154Zm0-21.015H110.677V263.047h28.154Zm0-21.015H110.677V242.031h28.154Zm0-21.015H110.677V221.016h28.154Z" transform="translate(11.369 156.556)" fill="#c1cfd8"/>
+  <g id="Grupo_54" data-name="Grupo 54">
+    <g id="Grupo_53" data-name="Grupo 53" clip-path="url(#clip-path)">
+      <path id="Trazado_218" data-name="Trazado 218" d="M873.573,296.131h-48.5v18.455H719.045V266.94H691.856V284.4H590.878v62.661h-116.9V281.176c0-16.026-28.464-23.736-34.169-25.117l-.31-.076-.3.09c-5.332,1.594-31.921,10.326-31.921,25.716v58.678H378.358V313.552H356.722v-15h-39.2v10.905H299.156V278.21H257.522v19.67H238.364v30.882H.05V484.212H873.573Z" transform="translate(0.047 188.107)" fill="#c1cfd8"/>
+      <path id="Trazado_219" data-name="Trazado 219" d="M1562.73,291.489h-303.6v18.455H1145.846V262.3H1116.8v17.463H1008.912v62.661H884.018V293.914H716.862V304.82H697.239V273.568H652.755v19.67H632.289V324.12H377.674V479.57H1562.73Z" transform="translate(353.814 192.748)" fill="#c1cfd8"/>
+      <rect id="Rectángulo_85" data-name="Rectángulo 85" width="1916.485" height="6.78" transform="translate(0.058 598.324)" fill="#d7ddec"/>
+      <rect id="Rectángulo_86" data-name="Rectángulo 86" width="1916.485" height="2.077" transform="translate(0.058 598.324)" fill="#e7ebf4"/>
+      <rect id="Rectángulo_87" data-name="Rectángulo 87" width="38.26" height="534.05" transform="translate(1450.529 148.319)" fill="#d7ddec"/>
+      <rect id="Rectángulo_88" data-name="Rectángulo 88" width="8.171" height="534.05" transform="translate(1480.618 148.319)" fill="#e7ebf4"/>
+      <rect id="Rectángulo_89" data-name="Rectángulo 89" width="30.172" height="534.05" transform="translate(121.065 148.319)" fill="#e7ebf4"/>
+      <rect id="Rectángulo_90" data-name="Rectángulo 90" width="12.607" height="534.05" transform="translate(126.023 148.319)" fill="#d7ddec"/>
+      <rect id="Rectángulo_91" data-name="Rectángulo 91" width="12.62" height="534.05" transform="translate(1078.445 148.319)" fill="#d7ddec"/>
+      <rect id="Rectángulo_92" data-name="Rectángulo 92" width="3.866" height="534.05" transform="translate(1087.199 148.319)" fill="#e7ebf4"/>
+      <rect id="Rectángulo_93" data-name="Rectángulo 93" width="12.62" height="534.05" transform="translate(504.085 148.319)" fill="#d7ddec"/>
+      <rect id="Rectángulo_94" data-name="Rectángulo 94" width="3.866" height="534.05" transform="translate(512.84 148.319)" fill="#e7ebf4"/>
+      <rect id="Rectángulo_95" data-name="Rectángulo 95" width="1919.957" height="30.292" transform="translate(0.006 678.569)" fill="#d7ddec"/>
+      <rect id="Rectángulo_96" data-name="Rectángulo 96" width="1664.75" height="5.997" transform="translate(0 678.566)" fill="#d7ddec"/>
+      <rect id="Rectángulo_97" data-name="Rectángulo 97" width="1919.957" height="111.934" transform="translate(0.006 53.376)" fill="#d7ddec"/>
+    </g>
+  </g>
+</svg>
