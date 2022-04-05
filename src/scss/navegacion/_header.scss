@@ -37,8 +37,11 @@
     h1{
         text-align: center;
         color: v.$azul1;
-        @include m.telefono{
-            font-size: 2.4rem;
+        @include m.tablet{
+            font-size: 2rem;
+        }
+        @include m.tablet{
+            font-size: 1.8rem;
         }
     }
 
