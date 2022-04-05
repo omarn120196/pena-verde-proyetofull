@@ -24,7 +24,7 @@
     }    
 }
 
-@mixin escritorioXLL {
+@mixin escritorioFHD {
     @media (max-width: v.$escritorioFHD) {
         @content;
     }    
@@ -41,8 +41,9 @@
     font-weight: $grosor;
 }
 
-@mixin fondo($position) {
-    background-position: $position;
+@mixin fondo($url) {
+    background-image: url($url);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -197,4 +198,45 @@
     top: 2rem;
     left: 1rem;
     position: absolute;
+}
+
+@mixin globo($color, $direccion) {
+    background: $color;
+    padding: 2rem;
+    border-radius: 2rem;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        clip-path: polygon(0 0, 0% 100%, 100% 50%);
+        background: $color;
+        top: 20%;
+        width: 3rem;
+        height: 4rem;
+
+        @if ($direccion == izquierda){
+            clip-path: polygon(100% 0, 0 50%, 100% 100%);
+            left: -2.8rem;
+        }
+    }
+}
+
+@mixin circulosLinea($color) {
+    background: $color;
+    border: 6px solid lighten($color,  25);
+}
+
+@mixin fondoInfo($color, $nivel) {
+    border-radius: 1rem;
+    background: lighten($color,  $nivel);
+    font-size: 1.4rem;
+
+    @include escritorioHD(){
+        font-size: 1.6rem;
+    }
+
+    @include tablet(){
+        font-size: 1.4rem;
+    }
 }
