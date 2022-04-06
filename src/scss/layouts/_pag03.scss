@@ -1,0 +1,228 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+#cont-gris{
+    position: relative;
+    top: 3rem;
+    @include m.grid(3, 1rem);
+    background: v.$grisClaro;
+
+    @include m.telefono{
+        @include m.grid(1, 3rem);
+    }
+
+    #cont01{
+        #LD{
+            position: relative;
+            top: -7rem;
+            left: 13rem;
+            @include m.resaltar(v.$colorFuente, 900);
+
+            @include m.tablet{
+                left: 5rem;
+            }
+
+            @include m.telefono{
+                top: -6rem;
+                left: 10rem;
+            }
+        }
+            
+        #cont01-imagen{
+            position: relative;
+            background: v.$verdeFuertePag03;
+            border-radius: 2rem 2rem 0 0;
+            margin-left: 2rem;
+
+            @include m.telefono{
+                margin-left: 1rem;
+                margin-right: 1rem;    
+            }
+            
+            .lavadora{
+                margin-left: 10rem;
+                margin-top: -4rem;
+                padding-top: 2rem;
+                height: 20rem;
+
+                @include m.tablet{
+                    height: 17rem;
+                    margin-left: 3.5rem;
+                }
+
+                @include m.telefono{
+                    margin-left: 9rem;
+                }
+
+                
+            }
+        }
+        #texto01{
+            position: relative;
+            display: flex;
+            border-radius: 0 0 2rem 2rem;
+            background: v.$negroPag03;
+            text-align: center;
+            padding: 5rem 3rem 11rem 3rem;
+            @include m.resaltar(v.$blanco, 400);
+            margin-left: 2rem;
+            margin-bottom: 4rem;
+            
+            @include m.tablet{
+                padding: 4rem 3rem 9rem 3rem;
+                margin-bottom: 1rem;
+            }
+
+            @include m.telefono{
+                margin-left: 1rem;
+                margin-right: 1rem;    
+            }
+        }
+    }
+    #cont02{
+        position: relative;
+        display: flex;
+        border-radius: 0 0 2rem 2rem;
+        text-align: center;
+        padding: 5rem 5rem 5rem 5rem;
+        @include m.resaltar(v.$colorFuente, 400);
+        margin-left: 2rem;
+        margin-bottom: 4rem;
+        border-radius: 2rem;
+        background: v.$azulPag03;
+        margin-top: -2rem;
+        margin-right: 2rem;
+
+        @include m.tablet{
+            padding: 2rem 2rem 10rem 2rem;
+        }
+
+        @include m.telefono{
+            padding: 15rem 3rem 5rem 3rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+    }
+    #cont03{
+        #FT{
+            position: relative;
+            top: -7rem;
+            left: 7rem;
+            @include m.resaltar(v.$colorFuente, 900);
+
+            @include m.tablet{
+                left: 2rem;
+            }
+
+            @include m.telefono{
+                top: -5rem;
+                left: 6rem;
+            }
+        }
+            
+        #cont03-imagen{
+            position: relative;
+            background: v.$naranjaPag03;
+            border-radius: 2rem 2rem 0 0;
+            margin-left: 2rem;
+            margin-right: 2rem;
+
+            @include m.tablet{
+                margin-left: 1rem;
+            }
+
+            @include m.telefono{
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+            .terrorista1{
+                margin-left: 10rem;
+                margin-top: -4rem;
+                padding-top: 2rem;
+                height: 20rem;
+
+                @include m.tablet{
+                    height: 15rem;
+                    margin-left: 5rem;
+                }
+
+                @include m.telefono{
+                    margin-left: 11rem;
+                }
+            }
+            .terrorista2{
+                position: absolute;
+                height: 15rem;
+                top: 6rem;
+
+                @include m.tablet{
+                    height: 10rem;
+                }
+                @include m.telefono{
+                    margin-left: 3rem;
+                }
+
+            }
+            .terrorista3{
+                position: absolute;
+                height: 13rem;
+                top: 8rem;
+                left: 23rem;
+
+                @include m.tablet{
+                    height: 8rem;
+                    left: 12rem;                
+                }
+                @include m.telefono{
+                    margin-left: 10rem;
+                }
+            }
+        }
+        #texto03{
+            position: relative;
+            display: flex;
+            border-radius: 0 0 2rem 2rem;
+            background: v.$verdeClaroPag03;
+            text-align: center;
+            padding: 5rem 3rem 5rem 3rem;
+            @include m.resaltar(v.$colorFuente, 400);
+            margin-left: 2rem;
+            margin-bottom: 4rem;
+            margin-right: 2rem;
+
+            @include m.tablet{
+                margin-left: 1rem;
+                padding: 5rem 2rem 5rem 2rem;
+            }
+            @include m.telefono{
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+                
+        }
+    }
+
+    .personaje{
+        position: absolute;
+        height: 20rem;
+        left: 55rem;
+        top: 29rem;
+
+        @include m.escritorioHD{
+            left: 50rem;
+        }
+
+        @include m.tablet{
+            height: 15rem;
+            left: 30rem;
+            top: 38.5rem;
+        }
+
+        @include m.telefono{
+            left: 18rem;
+            top: 40rem;
+        }
+    }
+}

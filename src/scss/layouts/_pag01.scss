@@ -36,6 +36,15 @@
         @include m.telefono{
             height: 20rem;
         }
+
+        .billetes{
+            @include m.tablet{
+                height: 10rem;
+            }
+            @include m.telefono{
+                height: 6rem;
+            }
+        }
     }
 
     #cont-boton{
