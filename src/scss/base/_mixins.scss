@@ -37,6 +37,7 @@
 }
 
 @mixin resaltar($color, $grosor) {
+
     color: $color;
     font-weight: $grosor;
 }
