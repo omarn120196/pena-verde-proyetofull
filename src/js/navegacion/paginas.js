@@ -16,7 +16,7 @@ const paginas = [
         progreso: 3
     },
     {
-        nombre: 'Evaluación final', 
+        nombre: 'Principales obligaciones en materia de Prevención de Lavado de Dinero y Financiamiento al Terrorismo', 
         ruta: 'pag04.html', 
         progreso: 4
     }

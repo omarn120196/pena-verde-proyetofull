@@ -1,0 +1,140 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+#cont-pagina04{
+
+    @include m.grid(4, 0);
+    height: 80vh;
+
+    @include m.escritorio{
+
+        @include m.grid(1, 0);
+        height: auto;
+    }
+
+    #cont-instrucciones{
+        grid-column: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @include m.escritorio{
+            flex-direction: row;
+            flex-wrap: wrap; 
+            background: v.$colorFuente;
+        }
+
+        #mensaje{
+
+            @include m.escritorio{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .cont-imagen{
+
+                @include m.escritorio{
+                    width: 40%;
+                }
+            }
+
+            #globo{
+                @include m.globoNegro;
+
+                @include m.escritorio{
+                    width: 50%;
+                }
+            }
+        }
+
+        #instrucciones{
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: v.$azulClaro2;
+            padding: 2rem;
+            border-radius: 1rem;
+
+            @include m.escritorio{
+                margin-top: 0;
+                border-radius: 0;
+                width: 100%;
+                justify-content: space-evenly;
+            }
+
+            #mano{
+                width: 6rem;
+                height: 6rem;
+                border-radius: 50%;
+                border: 6px solid v.$blanco;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 1rem;
+
+                img{
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+
+            p{
+                width: 70%;
+                text-align: center;
+            }
+        }
+    }
+
+    #cont-info{
+        grid-column: 2/5;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        @include m.escritorio{
+            grid-column: 1/2;
+            margin-top: 3.2rem;
+        }
+
+        #cont-info-parrafo{
+
+
+
+            #info-inicio{
+                
+            }
+
+            .info-parrafo{
+                position: absolute;
+            }
+        }
+    }
+}
+
+
+
+#circulo-central{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include m.escritorio{
+        display: none;
+    }
+}
+
+.circulos-info{
+    display: none;
+
+
+    &.activo{
+        display: block;
+    }
+
+    @include m.escritorio{
+        display: block;
+    }
+}
