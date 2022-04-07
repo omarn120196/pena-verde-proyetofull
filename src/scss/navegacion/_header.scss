@@ -24,7 +24,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 1rem;
+        margin-left: 1.2rem;
 
         i{
             font-size: 2rem;
@@ -37,11 +37,16 @@
     h1{
         text-align: center;
         color: v.$azul1;
-        @include m.tablet{
+        @include m.escritorioHD{
             font-size: 2rem;
         }
+        
         @include m.tablet{
             font-size: 1.8rem;
+        
+        }
+        @include m.telefono{
+            font-size: 1.4rem;
         }
     }
 

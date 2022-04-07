@@ -1,0 +1,336 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+#cont-pagina04{
+
+    @include m.grid(4, 0);
+    height: 80vh;
+
+    @include m.escritorio{
+
+        @include m.grid(1, 0);
+        height: auto;
+    }
+
+    #cont-instrucciones{
+        grid-column: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: v.$verde;
+        padding: 0 2rem;
+
+        @include m.escritorio{
+            flex-direction: row;
+            flex-wrap: wrap; 
+            background: v.$colorFuente;
+            padding: 0;
+        }
+
+        #mensaje{
+
+            @include m.escritorio{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .cont-imagen{
+
+                @include m.escritorio{
+                    width: 40%;
+                }
+            }
+
+            #globo{
+                @include m.globoNegro;
+
+                @include m.escritorio{
+                    width: 50%;
+                }
+            }
+        }
+
+        #instrucciones{
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: v.$azulClaro2;
+            padding: 2rem;
+            border-radius: 1rem;
+
+            @include m.escritorio{
+                margin-top: 0;
+                border-radius: 0;
+                width: 100%;
+                justify-content: space-evenly;
+            }
+
+            #mano{
+                width: 6rem;
+                height: 6rem;
+                border-radius: 50%;
+                border: 6px solid v.$blanco;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 1rem;
+
+                img{
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+
+            p{
+                width: 70%;
+                text-align: center;
+
+                @include m.escritorioHD{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    //Informacion circulos---------------------------------------------
+
+    #cont-info{
+        grid-column: 2/5;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: v.$gris3;
+
+        @include m.escritorio{
+            grid-column: 1/2;
+            margin-top: 3.2rem;
+        }
+
+        #circulo-central{
+            height: 42.5rem;
+
+            @include m.escritorio{
+                display: none;
+            }
+        }
+    }
+}
+
+#contenedor-info04{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    @include m.escritorio{
+        position: static;
+    }
+
+    #position-relative{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include m.escritorio{
+            flex-wrap: wrap;
+        }
+            
+        .btn-float{
+            position: absolute;
+            display: block;
+            color: v.$blanco;
+            background: v.$azulCielo;
+            padding: 1rem 2rem;
+            width: 18rem;
+            border-radius: 1rem;
+            text-align: center;
+
+            @include m.escritorioHD{
+                font-size: 1.2rem;
+                width: 12rem;
+            }
+
+            @include m.escritorio{
+                display: none;
+            }
+
+            &#btn-1{
+                top: 12%;
+                left: 40%;
+            }
+
+            &#btn-2{
+                top: 22%;
+                left: 70%;
+            }
+
+            &#btn-3{
+                top: 40%;
+                left: 77%;
+            }
+
+            &#btn-4{
+                top: 60%;
+                left: 77%;
+            }
+
+            &#btn-5{
+                top: 74%;
+                left: 65%;
+            }
+
+            &#btn-6{
+                top: 83%;
+                left: 40%;
+            }
+
+            &#btn-7{
+                top: 74%;
+                left: 13%;
+            }
+
+            &#btn-8{
+                top: 60%;
+                left: 7%;
+            }
+
+            &#btn-9{
+                top: 40%;
+                left: 5%;
+            }
+        }
+
+        .circulos-info{
+
+            display: none;
+            background: v.$amarillo;
+            width: 30rem;
+            height: 30rem;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            text-align: center;
+
+            &#info-inicio{
+                
+                @include m.escritorio{
+                    display: none;
+                }
+            }
+            
+            @include m.escritorio{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                border-radius: 0;
+                height: auto;
+                margin-bottom: 0;
+
+                p{
+                    padding: 2rem 4rem;  
+                    color: v.$blanco;
+                }
+
+                &#circulo1{
+                    background: v.$azul3;
+                    p{
+                        background: v.$azulCielo;
+                    }
+                }
+
+                &#circulo2{
+                    background: v.$azul4;
+                    p{
+                        background: v.$azul8;
+                    }
+                }
+
+                &#circulo3{
+                    background: v.$azul11;
+                    p{
+                        background: v.$azul7;
+                    }
+                }
+
+                &#circulo4{
+                    background: v.$azul9;
+                    p{
+                        background: v.$azul12;
+                    }
+                }
+
+                &#circulo5{
+                    background: v.$azul11;
+                    p{
+                        background: v.$azul10;
+                    }
+                }
+
+                &#circulo6{
+                    background: v.$azul13;
+                    p{
+                        background: v.$azul5;
+                    }
+                }
+
+                &#circulo7{
+                    background: v.$colorFuente;
+                    p{
+                        background: v.$colorFuente;
+                    }
+                }
+
+                &#circulo8{
+                    background: v.$azul6;
+                    p{
+                        background: v.$azul12;
+                    }
+                }
+
+                &#circulo9{
+                    background: v.$verde2;
+                    p{
+                        background: v.$verde3;
+                    }
+                }
+            }
+
+            &.activo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h1{
+                display: none;
+
+                @include m.escritorio{
+                    display: block;
+                    font-size: 2.4rem;
+                    width: 100%;
+                    color: v.$blanco;
+                    padding: 0 2rem;
+                }
+            }
+
+            h4{
+                padding: 0 2rem;
+                color: v.$blanco;
+            }
+
+            ul{
+                margin: 5rem;
+                text-align: justify;
+                color: v.$blanco;
+            }
+        }
+    }
+}
