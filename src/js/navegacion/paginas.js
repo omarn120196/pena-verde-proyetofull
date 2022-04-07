@@ -11,7 +11,7 @@ const paginas = [
         progreso: 2
     },
     {
-        nombre: 'Actividad de Reforzamiento', 
+        nombre: '¿Qué es y cuál es el propósito del Lavado de Dinero y del Financiamiento al Terrorismo?', 
         ruta: 'pag03.html', 
         progreso: 3
     },
@@ -19,5 +19,15 @@ const paginas = [
         nombre: 'Principales obligaciones en materia de Prevención de Lavado de Dinero y Financiamiento al Terrorismo', 
         ruta: 'pag04.html', 
         progreso: 4
+    },
+    {
+        nombre: 'Principales obligaciones en materia de Prevención de Lavado de Dinero y Financiamiento al Terrorismo', 
+        ruta: 'pag05.html', 
+        progreso: 5
+    },
+    {
+        nombre: 'Principales obligaciones en materia de Prevención de Lavado de Dinero y Financiamiento al Terrorismo', 
+        ruta: 'pag06.html', 
+        progreso: 6
     }
 ]
