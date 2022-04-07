@@ -78,8 +78,11 @@ function visualizarPagina(){
         $.get(url, {}, function(data){
             contenedor.html(data);
 
-            //Script de la página actual
-            // drop();
+            //Script de las páginas
+            
+
+            //Script página04
+            seleccionarInfo04();
         });
     }
 }

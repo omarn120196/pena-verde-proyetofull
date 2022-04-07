@@ -212,12 +212,16 @@
         .circulos-info{
 
             display: none;
-            background: v.$amarillo;
+            background: v.$blanco;
             width: 30rem;
             height: 30rem;
             border-radius: 50%;
             margin-bottom: 1rem;
             text-align: center;
+            font-size: 1.4rem;
+            padding: 2rem;
+            transition: all .3s ease-in-out;
+            
 
             &#info-inicio{
                 
@@ -233,6 +237,7 @@
                 border-radius: 0;
                 height: auto;
                 margin-bottom: 0;
+                padding: 0;
 
                 p{
                     padding: 2rem 4rem;  
@@ -303,10 +308,24 @@
                 }
             }
 
-            &.activo{
+            &.circulo-activo{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                &#circulo7{
+                    flex-direction: column;
+                    font-size: 1.1rem;
+                    padding: 2rem 4rem;
+
+                    h4{
+                        color: v.$colorFuente;
+                    }
+
+                    ul{
+                        text-align: justify;
+                    }
+                }
             }
 
             h1{
@@ -327,9 +346,14 @@
             }
 
             ul{
-                margin: 5rem;
-                text-align: justify;
-                color: v.$blanco;
+
+
+
+                @include m.escritorio{
+                    margin: 5rem;
+                    text-align: justify;
+                    color: v.$blanco;
+                }
             }
         }
     }
