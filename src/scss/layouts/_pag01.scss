@@ -5,6 +5,7 @@
 #seccion01{
     position: relative;
     overflow: hidden;
+    font-family: v.$poppins;
 
     .texto01{
         @include m.resaltar(v.$colorFuente, 600);
@@ -126,6 +127,7 @@
 #seccion02{
     height: auto;
     background: v.$blanco;
+    font-family: v.$poppins;
 
     #texto{
         @include m.resaltar(v.$verde, 700);

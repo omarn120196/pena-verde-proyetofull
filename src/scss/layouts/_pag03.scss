@@ -4,9 +4,10 @@
 
 #cont-gris{
     position: relative;
-    top: 3rem;
+    top: 5rem;
     @include m.grid(3, 1rem);
     background: v.$grisClaro;
+    font-family: v.$poppins;
 
     @include m.telefono{
         @include m.grid(1, 3rem);
@@ -15,7 +16,7 @@
     #cont01{
         #LD{
             position: relative;
-            top: -7rem;
+            top: -5rem;
             left: 13rem;
             @include m.resaltar(v.$colorFuente, 900);
 
@@ -108,7 +109,7 @@
     #cont03{
         #FT{
             position: relative;
-            top: -7rem;
+            top: -5rem;
             left: 7rem;
             @include m.resaltar(v.$colorFuente, 900);
 
