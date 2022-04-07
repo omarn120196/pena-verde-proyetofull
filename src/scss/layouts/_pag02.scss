@@ -8,7 +8,7 @@
     @include m.grid(3, 1rem);
 
     @include m.escritorioHD{
-        @include m.fondo('/build/img/contenido/Pag02/ventanasFondo.svg');
+        @include m.fondo('./build/img/contenido/Pag02/ventanasFondo.svg');
     }
 
     .cont-imagen{
