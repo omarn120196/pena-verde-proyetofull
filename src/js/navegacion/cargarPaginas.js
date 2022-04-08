@@ -67,7 +67,7 @@ function visualizarPagina(){
     //Actualizar el porcentaje del progreso
     const totalPaginas = paginas.length;
     const porcentajePorPagina = 100 / totalPaginas;
-    porcentaje = porcentajePorPagina * paginas[noPagina].progreso;
+    porcentaje = parseInt(porcentajePorPagina * paginas[noPagina].progreso) ;
     verificarMenu();
 
     //Cargar página
@@ -83,6 +83,9 @@ function visualizarPagina(){
 
             //Script página04
             seleccionarInfo04();
+
+            //Script página06
+            seleccionarInfo06();
         });
     }
 }
