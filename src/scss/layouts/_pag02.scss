@@ -13,8 +13,6 @@
 
     .cont-imagen{
         height: 100%;
-        display: flex;
-        justify-content: center;
     }
 
     #cont-parrafo{
@@ -40,7 +38,7 @@
     width: 100%;
     height: 55rem;
     overflow: hidden;
-    @include m.fondo('/build/img/contenido/Pag02/ventanasFondo.svg');
+    @include m.fondo('../img/contenido/Pag02/ventanasFondo.svg');
 
     @include m.escritorioHD{
         background: v.$blanco;
@@ -189,16 +187,16 @@
 
                     @include m.escritorioHD{
                         position: static;
-                        width: 30%;
+                        width: 8rem;
                         margin-right: 2rem;
                     }
 
                     @include m.tablet{
-                        width: 40%;
+                        width: 6rem;
                     }
 
                     @include m.telefono{
-                        width: 60%;
+                        width: 6rem;
                         height: 4rem;
                     }
                 }

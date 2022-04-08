@@ -242,7 +242,7 @@
     }
 }
 
-@mixin globoNegro {
+@mixin globoNegro ($posicion) {
     background: v.$colorFuente;
     padding: 2rem;
     border-radius: 2rem;
@@ -260,8 +260,37 @@
         width: 4rem;
         height: 3rem;
 
+        @if($posicion == izquierda){
+            width: 3rem;
+            height: 4rem;
+            clip-path: polygon(100% 0, 0 50%, 100% 100%);
+            top: 20%;
+            left: -2%;
+        }
+
         @include escritorio(){
             clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
         }
+    }
+}
+
+@mixin botones ($fondo){
+    display: block;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: $fondo;
+    transition: all .3s ease;
+    width: 90%;
+    color: v.$blanco;
+    font-weight: 700;
+
+    &:hover{
+        background: darken($fondo, 5);
+        transform: scale(1.1);
+        box-shadow: 0px 10px 18px -5px rgba(0,0,0,0.75);
+    }
+
+    @include escritorio{
+        font-size: 1.2rem;
     }
 }

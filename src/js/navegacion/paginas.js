@@ -26,8 +26,18 @@ const paginas = [
         progreso: 5
     },
     {
-        nombre: 'Principales obligaciones en materia de Prevención de Lavado de Dinero y Financiamiento al Terrorismo', 
+        nombre: 'Política de Identificación del cliente', 
         ruta: 'pag06.html', 
         progreso: 6
+    },
+    {
+        nombre: 'Entrevista Personal con el cliente', 
+        ruta: 'pag07.html', 
+        progreso: 7
+    },
+    {
+        nombre: 'Integración de expediente y umbrales', 
+        ruta: 'pag08.html', 
+        progreso: 8
     }
 ]
