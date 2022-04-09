@@ -47,12 +47,22 @@ const paginas = [
     },
     {
         nombre: 'Política de conocimiento del cliente: conocimiento, clasificación de grado de riesgo escalamiento de aprobación, personas políticamente expuestas', 
-        ruta: 'pag09.html', 
+        ruta: 'pag10.html', 
         progreso: 10
     },
     {
         nombre: 'Reportes de Operaciones', 
-        ruta: 'pag09.html', 
+        ruta: 'pag11.html', 
         progreso: 11
+    },
+    {
+        nombre: 'Reportes de Operaciones', 
+        ruta: 'pag12.html', 
+        progreso: 12
+    },
+    {
+        nombre: 'Reportes de Operaciones', 
+        ruta: 'pag13.html', 
+        progreso: 13
     }
 ]
