@@ -267,6 +267,14 @@
             top: 20%;
             left: -2%;
         }
+        
+        @if($posicion == derecha){
+            width: 3rem;
+            height: 4rem;
+            clip-path: polygon(0 0, 0% 100%, 100% 50%);
+            top: 20%;
+            left: 95%;
+        }
 
         @include escritorio(){
             clip-path: polygon(0% 0%, 0% 0%, 0% 0%);

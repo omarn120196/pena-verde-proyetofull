@@ -39,5 +39,20 @@ const paginas = [
         nombre: 'Integración de expediente y umbrales', 
         ruta: 'pag08.html', 
         progreso: 8
+    },
+    {
+        nombre: 'Actualización de expediente', 
+        ruta: 'pag09.html', 
+        progreso: 9
+    },
+    {
+        nombre: 'Política de conocimiento del cliente: conocimiento, clasificación de grado de riesgo escalamiento de aprobación, personas políticamente expuestas', 
+        ruta: 'pag09.html', 
+        progreso: 10
+    },
+    {
+        nombre: 'Reportes de Operaciones', 
+        ruta: 'pag09.html', 
+        progreso: 11
     }
 ]
