@@ -10,14 +10,19 @@
     font-family: v.$poppins;
 
     @include m.telefono{
+        top: 7rem;
+    }
+
+    @include m.telefono{
         @include m.grid(1, 3rem);
     }
 
     #cont01{
         #LD{
             position: relative;
+            display: flex;
+            justify-content: center;
             top: -5rem;
-            left: 13rem;
             @include m.resaltar(v.$colorFuente, 900);
 
             @include m.tablet{
@@ -42,21 +47,15 @@
             }
             
             .lavadora{
-                margin-left: 10rem;
+                display: flex;
+                justify-content: center;
                 margin-top: -4rem;
                 padding-top: 2rem;
                 height: 20rem;
 
                 @include m.tablet{
                     height: 17rem;
-                    margin-left: 3.5rem;
-                }
-
-                @include m.telefono{
-                    margin-left: 9rem;
-                }
-
-                
+                }                
             }
         }
         #texto01{
@@ -65,19 +64,19 @@
             border-radius: 0 0 2rem 2rem;
             background: v.$negroPag03;
             text-align: center;
-            padding: 5rem 3rem 11rem 3rem;
+            padding: 5rem 3rem 10rem 3rem;
             @include m.resaltar(v.$blanco, 400);
             margin-left: 2rem;
-            margin-bottom: 4rem;
             
             @include m.tablet{
-                padding: 4rem 3rem 9rem 3rem;
-                margin-bottom: 1rem;
+                padding: 5rem 3rem 16rem 3rem;
             }
 
             @include m.telefono{
                 margin-left: 1rem;
-                margin-right: 1rem;    
+                margin-right: 1rem; 
+                padding: 7rem 3rem 10rem 3rem;
+                margin-bottom: 5rem;   
             }
         }
     }
@@ -86,17 +85,16 @@
         display: flex;
         border-radius: 0 0 2rem 2rem;
         text-align: center;
-        padding: 5rem 5rem 5rem 5rem;
+        padding: 3rem 5rem 5rem 5rem;
         @include m.resaltar(v.$colorFuente, 400);
         margin-left: 2rem;
-        margin-bottom: 4rem;
+        margin-bottom: 8rem;
         border-radius: 2rem;
         background: v.$azulPag03;
         margin-top: -2rem;
-        margin-right: 2rem;
 
         @include m.tablet{
-            padding: 2rem 2rem 10rem 2rem;
+            padding: 4rem 2rem 10rem 2rem;
         }
 
         @include m.telefono{
@@ -104,13 +102,14 @@
             margin-left: 1rem;
             margin-right: 1rem;
         }
-
     }
     #cont03{
         #FT{
             position: relative;
+            display: flex;
             top: -5rem;
-            left: 7rem;
+            left: 5rem;
+            align-content: center;
             @include m.resaltar(v.$colorFuente, 900);
 
             @include m.tablet{
@@ -119,7 +118,7 @@
 
             @include m.telefono{
                 top: -5rem;
-                left: 6rem;
+                left: 5rem;
             }
         }
             
@@ -138,46 +137,25 @@
                 margin-left: 1rem;
                 margin-right: 1rem;
             }
-            .terrorista1{
-                margin-left: 10rem;
+            .terrorista{
+                display: flex;
+                margin-left: 4rem;
                 margin-top: -4rem;
                 padding-top: 2rem;
                 height: 20rem;
 
-                @include m.tablet{
-                    height: 15rem;
+                @include m.escritorioHD{
                     margin-left: 5rem;
                 }
 
-                @include m.telefono{
-                    margin-left: 11rem;
-                }
-            }
-            .terrorista2{
-                position: absolute;
-                height: 15rem;
-                top: 6rem;
-
                 @include m.tablet{
-                    height: 10rem;
-                }
-                @include m.telefono{
+                    height: 15rem;
                     margin-left: 3rem;
+                    padding-top: 3rem;
                 }
 
-            }
-            .terrorista3{
-                position: absolute;
-                height: 13rem;
-                top: 8rem;
-                left: 23rem;
-
-                @include m.tablet{
-                    height: 8rem;
-                    left: 12rem;                
-                }
                 @include m.telefono{
-                    margin-left: 10rem;
+                    margin-left: 9rem;
                 }
             }
         }
@@ -187,11 +165,15 @@
             border-radius: 0 0 2rem 2rem;
             background: v.$verdeClaroPag03;
             text-align: center;
-            padding: 5rem 3rem 5rem 3rem;
+            padding: 3rem 3rem 5rem 3rem;
             @include m.resaltar(v.$colorFuente, 400);
             margin-left: 2rem;
-            margin-bottom: 4rem;
+            margin-bottom: 8rem;
             margin-right: 2rem;
+
+            @include m.escritorioHD{
+                padding: 5rem 2rem 6rem 2rem;
+            }
 
             @include m.tablet{
                 margin-left: 1rem;
@@ -206,24 +188,26 @@
     }
 
     .personaje{
+        display: flex;
         position: absolute;
-        height: 20rem;
-        left: 55rem;
-        top: 29rem;
-
+        height: 40%;
+        top: 27rem;
+        margin-left: 55rem;
+        
         @include m.escritorioHD{
             left: 50rem;
+            top: 30rem;
         }
 
         @include m.tablet{
             height: 15rem;
             left: 30rem;
-            top: 38.5rem;
+            top: 47rem;
         }
 
         @include m.telefono{
             left: 18rem;
-            top: 40rem;
+            top: 50rem;
         }
     }
 }
