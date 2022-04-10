@@ -1,0 +1,394 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+#cont-intro5{
+    width: 100%;
+    background: v.$verde;
+    display: flex;
+    justify-content: space-between;
+
+
+    .cont-imagen{
+        width: 20%;
+        height: 20rem;
+        justify-content: flex-start;
+
+        @include m.tablet{
+            width: 40%;
+            height: 50%;
+            align-self: center;
+        }
+    }
+
+    #mensaje-intro5{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: v.$blanco;
+        padding: 2rem 4rem;
+        line-height: 1.6;
+
+        @include m.telefono{
+            font-size: 1.2rem;
+        }
+    }
+}
+
+#cont-info5{
+
+    background: v.$gris1;
+    @include m.grid(3, 0);
+
+    @include m.escritorio{
+        @include m.grid(1, 0);
+    }
+
+    #cont-riesgo{
+        grid-column: 1/2;
+
+        #cont-parrafo{
+            min-height: 8rem;
+            background: v.$amarillo;
+            padding: 2rem 3rem;
+            font-weight: 500;
+
+            @include m.escritorio{
+                text-align: center;
+            }
+        }
+
+        h3{
+            margin: 2rem 0;
+            text-align: center;
+
+            @include m.escritorio{
+                padding: 2rem 0;
+                background: v.$azulRey;
+                color: v.$blanco;
+                margin-top: 0;
+            }
+        }
+
+        #cont-medidor{
+            
+            #cont-niveles{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .niveles{
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin-right: 2rem;
+                    margin-bottom: 2rem;
+
+                    .color{
+                        width: 2rem;
+                        height: 2rem;
+                        margin-right: 1rem;
+                    }
+
+                    &#nivel1{
+
+                        .color{
+                            background: v.$rojo;
+                        }
+                    }
+                    &#nivel2{
+
+                        .color{
+                            background: v.$amarillo;
+                        }
+                    }
+                    &#nivel3{
+
+                        .color{
+                            background: v.$verde;
+                        }
+                    }
+                }
+            }
+
+            .cont-imagen{
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: 4rem;
+            }
+
+        }
+    }
+
+    #cont-factores{
+        grid-column: 2/4;
+
+        @include m.escritorio{
+            grid-column: 1/2;
+        }
+
+        #titulo{
+            height: 8rem;
+            background: v.$gris1;
+            padding: 2rem 3rem;
+            color: v.$azulRey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #imagenes-factores{
+
+            padding: 2rem;
+            background: v.$crema;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 8rem);
+
+            #cont-grid{
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .cajas{
+                    width: 20%;
+                    height: 15rem;
+                    margin-left: 1rem;
+                    margin-bottom: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+
+                    @include m.tablet{
+                        width: 100%;
+                        background: v.$blanco;
+                        border: 1px solid v.$azulRey;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+
+                    .cont-imagen{
+                        width: 8rem;
+                        height: 8rem;
+                        padding: 2rem;
+                        background: v.$gris1;
+                        box-shadow: 10px 10px 13px -10px rgba(0,0,0,0.75);
+
+                        @include m.tablet{
+                            margin-left: 25%;
+                        }
+
+                        @include m.telefono{
+                            margin-left: 15%;
+                        }
+                    }
+
+                    p{
+                        font-size: 1.4rem;
+                        text-align: center;
+
+                        @include m.tablet{
+                            width: 50%;
+                            text-align: left;
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}
+
+#cont-mensaje05_2{
+    
+    width: 100%;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    background: v.$crema;
+
+    @include m.escritorio{
+        height: auto;
+        background: v.$colorFuente;
+    }
+
+    .cont-imagen{
+        width: 20rem;
+        height: 100%;
+        margin-right: 3rem;
+    }
+
+    #mensaje05_2{
+        width: 80%;
+        padding: 2rem;
+
+        p{
+            @include m.globoNegro(izquierda);
+        }
+    }
+}
+
+#titulo05_2{
+    padding: 2rem;
+    color: v.$blanco;
+    background: v.$verde;
+    text-align: center;
+}
+
+#cont-botones05{
+
+    @include m.grid(3, 8rem);
+
+    @include m.escritorioHD{
+        @include m.grid(3, 4rem);
+    }
+    
+    @include m.escritorio{
+        @include m.grid(3, 2rem);
+    }
+
+    @include m.tablet{
+        @include m.grid(1, 0);
+    }
+
+    #cont-instrucciones{
+        padding: 2rem;
+        display: block;
+
+        @include m.tablet{
+            padding: 0;
+        }
+    }
+
+    .cont-botones{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+
+        &#seguros{
+            a{
+                @include m.botones(v.$amarillo);
+                color: v.$colorFuente;
+            }
+        }
+
+        &#reaseguradora{
+            a{
+                @include m.botones(v.$azulRey);
+            }
+        }
+    }
+}
+
+#cont-tablas{
+
+
+    .tablas05{
+        display: none;
+        padding: 2rem;
+        transition: all .3s ease;
+
+        &.tabla-activa{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            &#info-seguros{
+                justify-content: space-between;
+                background: v.$amarillo;
+
+                .info-seguros{
+                    padding: 2rem;
+                    margin-bottom: 2rem;
+                    width: 48%;
+                    min-height: 15rem;
+
+                    @include m.escritorio{
+                        width: 100%;
+                    }
+
+                    ul{
+                        padding-left: 4rem;
+                    }
+                }
+
+                #seguro01{
+                    background: v.$crema;
+
+                    @include m.escritorio{
+                        order: 1;
+                    }
+                }
+
+                #seguro02{
+                    background: v.$amarillo2;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 700;
+
+                    @include m.escritorio{
+                        order: 3;
+                    }
+                }
+
+                #seguro03{
+                    background: v.$crema;
+                    min-height: 30rem;
+
+                    @include m.escritorioHD{
+                        min-height: 40rem;
+                    }
+
+                    @include m.escritorio{
+                        min-height: auto;
+                        order: 2;
+                    }
+                }
+
+                #seguro04{
+                    background: v.$crema;
+                    min-height: 30rem;
+
+                    @include m.escritorioHD{
+                        min-height: 40rem;
+                    }
+
+                    @include m.escritorio{
+                        min-height: auto;
+                        order: 4;
+                    }
+                }
+            }
+
+            &#info-reaseguradora{
+                background: v.$azulRey;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                #reaseguradora01{
+                    width: 100%;
+                    padding: 8rem 16rem;
+                    background: v.$azulClaro1;
+    
+                    @include m.tablet{
+                        padding: 8rem;
+                    }
+    
+                    ul{
+                        margin: 2rem 0;
+                        padding-left: 6rem;
+                    }
+                }
+    
+            }
+        }
+    }
+}
