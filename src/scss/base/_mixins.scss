@@ -319,6 +319,9 @@
     @include tablet(){
         margin-left: 1rem;
   }
+
+}
+
 @mixin botones ($fondo){
     display: block;
     text-align: center;
