@@ -83,9 +83,11 @@ function visualizarPagina(){
 
             //Script página04
             seleccionarInfo04();
-
-            //Script página06
+          
+            //Script página05
             seleccionarInfo06();
+          
+            // Scrip página06
         });
     }
 }

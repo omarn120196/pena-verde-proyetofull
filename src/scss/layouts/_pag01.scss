@@ -4,7 +4,6 @@
 
 #seccion01{
     position: relative;
-    overflow: hidden;
     font-family: v.$poppins;
 
     .texto01{
@@ -30,6 +29,7 @@
         }
     }
     #cont-billetes{
+        position: relative;
         height: 30rem;
         margin-top: 3rem;
         background: v.$azulClaro1;
@@ -45,6 +45,23 @@
             @include m.telefono{
                 height: 6rem;
             }
+        }
+        .personaje1{
+            display: flex;
+            height: 130%;
+            margin-left: 5rem;
+            margin-top: -20rem;
+    
+            @include m.tablet{
+                margin-top: -15rem;
+                left: 2rem;
+            }
+            @include m.telefono{
+                height: 95%;
+                margin-top: -5rem;
+                margin-left: 2rem;
+            }
+    
         }
     }
 
@@ -95,33 +112,13 @@
                 background: v.$azulClaro2;
                 margin-top: 1rem;
                 top: 1rem;
-                width: 25rem;
+                width: 30rem;
                 left: 5rem;
                 
             }
         }
 
     }
-    .personaje1{
-        position: absolute;
-        height: 35rem;
-        width: auto;
-        top: 4rem;
-        left: 10rem;
-
-        @include m.escritorioHD{
-            height: 40rem;
-        }
-        @include m.tablet{
-            left: 2rem;
-        }
-        @include m.telefono{
-            height: 22rem;
-            top: 9rem;
-        }
-
-    }
-
 }
 
 #seccion02{

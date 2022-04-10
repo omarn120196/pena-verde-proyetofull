@@ -1,0 +1,166 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+#cont-azul{
+    position: relative;
+    height: 4rem;
+    background: v.$azulRey;
+
+    @include m.tablet{
+        height: 5rem;
+    }
+    
+}
+
+#principal{
+    position: relative;
+    @include m.grid(2, 0);
+    display: flex;
+
+    @include m.telefono{
+        @include m.grid(1, 0);
+    }
+
+    #cont-small{
+        position: relative;
+        width: 30%;
+        background: v.$naranja;
+
+        @include m.telefono{
+            width: 100%;
+        }
+
+        #text{
+            position: relative;
+            display: flex;
+            text-align: center;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            top: 3rem;
+            border-radius: 2rem 2rem 2rem 2rem;
+            padding: 2rem 2rem 2rem 6rem;
+            background: v.$azulClaro1;
+            @include m.resaltar(v.$colorFuente, 400);
+
+            @include m.telefono{
+                margin-right: 0;
+                border-radius: 0;
+                margin-left: 8rem;
+            }
+
+            .mano{
+                position: absolute;
+                left: 1rem;
+            }
+        }
+
+        .personaje{
+            display: flex;
+            height: 60%;
+            margin-bottom: -1rem;
+            margin-top: 20rem;
+
+            @include m.tablet{
+                margin-top: 25rem;
+            }
+
+            @include m.telefono{
+                height: 30rem;
+                margin-top: -5rem;
+            }
+        }
+
+    }
+
+    #cont-big{
+        position: relative;
+        width: 100%;
+        background: v.$rosaPag06;
+
+        #claro{
+            position: relative;
+            height: 25rem;
+            margin-top: 5rem;
+            background: v.$rosaClaroPag06;
+        }
+
+        #columnas{
+            display: flex;
+            position: relative;
+            @include m.grid(3, 1rem);
+
+            @include m.telefono{
+                @include m.grid(1, 0);
+            }
+
+            #libro1{
+                margin-top: -26rem;
+
+                .libro1{
+                   @include m.imagenLibro;
+
+                   @include m.telefono{
+                       background: v.$azulFuertePag06
+                   }
+
+                }
+
+                #cuadro{
+                    @include m.cuadro(v.$azulPag06, v.$azulFuertePag06, center);
+
+                    .texto1{
+                        @include m.resaltar(v.$azulFuente, 600);
+                    }
+                }
+            }
+            #libro2{
+                margin-top: -26rem;
+
+                @include m.telefono{
+                    margin-top: 1rem;
+                }
+
+                .libro2{
+                   @include m.imagenLibro;
+
+                   @include m.telefono{
+                       background: v.$naranjaTelPag06;
+                   }
+
+                }
+
+                #cuadro2{
+                    @include m.cuadro(v.$naranjaPag06, v.$naranjaFuertePag06, left);
+
+                    .texto2{
+                        @include m.resaltar(v.$naranjaFuentePag06, 600);
+                    }
+                }
+            }
+            #libro3{
+                margin-top: -26rem;
+
+                @include m.telefono{
+                    margin-top: 1rem;
+                }
+
+                .libro3{
+                   @include m.imagenLibro;
+
+                   @include m.telefono{
+                       background: v.$verdeTelPag06;
+                   }
+                }
+
+                #cuadro3{
+                    @include m.cuadro(v.$verdeClaroPag03, v.$verdeFuertePag06, center);
+
+                    .texto3{
+                        @include m.resaltar(v.$verde, 600);
+                    }
+                }
+            }
+        }
+    }
+}
