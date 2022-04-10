@@ -12,7 +12,14 @@
     }
 
     .cont-imagen{
-        height: 100%;
+        grid-column: 1/2;
+        width: 60%;
+        height: 50%;
+
+        @include m.escritorio{
+            width: 100%;
+            height: 70%;
+        }
     }
 
     #cont-parrafo{
