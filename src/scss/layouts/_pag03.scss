@@ -4,217 +4,125 @@
 
 #cont-gris{
     position: relative;
-    top: 5rem;
-    @include m.grid(3, 1rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     background: v.$grisClaro;
-    font-family: v.$poppins;
+    top: 7rem;
+    height: 57rem;
 
     @include m.tablet{
-        top: 7rem;
+        height: 68rem;
+        top: 8rem;
     }
 
-    @include m.telefono{
-        @include m.grid(1, 3rem);
-    }
+    // @include m.telefono{
+    //     justify-content: space-around;
+    // }
 
-    #cont01{
-        #LD{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            top: -5rem;
-            @include m.resaltar(v.$colorFuente, 900);
-
-            @include m.tablet{
-                left: 0;
-            }
-
-            @include m.telefono{
-                top: -6rem;
-                left: 1rem;
-            }
-        }
-            
-        #cont01-imagen{
-            position: relative;
-            background: v.$verdeFuertePag03;
-            border-radius: 2rem 2rem 0 0;
-            margin-left: 2rem;
-
-            @include m.tablet{
-                margin-left: 1rem;
-                margin-right: 1rem;    
-            }
-            
-            .lavadora{
-                display: flex;
-                margin-left: 7rem;
-                margin-top: -4rem;
-                padding-top: 2rem;
-                height: 20rem;
-                width: 18rem;
-
-                @include m.tablet{
-                    height: 15rem;
-                    width: 15rem;
-                    margin-left: 3rem;
-                }
-                
-                @include m.telefono{
-                    margin-left: 9rem;
-                }
-            }
-        }
-        #texto01{
-            position: relative;
-            display: flex;
-            border-radius: 0 0 2rem 2rem;
-            background: v.$negroPag03;
-            text-align: center;
-            padding: 5rem 3rem 11rem 3rem;
-            @include m.resaltar(v.$blanco, 400);
-            margin-left: 2rem;
-            
-            @include m.tablet{
-                margin-left: 1rem;
-                margin-right: 1rem; 
-                padding: 7rem 3rem 14.7rem 3rem;
-                margin-bottom: 5rem;   
-            }
-
-            @include m.telefono{
-                padding: 7rem 3rem 10rem 3rem;
-            }
-        }
-    }
-    #cont02{
+    
+    .cont-pag03{
+        width: 30%;
+        height: 70rem;
+        padding: 2rem;
         position: relative;
-        display: flex;
-        border-radius: 0 0 2rem 2rem;
-        text-align: center;
-        margin-left: 2rem;
-        border-radius: 2rem;
-        background: v.$azulPag03;
-        margin-top: -2rem;
-        margin-bottom: 8rem;
-        @include m.resaltar(v.$colorFuente, 400);
-        padding: 3rem 5rem 5rem 5rem;
 
-        @include m.tablet{
-            margin-left: 0;
-            padding: 5rem 2rem 3rem 2rem;
-        }
-
-    }
-
-    #cont03{
-        #FT{
-            position: relative;
-            display: flex;
-            top: -5rem;
-            left: 5rem;
-            align-content: center;
-            @include m.resaltar(v.$colorFuente, 900);
-
-            @include m.tablet{
-                left: 3rem;
-                top: -6rem;
-            }
-
-            @include m.telefono{
-                top: -5rem;
-                left: 5rem;
-            }
-        }
-            
-        #cont03-imagen{
-            position: relative;
-            background: v.$naranjaPag03;
-            border-radius: 2rem 2rem 0 0;
-            margin-left: 2rem;
-            margin-right: 2rem;
-
-            @include m.tablet{
-                margin-top: -5rem;
-                margin-left: 1rem;
-            }
-
-            @include m.telefono{
-                margin-left: 1rem;
-                margin-right: 1rem;
-            }
-            .terrorista{
-                display: flex;
-                margin-left: 4rem;
-                margin-top: -4rem;
-                padding-top: 2rem;
-                height: 20rem;
-
-                @include m.escritorioHD{
-                    margin-left: 5rem;
-                }
-
-                @include m.tablet{
-                    height: 15rem;
-                    margin-left: 3rem;
-                    padding-top: 3rem;
-                }
-
-                @include m.telefono{
-                    margin-left: 9rem;
-                }
-            }
-        }
-        #texto03{
-            position: relative;
-            display: flex;
-            border-radius: 0 0 2rem 2rem;
-            background: v.$verdeClaroPag03;
-            text-align: center;
-            padding: 3rem 3rem 5rem 3rem;
-            @include m.resaltar(v.$colorFuente, 400);
-            margin-left: 2rem;
-            margin-bottom: 8rem;
-            margin-right: 2rem;
-
-            @include m.escritorioHD{
-                padding: 5rem 2rem 6rem 2rem;
-            }
-
-            @include m.tablet{
-                margin-left: 1rem;
-                padding: 5rem 2rem 5rem 2rem;
-            }
-            @include m.telefono{
-                margin-left: 1rem;
-                margin-right: 1rem;
-            }
-                
-        }
-    }
-
-    .personaje{
-        display: flex;
-        align-content: flex-end;
-        height: 20rem;
-        width: 20rem;
-        margin-right: 5rem;
-        
         @include m.escritorioHD{
-            left: 50rem;
-            top: 30rem;
-        }
-
-        @include m.tablet{
-            height: 15rem;
-            left: 30rem;
-            top: 47rem;
+            width: 33%;
+            padding: 1rem;
         }
 
         @include m.telefono{
-            left: 18rem;
-            top: 50rem;
+            width: 90%;
+        }
+
+        .card03{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border-radius: 2rem;
+
+            @include m.telefono{
+                flex-direction: row;
+            }
+
+            figure{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 20rem;
+
+                img{
+                    width: 70%;
+                }
+            }
+        }
+        
+        span{
+            padding: 2rem;
+            height: 30rem;
+            text-align: center;
+
+            @include m.tablet{
+                height: 40rem;
+            }
         }
     }
 
+    #cont01{
+        top: -6rem;
+
+        @include m.tablet{
+            top: -4rem;
+        }
+
+        #LD{
+            position: relative;
+            bottom: 2rem;
+            @include m.resaltar(v.$colorFuente, 900); 
+        }   
+        #texto01{
+            @include m.resaltar(v.$blanco, 300);
+            background: v.$verdeFuertePag03;
+        }
+        .lavadora{
+            padding-top: 2rem;
+            background: v.$negroPag03;
+        }
+    }
+
+    #cont02{
+        top: -4rem;
+
+        @include m.tablet{
+            top: -2rem;
+        }
+
+        #texto02{
+            background: v.$azulPag03;
+        }
+        .personaje{
+            padding-top: 2rem;
+            background: v.$azulPag03;
+        }
+    }
+
+    #cont03{
+        top: -6rem;
+        
+        #FT{
+            position: relative;
+            bottom: 2rem;
+            @include m.resaltar(v.$colorFuente, 900);
+        }
+        #texto03{
+            background: v.$verdeClaroPag03;
+        }
+        .terrorista{
+            padding-top: 2rem;
+            background: v.$naranja;
+        }
+    }
 }

@@ -4,7 +4,7 @@
 
 #cont-azul{
     position: relative;
-    height: 4rem;
+    height: 7rem;
     background: v.$azulRey;
 
     @include m.tablet{
@@ -59,7 +59,7 @@
             display: flex;
             height: 60%;
             margin-bottom: -1rem;
-            margin-top: 25rem;
+            margin-top: 20rem;
 
             @include m.tablet{
                 margin-top: 25rem;
@@ -99,16 +99,16 @@
                 margin-top: -26rem;
 
                 .libro1{
-                    display: block;
-                    width: 100%;
                     @include m.imagenLibro;
+
                     @include m.telefono{
                         background: v.$azulFuertePag06
                     }
 
                 }
 
-                #cuadro{
+                #cuadro1{
+                    display: none;
                     @include m.cuadro(v.$azulPag06, v.$azulFuertePag06, center);
 
                     .texto1{
@@ -133,6 +133,7 @@
                 }
 
                 #cuadro2{
+                    display: none;
                     @include m.cuadro(v.$naranjaPag06, v.$naranjaFuertePag06, left);
 
                     .texto2{
@@ -156,6 +157,7 @@
                 }
 
                 #cuadro3{
+                    display: none;
                     @include m.cuadro(v.$verdeClaroPag03, v.$verdeFuertePag06, center);
 
                     .texto3{
