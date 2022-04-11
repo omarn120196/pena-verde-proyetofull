@@ -1,4 +1,0 @@
-function seleccionarInfo06(){
-    
-
-}

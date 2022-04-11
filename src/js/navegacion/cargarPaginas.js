@@ -88,6 +88,9 @@ function visualizarPagina(){
             seleccionarInfo05();
           
             // Scrip página06
+            visualizarCuadro1();
+            visualizarCuadro2();
+            visualizarCuadro3();
         });
     }
 }
