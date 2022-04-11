@@ -46,7 +46,7 @@
             @include m.telefono{
                 margin-right: 0;
                 border-radius: 0;
-                margin-left: 8rem;
+                margin-left: 9rem;
             }
 
             .mano{
@@ -59,14 +59,15 @@
             display: flex;
             height: 60%;
             margin-bottom: -1rem;
-            margin-top: 20rem;
+            margin-top: 25rem;
 
             @include m.tablet{
                 margin-top: 25rem;
             }
 
             @include m.telefono{
-                height: 30rem;
+                height: 25rem;
+                width: 15rem;
                 margin-top: -5rem;
             }
         }
@@ -86,7 +87,7 @@
         }
 
         #columnas{
-            display: flex;
+            width: 100%;
             position: relative;
             @include m.grid(3, 1rem);
 
@@ -98,11 +99,12 @@
                 margin-top: -26rem;
 
                 .libro1{
-                   @include m.imagenLibro;
-
-                   @include m.telefono{
-                       background: v.$azulFuertePag06
-                   }
+                    display: block;
+                    width: 100%;
+                    @include m.imagenLibro;
+                    @include m.telefono{
+                        background: v.$azulFuertePag06
+                    }
 
                 }
 
