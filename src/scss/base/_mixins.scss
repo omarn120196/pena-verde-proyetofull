@@ -286,15 +286,19 @@
 @mixin  imagenLibro{
     display: flex;
     height: 10rem;
+    width: 18rem;
     margin-top: -2rem;
     margin-left: 2rem;
 
     @include tablet(){
-        height: 7rem;
+        height: 5rem;
+        width: 10rem;
         margin-left: 1rem;
     }
 
     @include telefono(){
+        height: 8rem;
+        width: 15rem;
         margin-left: 0;
         margin-right: 0;
     }
@@ -318,7 +322,13 @@
 
     @include tablet(){
         margin-left: 1rem;
-  }
+        margin-right: 0;
+        padding: 7rem 1rem 7rem 1rem;
+    }
+
+    @include telefono(){
+        margin-right: 1rem;
+    }
 
 }
 
