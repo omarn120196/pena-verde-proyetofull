@@ -219,9 +219,13 @@
             border-radius: 50%;
             margin-bottom: 1rem;
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             padding: 2rem;
             transition: all .3s ease-in-out;
+
+            h3{
+                display: none;
+            }
             
 
             &#info-inicio{
@@ -320,10 +324,12 @@
                     padding: 2rem 4rem;
 
                     h4{
+                        font-size: 1.2rem;
                         color: v.$colorFuente;
                     }
 
                     ul{
+                        
                         text-align: justify;
                     }
                 }
