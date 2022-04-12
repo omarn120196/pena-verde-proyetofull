@@ -1,0 +1,23 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+#pag07{
+    position: relative;
+    @include m.grid(2, 0);
+    display: flex;
+
+    #conversacion{
+        position: relative;
+        width: 40%;
+        background: v.$azul2;
+        padding: 2rem 2rem 0 2rem;
+
+    }
+    #entrevista{
+        position: relative;
+        width: 100%;
+        background: v.$azulRey;
+
+    }
+}
