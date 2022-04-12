@@ -89,8 +89,9 @@ function visualizarPagina(){
           
             // Scrip página06
             visualizarCuadro1();
-            // visualizarCuadro2();
-            // visualizarCuadro3();
+
+            // Scrip página07
+            visualizarPag07()
         });
     }
 }

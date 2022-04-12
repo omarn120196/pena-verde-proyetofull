@@ -7,17 +7,180 @@
     @include m.grid(2, 0);
     display: flex;
 
+    @include m.telefono{
+        @include m.grid(1, 0);
+    }
+
     #conversacion{
         position: relative;
         width: 40%;
         background: v.$azul2;
         padding: 2rem 2rem 0 2rem;
 
+        @include m.tablet{
+            width: 78%;
+            height: 32rem;
+        }
+
+        @include m.telefono{
+            width: 100%;
+            height: 25rem;
+        }
+
     }
     #entrevista{
         position: relative;
         width: 100%;
         background: v.$azulRey;
+        @include m.resaltar(v.$blanco, 400);
+        padding: 2rem 2rem 2rem 5rem;
 
+        h2{
+            padding: 2rem 2rem 4rem 2rem;
+        }
+        li{
+            padding-bottom: 1rem;
+        }
     }
+}
+
+#pag07-2{
+    background: v.$grisPag07;
+    height: 40rem;
+
+    @include m.telefono{
+        background: v.$colorFuente;
+    }
+
+    .personaje{
+        position: relative;
+        top: 2rem;
+        left: 10rem;
+        height: 50%;
+        width: 20%;
+
+        @include m.escritorioHD{
+            left: 3rem;
+            height: 47%;
+            width: 18%;
+        }
+
+        @include m.tablet{
+            width: 25%;
+        }
+
+        @include m.telefono{
+            left: 22rem;
+            width: 33%;
+            height: 12rem;
+            top: 4rem;
+        }
+    }
+
+    #globo{
+        position: relative;
+        width: 30rem;
+        top: 4rem;
+        left: 5rem;
+        @include m.globoNegro(arriba);
+
+        @include m.escritorioHD{
+            left: 2rem;
+            width: 20rem;
+        }
+
+        @include m.telefono{
+            top: -9rem;
+            left: 0;
+
+        }
+    }
+
+    #cont-blanco{
+        position: relative;
+        display: flex;
+        left: 40rem;
+        background: v.$blanco;
+        border-radius: 2rem;
+        width: 70rem;
+        height: 90%;
+        top: -28rem;
+
+        @include m.escritorioHD{
+            width: 63rem;
+            left: 28rem;
+            top: -30rem;
+        }
+
+        @include m.tablet{
+            width: 43rem;
+            left: 25rem;
+        }
+
+        @include m.telefono{
+            left: 0;
+            width: 34rem;
+            top: -5rem;
+            border-radius: 0;
+        }
+
+        .cuadros07{
+            display: none;
+            opacity: 0;
+            transition: all .3s ease;
+        }
+
+        .btn01{
+            position: relative;
+            left: 2rem;
+            top: 2rem;
+            width: 50%;
+            #btn-seguros{
+                a{
+                    @include m.botones(v.$amarillo);
+                    color: v.$colorFuente;
+                }
+            }
+
+            #info-seguros{
+                text-align: center;
+                padding-top: 4rem;
+                height: 15rem;
+                width: 90%;
+                top: 5rem;
+                position: relative;
+                background: v.$amarilloPag07;
+
+                &.cuadros_activos{
+                    display: block;
+                    opacity: 1;
+                }
+            }
+        }
+        .btn02{
+            position: relative;
+            top: 2rem;
+            width: 50%;
+            #btn-reaseguradora{
+                a{
+                    @include m.botones(v.$azulRey);
+                }
+            }
+            #info-reaseguradora{
+                text-align: center;
+                padding-top: 4rem;
+                height: 15rem;
+                width: 90%;
+                top: 5rem;
+                position: relative;
+                background: v.$azulPag07;
+                
+                &.cuadros_activos{
+                    display: block;
+                    opacity: 1;
+                }
+            }
+        }
+
+    }    
 }
