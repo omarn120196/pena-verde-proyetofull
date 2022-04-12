@@ -356,3 +356,119 @@
         font-size: 1.2rem;
     }
 }
+
+@mixin flip-cards ($color, $intensidad) {
+    
+    
+    background: v.$blanco;
+    
+    .front{
+        overflow: hidden;
+        border-radius: 2rem;
+        box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.75);
+    }
+
+    .back{
+        overflow: hidden;
+        border-radius: 2rem;
+        box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.75);
+    }
+
+    .cont-titulo{
+        position: relative;
+        background: $color;
+        margin-bottom: 3.2rem;
+
+        &::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            clip-path: polygon(20% 0, 0 100%, 0 0);
+            @if($intensidad == fuerte){
+                background: darken($color, 20);
+            }
+            @if($intensidad == claro){
+                background: lighten($color, 5);
+            }
+        }
+    }
+
+    .cont-mensaje-front{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: lighten($color,  40);
+        color: darken($color, 20);
+        margin: 6rem 2rem 0;
+        height: 15rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+        @include escritorioHD{
+            height: 20rem;
+        }
+
+        @include escritorio{
+            height: 12rem;
+            margin: 2rem;
+        }
+        
+        p{
+            padding: 2rem;
+
+            @include escritorio{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .back{
+
+        .cont-titulo{
+            margin-bottom: 1rem;
+
+            &::after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+                clip-path: polygon(75% 0, 100% 100%, 100% 0);
+                @if($intensidad == fuerte){
+                    background: darken($color, 20);
+                }
+                @if($intensidad == claro){
+                    background: lighten($color, 5);
+                }
+            } 
+        }
+
+        .cont-mensaje-back{
+            height: 80%;
+            padding-bottom: 5rem;
+            overflow-y: scroll;
+
+            p{
+                color: darken($color, 20);
+            }
+
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar{
+                opacity: 1;
+                width: .5rem;
+            }
+        
+            &::-webkit-scrollbar-thumb{
+                background: v.$blanco;
+                border-radius: 1rem;
+            }
+            
+        }        
+    }
+}
