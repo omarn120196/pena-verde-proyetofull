@@ -2,127 +2,169 @@
 @use '../base/mixins' as m;
 
 
-#cont-gris{
-    position: relative;
+.cont-info03{
+
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background: v.$grisClaro;
-    top: 7rem;
-    height: 57rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: v.$gris1;
+    padding-top: 6rem;
+    position: relative;
 
-    @include m.tablet{
-        height: 68rem;
-        top: 8rem;
+    h4{
+        text-align: center;
+        position: absolute;
     }
 
-    // @include m.telefono{
-    //     justify-content: space-around;
-    // }
-
-    
-    .cont-pag03{
-        width: 30%;
-        height: 70rem;
-        padding: 2rem;
-        position: relative;
+    #h4_1{
+        top: 2rem;
+        left: 12rem;
 
         @include m.escritorioHD{
-            width: 33%;
-            padding: 1rem;
+            left: 6rem;
+        }
+
+        @include m.escritorio{
+            position: static;
+            color: v.$blanco;
+            padding-top: 2rem;
+        }
+    }
+    
+    #h4_2{
+        top: 2rem;
+        left: 70%;
+
+        @include m.escritorioHD{
+            left: 68%;
+        }
+
+        @include m.escritorio{
+            position: static;
+            padding-top: 2rem;
+        }
+    }
+
+    @include m.escritorio{
+        justify-content: center;
+    }
+
+    p{
+        padding: 6rem 3rem;
+        color: v.$blanco;
+        font-size: 1.7rem;
+        font-weight: 500;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .tarjetas03{
+        width: 32%;
+        height: 60rem;
+        border-radius: 2rem;
+        overflow: hidden;
+        z-index: 1;
+
+        @include m.escritorioHD{
+            height: 80rem;
+        }
+
+        @include m.escritorio{
+            width: 75%;
+            height: auto;
+            margin-bottom: 2rem;
         }
 
         @include m.telefono{
-            width: 90%;
+            width: 100%;
         }
 
-        .card03{
-            overflow: hidden;
+        h4{
+            position: absolute;
+            text-align: center;
+            font-size: 2rem;
+            padding-bottom: 3rem;
+        }
+
+        .cont-tarjeta{
             display: flex;
             flex-direction: column;
-            border-radius: 2rem;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
 
-            @include m.telefono{
-                flex-direction: row;
-            }
-
-            figure{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            .imagenes{
                 width: 100%;
-                height: 20rem;
+                height: 25rem;
 
-                img{
-                    width: 70%;
+                .cont-imagen{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+
+                    img{
+                        width: 60%;
+                        height: 80%;
+                    }
+                }
+            }
+        }
+
+        &#tarjeta01{
+
+            background: v.$verdeMilitar;
+
+            .cont-tarjeta{
+
+                .imagenes{
+                    background: v.$verdeFuertePag03;
                 }
             }
         }
         
-        span{
-            padding: 2rem;
-            height: 30rem;
-            text-align: center;
+        &#tarjeta02{
 
-            @include m.tablet{
-                height: 40rem;
+            position: relative;
+            background: v.$azulPag03;
+
+            p{
+                margin-bottom: 15rem;
+
+                @include m.telefono{
+                    margin-bottom: 18rem;
+                } 
+            }
+
+            .imagenes{
+                position: absolute;
+                width: 25rem;
+                height: 25rem;
+                bottom: -2rem;
+                right: 0;
             }
         }
-    }
-
-    #cont01{
-        top: -6rem;
-
-        @include m.tablet{
-            top: -4rem;
-        }
-
-        #LD{
-            position: relative;
-            bottom: 2rem;
-            @include m.resaltar(v.$colorFuente, 900); 
-        }   
-        #texto01{
-            @include m.resaltar(v.$blanco, 300);
-            background: v.$verdeFuertePag03;
-        }
-        .lavadora{
-            padding-top: 2rem;
-            background: v.$negroPag03;
-        }
-    }
-
-    #cont02{
-        top: -4rem;
-
-        @include m.tablet{
-            top: -2rem;
-        }
-
-        #texto02{
-            background: v.$azulPag03;
-        }
-        .personaje{
-            padding-top: 2rem;
-            background: v.$azulPag03;
-        }
-    }
-
-    #cont03{
-        top: -6rem;
         
-        #FT{
-            position: relative;
-            bottom: 2rem;
-            @include m.resaltar(v.$colorFuente, 900);
-        }
-        #texto03{
+        &#tarjeta03{
+
+            
             background: v.$verdeClaroPag03;
+
+            .cont-tarjeta{
+
+                p{
+                    color: v.$colorFuente;
+                }
+
+                .imagenes{
+                    background: v.$naranja;
+                }
+            }
         }
-        .terrorista{
-            padding-top: 2rem;
-            background: v.$naranja;
-        }
+
+        
     }
 }

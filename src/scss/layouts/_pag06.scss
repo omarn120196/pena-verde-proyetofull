@@ -18,7 +18,7 @@
     @include m.grid(2, 0);
     display: flex;
 
-    @include m.telefono{
+    @include m.escritorio{
         @include m.grid(1, 0);
     }
 
@@ -27,7 +27,7 @@
         width: 30%;
         background: v.$naranja;
 
-        @include m.telefono{
+        @include m.escritorio{
             width: 100%;
         }
 
@@ -43,7 +43,7 @@
             background: v.$azulClaro1;
             @include m.resaltar(v.$colorFuente, 400);
 
-            @include m.telefono{
+            @include m.escritorio{
                 margin-right: 0;
                 border-radius: 0;
                 margin-left: 9rem;
@@ -61,11 +61,8 @@
             margin-bottom: -1rem;
             margin-top: 20rem;
 
-            @include m.tablet{
+            @include m.escritorio{
                 margin-top: 25rem;
-            }
-
-            @include m.telefono{
                 height: 25rem;
                 width: 15rem;
                 margin-top: -5rem;
@@ -84,6 +81,10 @@
             height: 25rem;
             margin-top: 5rem;
             background: v.$rosaClaroPag06;
+
+            @include m.escritorio{
+                display: none;
+            }
         }
 
         #columnas{
@@ -91,77 +92,129 @@
             position: relative;
             @include m.grid(3, 1rem);
 
-            @include m.telefono{
+            @include m.escritorio{
+                margin-top: 4rem;
                 @include m.grid(1, 0);
+            }
+
+            .cuadros6{
+                display: none;
+                opacity: 0;
+                transition: all .3s ease;
             }
 
             #libro1{
                 margin-top: -26rem;
 
+                @include m.escritorio{
+                    margin-top: 1rem;
+                }
+
                 .libro1{
                     @include m.imagenLibro;
 
-                    @include m.telefono{
-                        background: v.$azulFuertePag06
-                    }
+                    @include m.escritorio{
+                        background: v.$azulFuertePag06;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: v.$azulCielo;
+                        padding: 2rem 0;
 
+                        img{
+                            width: 20rem;
+                        }
+                    }
                 }
 
                 #cuadro1{
-                    display: none;
                     @include m.cuadro(v.$azulPag06, v.$azulFuertePag06, center);
 
                     .texto1{
                         @include m.resaltar(v.$azulFuente, 600);
+                    }
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
                     }
                 }
             }
             #libro2{
                 margin-top: -26rem;
 
-                @include m.telefono{
+                @include m.escritorio{
                     margin-top: 1rem;
                 }
 
                 .libro2{
                    @include m.imagenLibro;
 
-                   @include m.telefono{
+                   @include m.escritorio{
+                       width: 100%;
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+                       padding: 2rem 0;
                        background: v.$naranjaTelPag06;
+                       img{
+                           width: 20rem;
+                       }
                    }
 
                 }
 
                 #cuadro2{
-                    display: none;
                     @include m.cuadro(v.$naranjaPag06, v.$naranjaFuertePag06, left);
 
                     .texto2{
                         @include m.resaltar(v.$naranjaFuentePag06, 600);
+                    }
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
                     }
                 }
             }
             #libro3{
                 margin-top: -26rem;
 
-                @include m.telefono{
+                @include m.escritorio{
                     margin-top: 1rem;
                 }
 
                 .libro3{
                    @include m.imagenLibro;
 
-                   @include m.telefono{
+                   @include m.escritorio{
                        background: v.$verdeTelPag06;
+
+                       @include m.escritorio{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 2rem 0;
+                        background: v.$verdeTelPag06;
+                        img{
+                            width: 20rem;
+                        }
+                    }
                    }
                 }
 
                 #cuadro3{
-                    display: none;
                     @include m.cuadro(v.$verdeClaroPag03, v.$verdeFuertePag06, center);
 
                     .texto3{
                         @include m.resaltar(v.$verde, 600);
+                    }
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
                     }
                 }
             }
