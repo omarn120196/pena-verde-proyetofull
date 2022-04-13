@@ -89,7 +89,10 @@ function visualizarPagina(){
           
             // Scrip página06
             visualizarCuadro1();
-
+          
+            // Scrip página07
+            visualizarPag07();
+          
             //Script página11
             voltearCards(); 
         });
