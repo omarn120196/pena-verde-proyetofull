@@ -91,6 +91,10 @@
                 @include m.escritorioHD{
                     font-size: 1.2rem;
                 }
+
+                @include m.escritorio{
+                    font-size: 1.6rem;
+                }
             }
         }
     }
@@ -220,8 +224,29 @@
             margin-bottom: 1rem;
             text-align: center;
             font-size: 1.4rem;
-            padding: 2rem;
+            padding: 2.2rem;
             transition: all .3s ease-in-out;
+
+            @include m.escritorio{
+                margin-bottom: 0;
+            }
+
+            h3{
+                display: none;
+
+                @include m.escritorio{
+                    display: block;
+                    font-size: 1.8rem;
+                    color: v.$blanco;
+                    text-align: center;
+                    padding: 2rem;
+                }
+            }
+
+            p{
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
             
 
             &#info-inicio{
@@ -233,6 +258,7 @@
             
             @include m.escritorio{
                 display: flex;
+                justify-content: center;
                 flex-wrap: wrap;
                 width: 100%;
                 border-radius: 0;
@@ -243,6 +269,7 @@
                 p{
                     padding: 2rem 4rem;  
                     color: v.$blanco;
+                    margin-bottom: 0;
                 }
 
                 &#circulo1{
@@ -316,15 +343,21 @@
 
                 &#circulo7{
                     flex-direction: column;
-                    font-size: 1rem;
-                    padding: 2rem 4rem;
+                    padding: 2rem;
+                    line-height: 1;
 
                     h4{
+                        font-size: 1.2rem;
                         color: v.$colorFuente;
                     }
 
                     ul{
+                        font-size: 1rem;
                         text-align: justify;
+
+                        @include m.escritorio{
+                            font-size: 1.4rem;
+                        }
                     }
                 }
             }

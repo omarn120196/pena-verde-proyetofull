@@ -1,0 +1,364 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+#intro-pag13{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 3rem 20rem;
+    background: lighten(v.$rosaPag06, 5);
+
+    @include m.escritorioHD{
+        padding: 3rem 14rem;
+    }
+
+    @include m.escritorio{
+        padding: 3rem 12rem 3rem 2rem;
+    }
+
+    .cont-imagen{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 70%;
+        width: 18rem;
+
+        @include m.escritorioHD{
+            width: 12rem;
+            height: 50%;
+        }
+
+        @include m.escritorio{
+            bottom: 0;
+            left: calc(100% - 12rem);
+            transform: rotateY(180deg);
+        }
+
+        @include m.telefono{
+            height: 30%;
+        }
+    }   
+
+    #cont-obligaciones{
+        text-align: justify;
+
+        @include m.escritorio{
+            text-align: left;
+        }
+
+        p{
+            span{
+                @include m.resaltar(v.$colorFuente, 700);
+            }
+        }
+    }
+}
+
+#cont-comite{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    
+    @include m.escritorioHD{
+        width: 60%;        
+    }
+    
+    @include m.escritorio{
+        width: 80%;        
+    }
+
+    .cont-imagen{
+        width: 100%;
+    }
+
+    #definicion{
+        width: 100%;
+        padding: 2rem;
+        color: v.$blanco;
+        background: v.$colorFuente;
+        text-align: center;
+        font-weight: 700;
+        border-radius: 2rem;        
+    }
+
+    .instrucciones-mano{
+        position: absolute;
+        top: 45%;
+        left: 5%;
+        width: 25rem;
+        
+        .cont-imagen{
+            width: 6rem;
+        }
+    }
+}
+
+#carouselComite{
+    margin-top: 6rem;
+    min-height: 20rem;
+    max-height: auto;
+    text-align: center;
+    background: v.$gris1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 15%;
+    border-radius: 2rem;
+    border: 2px solid v.$azul1;
+    box-shadow: -2px 2px 18px -5px rgba(0,0,0,0.75);
+
+    p{
+        font-size: 2.4rem;
+        @include m.resaltar(v.$colorFuente, 700);
+
+        @include m.escritorio{
+            font-size: 1.8rem;
+        }
+
+        @include m.tablet{
+            font-size: 1.6rem;
+        }
+    }
+}
+
+#oficialCumplimiento{
+
+    margin: 6rem 0;
+    
+    h3{
+        background: v.$gris1;
+        color: v.$azulRey;
+        padding: 3.2rem;
+        text-align: center;
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+    }
+
+    #contenedor-info{
+        @include m.grid(2, 0);
+
+        @include m.escritorioHD{
+            @include m.grid(1, 2rem);
+        }
+
+        #cont-funciones{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            background: v.$grisClaro2;
+            flex-wrap: wrap;
+
+
+            #t1{
+                width: 30%;
+
+                @include m.tablet{
+                    display: none;
+                }
+            }
+            
+            #t2{
+                display: none;
+
+                @include m.tablet{
+                    display: block;
+                    width: 30%;
+                    p{
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            #fn-intro{
+                display: none;
+
+                @include m.tablet{
+                    display: block;
+                    width: 50%;
+                }
+            }
+
+            #lista-funciones{
+                width: 60%;
+                @include m.tablet{
+                    width: 100%;
+                }
+
+                .parrafos{
+                    padding: 2rem;
+                    margin-bottom: .5rem;
+                    border: 1px solid v.$grisClaro;
+
+
+
+                    &#principal{
+                        text-align: center;
+                        @include m.resaltar(v.$colorFuente, 700);
+                        background: v.$fondo1;
+
+                        @include m.tablet{
+                            display: none;
+                        }
+                    }
+
+                    &#fn-1{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo2;
+                    }
+
+                    &#fn-2{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo3;
+                    }
+
+                    &#fn-3{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo4;
+                    }
+
+                    &#fn-4{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo5;
+                    }
+
+                    &#fn-5{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo6;
+                    }
+
+                    &#fn-6{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo7;
+                    }
+
+                    &#fn-7{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$blanco;
+                    }
+
+                    &#fn-8{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo9;
+                    }
+                }
+            }
+        }
+
+        #cont-capacitacion{
+
+            background: v.$gris1;
+            
+            h3{
+                background: v.$colorFuente;
+                color: v.$blanco;
+            }
+
+            p{
+                text-align: center;
+            }
+
+            .imagen{
+
+                margin: 3rem 0;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                height: 20rem;
+                background: v.$grisFondo;
+
+                @include m.escritorioHD{
+                    height: 30rem;
+                }
+
+                .cont-imagen{
+                    width: 80%;
+                    height: 80%;
+
+                    @include m.escritorioHD{
+                        width: 60%;
+                    }
+
+                    @include m.tablet{
+                        width: 90%;
+                    }
+                }
+            }
+
+            #cont-figuras{
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: v.$blanco;
+                font-weight: 700;
+                font-size: 1.2rem;
+                flex-wrap: wrap;
+
+                @include m.tablet{
+                    font-size: 1.6rem;
+                }
+
+                #flecha{
+                    width: 40%;
+                    height: 25rem;
+                    background: v.$azulRey;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 2rem 2rem 2rem 1rem;
+                    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+
+                    @include m.escritorioHD{
+                        width: 30%;
+                        height: 25rem;
+                    }
+
+                    @include m.tablet{
+                        width: 100%;
+                        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                        padding: 2rem;
+                        justify-content: center;
+                    }
+                    
+                    p{
+                        width: 80%;
+                    }
+                }
+
+                #cuadro{
+                    width: 40%;
+                    height: 25rem;
+                    background: v.$verde;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 2rem 2rem 2rem 7rem;
+                    clip-path: polygon(0 10%, 0 0, 100% 0, 100% 100%, 48% 100%, 0 100%, 0 90%, 28% 48%);
+
+                    @include m.escritorioHD{
+                        width: 30%;
+                        height: 25rem;
+                    }
+
+                    @include m.tablet{
+                        width: 100%;
+                        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                        padding: 2rem;
+                    }
+
+                    p{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
