@@ -19,5 +19,11 @@ $headings-margin-bottom: 0;
 
 $list-inline-padding: 0;
 
+//Variables para el carrusel
+$carousel-control-color: v.$azul1;
+$carousel-control-width: 10%;
+$carousel-control-icon-width: 4rem;
+
+
 //Importar Bootstrap
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';

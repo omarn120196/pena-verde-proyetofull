@@ -56,47 +56,47 @@ const paginas = [
         progreso: 11
     },
     {
-        nombre: 'Reportes de Operaciones', 
+        nombre: 'Cuentas concentradoras', 
         ruta: 'pag12.html', 
         progreso: 12
     },
     {
-        nombre: 'Reportes de Operaciones', 
+        nombre: 'Estructuras internas: ¿Cuáles son sus funciones?', 
         ruta: 'pag13.html', 
         progreso: 13
     },
     {
-        nombre: 'Página14', 
+        nombre: 'Sistemas automatizados', 
         ruta: 'pag14.html', 
         progreso: 14
     },
     {
-        nombre: 'Página15', 
+        nombre: 'Sistemas automatizados Pt.2', 
         ruta: 'pag15.html', 
         progreso: 15
     },
     {
-        nombre: 'Página16', 
+        nombre: 'Listas de personas bloqueadas', 
         ruta: 'pag16.html', 
         progreso: 16
     },
     {
-        nombre: 'Página17', 
+        nombre: 'Metodología de Evaluación de Riesgos PLD/CFT', 
         ruta: 'pag17.html', 
         progreso: 17
     },
     {
-        nombre: 'Página18', 
+        nombre: 'Actividad 1', 
         ruta: 'pag18.html', 
         progreso: 18
     },
     {
-        nombre: 'Página19', 
+        nombre: 'Historia de cambios en la regulación', 
         ruta: 'pag19.html', 
         progreso: 19
     },
     {
-        nombre: 'Página20', 
+        nombre: 'Relación entre la regulación y nuestro Manual de Cumplimiento de PLD/CFT', 
         ruta: 'pag20.html', 
         progreso: 20
     },
