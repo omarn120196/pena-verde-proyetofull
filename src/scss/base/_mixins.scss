@@ -514,7 +514,7 @@
     }
 }
 
-@mixin flip-cardsPag12 ($intensidad, $fondo) {
+@mixin flip-cardsPag12 ($intensidad, $fondo, $borde) {
     background: $fondo;
     border-radius: 2rem;
     
@@ -527,7 +527,9 @@
     .back{
         overflow: hidden;
         border-radius: 2rem;
+        border: solid 1rem $borde;
         box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.75);
+        
     }
 
     .cont-titulo{
