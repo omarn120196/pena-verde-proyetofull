@@ -1,4 +1,4 @@
-function seleccionarInfo06(){
+function seleccionarInfo05(){
     
     const btnInfo06 = document.querySelectorAll('.btn-info06');
     

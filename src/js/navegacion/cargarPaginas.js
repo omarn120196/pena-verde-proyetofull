@@ -83,9 +83,18 @@ function visualizarPagina(){
 
             //Script página04
             seleccionarInfo04();
-
-            //Script página06
-            seleccionarInfo06();
+          
+            //Script página05
+            seleccionarInfo05();
+          
+            // Scrip página06
+            visualizarCuadro1();
+          
+            // Scrip página07
+            visualizarPag07();
+          
+            //Script página11
+            voltearCards(); 
         });
     }
 }
