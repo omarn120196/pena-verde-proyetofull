@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="504.194" height="396.912" viewBox="0 0 504.194 396.912">
+  <g id="Grupo_115" data-name="Grupo 115" transform="translate(-26.04 -258.235)">
+    <path id="Trazado_330" data-name="Trazado 330" d="M134.04,127.789A137.627,137.627,0,0,0,0,0L18.655,35.9a6.97,6.97,0,0,1-.332,6.986L1.44,68.971a68.789,68.789,0,0,1,64.117,68.622A68.488,68.488,0,0,1,57.3,170.286l16.557,29.3a1.1,1.1,0,0,0,.954.559l44.227.127v.311c10.677-22.455,16.764-48.025,15-72.794" transform="translate(184.986 372.184) rotate(-42)" fill="#0c8f5a"/>
+    <path id="Trazado_331" data-name="Trazado 331" d="M192.008,30.57a6.971,6.971,0,0,1-6.035-3.535L171.036.6a68.729,68.729,0,0,1-57.064,30.358A68.721,68.721,0,0,1,56.522,0L51.594.032,23.126.22a1.1,1.1,0,0,0-.95.563L1.007,38.569l-.447.8-.395-.22L.082,39.1,0,39.263c14.182,20.962,31.064,35.6,53.828,46.661A137.62,137.62,0,0,0,233.312,30.689Z" transform="translate(215.268 580.984) rotate(-42)" fill="#002f87"/>
+    <path id="Trazado_332" data-name="Trazado 332" d="M68.817,137.506A68.784,68.784,0,0,1,135.4,68.765l18.863-29.152a1.1,1.1,0,0,0,.053-1.1L134.3,0l-6.464.225c-25.246,1.8-46.361,9.1-67.322,23.286A137.615,137.615,0,0,0,20.385,209.547l20.324-36.282a6.968,6.968,0,0,1,6.021-3.556l29.986-.2a68.478,68.478,0,0,1-7.9-32" transform="translate(80.369 466.498) rotate(-42)" fill="#e96247"/>
+    <text id="Etapas_de_Diseño_Identificación_Medición_Mitigación" data-name="Etapas de Diseño
+   Identificación
+   Medición
+   Mitigación" transform="translate(338.234 258.235)" fill="#0c8f5a" font-size="15" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="16">Etapas de Diseño</tspan><tspan x="0" y="36" xml:space="preserve">   Identificación</tspan><tspan x="0" y="56" xml:space="preserve">   Medición</tspan><tspan x="0" y="76" xml:space="preserve">   Mitigación</tspan></text>
+    <text id="Valoración" transform="translate(26.04 598.721)" fill="#e96247" font-size="15" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="16">Valoración</tspan></text>
+    <text id="Etapas_de_la_Metodología_" data-name="Etapas de la Metodología
+" transform="translate(212.143 454.168)" fill="#1a1e1e" font-size="15" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="16.283" y="16">Etapas de la </tspan><tspan x="14.266" y="36">Metodología</tspan></text>
+    <text id="Implementación" transform="translate(368.777 622.221)" fill="#002f87" font-size="15" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="16">Implementación</tspan></text>
+    <path id="Trazado_333" data-name="Trazado 333" d="M0,35V0H66.252" transform="translate(66.995 561.142)" fill="none" stroke="#e96247" stroke-width="1"/>
+    <path id="Trazado_334" data-name="Trazado 334" d="M-477.945,541V525.965h64.581" transform="translate(734.226 -209.358)" fill="none" stroke="#0c8f5a" stroke-width="1"/>
+    <path id="Trazado_335" data-name="Trazado 335" d="M57.01,30.784V0H0" transform="translate(380.767 580.937)" fill="none" stroke="#002f87" stroke-width="1"/>
+    <circle id="Elipse_4" data-name="Elipse 4" cx="2.268" cy="2.268" r="2.268" transform="translate(338.234 285.812)" fill="#0c8f5a"/>
+    <circle id="Elipse_5" data-name="Elipse 5" cx="2.268" cy="2.268" r="2.268" transform="translate(338.234 307.812)" fill="#0c8f5a"/>
+    <circle id="Elipse_6" data-name="Elipse 6" cx="2.268" cy="2.268" r="2.268" transform="translate(338.234 327.106)" fill="#0c8f5a"/>
+  </g>
+</svg>
