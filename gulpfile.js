@@ -22,7 +22,9 @@ const rutas = {
     js: 'src/js/**/*.js',
     imagenes: 'src/img/**/*',
     jquery: 'node_modules/jquery/dist/jquery.min.js',
-    aos: 'node_modules/aos/dist/aos.js'
+    aos: 'node_modules/aos/dist/aos.js',
+    bootstrapJS: 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+    bootstrapMAP: 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map'
 }
 
 //------------------Funciones------------------//
@@ -89,9 +91,27 @@ function aos(done){
     done();
 }
 
+function bootstrap(done){
+
+    src(rutas.bootstrapJS)
+    .pipe(dest('build/js'));
+
+    done();
+}
+
+function bootstrapMAP(done){
+
+    src(rutas.bootstrapMAP)
+    .pipe(dest('build/js'));
+
+    done();
+}
+
 exports.compilarCSS = compilarCSS;
 exports.compilarJS = compilarJS;
 exports.minificarIMG = minificarIMG;
 exports.watchArchivos = watchArchivos;
 exports.aos = aos;
 exports.jquery = jquery;
+exports.bootstrap = bootstrap;
+exports.bootstrapMAP = bootstrapMAP;
