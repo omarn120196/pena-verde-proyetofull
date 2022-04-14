@@ -94,7 +94,10 @@ function visualizarPagina(){
             visualizarPag07();
           
             //Script página11
-            voltearCards(); 
+            voltearCards();
+            
+            //Script página14
+            visualizarInfo14();
         });
     }
 }
