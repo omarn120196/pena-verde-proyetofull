@@ -95,10 +95,13 @@ function visualizarPagina(){
           
             //Script página11
             voltearCards();
-            
+          
             // Scrip página12
             visualizarPag12();
             voltearCardsPag12();
+          
+            //Script página14
+            visualizarInfo14();
         });
     }
 }
