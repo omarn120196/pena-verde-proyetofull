@@ -96,9 +96,12 @@ function visualizarPagina(){
             //Script página11
             voltearCards();
           
-            // Scrip página12
+            // Script página12
             visualizarPag12();
             voltearCardsPag12();
+          
+            //Script página15
+            visualizarGlobos();
           
             //Script página14
             visualizarInfo14();

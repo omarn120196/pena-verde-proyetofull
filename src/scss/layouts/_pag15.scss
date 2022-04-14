@@ -1,0 +1,253 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+#instrucciones{
+    position: relative;
+    display: flex;
+    background: v.$azulClaro2;
+    height: 10rem;
+    width: 50%;
+
+    @include m.tablet{
+        width: 100%;
+    }
+
+    @include m.telefono{
+        height: 15rem;
+    }
+
+    .mano{
+        padding: 2rem;
+        height: 10rem;
+        width: 13rem;
+
+        @include m.telefono{
+            width: 20rem;
+        }
+    }
+
+    p{
+        padding: 2rem;
+        text-align: center;
+    }
+}
+
+#cont-verde{
+    position: relative;
+    display: flex;
+    background: v.$verde;
+    height: 20rem;
+
+    @include m.telefono{
+        height: 40rem;
+    }
+
+    .globos12{
+        display: none;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+
+    .personaje1{
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        @include m.escritorioHD{
+            width: 90%;
+        }
+
+        @include m.telefono{
+            height: 50%;
+            top: 20rem;
+        }
+    }
+
+    #globo1{
+        display: flex;
+        @include m.globoNegro(izquierda);
+        width: 70%;
+        height: 50%;
+        top: 2rem;
+
+        @include m.escritorioHD{
+            height: 70%;
+        }
+
+        @include m.tablet{
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+
+        &.cuadros_activos{
+            display: block;
+            opacity: 1;
+        }
+
+    }
+}
+
+#columnas{
+    position: relative;
+    @include m.grid(2, 0);
+    display: flex;
+
+    @include m.tablet{
+        @include m.grid(1, 0);
+    }
+
+    .globos12{
+        display: none;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+
+    #cont-azul{
+        position: relative;
+        display: flex;
+        width: 70%;
+        height: 60rem;
+        background: v.$azul2;
+
+        @include m.tablet{
+            height: 20rem;
+            width: 100%;
+        }
+
+        @include m.telefono{
+            height: 35rem;
+        }
+
+        .personaje2{
+            position: relative;
+            height: 70%;
+            top: 18rem;
+
+            @include m.tablet{
+                height: 90%;
+                width: 70%;
+                top: 2rem
+            }
+
+            @include m.telefono{
+                height: 50%;
+                top: 18rem;
+            }
+        }
+
+        #globo2{
+            @include m.globoNegro(izquierda);
+            width: 50%;
+            height: 60%;
+            display: flex;
+            padding: 2rem;
+            margin-top: 2rem;
+            margin-right: 2rem;
+
+            @include m.escritorioHD{
+                height: 70%;
+            }
+
+            @include m.tablet{
+                width: 100%;
+                height: 100%;
+                margin-top: 0;
+                margin-right: 0;
+            }
+            @include m.telefono{
+                right: 3rem;
+            }
+
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+
+    #cont-gris{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 60rem;
+        background: v.$grisPag07;
+
+        #cont-img{
+            height: 75%;
+
+            #globo3{
+                @include m.globoNegro(derecha);
+                position: relative;
+                display: flex;
+                width: 60%;
+                margin-top: 2rem;
+                margin-left: 2rem;
+
+                @include m.telefono{
+                    width: 90%;
+                    margin-top: 0;
+                    margin-left: 0;
+                
+                }
+
+                &.cuadros_activos{
+                    display: block;
+                    opacity: 1;
+                }
+            }
+
+            #correo{
+                background: v.$blanco;
+                position: relative;
+                width: 60%;
+                margin-top: 2rem;
+                margin-left: 2rem;
+                padding: 2rem;
+                @include m.resaltar(v.$azulRey, 500);
+
+                @include m.telefono{
+                    width: 100%;
+                    margin-top: 0;
+                    margin-left: 0;
+
+                }
+            }
+
+            .personaje3{
+                position: relative;
+                top: -23rem;
+                left: 47rem;
+                height: 80%;
+                width: 30%;
+
+                @include m.escritorioHD{
+                    left: 70%;
+                }
+
+                @include m.telefono{
+                    top: 5rem;
+                    left: 5rem;
+                }
+            }
+        }
+
+        #cont-rojo{
+            position: relative;
+            display: flex;
+            background: v.$warning;
+            height: 21%;
+            width: 100%;
+
+            p{
+                @include m.resaltar(v.$blanco, 500);
+                padding: 2rem;
+            }
+
+            .warning{
+                padding: 2rem;
+            }
+        }
+    }
+}
