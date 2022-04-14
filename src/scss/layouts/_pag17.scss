@@ -178,8 +178,9 @@
     }
     .dialogo3{
         width: 80%;
+        @include m.globoNegro(izquierda);
         p{
-            @include m.globoNegro(izquierda);
+            
             margin-top: 3.5%;
             margin-left: 10%;
             padding-bottom: 2%;
