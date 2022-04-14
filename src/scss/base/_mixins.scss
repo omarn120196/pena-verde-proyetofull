@@ -250,6 +250,10 @@
     color: v.$blanco;
     text-align: center;
 
+    @include tablet{
+        border-radius: 0;
+    }
+
     &::after{
         content: '';
         position: absolute;
@@ -463,6 +467,93 @@
             p{
                 color: darken($color, 20);
             }
+
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar{
+                opacity: 1;
+                width: .5rem;
+            }
+        
+            &::-webkit-scrollbar-thumb{
+                background: v.$blanco;
+                border-radius: 1rem;
+            }
+            
+        }        
+    }
+}
+
+@mixin cardsPag12 ($borde, $circulo){
+    position: relative;
+    text-align: center;
+    width: 90%;
+    height: 65%;
+    background: v.$blanco;
+    border-radius: 2rem;
+    border: solid $borde;
+    top: 5rem;
+    margin-left: 1.5rem;
+    padding: 2rem;
+
+    @include escritorioHD{
+        top: 1rem;
+        height: 72%;
+    }
+
+    @include tablet{
+        height: 75%;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        clip-path: circle(9.6% at 50% 50%);
+        background: $circulo;
+        width: 4rem;
+        height: 3rem;
+        top: -20%;
+        left: 40%;
+
+        @include escritorioHD{
+            top: -12%;
+        }
+    }
+}
+
+@mixin flip-cardsPag12 ($intensidad, $fondo, $borde) {
+    background: $fondo;
+    border-radius: 2rem;
+    
+    .front{
+        overflow: hidden;
+        border-radius: 2rem;
+        box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.75);
+    }
+
+    .back{
+        overflow: hidden;
+        border-radius: 2rem;
+        border: solid 1rem $borde;
+        box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.75);
+        
+    }
+
+    .cont-titulo{
+        position: relative;
+        margin-bottom: 3.2rem;
+    }
+    .back{
+
+        .cont-titulo{
+            margin-bottom: 1rem; 
+        }
+
+        .cont-mensaje-back{
+            height: 80%;
+            padding-bottom: 5rem;
+            overflow-y: scroll;
 
             -ms-overflow-style: none;
             scrollbar-width: none;
