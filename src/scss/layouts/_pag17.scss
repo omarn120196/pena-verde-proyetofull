@@ -178,7 +178,6 @@
     }
     .dialogo3{
         width: 80%;
-        max-width: 600px;
         p{
             @include m.globoNegro(izquierda);
             margin-top: 3.5%;
@@ -187,7 +186,7 @@
             width: 80%;
             height: 70%;
             min-height: 30px;
-            font-size: 1.2vw;
+            font-size: 1.1vw;
             
         }
     }
