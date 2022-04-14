@@ -99,6 +99,9 @@ function visualizarPagina(){
             // Scrip página12
             visualizarPag12();
             voltearCardsPag12();
+
+            //Scrip página15
+            visualizarGlobos();
         });
     }
 }
