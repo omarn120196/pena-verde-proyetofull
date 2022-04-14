@@ -4,7 +4,7 @@
 .menu__side{
 
     width: 8rem;
-    height: 100%;
+    height: 100vh;
     background: v.$azul1;
     position: fixed;
     top: 8rem;
@@ -12,7 +12,7 @@
     font-size: 1.8rem;
     z-index: 21;
     overflow: hidden;
-    border-right: 2rem solid v.$azul1;
+    // border-right: 2rem solid v.$azul1;
     transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
     box-shadow: 14px -1px 4px -11px rgba(0,0,0,0.59);
 
@@ -23,12 +23,9 @@
         align-items: center;
     }
 
-    // &::-webkit-scrollbar{
-    //     display: none;
-    // }
-
-    // -ms-overflow-style: none;
-    // scrollbar-width: none;
+    i{
+        margin-right: 3.6rem;
+    }
 
     &.side__move{
         width: 25rem;
@@ -45,6 +42,7 @@
 }
 
 .barra__progreso{
+    height: 6rem;
     padding: 2rem 3rem;
 
     .barra{
@@ -76,13 +74,35 @@
 }
 
 .options__menu{
+    margin-top: 2rem;
     padding: 2rem 3rem;
-    position: absolute;
-    top: 18rem;
+    height: 50%;
+    overflow-x: hidden;
     overflow-y: scroll;
+    transition: all .3s ease;
+
+    &::-webkit-scrollbar{
+        opacity: 0;
+    }
+    
+    &:hover{
+        &::-webkit-scrollbar{
+            opacity: 1;
+            width: .5rem;
+        }
+    
+        &::-webkit-scrollbar-thumb{
+            background: v.$blanco;
+            border-radius: 1rem;
+        }
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     a{
         color: v.$gris1;
+        opacity: 60%;
         cursor: default;
         display: block;
         position: relative;
@@ -90,6 +110,8 @@
 
         &:hover{
             color: v.$blanco;
+            opacity: 100%;
+            cursor: pointer;
         }
 
         &.select{
@@ -113,13 +135,8 @@
             align-items: center;
             position: relative;
 
-            i{
-                cursor: pointer;
-            }
-
             h4{
                 font-weight: 300;
-                cursor: pointer;
             }
         }
     }

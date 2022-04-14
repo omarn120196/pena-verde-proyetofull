@@ -1,0 +1,223 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+#cont-azul{
+    position: relative;
+    height: 7rem;
+    background: v.$azulRey;
+
+    @include m.tablet{
+        height: 5rem;
+    }
+    
+}
+
+#principal{
+    position: relative;
+    @include m.grid(2, 0);
+    display: flex;
+
+    @include m.escritorio{
+        @include m.grid(1, 0);
+    }
+
+    #cont-small{
+        position: relative;
+        width: 30%;
+        background: v.$naranja;
+
+        @include m.escritorio{
+            width: 100%;
+        }
+
+        #text{
+            position: relative;
+            display: flex;
+            text-align: center;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            top: 3rem;
+            border-radius: 2rem 2rem 2rem 2rem;
+            padding: 2rem 2rem 2rem 6rem;
+            background: v.$azulClaro1;
+            @include m.resaltar(v.$colorFuente, 400);
+
+            @include m.escritorio{
+                margin-right: 0;
+                border-radius: 0;
+                margin-left: 9rem;
+            }
+
+            .mano{
+                position: absolute;
+                left: 1rem;
+            }
+        }
+
+        .personaje{
+            display: flex;
+            height: 60%;
+            margin-bottom: -1rem;
+            margin-top: 20rem;
+
+            @include m.escritorio{
+                margin-top: 25rem;
+                height: 25rem;
+                width: 15rem;
+                margin-top: -5rem;
+            }
+        }
+
+    }
+
+    #cont-big{
+        position: relative;
+        width: 100%;
+        background: v.$rosaPag06;
+
+        #claro{
+            position: relative;
+            height: 25rem;
+            margin-top: 5rem;
+            background: v.$rosaClaroPag06;
+
+            @include m.escritorio{
+                display: none;
+            }
+        }
+
+        #columnas{
+            width: 100%;
+            position: relative;
+            @include m.grid(3, 1rem);
+
+            @include m.escritorio{
+                margin-top: 4rem;
+                @include m.grid(1, 0);
+            }
+
+            .cuadros6{
+                display: none;
+                opacity: 0;
+                transition: all .3s ease;
+            }
+
+            #libro1{
+                margin-top: -26rem;
+
+                @include m.escritorio{
+                    margin-top: 1rem;
+                }
+
+                .libro1{
+                    @include m.imagenLibro;
+
+                    @include m.escritorio{
+                        background: v.$azulFuertePag06;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: v.$azulCielo;
+                        padding: 2rem 0;
+
+                        img{
+                            width: 20rem;
+                        }
+                    }
+                }
+
+                #cuadro1{
+                    @include m.cuadro(v.$azulPag06, v.$azulFuertePag06, center);
+
+                    .texto1{
+                        @include m.resaltar(v.$azulFuente, 600);
+                    }
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+            #libro2{
+                margin-top: -26rem;
+
+                @include m.escritorio{
+                    margin-top: 1rem;
+                }
+
+                .libro2{
+                   @include m.imagenLibro;
+
+                   @include m.escritorio{
+                       width: 100%;
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+                       padding: 2rem 0;
+                       background: v.$naranjaTelPag06;
+                       img{
+                           width: 20rem;
+                       }
+                   }
+
+                }
+
+                #cuadro2{
+                    @include m.cuadro(v.$naranjaPag06, v.$naranjaFuertePag06, left);
+
+                    .texto2{
+                        @include m.resaltar(v.$naranjaFuentePag06, 600);
+                    }
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+            #libro3{
+                margin-top: -26rem;
+
+                @include m.escritorio{
+                    margin-top: 1rem;
+                }
+
+                .libro3{
+                   @include m.imagenLibro;
+
+                   @include m.escritorio{
+                       background: v.$verdeTelPag06;
+
+                       @include m.escritorio{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 2rem 0;
+                        background: v.$verdeTelPag06;
+                        img{
+                            width: 20rem;
+                        }
+                    }
+                   }
+                }
+
+                #cuadro3{
+                    @include m.cuadro(v.$verdeClaroPag03, v.$verdeFuertePag06, center);
+
+                    .texto3{
+                        @include m.resaltar(v.$verde, 600);
+                    }
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
