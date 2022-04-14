@@ -102,6 +102,9 @@ function visualizarPagina(){
           
             //Script página14
             visualizarInfo14();
+
+            //Script página24
+            flipCard();
         });
     }
 }
