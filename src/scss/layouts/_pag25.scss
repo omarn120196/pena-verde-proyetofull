@@ -2,11 +2,14 @@
 @use '../base/mixins' as m;
 
 #intro-actividad25{
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: v.$grisFondo;
+
+    &.retro{
+        display: none;
+    }
 
     .cont-imagen{
         width: 20%;
@@ -36,41 +39,12 @@
     align-items: center;
     background: v.$azul1;
 
+    &.retro{
+        display: none;
+    }
+
     a{
-        display: block;
-        padding: 1rem 2rem;
-        color: v.$blanco;
-        background: v.$amarillo;
-        font-weight: 700;
-        border-radius: 1rem;
-        border: 2px solid v.$blanco;
-        overflow: hidden;
-        text-transform: uppercase;
-        position: relative;
-        z-index: 2;
-        transition: all .3s ease;
-
-        &::after{
-            content: '';
-            width: 0;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: darken(v.$amarillo,  10);
-            transition: all .3s ease;
-            z-index: -1;
-        }
-
-        &:hover{
-
-            transform: scale(1.05);
-            box-shadow: 3px 5px 8px -4px rgba(0,0,0,0.75);
-
-            &::after{
-                width: 100%;
-            }
-        }
+        @include m.boton(v.$amarillo);
 
     }
 }
@@ -79,6 +53,11 @@
     
     margin-top: 4rem;
     @include m.grid(5, 1rem);
+    position: relative;
+
+    &.retro{
+        display: none;
+    }
 
     @include m.escritorioHD{
         @include m.grid(1, 1rem);
@@ -227,11 +206,67 @@
                 width: 100%;
                 height: 8rem;
                 transition: all .3s ease;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-weight: 700;
 
                 &:hover{
                     background: darken(v.$grisFondo,  10);
                 }
             }
         }
+    }
+}
+
+
+
+#box{
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75vh;
+    background: v.$azul1;
+    z-index: 10;
+    padding: 6rem 3rem 0 3rem;
+    opacity: 0;
+    transition: all .6s ease;
+
+
+    &.bien{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 1;
+    }
+
+    &::after{
+        content: '';
+        width: 100%;
+        height: 20rem;
+        position: absolute;
+        background: v.$azulRey;
+        top: 40%;
+        left: 0;
+        z-index: -1;
+    }
+
+    .cont-imagen{
+        width: 30%;
+        align-self: flex-end;
+    }
+
+    .cont-mensaje{
+        width: 60%;
+        font-size: 2rem;
+        font-weight: 700;
+        color: v.$blanco;
+        text-align: center;
+        border: 2px solid v.$blanco;
+        padding: 3.2rem;
     }
 }
