@@ -1,0 +1,180 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.cuestionario{
+    display: block;
+    .contenedor2{
+        .contenedor1{
+            display: flex;
+            .persona1{
+                position: absolute;
+                width:14%;
+                padding-left: 10px;
+                z-index: 1;
+                @include m.tablet{
+                    width: 20%;
+                    margin-top: 10%;
+                    margin-left: 1%;
+                }
+                @include m.telefono{
+                    width: 20%;
+                    margin-top: 12%;
+                    margin-left: 0.5%;
+                    float: right;
+                }
+            }
+            .cuadro-azul{
+                margin-top: 7%;
+                width: 1600px;
+                height: 35%;
+                background-color: #002F87;
+                color: #fff;
+                margin-left: -30%;
+                z-index: -1;
+                .txt-azul{
+                    text-align: center;
+                    color: #fff !important;
+                    padding:40px 50px 40px 44.9%;
+                    font-size: 1.4vw;
+                    @include m.tablet{
+                        margin-top: 5px;
+                        font-size: 2.1vw;
+                    }
+                    @include m.telefono{
+                        margin-top: 5px;
+                        font-size: 2.1vw;
+                        height: 15%;
+                    }
+                }
+            }
+                
+        }
+        
+        .iniciar{
+            background-color: #E1E7ED;
+            width: 100%;
+            height: 20%;
+            min-height: 200px;
+            @include m.telefono{
+                height: 15%;
+                min-height: 120px;
+            }
+            button{
+                align-items: center;
+                height: 60px;
+                width: 160px;
+                background-color: #F9C931;
+                border: solid 2px #fff;
+                border-radius: 8px;
+                color: #fff;
+                margin-left: 40%;
+                margin-top: 8%;
+                font-size: 4vh;
+                @include m.telefono{
+                    margin-left: 35%;
+                    margin-top: 10%;
+                    height: 40px;
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    .pregunta{
+        display:none ;
+        .niv1preg{
+            display: flex;
+            height: 12%;
+            min-height: 30px;
+            .num{
+                text-align: center;
+                align-items: center;
+                padding-top: 2.2%; 
+                width:5%;
+                background-color: #002F87;
+                color: #fff;
+                font-size: 2.2vh;
+                font-weight: bold;
+            }
+            .txt-preg{
+                padding: 1.5% 17px;
+                width: 100%;
+                background-color: #C2DCF5;
+                font-size: 1.9vh;
+                font-weight: bold;
+            }
+        }
+        
+        .cuadro-res{
+            display: block;
+            background-color: #EDEDF2;
+            height: 300px;
+            .opcion{
+                display: flex;
+                margin-left: 40%;
+                .cuadro-txt{
+                    padding-top: 10px;
+                    text-align: center;
+                    height: 50px;
+                    width: 200px;
+                    border-radius: 7px;
+                    background-color: #002F87;
+                    color: #fff;
+                    font-weight: bold;
+                    margin-top: 30px;
+                    margin-right: 10px;
+                }
+                .resultado{
+                    img{
+                        height: 40px;
+                        width: 40px;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contenedor3{
+        display: none;
+        position: absolute;
+        background-color: #7AA0DD;
+        width: 100%;
+        max-width: 1200px;
+        height:600px;
+        z-index:3;
+        .persona1{
+            .img{
+                position: absolute;
+                height: 80% !important;
+                width: 90%;
+                min-width:100px;
+                max-width: 200px;
+                padding-top: 5%;
+                margin-top: 100px;
+                z-index:1 ;
+            }
+        }
+        .cuadro-verde{
+            width: 100%;
+            max-width: 1250px;
+            height: 250px;
+            background-color: #0C8F5A;
+            z-index: -1;
+            margin-left: -34.75%;
+            margin-top: 18%;
+            .cuadro-blanco{
+                width: 60%;
+                height: 60%;
+                margin-left:39%;
+                margin-top: 4.5%;
+                background-color: #0C8F5A;
+                color: #fff;
+                border: solid 2px #fff;
+                font-size: 1.7vw;
+                padding: 0.9%;
+                z-index:2 ;
+            }
+        }
+    }
+}
