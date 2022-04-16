@@ -116,12 +116,12 @@ const paginas = [
         progreso: 23
     },
     {
-        nombre: 'Página24', 
+        nombre: 'Marco Legal en México', 
         ruta: 'pag24.html', 
         progreso: 24
     },
     {
-        nombre: 'Página25', 
+        nombre: 'Actividad de Reforzamiento', 
         ruta: 'pag25.html', 
         progreso: 25
     },

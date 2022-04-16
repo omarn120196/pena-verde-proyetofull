@@ -12,6 +12,10 @@ body{
     color: v.$colorFuente;
 }
 
+:root{
+    scroll-behavior: smooth;
+}
+
 .contenedor{
     width: 90%;
     max-width: 120rem;

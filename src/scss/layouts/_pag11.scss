@@ -119,18 +119,6 @@
             }
         }
 
-        // &:hover{
-
-        //     .front{
-        //         transform: perspective(50rem) rotateY(180deg);
-        //     }
-
-        //     .back{
-        //         transform: perspective(50rem) rotateY(360deg);
-        //     }
-
-        // }
-
         &.click{
             .front{
                 transform: perspective(50rem) rotateY(180deg);
