@@ -1,0 +1,237 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+#intro-actividad25{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: v.$grisFondo;
+
+    .cont-imagen{
+        width: 20%;
+    }
+
+    .instrucciones{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
+
+        p{
+            text-align: center;
+            color: v.$blanco;
+            font-weight: 700;
+        }
+    }
+}
+
+.cont-inicio{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: v.$azul1;
+
+    a{
+        display: block;
+        padding: 1rem 2rem;
+        color: v.$blanco;
+        background: v.$amarillo;
+        font-weight: 700;
+        border-radius: 1rem;
+        border: 2px solid v.$blanco;
+        overflow: hidden;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        transition: all .3s ease;
+
+        &::after{
+            content: '';
+            width: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: darken(v.$amarillo,  10);
+            transition: all .3s ease;
+            z-index: -1;
+        }
+
+        &:hover{
+
+            transform: scale(1.05);
+            box-shadow: 3px 5px 8px -4px rgba(0,0,0,0.75);
+
+            &::after{
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+#cont-actividad25{
+    
+    margin-top: 4rem;
+    @include m.grid(5, 1rem);
+
+    @include m.escritorioHD{
+        @include m.grid(1, 1rem);
+    }
+    
+
+    #cont-definiciones{
+        grid-column: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        
+
+        .cont-mano{
+            background: v.$azulClaro2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+            margin-bottom: 2rem;
+
+            @include m.escritorioHD{
+                width: 100%;
+            }
+
+            .cont-imagen{
+                width: 6rem;
+                height: 6rem;
+                border: 5px solid v.$blanco;
+                border-radius: 50%;
+                padding: 1rem;
+            }
+            
+            p{
+                text-align: center;
+            }
+        }
+
+        .cont-drag{
+
+            @include m.escritorioHD{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            
+            p{
+                font-size: 1.4rem;
+                padding: 1rem 2rem;
+                text-align: center;
+                border: 1px solid v.$blanco;
+                font-weight: 700;
+                background: v.$colorFuente;
+                color: v.$blanco;
+                cursor: pointer;
+
+                @include m.escritorioHD{
+                    width: 24%;
+                    height: 6rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    #cont-drop{
+        grid-column: 2/6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6rem 2rem;
+        flex-wrap: wrap;
+
+        @include m.escritorioHD{
+            grid-column: 1/2; 
+            padding: 2rem 0;  
+        }
+
+        .posts{
+            width: 23%;
+            height: 35rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 2rem;
+
+            .cuadro{
+
+                height: 27rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2rem;
+
+                p{
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                }
+
+                &#cuadro1{
+                    @include m.posit(v.$amarillo);
+                }
+
+                &#cuadro2{
+                    @include m.posit(v.$naranjaPag03);
+                }
+
+                &#cuadro3{
+                    @include m.posit(v.$azul1);
+                }
+
+                &#cuadro4{
+                    @include m.posit(v.$verde);
+                }
+
+                &#cuadro5{
+                    @include m.posit(v.$grisFuerte);
+                }
+
+                &#cuadro6{
+                    @include m.posit(v.$lila);
+                }
+
+                &#cuadro7{
+                    @include m.posit(v.$naranja);
+                }
+
+                &#cuadro8{
+                    @include m.posit(v.$azulPag03);
+                }
+
+                p{
+                    text-align: center;
+                }
+            }
+
+            .drop{
+                background: v.$grisFondo;
+                width: 100%;
+                height: 8rem;
+                transition: all .3s ease;
+
+                &:hover{
+                    background: darken(v.$grisFondo,  10);
+                }
+            }
+        }
+    }
+}

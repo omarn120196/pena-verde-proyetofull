@@ -105,6 +105,9 @@ function visualizarPagina(){
 
             //Script página24
             flipCard();
+
+            //Script página25
+            arrastrar();
         });
     }
 }
