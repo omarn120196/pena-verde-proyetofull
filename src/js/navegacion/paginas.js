@@ -126,7 +126,7 @@ const paginas = [
         progreso: 25
     },
     {
-        nombre: 'Página26', 
+        nombre: 'Tipologías y casos', 
         ruta: 'pag26.html', 
         progreso: 26
     },
