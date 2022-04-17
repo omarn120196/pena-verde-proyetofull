@@ -111,6 +111,9 @@ function visualizarPagina(){
 
             //Script página25
             arrastrar();
+
+            //Script 26
+            elegirCaso();
         });
     }
 }
