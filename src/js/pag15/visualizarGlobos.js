@@ -3,7 +3,8 @@ function visualizarGlobos(){
     const btnCuadros = document.querySelectorAll('.btn_cuadros12');
 
     btnCuadros.forEach(boton=>{
-        boton.addEventListener('click', function () {  
+        boton.addEventListener('click', function (e) {
+            e.preventDefault();  
             const cuadro = boton.getAttribute('href');
             const visualizarCuadro = document.querySelector(cuadro);
 

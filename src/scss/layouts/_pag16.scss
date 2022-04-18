@@ -1,0 +1,88 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+#cont-pag16{
+    @include m.grid(2, 0);
+
+    #cont-izquierda{
+        height: 60rem;
+        #cont-img{
+            display: flex;
+            background: v.$azul2;
+            height: 60%;
+
+            .personaje{
+                height: 70%;
+                margin-top: 11rem;
+            }
+
+            #globo1{
+                @include m.globoNegro(izquierda);
+                width: 50%;
+                height: 70%;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+
+        #cont-gris{
+            position: relative;
+            background: v.$grisClaro;
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            #globo2{
+                @include m.globo(v.$vino, arriba);
+                @include m.resaltar(v.$blanco, 500);
+                width: 85%;
+                height: 80%;
+                
+            }
+        }
+    }
+
+    #cont-derecha{
+        #cont-vino{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            background: v.$vino;
+            height: 30%;
+            @include m.resaltar(v.$blanco, 500);
+        }
+
+        #instrucciones{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            .mano{
+                width: 17%;
+            }
+        }
+
+        #botones{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: v.$grisPag07;
+            height: 40%;
+
+            #btn-aseguradora{
+                a{
+                    @include m.botones(v.$azulRey);
+                }
+            }
+            #btn-reaseguradora{
+                a{
+                    @include m.botones(v.$verde);
+                }
+            }
+        }
+    }
+}
