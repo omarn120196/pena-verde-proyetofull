@@ -12,6 +12,10 @@ body{
     color: v.$colorFuente;
 }
 
+:root{
+    scroll-behavior: smooth;
+}
+
 .contenedor{
     width: 90%;
     max-width: 120rem;
@@ -31,6 +35,10 @@ img{
 i{
     width: 2rem;
     margin-right: 2rem;
+}
+
+p{
+    margin: 0;
 }
 
 .contenido{

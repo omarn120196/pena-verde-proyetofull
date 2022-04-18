@@ -105,6 +105,15 @@ function visualizarPagina(){
           
             //Script página14
             visualizarInfo14();
+
+            //Script página24
+            flipCard();
+
+            //Script página25
+            arrastrar();
+
+            //Script 26
+            elegirCaso();
         });
     }
 }
