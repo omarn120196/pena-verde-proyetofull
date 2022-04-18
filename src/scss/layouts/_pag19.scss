@@ -157,6 +157,7 @@
         height: 10%;
         max-height:250px;
         .titulopag19-verde{
+            background-color: #0C8F5A;
             width: 100%;
             text-align: left;
             padding-left: 3%;
@@ -189,9 +190,10 @@
     .contenido6pag19{
         margin-top: -5%;
         background-color: #FAF2D6;
-        height: 65%;
-        min-height: 290px;
-        padding: 5%;
+        height:25%;
+        min-height:222px;
+        max-height:230px;
+        padding: 3.5%;
         .globo2pag19{
             @include m.globoNegro(arriba);
             height: 40%;
