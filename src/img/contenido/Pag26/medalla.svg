@@ -1,0 +1,18 @@
+<svg id="medalla" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="208.317" height="208.317" viewBox="0 0 208.317 208.317">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_156" data-name="Rectángulo 156" width="208.317" height="208.317" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_125" data-name="Grupo 125" clip-path="url(#clip-path)">
+    <path id="Rectángulo_155" data-name="Rectángulo 155" d="M26.664,0H181.652a26.665,26.665,0,0,1,26.665,26.665V181.652a26.665,26.665,0,0,1-26.665,26.665H26.664A26.664,26.664,0,0,1,0,181.653V26.664A26.664,26.664,0,0,1,26.664,0Z" transform="translate(0 0)" fill="#ff3c07"/>
+    <path id="Trazado_419" data-name="Trazado 419" d="M104.158,0H26.664A26.664,26.664,0,0,0,0,26.664V181.652a26.665,26.665,0,0,0,26.664,26.665h77.494Z" fill="#ff7a2d"/>
+    <path id="Trazado_420" data-name="Trazado 420" d="M118.517,30.976,106.283,51.693,93.712,30.827H40.06L79.458,96.2l-.2.33,50.255,5.522,42.652-71.08Z" fill="#00d0ce"/>
+    <path id="Trazado_421" data-name="Trazado 421" d="M128.536,30.976,106.283,65.027l-22.59-34.2H48.075L87.473,96.2l7.817.33h27.6l39.257-65.558Z" fill="#ff7a2d"/>
+    <path id="Trazado_422" data-name="Trazado 422" d="M134.547,30.976l-28.264,44.07L75.677,30.827H56.09L97.492,96.2l-2.2.33h19.585l39.258-65.558Z" fill="#ffe15c"/>
+    <path id="Trazado_423" data-name="Trazado 423" d="M106.426,89.3a50.4,50.4,0,1,0,50.4,50.395,50.454,50.454,0,0,0-50.4-50.395" fill="#ffd000"/>
+    <path id="Trazado_424" data-name="Trazado 424" d="M106.426,179.1a39.4,39.4,0,1,1,39.408-39.4,39.45,39.45,0,0,1-39.408,39.4" fill="#ffc900"/>
+    <path id="Trazado_425" data-name="Trazado 425" d="M73.817,161.785a39.387,39.387,0,1,0,62.944-47.208Z" fill="#ffe15c"/>
+    <path id="Trazado_426" data-name="Trazado 426" d="M106.426,183.5A43.807,43.807,0,1,1,150.237,139.7,43.857,43.857,0,0,1,106.426,183.5m0-78.808a35,35,0,1,0,35,35,35.039,35.039,0,0,0-35-35" fill="#ff7a2d"/>
+  </g>
+</svg>
