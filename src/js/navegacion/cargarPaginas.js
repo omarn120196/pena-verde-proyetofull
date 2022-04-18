@@ -113,7 +113,7 @@ function visualizarPagina(){
             arrastrar();
 
             //Script 26
-            elegirCaso();
+            iniciarCasos()
         });
     }
 }

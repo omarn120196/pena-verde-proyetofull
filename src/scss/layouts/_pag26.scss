@@ -128,6 +128,10 @@
             padding: 2rem;
             flex-wrap: wrap;
 
+            &.ocultar{
+                display: none;
+            }
+
             #cont-titulo{
                 width: 20%;
                 height: 100%;
@@ -162,6 +166,7 @@
 
                 @include m.tablet{
                     width: 50%;
+                    margin: 0 auto;
                 }
             }
 
@@ -184,7 +189,7 @@
                 }
 
                 @include m.tablet{
-                    width: 50%;
+                    width: 100%;
                 }
             }
 
@@ -214,6 +219,10 @@
             background: v.$azulClaro2;
             padding: 2rem;
 
+            &.ocultar{
+                display: none;
+            }
+
             .cont-imagen{
                 width: 6rem;
                 height: 6rem;
@@ -231,6 +240,10 @@
             margin-top: 6rem;
             padding: 2rem;
             background: v.$grisFondo;
+
+            &.ocultar{
+                display: none;
+            }
 
             #carouselAseguradora{
                 border-radius: 2rem;
@@ -254,11 +267,12 @@
                     height: 25rem;
 
                     @include m.tablet{
-                        height: 40rem;
+                        height: 45rem;
                     }
                     
                     .informacion{
                         width: 70%;
+                        font-weight: 500;
 
                         @include m.tablet{
                             width: 100%;
@@ -280,9 +294,184 @@
                         }
                     }
                 }
-
-                
             }
+
+            #cont-inicio{
+                margin: 4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a{
+                    display: block;
+                    @include m.boton(v.$amarillo);
+                }
+            }
+        }
+
+        #cont-preguntasAseguradora{
+            display: none;
+            transition: all .6s ease;
+
+            &.visualizar{
+                display: block
+            }
+
+            .preguntasAseguradora{
+                display: none;
+                transition: all .6s ease;
+                background: v.$grisFondo;
+
+                .encabezado{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    height: 12rem;
+
+                    @include m.escritorio{
+                        height: auto;
+                    }
+
+                    .cont-imagen{
+                        margin: 0;
+                        width: 10%;
+
+                        @include m.escritorio{
+                            width: 20%;
+                        }
+                    }
+
+                    .pregunta{
+                        width: 60%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        background: v.$colorFuente;
+                        color: v.$blanco;
+                        padding: 2rem;
+
+                        @include m.escritorio{
+                            width: 80%;
+                        }
+                    }
+
+                    .instruccion{
+                        width: 30%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 2rem;
+                        background: v.$azulClaro2;
+
+                        .cont-imagen{
+                            padding: 1rem;
+                            width: 6rem;
+                            height: 6rem;
+                            border-radius: 50%;
+                            border: 5px solid v.$blanco;
+                        }
+
+                        p{
+                            width: 70%;
+                        }
+
+                        @include m.escritorio{
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .opciones{
+                    margin-top: 4rem;
+                    position: relative;
+
+                    .cont-bloquear{
+                        position: absolute;
+                        background: transparent;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: none;
+
+                        &.activado{
+                            display: block;
+                        }
+                    }
+
+                    .opcionInciso{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 4rem;
+
+                        .inciso{
+                            width: 10%;
+                            color: v.$azulRey;
+                            
+                            h4{
+                                font-size: 2.4rem;
+                                font-weight: 700;
+                            }
+                        }
+
+                        .respuesta{
+                            padding: 2rem;
+                            width: 80%;
+                            background: v.$blanco;
+                            cursor: pointer;
+                            transition: all .3s ease;
+
+                            &:hover{
+                                transform: scale(1.01);
+                                box-shadow: 0px 1px 4px 2px rgba(0,0,0,0.75);
+                            }
+
+                            &.fondoCorrecto{
+                                background: v.$verde;
+                                color: v.$blanco;
+                                cursor: default;
+                            }
+                            
+                            &.fondoIncorrecto{
+                                background: v.$rojo2;
+                                color: v.$blanco;
+                                cursor: default;
+                            }
+                        }
+                    }
+                    
+                }
+
+                .cont-btn{
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 10rem;
+
+                    a{
+                        display: none;
+                        @include m.boton(v.$verde);
+
+                        &.visualizar{
+                            display: block;
+                        }
+                    }
+                }
+
+
+                &.visualizar{
+                    display: block;
+                }
+            }
+        }
+
+        #retro-aseguradora{
+            display: none;
         }
     }
 
@@ -292,5 +481,37 @@
 
     &#caso-reaseguradora{
 
+    }
+}
+
+.respuesta-correcta{
+    animation: parpadeaVerde 2s 1;    
+}
+
+.respuesta-incorrecta{
+    animation: parpadeaRojo 2s 1;
+}
+
+
+
+@keyframes parpadeaVerde {
+    0%, 50%, 100%{
+        background: v.$verde;
+        color: v.$blanco;
+    }
+    25%, 75%{
+        background: v.$blanco;
+        color: v.$colorFuente;
+    }
+}
+
+@keyframes parpadeaRojo {
+    0%, 50%, 100%{
+        background: v.$rojo2;
+        color: v.$blanco;
+    }
+    25%, 75%{
+        background: v.$blanco;
+        color: v.$colorFuente;
     }
 }
