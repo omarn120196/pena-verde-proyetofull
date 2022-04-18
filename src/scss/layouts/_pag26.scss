@@ -456,6 +456,7 @@
                     a{
                         display: none;
                         @include m.boton(v.$verde);
+                        transition: all .3s ease;
 
                         &.visualizar{
                             display: block;

@@ -71,7 +71,7 @@ const paginas = [
         progreso: 14
     },
     {
-        nombre: 'Sistemas automatizados Pt.2', 
+        nombre: 'Sistemas automatizados', 
         ruta: 'pag15.html', 
         progreso: 15
     },
@@ -101,17 +101,17 @@ const paginas = [
         progreso: 20
     },
     {
-        nombre: 'Página21', 
+        nombre: 'Actividad 2', 
         ruta: 'pag21.html', 
         progreso: 21
     },
     {
-        nombre: 'Página22', 
+        nombre: 'Lavado de Dinero', 
         ruta: 'pag22.html', 
         progreso: 22
     },
     {
-        nombre: 'Página23', 
+        nombre: 'Organismos y autoridades que participan en la prevención del Lavado de Dinero y Combate al Financiamiento al Terrorismo', 
         ruta: 'pag23.html', 
         progreso: 23
     },
