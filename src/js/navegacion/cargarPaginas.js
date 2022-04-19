@@ -88,7 +88,7 @@ function visualizarPagina(){
             seleccionarInfo05();
           
             // Scrip página06
-            visualizarCuadro1();
+            visualizarPag06();
           
             // Scrip página07
             visualizarPag07();

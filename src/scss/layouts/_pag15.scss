@@ -6,7 +6,8 @@
     position: relative;
     display: flex;
     background: v.$azulClaro2;
-    height: 10rem;
+    overflow: visible;
+    height: 30%;
     width: 50%;
 
     @include m.tablet{
@@ -36,8 +37,9 @@
 #cont-verde{
     position: relative;
     display: flex;
+    overflow: hidden;
     background: v.$verde;
-    height: 20rem;
+    height: 20%;
 
     @include m.telefono{
         height: 40rem;
@@ -78,6 +80,10 @@
         @include m.tablet{
             width: 100%;
             height: 100%;
+            top: 2rem;
+        }
+
+        @include m.telefono{
             top: 0;
         }
 
@@ -93,6 +99,9 @@
     position: relative;
     @include m.grid(2, 0);
     display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 
     @include m.tablet{
         @include m.grid(1, 0);
@@ -105,6 +114,7 @@
     }
 
     #cont-azul{
+        overflow: hidden;
         position: relative;
         display: flex;
         width: 70%;
@@ -152,12 +162,13 @@
 
             @include m.tablet{
                 width: 100%;
-                height: 100%;
-                margin-top: 0;
+                height: 80%;
+                margin-top: 2rem;
                 margin-right: 0;
             }
             @include m.telefono{
-                right: 3rem;
+                height: 100%;
+                margin-top: 0;
             }
 
             &.cuadros_activos{
@@ -168,25 +179,29 @@
     }
 
     #cont-gris{
+        overflow: hidden;
         position: relative;
         display: block;
         width: 100%;
         height: 60rem;
         background: v.$grisPag07;
 
+        @include m.telefono{
+            height: auto;
+        }
+
         #cont-img{
             height: 75%;
 
             #globo3{
                 @include m.globoNegro(derecha);
-                position: relative;
                 display: flex;
                 width: 60%;
-                margin-top: 2rem;
+                margin-top: 8%;
                 margin-left: 2rem;
 
                 @include m.telefono{
-                    width: 90%;
+                    width: 100%;
                     margin-top: 0;
                     margin-left: 0;
                 
@@ -201,17 +216,14 @@
             #correo{
                 background: v.$blanco;
                 position: relative;
-                width: 60%;
+                width: auto;
                 margin-top: 2rem;
-                margin-left: 2rem;
                 padding: 2rem;
                 @include m.resaltar(v.$azulRey, 500);
 
                 @include m.telefono{
-                    width: 100%;
-                    margin-top: 0;
-                    margin-left: 0;
-
+                    padding: 1rem;
+                    font-size: 15px;
                 }
             }
 
@@ -227,8 +239,8 @@
                 }
 
                 @include m.telefono{
-                    top: 5rem;
-                    left: 5rem;
+                    top: 2rem;
+                    left: 10rem;
                 }
             }
         }
@@ -246,7 +258,15 @@
             }
 
             .warning{
-                padding: 2rem;
+                padding: 3rem;
+
+                @include m.telefono{
+                    position: relative;
+                    width: 20rem;
+                    top: 2rem;
+                    height: 10rem;
+                    padding: 1rem;
+                }
             }
         }
     }
