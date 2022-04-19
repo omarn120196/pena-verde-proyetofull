@@ -646,3 +646,34 @@
             }
         }
 }
+
+@mixin conceptual($color){
+    background: v.$colorFuente;
+
+        .titulo{
+            width: 100%;
+            background: $color;
+            text-align: center;
+            padding: 2rem;
+            @include resaltar(v.$blanco, 500);
+        }
+
+        p{
+            position: relative;
+            left: 10%;
+            padding: 1rem;
+            width: 80%;
+            top: 2rem;
+            background: v.$azulPag16;
+
+            @include tablet{
+                width: 90%;
+                left: 3rem;
+            }
+
+            @include telefono{
+                width: 100%;
+                left: 0;
+            }
+        }
+}

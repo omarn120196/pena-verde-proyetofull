@@ -5,8 +5,25 @@
 #cont-pag16{
     @include m.grid(2, 0);
 
+    @include m.tablet{
+        @include m.grid(1, 0);
+    }
+
     #cont-izquierda{
         height: 60rem;
+
+        @include m.escritorioHD{
+            height: 80rem;
+        }
+
+        @include m.tablet{
+            height: 50rem;
+        }
+
+        @include m.telefono{
+            height: 80rem;
+        }
+
         #cont-img{
             display: flex;
             background: v.$azul2;
@@ -15,6 +32,24 @@
             .personaje{
                 height: 70%;
                 margin-top: 11rem;
+
+                @include m.escritorioHD{
+                    height: 60%;
+                    margin-top: 20rem;
+                }
+
+                @include m.tablet{
+                    margin-top: 11rem;
+                    height: 65%;
+                }
+
+                @include m.telefono{
+                    position: absolute;
+                    overflow: hidden;
+                    margin-top: 28rem;
+                    height: 20rem;
+                    width: 20rem;
+                }
             }
 
             #globo1{
@@ -24,6 +59,18 @@
                 margin-top: 1rem;
                 margin-left: 1rem;
                 margin-right: 1rem;
+
+                @include m.escritorioHD{
+                    height: 100%;
+                    margin-top: 0;
+                }
+
+                @include m.tablet{
+                    margin-right: 0;
+                    margin-left: 0;
+                    height: 50%;
+                    width: 100%;
+                }
             }
         }
 
@@ -40,6 +87,16 @@
                 @include m.resaltar(v.$blanco, 500);
                 width: 85%;
                 height: 80%;
+
+                @include m.escritorioHD{
+                    height: 90%;
+                    width: 90%;
+                }
+
+                @include m.tablet{
+                    width: 100%;
+                    height: 100%;
+                }
                 
             }
         }
@@ -53,6 +110,10 @@
             background: v.$vino;
             height: 30%;
             @include m.resaltar(v.$blanco, 500);
+
+            @include m.telefono{
+                margin-top: 1rem;
+            }
         }
 
         #instrucciones{
@@ -61,28 +122,100 @@
             align-items: center;
             width: 100%;
 
+            @include m.tablet{
+                height: 7rem;
+            }
+
             .mano{
                 width: 17%;
+
+                @include m.tablet{
+                    width: 15%;
+                    margin-top: 1rem;
+                }
+
+                @include m.telefono{
+                    width: 13rem;
+                }
             }
         }
 
         #botones{
             display: flex;
-            justify-content: center;
+            position: relative;
             align-items: center;
             background: v.$grisPag07;
             height: 40%;
 
+            @include m.tablet{
+                margin-top: 1rem;
+            }
+
             #btn-aseguradora{
+                margin-left: 3rem;
+                width: 50%;
+
+                @include m.telefono{
+                    margin-left: 1rem;
+                }
                 a{
                     @include m.botones(v.$azulRey);
                 }
             }
             #btn-reaseguradora{
+                width: 60%;
+
                 a{
                     @include m.botones(v.$verde);
                 }
             }
+        }
+    }
+}
+
+#cards-pag16{
+
+    @include m.tablet{
+        margin-top: 1rem;
+    }
+    .mapa-pag16{
+        display: none;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    #aseguradora{
+        @include m.conceptual(v.$azulRey);
+        height: 80rem;
+
+        @include m.tablet{
+            height: 95rem;
+        }
+
+        @include m.telefono{
+            height: auto;
+        }
+
+        &.cuadros_activos{
+            display: block;
+            opacity: 1;
+        }
+    }
+    #reaseguradora{
+        @include m.conceptual(v.$verde);
+        height: 70rem;
+
+        @include m.tablet{
+            height: 80rem;
+        }
+
+        @include m.telefono{
+            height: auto;
+            margin-top: 1rem;
+        }
+
+        &.cuadros_activos{
+            display: block;
+            opacity: 1;
         }
     }
 }
