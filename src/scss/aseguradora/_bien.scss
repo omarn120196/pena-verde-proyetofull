@@ -1,0 +1,85 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+#retro-aseguradora{
+
+    display: none;
+
+    &.visualizar{
+        display: block;
+    }
+
+    #retro-bien{
+        display: none;
+        transition: all .3s ease;
+        position: relative;
+
+        &.visualizar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: v.$grisClaro2;
+
+            @include m.escritorio{
+                background: v.$azulRey;
+                flex-direction: column-reverse;
+            }
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            background: v.$azulRey;
+            top: 5%;
+            left: 0;
+        }
+
+        .cont-imagen{
+            width: 30%;
+            z-index: 1;
+        }
+
+        #cont-logro{
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+            z-index: 1;
+
+            @include m.escritorio{
+                width: 100%;
+            }
+
+            .mensaje{
+                text-align: center;
+                color: v.$blanco;
+                font-size: 2.4rem;
+                padding: 2rem;
+                border: 1px solid v.$verde;
+            }
+
+            .cont-imagen{
+                width: 12rem;
+                height: 12rem;
+                margin: 2rem 0;
+            }
+
+            .texto{
+                font-size: 2rem;
+                font-weight: 700;
+                color: v.$azulRey;
+                text-align: center;
+
+                @include m.escritorio{
+                    padding: 2rem;
+                    background: v.$grisClaro2;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
