@@ -39,7 +39,6 @@ class Aseguradora{
     }
 
     ocultar(indice){
-        //Visualizar primer pregunta
         this.contenedor[indice].style.opacity = 1;            
 
         setTimeout(()=>{
@@ -54,22 +53,24 @@ function preguntasAseguradora1(aseguradora) {
    
     aseguradora.respuestaA1.addEventListener('click', function(){
         aseguradora.respuestaA1.classList.add('respuesta-incorrecta');
-        
+        bloquearPregunta(aseguradora, 0);
+
         setTimeout(()=>{
             aseguradora.respuestaA1.classList.remove('respuesta-incorrecta');
             aseguradora.respuestaA1.classList.add('fondoIncorrecto');
-            bloquearPregunta(aseguradora, 0);
+            
         }, 2000);
     });
    
     aseguradora.respuestaB1.addEventListener('click', function(){
         aseguradora.respuestaB1.classList.add('respuesta-correcta');
-        
+        bloquearPregunta(aseguradora, 0);
+
         setTimeout(()=>{
             aseguradora.respuestaB1.classList.remove('respuesta-correcta');
             aseguradora.respuestaB1.classList.add('fondoCorrecto');
             aseguradora.acietos++;
-            bloquearPregunta(aseguradora, 0);
+            
         }, 2000);
     }); 
 }
@@ -79,22 +80,24 @@ function preguntasAseguradora2(aseguradora) {
    
     aseguradora.respuestaA2.addEventListener('click', function(){
         aseguradora.respuestaA2.classList.add('respuesta-correcta');
-        
+        bloquearPregunta(aseguradora, 1);
+
         setTimeout(()=>{
             aseguradora.respuestaA2.classList.remove('respuesta-correcta');
             aseguradora.respuestaA2.classList.add('fondoCorrecto');
             aseguradora.acietos++;
-            bloquearPregunta(aseguradora, 1);
+            
         }, 2000);
     });
    
     aseguradora.respuestaB2.addEventListener('click', function(){
         aseguradora.respuestaB2.classList.add('respuesta-incorrecta');
-        
+        bloquearPregunta(aseguradora, 1);
+
         setTimeout(()=>{
             aseguradora.respuestaB2.classList.remove('respuesta-incorrecta');
             aseguradora.respuestaB2.classList.add('fondoIncorrecto');
-            bloquearPregunta(aseguradora, 1);
+            
         }, 2000);
     }); 
 }
@@ -104,22 +107,24 @@ function preguntasAseguradora3(aseguradora) {
    
     aseguradora.respuestaA3.addEventListener('click', function(){
         aseguradora.respuestaA3.classList.add('respuesta-correcta');
-        
+        bloquearPregunta(aseguradora, 2);
+
         setTimeout(()=>{
             aseguradora.respuestaA3.classList.remove('respuesta-correcta');
             aseguradora.respuestaA3.classList.add('fondoCorrecto');
             aseguradora.acietos++;
-            bloquearPregunta(aseguradora, 2);
+            
         }, 2000);
     });
    
     aseguradora.respuestaB3.addEventListener('click', function(){
         aseguradora.respuestaB3.classList.add('respuesta-incorrecta');
-        
+        bloquearPregunta(aseguradora, 2);
+
         setTimeout(()=>{
             aseguradora.respuestaB3.classList.remove('respuesta-incorrecta');
             aseguradora.respuestaB3.classList.add('fondoIncorrecto');
-            bloquearPregunta(aseguradora, 2);
+            
         }, 2000);
     }); 
 }
@@ -136,7 +141,7 @@ function bloquearPregunta(aseguradora, indice) {
 
     setTimeout(()=>{
         btnSiguiente.style.opacity = 1;
-    });
+    }, 2000);
 
     if(indice == 0){
         btnSiguiente.addEventListener('click', function (e) {  
@@ -159,10 +164,33 @@ function bloquearPregunta(aseguradora, indice) {
     if(indice == 2){
         btnSiguiente.addEventListener('click', function (e) {  
             e.preventDefault();
-            // aseguradora.ocultar(1);
-            // aseguradora.visualizar(2);
-            // preguntasAseguradora3(aseguradora);
-            console.log('Retroalimentacion');
+            aseguradora.ocultar(2);
+            retroAseguradora(aseguradora.acietos);
         });
+    }
+}
+
+function retroAseguradora(puntos){
+
+    const contenedorRetro = document.querySelector('#retro-aseguradora');
+    const bien = document.querySelector('#retro-bien');
+    const mal = document.querySelector('#retro-mal');
+
+    contenedorRetro.classList.add('visualizar');
+
+    if(puntos==3){
+        bien.classList.add('visualizar');
+
+        bien.style.opacity = 0;
+        setTimeout(()=>{
+            bien.style.opacity = 1;
+        }, 300);
+    }
+    else{
+        mal.classList.add('visualizar');
+        mal.style.opacity = 0;
+        setTimeout(()=>{
+            mal.style.opacity = 1;
+        }, 300);
     }
 }
