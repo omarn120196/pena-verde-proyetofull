@@ -102,6 +102,9 @@ function visualizarPagina(){
           
             //Script página15
             visualizarGlobos();
+
+            //Script página16
+            visualizarMapa();
           
             //Script página14
             visualizarInfo14();
