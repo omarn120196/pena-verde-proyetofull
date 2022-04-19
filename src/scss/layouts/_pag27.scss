@@ -1,3 +1,190 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
+#cont-evaluacion{
+    background: v.$fondo6;
+
+    
+    #intro-evaluacion{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        flex-wrap: wrap;
+
+        @include m.tablet{
+            justify-content: center;   
+        }
+        
+        &::after{
+            content: '';
+            background: v.$blanco;
+            width: 100%;
+            height: 30%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    
+        .cont-imagen{
+            width: 30%;
+            z-index: 1;
+        }
+    
+        .cont-mensaje{
+            width: 60%;
+            padding: 2rem;
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            z-index: 1;
+
+            @include m.tablet{
+                width: 100%;
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    #instruccionEvaluacion{
+        text-align: center;
+        padding: 2rem;
+        color: v.$blanco;
+        font-weight: 700;
+        background: v.$azul1;
+    }
+
+    #cont-inicioEvaluacion{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        a{
+            @include m.boton(v.$amarillo);
+        }
+    }
+
+    #cont-preguntas{
+
+        #instruccion{
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background: v.$azulClaro2;
+            padding: 2rem;
+
+            .cont-imagen{
+                width: 6rem;
+                height: 6rem;
+                border: 5px solid v.$blanco;
+                border-radius: 50%;
+                padding: 1rem;
+            }
+
+            #parrafo{
+                font-weight: 700;
+
+                @include m.telefono{
+                    width: 60%;
+                }
+            }
+        }
+
+        .preguntas{
+
+            padding: 2rem 4rem;
+
+           .cont-preguntas{
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 4rem 0;
+
+                .numero-Pregunta{
+                    width: 10%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: v.$azulRey;
+
+                    h2{
+                        font-weight: 700;
+                    }
+                }
+
+                .pregunta{
+                    width: 90%;
+                    padding: 2rem;
+                    background: v.$blanco;
+
+                    p{
+                        font-weight: 700;
+                    }
+                }
+           }
+
+            .cont-respuestas{
+                
+                position: relative;
+                
+                .incisos{
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 2rem 0;
+                    
+                    .letras{
+                        width: 10%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: v.$azulRey;
+
+                        h2{
+                            font-weight: 700;
+                        }
+                    }
+
+                    .respuesta{
+                        width: 90%;
+                        padding: 2rem;
+                        background: v.$fondo1;
+                        transition: all .3s ease;
+                        cursor: pointer;
+    
+                        p{
+                            font-weight: 700;
+                        }
+
+                        &:hover{
+
+                            box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.44);
+                            transform: scale(1.01);
+                        }
+                    }
+                }
+
+                .bloquear-respuesta{
+
+                    position: absolute;
+                    background: transparent;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: none;
+
+                    &.activado{
+                        display: block;
+                    }
+
+                }                
+            }
+        }
+    }
+}
