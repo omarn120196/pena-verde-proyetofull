@@ -147,23 +147,22 @@
     }
 
     .contenedor3pag18{
-        display: none;
+        display:none;
         position: absolute;
         background-color: #7AA0DD;
-        width: 100%;
+        width: 90%;
         max-width: 1200px;
-        height:600px;
+        height:82%;
         z-index:3;
         .persona1pag18{
             img{
+                height: 41%!important;
+                margin-left: -2%;
+                margin-top: 17%;
+                padding: 0% 3%;
                 position: absolute;
-                height: 80% !important;
-                width: 100%;
-                min-width:100px;
-                max-width: 200px;
-                padding-top: 5%;
-                margin-top: 100px;
-                z-index:1 ;
+                width: 23.5%;
+                z-index: 1;
             }
         }
         .cuadro-verdepag18{
@@ -173,22 +172,25 @@
             background-color: #0C8F5A;
             z-index: -1;
             margin-left: 0%;
-            margin-top: 18%;
+            margin-top: 15%;
+            padding-top:0.01%;
+            align-items: center;
             .cuadro-blancopag18{
-                width: 60%;
-                height: 60%;
-                margin-left:20%;
-                margin-top: 15%;
                 background-color: #0C8F5A;
                 color: #fff;
                 border: solid 2px #fff;
-                font-size: 1.7vw;
-                padding: 0.9%;
-                z-index:2 ;
+                font-size: 2vw;
+                height: 64%;
+                margin-left: 25%;
+                margin-top: 4.5%;
+                padding: 1% 2%;
+                width: 70%;
+                z-index: 2;
             }
         }
+        
     }
-    .contenedor3.activo{
-        display: block;
+    .contenedor3pag18.activo{
+        display: block !important;
     }
 }
