@@ -98,7 +98,7 @@ function responder5(){
         const qtDesactivar4=document.getElementById("pregunta5");
         qtActivar3.classList.add('activo');
         qtDesactivar4.classList.remove('activo');
-    }, 5000);
+    }, 3000);
     
 }
 

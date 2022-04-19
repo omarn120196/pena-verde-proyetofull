@@ -24,15 +24,30 @@
         height: 90%;
         z-index: 2;
         padding-top: 16.5%;
-       img{
-            height: 100%;
-            width: 100%;
-            min-height: 200px;
-            max-height: 290px;
-            min-width: 200px;
-            margin-left: 10%;
-
-       }
+        img{
+                height: 100%;
+                width: 100%;
+                min-height: 200px;
+                max-height: 290px;
+                min-width: 200px;
+                margin-left: 10%;
+                margin-top: -6%;
+        }
+        @include m.tablet{
+            height: 70%;
+            img{
+                height: 90%;
+            }
+        }
+        @include m.telefono{
+            height: 50%;
+            img{
+                height: 40%;
+                min-height: 90px;
+                width: 100%;
+                min-width: 70px;
+            }
+        }
     }
     .rec1pag19{
         height: 70%;
@@ -46,6 +61,17 @@
         font-size: 1vw;
         font-weight: bold;
         border-radius: 2%;
+        @include m.tablet{
+            font-size: 1.7vw;
+            padding: 2%;
+            height: 60%;
+        }
+        @include m.telefono{
+            font-size: 2vw;
+            height: 50%;
+            min-height: 200px;
+            margin-bottom: 10%;
+        }
     }
     .rec2pag19{
         height: 70%;
@@ -75,6 +101,11 @@
             float: right;
             
         }
+        @include m.telefono{
+            font-size: 2vw;
+            height: 50%;
+            min-height: 200px;
+        }
     }
     .rec3pag19{
         position: relative;
@@ -88,6 +119,11 @@
         font-weight: bold;
         margin-right: -10%;
         border-radius: 2%;
+        @include m.telefono{
+            font-size: 1.5vw;
+            height: 50%;
+            min-height: 200px;
+        }
     }
     .contenedor2pag19{
         margin-top: 18.5%;
@@ -99,7 +135,7 @@
             height: 70%;
             z-index: 3;
             margin-left: -5%;
-            margin-top: 0px;
+            margin-top: -7%;
         }
     }
 }
@@ -191,7 +227,7 @@
         margin-top: -5%;
         background-color: #FAF2D6;
         height:25%;
-        min-height:222px;
+        min-height:251px;
         max-height:230px;
         padding: 3.5%;
         .globo2pag19{

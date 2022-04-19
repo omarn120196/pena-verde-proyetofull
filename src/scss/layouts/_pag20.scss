@@ -18,6 +18,48 @@
     }
 }
 
+.contenedorPrinPag20{
+    display: flex;
+    .libro,.tarjeta{
+        height: 60%;
+        width: 30%;
+        
+    }
+    #libro1,#libro3,#libro5{
+        display: none;
+        margin-top: 5%;
+    }
+    #libro2,#libro4{
+        display:none;
+        margin-top: 15%;
+    }
+    #tarjeta1{
+        height: 60%;
+        width: 30%;
+        border:solid 2px #7AA0DD;
+    }
+    #tarjeta2{
+        height: 60%;
+        width: 30%;
+        border:solid 2px #E96247;
+    }
+    #tarjeta3{
+        height: 60%;
+        width: 30%;
+        border:solid 2px #F9C931;
+    }
+    #tarjeta4{
+        height: 60%;
+        width: 30%;
+        border:solid 2px #0C8F5A;
+    }
+    #tarjeta5{
+        height: 60%;
+        width: 30%;
+        border:solid 2px #002F87;
+    }
+}
+
 .contenido1{
     .nivel01{
         display: flex;
