@@ -115,8 +115,11 @@ function visualizarPagina(){
             //Script página25
             arrastrar();
 
-            //Script 26
+            //Script página26
             iniciarCasos()
+
+            //Script página27
+            evaluacionFinal();
         });
     }
 }

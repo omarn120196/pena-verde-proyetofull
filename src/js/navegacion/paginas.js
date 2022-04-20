@@ -131,18 +131,8 @@ const paginas = [
         progreso: 26
     },
     {
-        nombre: 'Página27', 
+        nombre: 'Evaluación', 
         ruta: 'pag27.html', 
         progreso: 27
-    },
-    {
-        nombre: 'Página28', 
-        ruta: 'pag28.html', 
-        progreso: 28
-    },
-    {
-        nombre: 'Página29', 
-        ruta: 'pag29.html', 
-        progreso: 29
     }
 ]
