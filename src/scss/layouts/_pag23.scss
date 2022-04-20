@@ -1,0 +1,165 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contenedorPrincipalPag23{
+    .cuadroClickPag23{
+        display: flex;
+        width: 100%;
+        height: 30%;
+        background-color: #D9EDEF;
+        .icon2c{
+            height:5%;
+            width: 5%;
+            margin-left:20% ;
+            margin-top: 1%;
+        }
+        p{
+            font-size: 1.2vw;
+            margin-left: 2%;
+            margin-top: 2%;
+        }
+    }
+    .nivel1pag23{
+        display:flex;
+        margin-top: 3%;
+        .grupo1{
+            margin-left: 2%;
+            .tituloVerdepag23{
+                width: 90%;
+                background-color: #0C8F5A;
+                border-top-left-radius: 5px;
+                border-top-right-radius:5px;
+                text-align: center;
+                color: #FFF;
+                margin-right: 10%;
+            }
+            .contenidoBlanco{
+                width: 90%;
+                box-shadow: 2px 2px 5px #999;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius:5px;
+                .logo-institucion{
+                    img{
+                        width: 100%;
+                        height: 10%;
+                        padding: 0% 4%;
+                    }
+                }
+            }
+        }
+        .grupo2{
+            margin-right: 2%;
+            .tituloVerdepag23{
+                width: 100%;
+                background-color: #0C8F5A;
+                border-top-left-radius: 5px;
+                border-top-right-radius:5px;
+                text-align:center;
+                color: #FFF;
+                margin-right: 10%;
+                
+                p{
+                    padding: 0% 20%;
+                }
+            }
+            .contenidoBlanco{
+                width: 100%;
+                box-shadow: 2px 2px 5px #999;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius:5px;
+                .logo-institucion{
+                    img{
+                        height: 34%;
+                        padding: 6% 0% 6% 35%;
+                        width: 63%;
+                    }
+                }
+            }
+        }
+        .grupo3{
+            .tituloVerdepag23{
+                width: 90%;
+                background-color: #0C8F5A;
+                border-top-left-radius: 5px;
+                border-top-right-radius:5px;
+                text-align: center;
+                color: #FFF;
+                padding: 0% 6%;
+                margin-right: 10%;
+            }
+            .contenidoBlanco{
+                width: 90%;
+                box-shadow: 2px 2px 5px #999;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius:5px;
+                .logo-institucion{
+                    img{
+                        width: 90%;
+                        height: 30%;
+                        padding: 7% 1%;
+                    }
+                }
+            }
+        }
+        .grupo4{
+            .tituloVerdepag23{
+                width: 90%;
+                background-color: #0C8F5A;
+                border-top-left-radius: 5px;
+                border-top-right-radius:5px;
+                text-align: center;
+                color:#FFF;
+                padding: 0% 6%;
+                margin-right: 10%;
+            }
+            .contenidoBlanco{
+                width: 90%;
+                box-shadow: 2px 2px 5px #999;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius:5px;
+                .logo-institucion{
+                    img{
+                        width: 100%;
+                        height: 30%;
+                        padding: 4% 5%;
+                    }
+                }
+            }
+        }
+        .grupo5{
+            .tituloVerdepag23{
+                width: 90%;
+                background-color: #0C8F5A;
+                border-top-left-radius: 5px;
+                border-top-right-radius:5px;
+                text-align: center;
+                color: #FFF;
+            }
+            .contenidoBlanco{
+                width: 90%;
+                box-shadow: 2px 2px 5px #999;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius:5px;
+                .logo-institucion{
+                    img{
+                        width: 100%;
+                        height:30%;
+                        padding: 6% 22% 6% 23%;
+                    }
+                }
+            }
+        }
+    }
+    .nivel2pag23{
+        .cuadro-info{
+            width: 100%;
+            height: 50%;
+            background-color: #E9EBED;
+            background-image: url(/build/img/contenido/Pag23/esquinas.svg);
+            background-repeat: no-repeat;
+        }
+        #info1{
+
+        }
+    }
+}
