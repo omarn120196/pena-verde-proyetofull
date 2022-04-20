@@ -156,6 +156,18 @@
                         background: v.$fondo1;
                         transition: all .3s ease;
                         cursor: pointer;
+
+                        &.fondoCorrecto{
+                            background: v.$verde;
+                            color: v.$blanco;
+                            cursor: default;
+                        }
+                        
+                        &.fondoIncorrecto{
+                            background: v.$rojo2;
+                            color: v.$blanco;
+                            cursor: default;
+                        }
     
                         p{
                             font-weight: 700;
@@ -185,6 +197,17 @@
 
                 }                
             }
+        }
+    }
+
+    .cont-btnEvaluar{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a{
+            @include m.boton(v.$amarillo);
         }
     }
 }
