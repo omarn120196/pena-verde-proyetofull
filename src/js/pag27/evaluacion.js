@@ -8,11 +8,15 @@ class EvaluacionFinal{
     acierto(){
         this.aciertos++;
     }
+
+    intento(){
+        this.intentos++;
+    }
 }
 
 function evaluacionFinal(){
 
-    const evaluacion = new EvaluacionFinal;
+    const evaluacion = new EvaluacionFinal();
 
     //Preguntas
     pregunta1(evaluacion);
@@ -31,6 +35,18 @@ function evaluacionFinal(){
     pregunta14(evaluacion);
     pregunta15(evaluacion);
     pregunta16(evaluacion);
+
+    //Evaluar
+    calificacionFinal(evaluacion);
+
+    //Reintentar
+    reintentarCuestionario();
+
+    //Cerrar Ventana
+    cerrarVentana();
+
+    //registrar
+    registrar();
     
 }
 
@@ -576,4 +592,51 @@ function pregunta16(evaluacion){
 
 function bloquearRespuesta(div){
     div.classList.add('activado');
+}
+
+function calificacionFinal(evaluacion){
+
+    const btnEvaluar = document.querySelector('#evaluarCuestionario');
+    const calificacion = document.querySelector('#calificacion');
+    const noPreguntas = 16;
+
+    const intro = document.querySelector('#intro-evaluacion');
+    const instruccion = document.querySelector('#instruccionEvaluacion');
+    const btnInicio = document.querySelector('#cont-inicioEvaluacion');
+    const contPreguntas = document.querySelector('#cont-preguntas');
+    
+
+    if(btnEvaluar){
+
+        btnEvaluar.addEventListener('click', function(e){
+            e.preventDefault();
+
+            intro.classList.add('ocultar');
+            instruccion.classList.add('ocultar');
+            btnInicio.classList.add('ocultar');
+            contPreguntas.classList.add('ocultar');
+            btnEvaluar.parentElement.classList.add('ocultar');
+    
+            const promedio = parseInt((evaluacion.aciertos * 100) / 16);
+            
+            if(promedio >= 80){
+                const retro = document.querySelector('#retro-positiva');       
+                retroFinal(retro);
+                calificacion.textContent = promedio; 
+            }
+            else{
+                const retro = document.querySelector('#retro-negativa');
+                retroFinal(retro);
+            }   
+        });
+    }
+}
+
+function retroFinal(contenedor){
+    contenedor.classList.add('visualizar');
+    contenedor.style.opacity = 0;
+
+    setTimeout(()=>{
+        contenedor.style.opacity = 1;
+    }, 300);
 }
