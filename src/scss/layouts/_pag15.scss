@@ -249,8 +249,13 @@
             position: relative;
             display: flex;
             background: v.$warning;
+            top: -3rem;
             height: 21%;
             width: 100%;
+
+            @include m.telefono{
+                top: 0;
+            }
 
             p{
                 @include m.resaltar(v.$blanco, 500);
