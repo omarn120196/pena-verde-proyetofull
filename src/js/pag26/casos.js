@@ -90,7 +90,7 @@ function patria(){
             const patria = new Patria(preguntasPA);
             patria.visualizar(0);
 
-            preguntasAseguradora1(patria);
+            preguntasPatria1(patria);
         });
     }
 }   
