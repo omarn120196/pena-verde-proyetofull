@@ -22,28 +22,34 @@
     </div>
     <div class="contenido1pag22">
         <div class="contenido1_1pag22">
-            <div class="cuadro-amarillo22">
-                <p>
-                    Colocación
-                </p>
-            </div>
-            <div class="cuadro-verde22">
-                <p>
-                    Estratificación o enmascaramiento
-                </p>
-            </div>
-            <div class="cuadro-azul22-2">
-                <p>
-                    Integración o reingreso 
-                </p>
-            </div>
+            <a href="javascript:mostrarEtapa1Pag22()">
+                <div class="cuadro-amarillo22">
+                    <p>
+                        Colocación
+                    </p>
+                </div>
+            </a>
+            <a href="javascript:mostrarEtapa2Pag22()">
+                <div class="cuadro-verde22">
+                    <p>
+                        Estratificación o enmascaramiento
+                    </p>
+                </div>
+            </a>
+            <a href="javascript:mostrarEtapa3Pag22()">
+                <div class="cuadro-azul22-2">
+                    <p>
+                        Integración o reingreso 
+                    </p>
+                </div>
+            </a>
         </div>
         <div class="contenido1_2-22">
             <div class="cuadro2-amarillo22">
                 <div class="minicuadro-claro">
 
                 </div>
-                <div class="minicuadro-amarillo">
+                <div class="minicuadro-amarillo" id="infoAmarilloPag22">
                     <figure class="triangulo">
                         <img src="/build/img/contenido/Pag22/triangulo-amarillo.svg" alt="triangulo amarillo">
                     </figure>
@@ -56,7 +62,7 @@
                 <div class="minicuadro-claro">
 
                 </div>
-                <div class="minicuadro-verde">
+                <div class="minicuadro-verde" id="infoVerdePag22">
                     <figure class="triangulo">
                         <img src="/build/img/contenido/Pag22/triangulo-verde.svg" alt="triangulo verde">
                     </figure>
@@ -69,7 +75,7 @@
                 <div class="minicuadro-claro">
 
                 </div>
-                <div class="minicuadro-azul">
+                <div class="minicuadro-azul" id="infoAzulPag22">
                     <figure class="triangulo">
                         <img src="/build/img/contenido/Pag22/triangulo-azul.svg" alt="triangulo azul">
                     </figure>
@@ -86,13 +92,17 @@
                 <img src="/build/img/contenido/Pag22/i-click.svg" alt="icono click">
             </figure>
             <p>
-                Relaciona el concepto de la primera columna con la etapa del ciclo del Lavado de Dinero que le corresponde.
+                Relaciona el concepto de la primera columna con la etapa del ciclo del Lavado de Dinero que le corresponde, no olvides dar en iniciar
 
             </p>
         </div>
+        <div class="boton">
+            <input type="button" value="iniciar" onclick="iniciarRel()">
+        </div>
         <div class="contenido2nv2pag22">
+            
             <div class="opcionescolumna1">
-                <div class="cuadro-opcion">
+                <div class="cuadro-opcion" id="contenedor1pag22">
                     <figure class="c-opcion">
     
                     </figure>
@@ -100,7 +110,7 @@
                         Introducir ganancias ilícitas al sistema financiero.
                     </p>
                 </div>
-                <div class="cuadro-opcion">
+                <div class="cuadro-opcion" id="contenedor2pag22">
                     <figure class="c-opcion">
     
                     </figure>
@@ -108,7 +118,7 @@
                         Realizar múltiples transacciones que separan los fondos de su fuente ilegal, dificultando su rastreo.   
                     </p>
                 </div>
-                <div class="cuadro-opcion">
+                <div class="cuadro-opcion" id="contenedor3pag22">
                     <figure class="c-opcion">
     
                     </figure>
@@ -118,33 +128,39 @@
                 </div>
             </div>
             <div class="columna2-22">
-                <figure class="img1">
-                    <img src="/build/img/contenido/Pag22/i-verde_persona.svg" alt="persona verde">
-                </figure>
-                <div class="cuadroIMG-verde">
-                    <img src="/build/img/contenido/Pag22/cuadro-verde.svg" alt="cuadro curva verde">
-                    <p>
-                        Estratificación o enmascaramiento
-
-                    </p>
+                <div class="concepto" id="concepto1" draggable="true">
+                    <figure class="img1">
+                        <img src="/build/img/contenido/Pag22/i-verde_persona.svg" alt="persona verde">
+                    </figure>
+                    <div class="cuadroIMG-verde">
+                        <img src="/build/img/contenido/Pag22/cuadro-verde.svg" alt="cuadro curva verde">
+                        <p>
+                            Estratificación o enmascaramiento
+    
+                        </p>
+                    </div>
                 </div>
-                <figure class="img2">
-                    <img src="/build/img/contenido/Pag22/i-amarillo_billete.svg" alt="tendedero billete amarillo">
-                </figure>
-                <div class="cuadroIMG-amarillo">
-                    <img src="/build/img/contenido/Pag22/cuadro-amarillo.svg" alt="cuadro curva amarillo">
-                    <p>
-                        Colocación
-                    </p>
+                <div class="concepto" id="concepto2" draggable="true">
+                    <figure class="img2">
+                        <img src="/build/img/contenido/Pag22/i-amarillo_billete.svg" alt="tendedero billete amarillo">
+                    </figure>
+                    <div class="cuadroIMG-amarillo">
+                        <img src="/build/img/contenido/Pag22/cuadro-amarillo.svg" alt="cuadro curva amarillo">
+                        <p>
+                            Colocación
+                        </p>
+                    </div>
                 </div>
-                <figure class="img3">
-                    <img src="/build/img/contenido/Pag22/i-carrito_azul.svg" alt="carrito azul">
-                </figure>
-                <div class="cuadroIMG-azul">
-                    <img src="/build/img/contenido/Pag22/cuadro-azul.svg" alt="cuadro curva azul">
-                    <p>
-                        Integración o reingreso 
-                    </p>
+                <div class="concepto" id="concepto3" draggable="true">
+                    <figure class="img3">
+                        <img src="/build/img/contenido/Pag22/i-carrito_azul.svg" alt="carrito azul">
+                    </figure>
+                    <div class="cuadroIMG-azul">
+                        <img src="/build/img/contenido/Pag22/cuadro-azul.svg" alt="cuadro curva azul">
+                        <p>
+                            Integración o reingreso 
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

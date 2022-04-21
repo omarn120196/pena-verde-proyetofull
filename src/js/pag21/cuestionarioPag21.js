@@ -16,6 +16,7 @@ function iniciarCuestionarioPag21(){
     const contRes4=document.getElementById('contenedor4');
     const contRes5=document.getElementById('contenedor5');
     
+    
     contRes1.addEventListener('dragover', e => {
         e.preventDefault();
     });
