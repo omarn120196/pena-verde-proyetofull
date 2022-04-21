@@ -50,11 +50,15 @@ jQuery(function($){
     btnAdelante.on('click', btnNav.sigPagina);
     btnAtras.on('click', btnNav.atrasPaginas);
     btnHome.on('click', btnNav.home);
+
+    //Calcular altura
+    calcularAltura();
 })
 
 //Funciones----------------------------------------------------------
 
 function visualizarPagina(){
+
     const contenedor = $('#cont-paginas');
     const url = 'contenido/'+paginas[noPagina].ruta;
     const titulo = paginas[noPagina].nombre;
@@ -88,7 +92,7 @@ function visualizarPagina(){
             seleccionarInfo05();
           
             // Scrip página06
-            visualizarCuadro1();
+            visualizarPag06();
           
             // Scrip página07
             visualizarPag07();
@@ -101,7 +105,10 @@ function visualizarPagina(){
             voltearCardsPag12();
           
             //Script página15
-            visualizarGlobos();
+            // visualizarGlobos();
+
+            //Script página16
+            visualizarMapa();
           
             //Script página14
             visualizarInfo14();
@@ -112,8 +119,11 @@ function visualizarPagina(){
             //Script página25
             arrastrar();
 
-            //Script 26
-            elegirCaso();
+            //Script página26
+            iniciarCasos()
+
+            //Script página27
+            evaluacionFinal();
         });
     }
 }
@@ -125,4 +135,27 @@ function selectOpcion(noPagina){
     select.classList.remove('select');
 
     enlaces[noPagina].classList.add('select');
+}
+
+//Parpadear el boton al final de la página
+function calcularAltura(){
+
+    $(window).on("scroll", function() {
+        const scrollHeight = $(document).height();
+        const scrollPosition = $(window).height() + $(window).scrollTop();
+
+
+        if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+            
+            btnAdelante.addClass('parpadea');
+
+            setTimeout(()=>{
+                btnAdelante.removeClass('parpadea');
+            }, 3000);
+             
+        }
+        else{
+            btnAdelante.removeClass('parpadea');
+        }
+    });
 }

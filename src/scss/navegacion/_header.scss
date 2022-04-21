@@ -37,6 +37,7 @@
     h1{
         text-align: center;
         color: v.$azul1;
+        font-size: 2.4rem;
         @include m.escritorioHD{
             font-size: 2rem;
         }

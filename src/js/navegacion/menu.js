@@ -5,16 +5,29 @@ const header = document.querySelector('.header');
 const contenido = document.querySelector('.contenido');
 const mensajePorcentaje = document.querySelector('#progreso__mensaje');
 const barra = document.querySelector('.barra');
+let h4;
 
-//Variables de los enlaces del menu
-const enlaces = document.querySelectorAll('.enlacesPaginas');
+let enlaces;
 
 let menuAbierto = false;
 
 document.addEventListener('DOMContentLoaded', function(){
 
     btn_menu.addEventListener('click', abirMenu);
+
+    temas();
+
+    //Variables de los enlaces del menu
+    enlaces = document.querySelectorAll('.enlacesPaginas');
+    h4 = document.querySelectorAll('.option h4');
+
+    h4.forEach(titulos=>{
+        titulos.classList.add('ocultar');
+    });
+
     irPagina();
+
+    
 });
 
 function abirMenu() {
@@ -40,6 +53,10 @@ function abirMenu() {
         mensajePorcentaje.innerHTML = `
             <i class="fa-light fa-percent"></i>
         `;
+
+        h4.forEach(titulos=>{
+            titulos.classList.add('ocultar');
+        });
     }
     
 }
@@ -51,6 +68,10 @@ function actualizarPorcentaje(){
 
     const barraPorcentaje = document.querySelector('.porcentaje');
     barraPorcentaje.style.width = `${porcentaje}%`;
+
+    h4.forEach(titulos=>{
+        titulos.classList.remove('ocultar');
+    });
 }
 
 function verificarMenu(){

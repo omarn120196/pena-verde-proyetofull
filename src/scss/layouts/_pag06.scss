@@ -3,221 +3,221 @@
 
 
 #cont-azul{
-    position: relative;
-    height: 7rem;
     background: v.$azulRey;
-
-    @include m.tablet{
-        height: 5rem;
-    }
-    
+    height: 5rem;
 }
 
-#principal{
-    position: relative;
-    @include m.grid(2, 0);
-    display: flex;
+#cont-pag06{
+    @include m.grid(4, 0);
+    height: auto;
 
-    @include m.escritorio{
+    @include m.tablet{
         @include m.grid(1, 0);
     }
 
-    #cont-small{
-        position: relative;
-        width: 30%;
-        background: v.$naranja;
+    #cont-rojo{
+        grid-column: 1/2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        background: v.$naranjaPag03;
 
-        @include m.escritorio{
-            width: 100%;
+        @include m.tablet{
+            height: 30rem;
+            align-items: flex-start;
         }
 
-        #text{
+        #clic-pag06{
             position: relative;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
             display: flex;
-            text-align: center;
-            margin-left: 2rem;
-            margin-right: 2rem;
-            top: 3rem;
-            border-radius: 2rem 2rem 2rem 2rem;
-            padding: 2rem 2rem 2rem 6rem;
-            background: v.$azulClaro1;
-            @include m.resaltar(v.$colorFuente, 400);
+            justify-content: space-between;
+            align-items: center;
+            background: v.$azulClaro2;
+            padding: 2rem;
+            border-radius: 1rem;
+            width: 80%;
+            height: 10rem;
 
-            @include m.escritorio{
-                margin-right: 0;
-                border-radius: 0;
-                margin-left: 9rem;
+            @include m.tablet{
+                width: 60%;
+                height: 15rem;
+                margin-bottom: 0;
+                top: 15rem;
+                left: 20rem;
             }
 
-            .mano{
-                position: absolute;
-                left: 1rem;
+            @include m.telefono{
+                left: 15rem;
+                width: 50%;
+                height: 20rem;
+                padding: 2rem;
+                top: 10rem;
+                text-align: center;
             }
+
+            .mano-pag06{
+                width: 60%;
+                height: 70%;
+
+                @include m.tablet{
+                    width: 20%;
+                }
+
+                @include m.telefono{
+                    position: absolute;
+                    top: 1rem;
+                    left: -3rem;
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+
         }
 
         .personaje{
-            display: flex;
-            height: 60%;
-            margin-bottom: -1rem;
-            margin-top: 20rem;
+            @include m.tablet{
+                height: 90%;
+                width: 25%;
+            }
 
-            @include m.escritorio{
-                margin-top: 25rem;
+            @include m.telefono{
                 height: 25rem;
-                width: 15rem;
-                margin-top: -5rem;
+                width: 40%;
             }
         }
-
     }
-
-    #cont-big{
+    #cont-rosa{
+        grid-column: 2/5;
         position: relative;
-        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: v.$rosaPag06;
 
-        #claro{
-            position: relative;
-            height: 25rem;
-            margin-top: 5rem;
-            background: v.$rosaClaroPag06;
-
-            @include m.escritorio{
-                display: none;
-            }
+        @include m.tablet{
+            grid-column: 1/2;
         }
 
-        #columnas{
-            width: 100%;
+        .libros{
+            @include m.grid(3, 0);
             position: relative;
-            @include m.grid(3, 1rem);
+            overflow: hidden;
+            padding: 2rem;
+            width: 100%;
+            height: 90%;
 
-            @include m.escritorio{
-                margin-top: 4rem;
-                @include m.grid(1, 0);
+            @include m.telefono{
+                @include m.grid(1, 2rem);
             }
 
-            .cuadros6{
+            .cuadro-pag06{
                 display: none;
                 opacity: 0;
                 transition: all .3s ease;
             }
 
-            #libro1{
-                margin-top: -26rem;
+            .btn-pag06{
+                animation-name: parpadeo;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                -webkit-animation-name: parpadeo;
+                -webkit-animation-duration: 2s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
 
-                @include m.escritorio{
-                    margin-top: 1rem;
+            }
+
+            .btn-pag06:hover{
+                animation-play-state: paused;
+            } 
+
+            @-moz-keyframes parpadeo {
+                0% {
+                  opacity: 1.0;
                 }
-
-                .libro1{
-                    @include m.imagenLibro;
-
-                    @include m.escritorio{
-                        background: v.$azulFuertePag06;
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background: v.$azulCielo;
-                        padding: 2rem 0;
-
-                        img{
-                            width: 20rem;
-                        }
-                    }
+              
+                50% {
+                  opacity: 0.0;
                 }
-
-                #cuadro1{
-                    @include m.cuadro(v.$azulPag06, v.$azulFuertePag06, center);
-
-                    .texto1{
-                        @include m.resaltar(v.$azulFuente, 600);
-                    }
-
-                    &.cuadros_activos{
-                        display: block;
-                        opacity: 1;
-                    }
+              
+                100% {
+                  opacity: 1.0;
                 }
             }
-            #libro2{
-                margin-top: -26rem;
-
-                @include m.escritorio{
-                    margin-top: 1rem;
+              
+            @-webkit-keyframes parpadeo {
+                0% {
+                  opacity: 1.0;
                 }
-
-                .libro2{
-                   @include m.imagenLibro;
-
-                   @include m.escritorio{
-                       width: 100%;
-                       display: flex;
-                       justify-content: center;
-                       align-items: center;
-                       padding: 2rem 0;
-                       background: v.$naranjaTelPag06;
-                       img{
-                           width: 20rem;
-                       }
-                   }
-
+              
+                50% {
+                  opacity: 0.0;
                 }
-
-                #cuadro2{
-                    @include m.cuadro(v.$naranjaPag06, v.$naranjaFuertePag06, left);
-
-                    .texto2{
-                        @include m.resaltar(v.$naranjaFuentePag06, 600);
-                    }
-
-                    &.cuadros_activos{
-                        display: block;
-                        opacity: 1;
-                    }
+              
+                100% {
+                  opacity: 1.0;
                 }
             }
-            #libro3{
-                margin-top: -26rem;
-
-                @include m.escritorio{
-                    margin-top: 1rem;
+              
+            @keyframes parpadeo {
+                0% {
+                  opacity: 1.0;
                 }
-
-                .libro3{
-                   @include m.imagenLibro;
-
-                   @include m.escritorio{
-                       background: v.$verdeTelPag06;
-
-                       @include m.escritorio{
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 2rem 0;
-                        background: v.$verdeTelPag06;
-                        img{
-                            width: 20rem;
-                        }
-                    }
-                   }
+              
+                50% {
+                  opacity: 0.0;
                 }
+              
+                100% {
+                  opacity: 1.0;
+                }
+            }
 
-                #cuadro3{
-                    @include m.cuadro(v.$verdeClaroPag03, v.$verdeFuertePag06, center);
+            .img-libro{
+                width: 80%;
 
-                    .texto3{
-                        @include m.resaltar(v.$verde, 600);
-                    }
+                @include m.telefono{
+                    width: 60%;
+                }
+            }
 
-                    &.cuadros_activos{
-                        display: block;
-                        opacity: 1;
-                    }
+            a{
+                display: block;
+            }
+
+            #cuadro1{
+                @include m.cuadrosPag06(v.$azulPag06, v.$azulFuertePag06, center);
+                @include m.resaltar(v.$azulFuente, 600);
+
+                &.cuadros_activos{
+                    display: block;
+                    opacity: 1;
+                }
+            }
+
+            #cuadro2{
+                @include m.cuadrosPag06(v.$naranjaPag06, v.$naranjaFuertePag06, left);
+                @include m.resaltar(v.$naranjaFuentePag06, 600);
+
+                &.cuadros_activos{
+                    display: block;
+                    opacity: 1;
+                }
+            }
+            #cuadro3{
+                @include m.cuadrosPag06(v.$verdeClaroPag03, v.$verdeFuertePag06, center);
+                @include m.resaltar(v.$verde, 600);
+
+                &.cuadros_activos{
+                    display: block;
+                    opacity: 1;
                 }
             }
         }
     }
 }
+

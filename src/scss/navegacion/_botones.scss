@@ -25,18 +25,33 @@
         left: 10%;
     }
     
-    i{
+    button{
         width: auto;
         margin: 0;
         font-size: 4.2rem;
         color: v.$blanco;
         cursor: pointer;
-        transition: all .2s ease-in;
+        transition: all .3s ease-in;
+        background: transparent;
+        border: none;
 
         &:hover{
             color: v.$azul1;
         }
+
+        &.parpadea{
+            animation: parpadear 3s 5;
+        }
     }
-    
 }
 
+@keyframes parpadear {
+    0%, 50%, 100%{
+        color: v.$azul1;
+        transform: scale(.9);
+    }
+    25%, 75%{
+        color: v.$blanco;
+        transform: scale(1);
+    }
+}

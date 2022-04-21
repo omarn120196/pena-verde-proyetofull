@@ -12,8 +12,17 @@
     @include m.grid(2, 0);
     display: flex;
 
+    @include m.escritorioHD{
+        height: 70rem;
+    }
+
     @include m.tablet{
         @include m.grid(1, 0);
+        height: 100rem;
+    }
+
+    @include m.telefono{
+        height: auto;
     }
 
     #cont-01{
@@ -23,6 +32,7 @@
 
         @include m.tablet{
             width: 100%;
+            height: 37rem;
         }
 
         .personaje{
@@ -36,8 +46,8 @@
             }
 
             @include m.tablet{
-                width: 30%;
-                height: 10%;
+                width: 35%;
+                height: 80%;
                 padding: 1rem 2rem 0 10rem;
             }
 
@@ -46,7 +56,7 @@
                 width: 25rem;
             }
         }
-        #text{
+        #clic1-pag12{
             position: relative;
             bottom: 4rem;
             display: flex;
@@ -57,50 +67,56 @@
 
             @include m.escritorioHD{
                 bottom: 0;
-                padding: 3rem;
+                padding: 1rem;
                 top: -1rem;
+                height: 23rem;
+                padding: 4rem;
             }
 
             @include m.tablet{
-                height: 15rem;
-                top: 0;
+                height: 10rem;
+            }
+
+            @include m.telefono{
+                top: -2rem;
             }
 
             p{
                 @include m.tablet{
                     position: relative;
                     left: 10rem;
-                    top: 3rem;
+                    top: -1rem;
                 }
 
                 @include m.telefono{
                     width: 20rem;
                     left: 3rem;
-                    top: 2rem;
+                    top: -3rem;
                 }
             }
-            .mano{
+            .mano1-pag12{
                 position: relative;
                 top: 2rem;
-                width: 150%;
-                height: 150%;
+                width: 120%;
+                height: 120%;
 
                 @include m.escritorioHD{
-                    left: -2rem;
-                    width: 250%;
-                    height: 250%;
+                    left: -3rem;
+                    width: 20rem;
+                    height: 5rem;
                 }
 
                 @include m.tablet{
-                    width: 10%;
-                    height: 70%;
+                    width: 5rem;
+                    height: 5rem;
                     left: 5rem;
+                    top: -2rem;
                 }
 
                 @include m.telefono{
                     left: 0;
-                    width: 7rem;
-                    height: 7rem;
+                    width: 5rem;
+                    height: 5rem;
                 }
             }
 
@@ -158,7 +174,65 @@
             }
 
             @include m.telefono{
-                @include m.grid(1, 0);
+                @include m.grid(1, 2rem);
+            }
+
+            .btn_cuadros12{
+                animation-name: parpadeo;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                -webkit-animation-name: parpadeo;
+                -webkit-animation-duration: 2s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+
+            }
+
+            .btn_cuadros12:hover{
+                animation-play-state: paused;
+            } 
+
+            @-moz-keyframes parpadeo {
+                0% {
+                  opacity: 1.0;
+                }
+              
+                50% {
+                  opacity: 0.0;
+                }
+              
+                100% {
+                  opacity: 1.0;
+                }
+            }
+              
+            @-webkit-keyframes parpadeo {
+                0% {
+                  opacity: 1.0;
+                }
+              
+                50% {
+                  opacity: 0.0;
+                }
+              
+                100% {
+                  opacity: 1.0;
+                }
+            }
+              
+            @keyframes parpadeo {
+                0% {
+                  opacity: 1.0;
+                }
+              
+                50% {
+                  opacity: 0.0;
+                }
+              
+                100% {
+                  opacity: 1.0;
+                }
             }
 
 
@@ -176,8 +250,10 @@
                 }
 
                 #info-seguros{
+                    display: flex;
                     @include m.resaltar(v.$azulRey, 400);
                     @include m.cardsPag12(v.$azulRey, v.$azulRey);
+
 
                     &.cuadros_activos{
                         display: block;
@@ -200,6 +276,7 @@
                 }
 
                 #info-seguimiento{
+                    display: flex;
                     @include m.resaltar(v.$verde, 400);
                     @include m.cardsPag12(v.$verde, v.$verde);
 
@@ -224,6 +301,7 @@
                 }
 
                 #info-reportar{
+                    display: flex;
                     @include m.resaltar(v.$verde, 400);
                     @include m.cardsPag12(v.$verdePag12, v.$verdePag12);
 
@@ -254,7 +332,7 @@
 
             @include m.telefono{
                 height: 25rem;
-                width: 27rem;
+                width: 50rem;
             }
         }
 
@@ -275,22 +353,23 @@
             }
 
             @include m.telefono{
-                padding: 2rem;
-                height: 27rem;
+                padding: 1rem;
+                height: 38rem;
                 left: 0;
             }
         }
 
-        #instrucciones{
+        #clic2-pag12{
             position: relative;
             display: flex;
             background: v.$azulClaro1;
             width: 30%;
             height: 10%;
             border-radius: 2rem;
-            padding: 2rem;
+            padding: 5rem 2rem 2rem 2rem;
             left: 5rem;
             top: 5rem;
+            text-align: center;
 
             @include m.tablet{
                 position: absolute;
@@ -300,30 +379,46 @@
                 left: 0;
                 border-radius: 0;
                 padding-left: 10rem;
-                padding-top: 3rem;
+            
             }
 
             @include m.telefono{
-                top: 26rem;
-                padding-top: 1rem;
+                top: 36rem;
+                height: 10rem;
+                padding-top: 3rem;
+            }
+
+            p{
+                position: relative;
+                top: -2rem;
             }
 
 
-            .mano{
+            .mano2-pag12{
                 position: relative;
                 display: flex;
                 width: 20%;
+                height: 10%;
 
-                @include m.tablet{
-                    width: 10%;
-                    height: 5rem;
-                    left: -5rem;
+                @include m.escritorioHD{
+                    width: 25%;
+                    height: 15%;
                     top: -1rem;
                 }
 
+                @include m.tablet{
+                    width: 5rem;
+                    height: 5rem;
+                    left: -5rem;
+                    top: -3rem;
+                }
+
                 @include m.telefono{
-                    width: 50%;
+                    position: absolute;
+                    left: 2rem;
                     top: 1rem;
+                    width: 6rem;
+                    height: 6rem;
                 }
             }
         }
@@ -363,7 +458,7 @@
     
             @include m.tablet{
                 top: 6rem;
-                width: 65%;
+                width: 60%;
                 height: 30rem;
             }
     

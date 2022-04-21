@@ -134,9 +134,14 @@
             display: flex;
             align-items: center;
             position: relative;
+            transition: all .3s ease;
 
             h4{
                 font-weight: 300;
+
+                &.ocultar{
+                    display: none;
+                }
             }
         }
     }

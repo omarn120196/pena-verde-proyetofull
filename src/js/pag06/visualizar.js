@@ -1,9 +1,10 @@
-function visualizarCuadro1(){
+function visualizarPag06(){
     
-    const btnCuadros = document.querySelectorAll('.btn_cuadros06');
+    const btnCuadros = document.querySelectorAll('.btn-pag06');
 
     btnCuadros.forEach(boton=>{
-        boton.addEventListener('click', function () {  
+        boton.addEventListener('click', function (e) {
+            e.preventDefault();  
             const cuadro = boton.getAttribute('href');
             const visualizarCuadro = document.querySelector(cuadro);
 
