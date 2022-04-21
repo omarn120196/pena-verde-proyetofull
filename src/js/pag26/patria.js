@@ -184,6 +184,14 @@ function retroPatria(puntos){
         bien.style.opacity = 0;
         setTimeout(()=>{
             bien.style.opacity = 1;
+
+            //Pasar automaticamente a la evaluacion
+            setTimeout(()=>{
+                noPagina = 26
+                selectOpcion(noPagina);
+                visualizarPagina();
+            }, 7000);
+            
         }, 300);
     }
     else{

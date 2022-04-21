@@ -3,6 +3,50 @@ class EvaluacionFinal{
     constructor(){
         this.contenedor = document.querySelector('#cont-evaluacion');
         this.aciertos = 0;
+        this.preguntasRespuestas = [
+            {
+                pregunta: 'Persona de contacto entre el Comité de Comunicación y Control, las autoridades y la Compañía para la atención de obligaciones en materia de PLD/CFT.',
+                respuestaA: 'Cualquier colaborador',
+                respuestaB: 'Auditoría Interna',
+                respuestaC: 'El Oficial de Cumplimiento',
+                numero: 1
+            },
+            {
+                pregunta: 'Actos u operaciones que consisten en hacer que los fondos obtenidos a través de la comisión de delitos parezcan como el fruto de actividades legales y circulen sin problema en el sistema financiero.',
+                respuestaA: 'Narcotráfico',
+                respuestaB: 'Lavado de dinero',
+                respuestaC: 'Tráfico de influencias',
+                numero: 2
+            },
+            {
+                pregunta: 'Proceso por el que se obtienen los bienes o recursos de procedencia lícita o ilícita para presionar a los gobiernos generando terror o temor a la población.',
+                respuestaA: 'Financiamiento al terrorismo',
+                respuestaB: 'Operación inusual',
+                respuestaC: 'Operación Relevante',
+                numero: 3
+            },
+            {
+                pregunta: 'En esta etapa, el dinero lavado vuelve a la circulación integrándose a la economía formal aparentando que se obtuvo legalmente, volviéndose extremadamente difícil distinguir si el dinero lavado tuvo un origen lícito o ilícito.',
+                respuestaA: 'Colocación',
+                respuestaB: 'Integración',
+                respuestaC: 'Diversificación',
+                numero: 4
+            },
+            {
+                pregunta: 'Si un Cliente realiza una transacción superior a los $7,500 dólares en efectivo, corresponde a una operación:',
+                respuestaA: 'Preocupante',
+                respuestaB: 'Relevante',
+                respuestaC: 'Inusual',
+                numero: 5
+            },
+            {
+                pregunta: 'El Comité de Comunicación y Control es el órgano colegiado encargado dentro de la Compañía para dictar y vigilar el cumplimiento de las medidas y procedimientos en materia de PLD/CFT.',
+                respuestaA: 'Falso',
+                respuestaB: 'Relevante',
+                respuestaC: 'Verdadero',
+                numero: 6
+            }
+        ]
     }
 
     acierto(){
