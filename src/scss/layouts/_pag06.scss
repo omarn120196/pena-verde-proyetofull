@@ -28,9 +28,10 @@
             align-items: flex-start;
         }
 
-        #instrucciones{
+        #clic-pag06{
             position: relative;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -38,7 +39,7 @@
             padding: 2rem;
             border-radius: 1rem;
             width: 80%;
-            height: 20%;
+            height: 10rem;
 
             @include m.tablet{
                 width: 60%;
@@ -52,25 +53,25 @@
                 left: 15rem;
                 width: 50%;
                 height: 20rem;
-                padding: 1rem;
-                top: 20rem;
+                padding: 2rem;
+                top: 10rem;
+                text-align: center;
             }
 
-            .mano{
-                width: 20rem;
-                height: 9rem;
+            .mano-pag06{
+                width: 60%;
+                height: 70%;
 
                 @include m.tablet{
-                    height: 10rem;
-                    width: 15rem;
+                    width: 20%;
                 }
 
                 @include m.telefono{
                     position: absolute;
-                    top: -5rem;
+                    top: 1rem;
                     left: -3rem;
-                    width: 10rem;
-                    height: 10rem;
+                    width: 5rem;
+                    height: 5rem;
                 }
             }
 
