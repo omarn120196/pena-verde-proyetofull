@@ -105,7 +105,7 @@ function visualizarPagina(){
             voltearCardsPag12();
           
             //Script página15
-            visualizarGlobos();
+            // visualizarGlobos();
 
             //Script página16
             visualizarMapa();

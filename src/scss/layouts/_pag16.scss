@@ -55,10 +55,11 @@
             #globo1{
                 @include m.globoNegro(izquierda);
                 width: 50%;
-                height: 70%;
+                height: 75%;
                 margin-top: 1rem;
                 margin-left: 1rem;
                 margin-right: 1rem;
+                margin-bottom: 1rem;
 
                 @include m.escritorioHD{
                     height: 100%;
@@ -85,8 +86,8 @@
             #globo2{
                 @include m.globo(v.$vino, arriba);
                 @include m.resaltar(v.$blanco, 500);
-                width: 85%;
-                height: 80%;
+                width: 95%;
+                height: 85%;
 
                 @include m.escritorioHD{
                     height: 90%;
@@ -118,24 +119,29 @@
 
         #instrucciones{
             display: flex;
+            position: relative;
             justify-content: center;
             align-items: center;
             width: 100%;
+            height: 30%;
 
             @include m.tablet{
                 height: 7rem;
             }
 
             .mano{
-                width: 17%;
+                width: 10%;
+                height: 25%;
 
                 @include m.tablet{
-                    width: 15%;
+                    height: 50%;
+                    width: 8%;
                     margin-top: 1rem;
                 }
 
                 @include m.telefono{
-                    width: 13rem;
+                    width: 20%;
+                    height: 60%;
                 }
             }
         }
