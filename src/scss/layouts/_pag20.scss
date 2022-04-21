@@ -37,6 +37,7 @@
         display:block;
         margin: 5% 3% 0% 3%;
         transition: all 0.3s ease-in-out;
+        transform: scale3d();
     }
 
     #libro5.activo{
@@ -202,6 +203,35 @@
                 width: 133%;
                 margin-left: -16%;
             }
+            &:hover{
+                opacity: 0.5;
+                .animated {
+                    -webkit-animation-duration: 2s;
+                    animation-duration: 2s;
+                    -webkit-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                   }
+                   @-webkit-keyframes flash {
+                    0%, 50%, 100% {
+                    opacity: 1;
+                    }
+                   25%, 75% {
+                    opacity: 0;
+                    }
+                   }
+                   @keyframes flash {
+                    0%, 50%, 100% {
+                    opacity: 1;
+                    }
+                   25%, 75% {
+                    opacity: 0;
+                    }
+                   }
+                   .flash {
+                    -webkit-animation-name: flash;
+                    animation-name: flash;
+                   }
+            }
             .cuadro-c.activo{
                 display: block;
             }
@@ -303,6 +333,10 @@
                     }
                 }
             }
+            &:hover{
+                opacity: 0.5;
+                transition: all 0.4s ease-in ;
+            }
             .mensajeSem{
                 display: none;
                 img{
@@ -324,6 +358,7 @@
                 display: block;
             }
         }
+        
         #maletin-verde{
             display: flex;
             a{
@@ -334,6 +369,10 @@
                         height: 30%;
                     }
                 }
+            }
+            &:hover{
+                opacity: 0.5;
+                transition: all 0.4s ease-in ;
             }
             .mensajeSem{
                 display: none;
@@ -353,7 +392,7 @@
                 display: block;
             }
         }
-
+       
         #maletin-azul{
             display: flex;
             a{
@@ -364,6 +403,10 @@
                         height: 75px;
                     }
                 }
+            }
+            &:hover{
+                opacity: 0.5;
+                transition: all 0.4s ease-in ;
             }
             .mensajeSem{
                 display: none;
@@ -383,6 +426,7 @@
                 display: block;
             }
         }
+        
         #maletin-rojo{
             display: flex;
             a{
@@ -393,6 +437,10 @@
                         height: 75px;
                     }
                 }
+            }
+            &:hover{
+                opacity: 0.5;
+                transition: all 0.4s ease-in ;
             }
             .mensajeSem{
                 display: none;
