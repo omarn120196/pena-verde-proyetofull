@@ -74,7 +74,7 @@
                 margin-left: 40%;
                 margin-top: 8%;
                 font-size: 4vh; 
-                transition: all .4s ease-in;
+                //transition: all .4s ;
                 overflow: hidden;
                 @include m.telefono{
                     margin-left: 35%;
@@ -83,14 +83,12 @@
                     width: 100px;
                 }
             }
-            input:after{
-                background: #E1E7ED;
+            input:hover{
+                opacity: 0.6;
                 content: "";
-                height: 100%;
                 left: 0;
                 top: 0;
-                transition: all .3s ease;
-                width: 0;
+                transition: all .3s ease-in;
             }
         }
     }
@@ -138,6 +136,9 @@
                     font-weight: bold;
                     margin-top: 30px;
                     margin-right: 10px;
+                }
+                &:hover{
+                    opacity:0.5;
                 }
                 .resultado{
                     display:none;
