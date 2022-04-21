@@ -9,44 +9,128 @@ class EvaluacionFinal{
                 respuestaA: 'Cualquier colaborador',
                 respuestaB: 'Auditoría Interna',
                 respuestaC: 'El Oficial de Cumplimiento',
-                numero: 1
+                numero: 1,
+                respuestaCorrecta: 'C'
             },
             {
                 pregunta: 'Actos u operaciones que consisten en hacer que los fondos obtenidos a través de la comisión de delitos parezcan como el fruto de actividades legales y circulen sin problema en el sistema financiero.',
                 respuestaA: 'Narcotráfico',
                 respuestaB: 'Lavado de dinero',
                 respuestaC: 'Tráfico de influencias',
-                numero: 2
+                numero: 2,
+                respuestaCorrecta: 'B'
             },
             {
                 pregunta: 'Proceso por el que se obtienen los bienes o recursos de procedencia lícita o ilícita para presionar a los gobiernos generando terror o temor a la población.',
                 respuestaA: 'Financiamiento al terrorismo',
                 respuestaB: 'Operación inusual',
                 respuestaC: 'Operación Relevante',
-                numero: 3
+                numero: 3,
+                respuestaCorrecta: 'A'
             },
             {
                 pregunta: 'En esta etapa, el dinero lavado vuelve a la circulación integrándose a la economía formal aparentando que se obtuvo legalmente, volviéndose extremadamente difícil distinguir si el dinero lavado tuvo un origen lícito o ilícito.',
                 respuestaA: 'Colocación',
                 respuestaB: 'Integración',
                 respuestaC: 'Diversificación',
-                numero: 4
+                numero: 4,
+                respuestaCorrecta: 'B'
             },
             {
                 pregunta: 'Si un Cliente realiza una transacción superior a los $7,500 dólares en efectivo, corresponde a una operación:',
                 respuestaA: 'Preocupante',
                 respuestaB: 'Relevante',
                 respuestaC: 'Inusual',
-                numero: 5
+                numero: 5, 
+                respuestaCorrecta: 'B'
             },
             {
                 pregunta: 'El Comité de Comunicación y Control es el órgano colegiado encargado dentro de la Compañía para dictar y vigilar el cumplimiento de las medidas y procedimientos en materia de PLD/CFT.',
                 respuestaA: 'Falso',
-                respuestaB: 'Relevante',
-                respuestaC: 'Verdadero',
-                numero: 6
+                respuestaB: 'Verdadero',
+                numero: 6,
+                respuestaCorrecta: 'B'
+            },
+            {
+                pregunta: 'Obligación de integrar un expediente a través del agente o colaborador de la Compañía previo a celebrar un contrato de Seguro o Reaseguro.',
+                respuestaA: 'Conocimiento del Cliente',
+                respuestaB: 'Identificación del Cliente',
+                respuestaC: 'Clasificación de grado de riesgo',
+                numero: 7,
+                respuestaCorrecta: 'B'
+            },
+            {
+                pregunta: 'Son los factores que se consideran para clasificar el “Grado de Riesgo” de un de un Cliente: tipo de persona, fecha de nacimiento o constitución, nacionalidad, origen y destino de los recursos.',
+                respuestaA: 'Falso',
+                respuestaB: 'Verdadero',
+                numero: 8,
+                respuestaCorrecta: 'B'
+            },
+            {
+                pregunta: 'Previo a establecer una relación comercial con el cliente, se debe celebrar una:',
+                respuestaA: 'Reunión',
+                respuestaB: 'Comida',
+                respuestaC: 'Entrevista Personal',
+                numero: 9,
+                respuestaCorrecta: 'C'
+            },
+            {
+                pregunta: 'Lapso por el cual se deberán conservar los expedientes de identificación del Cliente o Cedente, durante la relación comercial y a partir de que finalice el contrato. ',
+                respuestaA: '3 años',
+                respuestaB: '6 meses',
+                respuestaC: '10 años ',
+                numero: 10,
+                respuestaCorrecta: 'C'
+            },
+            {
+                pregunta: 'Proceso que permite identificar, medir y establecer mitigantes a los elementos e indicadores asociados a cada uno de los riesgos de LD/FT a los que se ve expuesta la Compañía.',
+                respuestaA: 'Metodología de la Perspectiva o Metodología PR',
+                respuestaB: 'Modelo de Clasificación del Cliente o Cedente',
+                respuestaC: 'Metodología de Evaluación de Riesgos PLD/CFT',
+                numero: 11,
+                respuestaCorrecta: 'C'
+            },
+            {
+                pregunta: 'Obligación de integrar un expediente a través del agente o colaborador de la Compañía previo a celebrar un contrato de Seguro o Reaseguro.',
+                respuestaA: 'Conocimiento del Cliente.',
+                respuestaB: 'Identificación del Cliente',
+                respuestaC: 'Clasificación de grado de riesgo',
+                numero: 12,
+                respuestaCorrecta: 'B'
+            },
+            {
+                pregunta: '¿Cuáles son las fases de la Metodología de Evaluación de Riesgos PLD/CFT?',
+                respuestaA: 'Diseño, implementación y valoración',
+                respuestaB: 'Estudio, implementación y finalización',
+                respuestaC: 'Diseño, valoración y proceso',
+                numero: 13,
+                respuestaCorrecta: 'A'
+            },
+            {
+                pregunta: 'Algunas de las diferencias entre los delitos de Lavado de Dinero y Combate al Financiamiento al Terrorismo son: Propósito del delito, volumen de fondos y momento del delito.',
+                respuestaA: 'Falso',
+                respuestaB: 'Verdadero',
+                numero: 14,
+                respuestaCorrecta: 'B'
+            },
+            {
+                pregunta: 'El Lavado de Dinero tiene como propósito legalizar las ganancias mientras que el del Financiamiento al Terrorismo es generar temor o terror.',
+                respuestaA: 'Falso',
+                respuestaB: 'Verdadero',
+                numero: 15, 
+                respuestaCorrecta: 'B'
+            },
+            {
+                pregunta: '¿Es una de las Autoridades con facultades de inspección y vigilancia de las Aseguradoras y Reaseguradoras?',
+                respuestaA: 'Comisión Nacional de Seguros y Fianzas (CNSF)',
+                respuestaB: 'Secretaría de la Función Pública',
+                respuestaC: 'Banco de México',
+                numero: 16,
+                respuestaCorrecta: 'A'
             }
         ]
+
+        this.respuestas = [...this.preguntasRespuestas];
     }
 
     acierto(){
@@ -60,25 +144,25 @@ class EvaluacionFinal{
 
 function evaluacionFinal(){
 
-    const evaluacion = new EvaluacionFinal();
+    const evaluacion = new EvaluacionFinal;
 
-    //Preguntas
-    pregunta1(evaluacion);
-    pregunta2(evaluacion);
-    pregunta3(evaluacion);
-    pregunta4(evaluacion);
-    pregunta5(evaluacion);
-    pregunta6(evaluacion);
-    pregunta7(evaluacion);
-    pregunta8(evaluacion);
-    pregunta9(evaluacion);
-    pregunta10(evaluacion);
-    pregunta11(evaluacion);
-    pregunta12(evaluacion);
-    pregunta13(evaluacion);
-    pregunta14(evaluacion);
-    pregunta15(evaluacion);
-    pregunta16(evaluacion);
+    visualizarPreguntas(evaluacion);
+
+    if(evaluacion.contenedor){
+        evaluacion.respuestas.forEach(respuesta=>{
+            const {numero, respuestaCorrecta} = respuesta;
+            
+            if(respuestaCorrecta === 'A'){
+                respuestaA(evaluacion, numero);
+            }
+            else if(respuestaCorrecta === 'B'){
+                respuestaB(evaluacion, numero);
+            }
+            else if(respuestaCorrecta === 'C'){
+                respuestaC(evaluacion, numero);
+            }
+        });
+    }
 
     //Evaluar
     calificacionFinal(evaluacion);
@@ -94,87 +178,14 @@ function evaluacionFinal(){
     
 }
 
-function pregunta1(evaluacion){
+function respuestaA(evaluacion, numero) {  
 
-    const respA = document.querySelector('#respuestaA1');
-    const respB = document.querySelector('#respuestaB1');
-    const respC = document.querySelector('#respuestaC1');
-    const bloquear = document.querySelector('#bloquearR-1');
+    const respA = document.querySelector(`#respuestaA${numero}`);
+    const respB = document.querySelector(`#respuestaB${numero}`);
+    const respC = document.querySelector(`#respuestaC${numero}`);
+    const bloquear = document.querySelector(`#bloquearR-${numero}`);
 
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respC.addEventListener('click', function () {  
-            respC.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respC.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta2(evaluacion){
-
-    const respA = document.querySelector('#respuestaA2');
-    const respB = document.querySelector('#respuestaB2');
-    const respC = document.querySelector('#respuestaC2');
-    const bloquear = document.querySelector('#bloquearR-2');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-
-        respC.addEventListener('click', function () {  
-            respC.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respC.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta3(evaluacion){
-
-    const respA = document.querySelector('#respuestaA3');
-    const respB = document.querySelector('#respuestaB3');
-    const respC = document.querySelector('#respuestaC3');
-    const bloquear = document.querySelector('#bloquearR-3');
-
-    if(evaluacion.contenedor){
-
+    if( respA && respB && bloquear){
         respA.addEventListener('click', function () {  
             respA.classList.add('respuesta-correcta');
             evaluacion.acierto();
@@ -183,7 +194,85 @@ function pregunta3(evaluacion){
                 respA.classList.add('fondoCorrecto');
             }, 2000);
         });
+            
+        respB.addEventListener('click', function () {  
+            respB.classList.add('respuesta-incorrecta');
+            bloquearRespuesta(bloquear);
+            setTimeout(()=>{
+                respB.classList.add('fondoIncorrecto');
+            }, 2000);
+        });
+            
+        if(respC){
+            respC.addEventListener('click', function () {  
+                respC.classList.add('respuesta-incorrecta');
+                bloquearRespuesta(bloquear);
+                setTimeout(()=>{
+                    respC.classList.add('fondoIncorrecto');
+                }, 2000);
+            });
+        }
+    }
 
+    
+    
+}
+
+function respuestaB(evaluacion, numero) {  
+
+    const respA = document.querySelector(`#respuestaA${numero}`);
+    const respB = document.querySelector(`#respuestaB${numero}`);
+    const respC = document.querySelector(`#respuestaC${numero}`);
+    const bloquear = document.querySelector(`#bloquearR-${numero}`);
+
+    if( respA && respB && bloquear){
+        respA.addEventListener('click', function () {  
+            respA.classList.add('respuesta-incorrecta');
+            bloquearRespuesta(bloquear);
+            setTimeout(()=>{
+                respA.classList.add('fondoIncorrecto');
+            }, 2000);
+        });
+    
+        respB.addEventListener('click', function () {  
+            respB.classList.add('respuesta-correcta');
+            evaluacion.acierto();
+            bloquearRespuesta(bloquear);
+            setTimeout(()=>{
+                respB.classList.add('fondoCorrecto');
+            }, 2000);
+        });
+        
+        if(respC){
+            respC.addEventListener('click', function () {  
+                respC.classList.add('respuesta-incorrecta');
+                bloquearRespuesta(bloquear);
+                setTimeout(()=>{
+                    respC.classList.add('fondoIncorrecto');
+                }, 2000);
+            });
+        }
+        
+    }
+    
+}
+
+function respuestaC(evaluacion, numero) {  
+
+    const respA = document.querySelector(`#respuestaA${numero}`);
+    const respB = document.querySelector(`#respuestaB${numero}`);
+    const respC = document.querySelector(`#respuestaC${numero}`);
+    const bloquear = document.querySelector(`#bloquearR-${numero}`);
+
+    if( respA && respB && respC && bloquear){
+        respA.addEventListener('click', function () {  
+            respA.classList.add('respuesta-incorrecta');
+            bloquearRespuesta(bloquear);
+            setTimeout(()=>{
+                respA.classList.add('fondoIncorrecto');
+            }, 2000);
+        });
+         
         respB.addEventListener('click', function () {  
             respB.classList.add('respuesta-incorrecta');
             bloquearRespuesta(bloquear);
@@ -192,203 +281,7 @@ function pregunta3(evaluacion){
             }, 2000);
         });
 
-        respC.addEventListener('click', function () {  
-            respC.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respC.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta4(evaluacion){
-
-    const respA = document.querySelector('#respuestaA4');
-    const respB = document.querySelector('#respuestaB4');
-    const respC = document.querySelector('#respuestaC4');
-    const bloquear = document.querySelector('#bloquearR-4');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-
-        respC.addEventListener('click', function () {  
-            respC.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respC.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta5(evaluacion){
-
-    const respA = document.querySelector('#respuestaA5');
-    const respB = document.querySelector('#respuestaB5');
-    const respC = document.querySelector('#respuestaC5');
-    const bloquear = document.querySelector('#bloquearR-5');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-
-        respC.addEventListener('click', function () {  
-            respC.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respC.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta6(evaluacion){
-
-    const respA = document.querySelector('#respuestaA6');
-    const respB = document.querySelector('#respuestaB6');
-    const bloquear = document.querySelector('#bloquearR-6');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta7(evaluacion){
-
-    const respA = document.querySelector('#respuestaA7');
-    const respB = document.querySelector('#respuestaB7');
-    const respC = document.querySelector('#respuestaC7');
-    const bloquear = document.querySelector('#bloquearR-7');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-
-        respC.addEventListener('click', function () {  
-            respC.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respC.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta8(evaluacion){
-
-    const respA = document.querySelector('#respuestaA8');
-    const respB = document.querySelector('#respuestaB8');
-    const bloquear = document.querySelector('#bloquearR-8');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta9(evaluacion){
-
-    const respA = document.querySelector('#respuestaA9');
-    const respB = document.querySelector('#respuestaB9');
-    const respC = document.querySelector('#respuestaC9');
-    const bloquear = document.querySelector('#bloquearR-9');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
+        
         respC.addEventListener('click', function () {  
             respC.classList.add('respuesta-correcta');
             evaluacion.acierto();
@@ -397,242 +290,10 @@ function pregunta9(evaluacion){
                 respC.classList.add('fondoCorrecto');
             }, 2000);
         });
+        
     }
 }
 
-function pregunta10(evaluacion){
-
-    const respA = document.querySelector('#respuestaA10');
-    const respB = document.querySelector('#respuestaB10');
-    const respC = document.querySelector('#respuestaC10');
-    const bloquear = document.querySelector('#bloquearR-10');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respC.addEventListener('click', function () {  
-            respC.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respC.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta11(evaluacion){
-
-    const respA = document.querySelector('#respuestaA11');
-    const respB = document.querySelector('#respuestaB11');
-    const respC = document.querySelector('#respuestaC11');
-    const bloquear = document.querySelector('#bloquearR-11');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respC.addEventListener('click', function () {  
-            respC.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respC.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta12(evaluacion){
-
-    const respA = document.querySelector('#respuestaA12');
-    const respB = document.querySelector('#respuestaB12');
-    const respC = document.querySelector('#respuestaC12');
-    const bloquear = document.querySelector('#bloquearR-12');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-
-        respC.addEventListener('click', function () {  
-            respC.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respC.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta13(evaluacion){
-
-    const respA = document.querySelector('#respuestaA13');
-    const respB = document.querySelector('#respuestaB13');
-    const respC = document.querySelector('#respuestaC13');
-    const bloquear = document.querySelector('#bloquearR-13');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respC.addEventListener('click', function () {  
-            respC.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respC.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta14(evaluacion){
-
-    const respA = document.querySelector('#respuestaA14');
-    const respB = document.querySelector('#respuestaB14');
-    const bloquear = document.querySelector('#bloquearR-14');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta15(evaluacion){
-
-    const respA = document.querySelector('#respuestaA15');
-    const respB = document.querySelector('#respuestaB15');
-    const bloquear = document.querySelector('#bloquearR-15');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-    }
-}
-
-function pregunta16(evaluacion){
-
-    const respA = document.querySelector('#respuestaA16');
-    const respB = document.querySelector('#respuestaB16');
-    const respC = document.querySelector('#respuestaC16');
-    const bloquear = document.querySelector('#bloquearR-16');
-
-    if(evaluacion.contenedor){
-
-        respA.addEventListener('click', function () {  
-            respA.classList.add('respuesta-correcta');
-            evaluacion.acierto();
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respA.classList.add('fondoCorrecto');
-            }, 2000);
-        });
-
-        respB.addEventListener('click', function () {  
-            respB.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respB.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-
-        respC.addEventListener('click', function () {  
-            respC.classList.add('respuesta-incorrecta');
-            bloquearRespuesta(bloquear);
-            setTimeout(()=>{
-                respC.classList.add('fondoIncorrecto');
-            }, 2000);
-        });
-    }
-}
 
 function bloquearRespuesta(div){
     div.classList.add('activado');
@@ -642,7 +303,7 @@ function calificacionFinal(evaluacion){
 
     const btnEvaluar = document.querySelector('#evaluarCuestionario');
     const calificacion = document.querySelector('#calificacion');
-    const noPreguntas = 16;
+    const noPreguntas = 10;
 
     const intro = document.querySelector('#intro-evaluacion');
     const instruccion = document.querySelector('#instruccionEvaluacion');
@@ -661,7 +322,7 @@ function calificacionFinal(evaluacion){
             contPreguntas.classList.add('ocultar');
             btnEvaluar.parentElement.classList.add('ocultar');
     
-            const promedio = parseInt((evaluacion.aciertos * 100) / 16);
+            const promedio = parseInt((evaluacion.aciertos * 100) / noPreguntas);
             
             if(promedio >= 80){
                 const retro = document.querySelector('#retro-positiva');       
