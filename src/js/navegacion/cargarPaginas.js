@@ -50,11 +50,15 @@ jQuery(function($){
     btnAdelante.on('click', btnNav.sigPagina);
     btnAtras.on('click', btnNav.atrasPaginas);
     btnHome.on('click', btnNav.home);
+
+    //Calcular altura
+    calcularAltura();
 })
 
 //Funciones----------------------------------------------------------
 
 function visualizarPagina(){
+
     const contenedor = $('#cont-paginas');
     const url = 'contenido/'+paginas[noPagina].ruta;
     const titulo = paginas[noPagina].nombre;
@@ -131,4 +135,27 @@ function selectOpcion(noPagina){
     select.classList.remove('select');
 
     enlaces[noPagina].classList.add('select');
+}
+
+//Parpadear el boton al final de la página
+function calcularAltura(){
+
+    $(window).on("scroll", function() {
+        const scrollHeight = $(document).height();
+        const scrollPosition = $(window).height() + $(window).scrollTop();
+
+
+        if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+            
+            btnAdelante.addClass('parpadea');
+
+            setTimeout(()=>{
+                btnAdelante.removeClass('parpadea');
+            }, 3000);
+             
+        }
+        else{
+            btnAdelante.removeClass('parpadea');
+        }
+    });
 }

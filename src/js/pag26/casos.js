@@ -4,6 +4,7 @@ function iniciarCasos() {
     aseguradora();
     patria();
     reaseguradora();
+    irEvaluacionFinal();
 }
 
 function elegirCaso() {  
@@ -121,6 +122,22 @@ function reaseguradora(){
             reaseguradora.visualizar(0);
 
             preguntasReaseguradora1(reaseguradora);
+        });
+    }
+}
+
+function irEvaluacionFinal(){
+
+    const cuadernos = document.querySelectorAll('.cuaderno');
+
+    if(cuadernos){
+        
+        cuadernos.forEach(cuaderno=>{
+            cuaderno.addEventListener('click', function () {
+                noPagina = 26
+                selectOpcion(noPagina);
+                visualizarPagina();
+            });
         });
     }
 }

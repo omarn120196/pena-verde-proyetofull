@@ -71,7 +71,7 @@ const paginas = [
         progreso: 14
     },
     {
-        nombre: 'Sistemas automatizados', 
+        nombre: 'Reserva y confidencialidad', 
         ruta: 'pag15.html', 
         progreso: 15
     },
