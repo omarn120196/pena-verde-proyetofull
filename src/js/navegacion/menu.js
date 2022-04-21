@@ -5,21 +5,29 @@ const header = document.querySelector('.header');
 const contenido = document.querySelector('.contenido');
 const mensajePorcentaje = document.querySelector('#progreso__mensaje');
 const barra = document.querySelector('.barra');
-const h4 = document.querySelectorAll('.option h4');
+let h4;
 
-//Variables de los enlaces del menu
-const enlaces = document.querySelectorAll('.enlacesPaginas');
+let enlaces;
 
 let menuAbierto = false;
 
 document.addEventListener('DOMContentLoaded', function(){
 
     btn_menu.addEventListener('click', abirMenu);
-    irPagina();
+
+    temas();
+
+    //Variables de los enlaces del menu
+    enlaces = document.querySelectorAll('.enlacesPaginas');
+    h4 = document.querySelectorAll('.option h4');
 
     h4.forEach(titulos=>{
         titulos.classList.add('ocultar');
     });
+
+    irPagina();
+
+    
 });
 
 function abirMenu() {
