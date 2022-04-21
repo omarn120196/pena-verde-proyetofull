@@ -79,6 +79,9 @@
                     width: 100px;
                 }
             }
+            &:hover{
+                opacity: 0.5;
+            }
         }
     }
     .contenedor2.activo{
@@ -124,7 +127,9 @@
                     height: 90%;
                     padding: 3% 3%;
                     font-size: 1.5vh;
+                   
                 }
+                
                 .pin{
                     align-items: center;
                     height: 15px;
@@ -135,6 +140,12 @@
                     margin-left: 6%;
                 }
             } 
+
+            .cuadroC1#respuesta1pag21{
+                p{
+                    @include m.parpadeo();
+                }
+            }
             .cuadroC1#respuesta1pag21.correcto{
                 p{
                     background-color: #E96247;
