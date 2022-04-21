@@ -411,20 +411,33 @@
         }
         .carousel-control-next{
             margin-right: -5px;
-            margin-top: -30%;
+            margin-top: 0%;
+            @include m.telefono{
+                margin-top: -30%;
+            }
             .carousel-control-next-icon{
                 position: 500px !important;
                 background-image: url("/build/img/contenido/Pag17/icono-next.svg");
                 width: 40%;
-                height: 5%;
+                height: 8%;
+                @include m.tablet{
+                    height: 5%;
+                }
             }
         }
         .carousel-control-prev{
-            margin-top: -30%;
+            margin-top: 0%;
+            margin-top: 0%;
+            @include m.telefono{
+                margin-top: -30%;
+            }
             .carousel-control-prev-icon{
                 background-image: url("/build/img/contenido/Pag17/icono-prev.svg");
                 width: 40%;
-                height: 5%;
+                height: 8%;
+                @include m.tablet{
+                    height: 5%;
+                }
             }
         }
     }

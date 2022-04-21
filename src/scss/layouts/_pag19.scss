@@ -58,7 +58,7 @@
         margin-left: -12%;
         padding: 1%;
         margin-right: 5%;
-        font-size: 1vw;
+        font-size: 0.8vw;
         font-weight: bold;
         border-radius: 2%;
         @include m.tablet{
@@ -87,7 +87,7 @@
                 color:#E96247 ;
                 p{
                     color: black;
-                    font-size: 0.81vw;
+                    font-size: 0.80vw;
                     font-weight: bold;
                 }
             }
@@ -97,7 +97,7 @@
             height: 3%;
             z-index: 2;
             margin-left: 65%;
-            margin-top: -5%;
+            margin-top: -4%;
             float: right;
             
         }
