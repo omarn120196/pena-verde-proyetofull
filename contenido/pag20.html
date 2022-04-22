@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página 20</title>
 </head>
+
 <body>
     <div class="cuadro2click">
         <figure class="icon2c">
@@ -15,78 +17,93 @@
             Da clic en cada tarjeta para conocer más sobre cuál es la misión del Manual de Cumplimiento PLD/CFT.
         </p>
     </div>
-    <div class="contenedorPrinPag20">
-        <figure class="libro activo" id="libro1">
-            <a href="javascript:mostrarT1()">
-                <img src="/build/img/contenido/Pag20/libro-azul.svg" alt="libro azul">
-            </a>
-        </figure>
-        <figure class="tarjeta" id="tarjeta1">
-            <a href="javascript:mostrarL1()">
-                <p>
-                    Cumplir con lo dispuesto por la LISF, las Disposiciones y demás normativas aplicables a la materia.
-                </p>
-            </a>
-        </figure>
-
-        <figure class="libro activo" id="libro2">
-            <a href="javascript:mostrarT2()">
-                <img src="/build/img/contenido/Pag20/libro-naranja.svg" alt="libro naranja">
-            </a>
-        </figure>
-        <figure class="tarjeta" id="tarjeta2">
-            <a href="javascript:mostrarL2()">
-                <p>
-                    Establecer las medidas y procedimientos mínimos a observar para prevenir y detectar los actos, omisiones y operaciones que pudieran favorecer, prestar ayuda, auxilio o cooperación de cualquier especie para la comisión de los delitos previstos en los artículos 139, 139 Quáter, 148 Bis o 400 Bis del Código Penal Federal.
-                </p>
-            </a>
-        </figure>
-
-        <figure class="libro activo" id="libro3">
-            <a href="javascript:mostrarT3()">
-                <img src="/build/img/contenido/Pag20/libro-amarillo.svg" alt="libro amarillo">
-            </a>
-        </figure>
-        <figure class="tarjeta" id="tarjeta3">
-            <a href="javascript:mostrarL3()">
-                <p>
-                    Prevenir que las Operaciones de la Compañía sean utilizadas para ocultar el origen de los recursos de procedencia ilícita y/o para financiar actos terroristas, y por lo tanto, se dañe la reputación de la Compañía.
-                </p>
-            </a>
-        </figure>
-
-        <figure class="libro activo" id="libro4">
-            <a href="javascript:mostrarT4()">
-                <img src="/build/img/contenido/Pag20/libro-verde.svg" alt="libro verde">
-            </a>
-        </figure>
-        <figure class="tarjeta" id="tarjeta4">
-            <a href="javascript:mostrarL4()">
-                <p>
-                    Establecer criterios uniformes conforme a los procesos operativos y estrategias, que permitana los colaboradores de la Compañía establecer sistemas preventivos de identificación y de conocimiento del Cliente; a fin de mitigar el riesgo de realizar operaciones que pudieran verse implicadas en los supuestos antes referidos.
-                </p>
-            </a>
-        </figure>
-        <figure class="libro activo" id="libro5">
-            <a href="javascript:mostrarT5()">
-                <img src="/build/img/contenido/Pag20/libro-azur.svg" alt="libro azul fuerte">
-            </a>
-        </figure>
-        <figure class="tarjeta" id="tarjeta5">
-            <a href="javascript:mostrarL5()">
-                <p>
-                    Ser una herramienta de trabajo mediante la cual los Colaboradores de la Compañía podrán detectar y reportar posibles Operaciones con recursos de procedencia ilícita y/o combate al financiamiento del terrorismo; así como realizar el reporte de cualquier operación a la autoridad.
-
-                </p>
-            </a>
-        </figure>
+    <div id="flipCards-pag20">
+        <div class="cards" id="flip1">
+            <div class="front caras">
+                <figure class="cont-imagen">
+                    <img src="./build/img/contenido/Pag20/libro-azul.svg" alt="Flip Card">
+                </figure>
+            </div>
+            <div class="back caras">
+                <div class="cont-mensaje-back" id="libro-azul">
+                    <p>Cumplir con lo dispuesto por la LISF, las Disposiciones y demás normativas aplicables a la
+                        materia.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cards" id="flip2">
+            <div class="front caras">
+                <figure class="cont-imagen">
+                    <img src="./build/img/contenido/Pag20/libro-naranja.svg" alt="Flip Card">
+                </figure>
+            </div>
+            <div class="back caras">
+                <div class="cont-mensaje-back" id="libro-naranja">
+                    <p>Establecer las medidas y procedimientos mínimos a observar para prevenir y detectar los actos,
+                        omisiones y operaciones que pudieran favorecer, prestar ayuda, auxilio o cooperación de
+                        cualquier especie para la comisión de los delitos previstos en los artículos 139, 139 Quáter,
+                        148 Bis o 400 Bis del Código Penal Federal.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cards" id="flip3">
+            <div class="front caras">
+                <figure class="cont-imagen">
+                    <img src="./build/img/contenido/Pag20/libro-amarillo.svg" alt="Flip Card">
+                </figure>
+            </div>
+            <div class="back caras">
+                <div class="cont-mensaje-back" id="libro-amarillo">
+                    <p>
+                        Prevenir que las Operaciones de la Compañía sean utilizadas para ocultar el origen de los
+                        recursos de procedencia ilícita y/o para financiar actos terroristas, y por lo tanto, se dañe la
+                        reputación de la Compañía.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cards" id="flip4">
+            <div class="front caras">
+                <figure class="cont-imagen">
+                    <img src="./build/img/contenido/Pag20/libro-verde.svg" alt="Flip Card">
+                </figure>
+            </div>
+            <div class="back caras">
+                <div class="cont-mensaje-back" id="libro-verde">
+                    <p>
+                        Establecer criterios uniformes conforme a los procesos operativos y estrategias, que permitana
+                        los colaboradores de la Compañía establecer sistemas preventivos de identificación y de
+                        conocimiento del Cliente; a fin de mitigar el riesgo de realizar operaciones que pudieran verse
+                        implicadas en los supuestos antes referidos.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cards" id="flip5">
+            <div class="front caras">
+                <figure class="cont-imagen">
+                    <img src="./build/img/contenido/Pag20/libro-azur.svg" alt="Flip Card">
+                </figure>
+            </div>
+            <div class="back caras">
+                <div class="cont-mensaje-back" id="libro-azur">
+                    <p>
+                        Ser una herramienta de trabajo mediante la cual los Colaboradores de la Compañía podrán detectar
+                        y reportar posibles Operaciones con recursos de procedencia ilícita y/o combate al
+                        financiamiento del terrorismo; así como realizar el reporte de cualquier operación a la
+                        autoridad.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="cuadro2click">
         <figure class="icon2c">
             <img src="./build/img/contenido/Pag20/icon2click.svg" alt="icono click">
         </figure>
         <p>
-            Da clic en el icono de cada Diferencia para conocer en qué se distinguen el Lavado de Dinero del Financiamiento al Terrorismo.
+            Da clic en el icono de cada Diferencia para conocer en qué se distinguen el Lavado de Dinero del
+            Financiamiento al Terrorismo.
         </p>
     </div>
     <div class="contenido1">
@@ -153,7 +170,7 @@
                         <img src="./build/img/contenido/Pag20/respuesta-central.svg" alt="respuesta central">
                         <p>
                             Fuente o procedencia de los fondos
-    
+
                         </p>
                     </figure>
                 </a>
@@ -189,7 +206,7 @@
             <div class="cuadro-claro">
                 <p>
                     El volumen de fondos que manejan los terroristas es mucho menor.
-                </p>               
+                </p>
             </div>
         </div>
 
@@ -213,7 +230,7 @@
                             Momento del Delito
                         </p>
                     </figure>
-                </a>  
+                </a>
             </div>
             <div class="cuadro-claro">
                 <p>
@@ -228,7 +245,8 @@
             <img src="./build/img/contenido/Pag20/icon2click.svg" alt="icono click">
         </figure>
         <p>
-            Da clic en cada icono para conocer las semejanzas entre el Lavado de Dinero y el Financiamiento al Terrorismo. 
+            Da clic en cada icono para conocer las semejanzas entre el Lavado de Dinero y el Financiamiento al
+            Terrorismo.
         </p>
     </div>
     <div class="contenido2">
@@ -259,8 +277,8 @@
                 <div class="mensajeSem" id="mAmarillo">
                     <p>
                         Son delitos financieros que tienen consecuencias económicas.
-                    </p>     
-                </div>        
+                    </p>
+                </div>
             </div>
             <div class="maletin" id="maletin-verde">
                 <a href="javascript:mostrarVerde()">
@@ -271,8 +289,8 @@
                 <div class="mensajeSem" id="mVerde">
                     <p>
                         Pueden amenazar su estabilidad del sector financiero de un país.
-                    </p>  
-                </div>           
+                    </p>
+                </div>
             </div>
             <div class="maletin" id="maletin-azul">
                 <a href="javascript:mostrarAzul()">
@@ -282,9 +300,10 @@
                 </a>
                 <div class="mensajeSem" id="mAzul">
                     <p>
-                        La prevención es esencial para salvaguardar la integridad de los mercados y del marco financiero mundial.
-                    </p> 
-                </div>            
+                        La prevención es esencial para salvaguardar la integridad de los mercados y del marco financiero
+                        mundial.
+                    </p>
+                </div>
             </div>
             <div class="maletin" id="maletin-rojo">
                 <a href="javascript:mostrarRojo()">
@@ -296,9 +315,10 @@
                     <p>
                         Propician el anonimato y la falta de transparencia en sus transacciones.
                     </p>
-                </div>             
+                </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>

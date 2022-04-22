@@ -117,6 +117,9 @@ function visualizarPagina(){
             desplegar();
 
             //Script página24
+            voltearCardsPag20();
+
+            //Script página24
             flipCard();
 
             //Script página25

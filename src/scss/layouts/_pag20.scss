@@ -2,6 +2,8 @@
 @use '../base/mixins' as m;
 
 .cuadro2click{
+    position: relative;
+    top: 2rem;
     display: flex;
     background-color: #D9EDEF;
     align-items: center;
@@ -18,120 +20,74 @@
     }
 }
 
-.contenedorPrinPag20{
+#flipCards-pag20{
     display: flex;
-    .libro{
-        height: 90%;
-        width: 30%;
-    }
-    #libro1,#libro3,#libro5{
-        display:none;
-    }
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4rem 0;
 
-    #libro1.activo{
-        display:block;
-        margin: 5% 3% 0% 0%;
-    }
+    .cards{
+        width: 22rem;
+        height: 40rem;
+        position: relative;
+        cursor: pointer;
 
-    #libro3.activo{
-        display:block;
-        margin: 5% 3% 0% 3%;
-        transition: all 0.3s ease-in-out;
-        transform: scale3d();
-    }
+        &#flip1{
+            @include m.flip-cardsPag20(fuerte, v.$azul2);
+        }
+        
+        &#flip2{
+            @include m.flip-cardsPag20(fuerte, v.$naranja);
+            top: 5rem;
+        }
+        &#flip3{
+            @include m.flip-cardsPag20(fuerte, v.$amarilloPag20);
+        }
+        &#flip4{
+            @include m.flip-cardsPag20(fuerte, v.$verde);
+            top: 5rem;
+        }
+        &#flip5{
+            @include m.flip-cardsPag20(fuerte, v.$azulRey);
+        }
+        
+        .caras{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transition: all 1s ease;            
+        }
+        
+        .front{
+            transform: perspective(50rem) rotateY(0deg);
 
-    #libro5.activo{
-        display:block;
-        margin: 5% 0% 0% 3%;
-    }
-    
-    #libro2,#libro4{
-        display:none;
-    }
-    #libro2.activo,#libro4.activo{
-        display:block;
-        margin: 15% 0% 5% 0%;
-    }
+            .cont-imagen{
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
 
-    #tarjeta1.activo{
-        display: block;
-        border:solid 2px #7AA0DD;
-        height: 60%;
-        width: 30%;
-        padding: 8.7% 1.5%;
-        border-radius: 5px;
-        font-weight: bold;
-        margin: 5% 3% 0% 0%;
-        p{
-            font-size: 0.8vw;
-            text-align: center;
-            color: #1A1E1E;
+        .back{
+            transform: perspective(50rem) rotateY(180deg);
+
+            .cont-mensaje-back{
+                padding: 2rem;
+                text-align: justify;
+            }
         }
-    }
-    
-    #tarjeta2.activo{
-        display: block;
-        border:solid 2px #E96247;
-        height: 60%;
-        width: 30%;
-        padding: 3.5% 1.5%;
-        border-radius: 5px;
-        font-weight: bold;
-        margin: 15% 0% 5% 0%;
-        p{
-            font-size: 0.8vw;
-            text-align: center;
-            color: #1A1E1E;
+
+        &.click{
+            .front{
+                transform: perspective(50rem) rotateY(180deg);
+            }
+        
+            .back{
+                transform: perspective(50rem) rotateY(360deg);
+            }
         }
-    }
-    #tarjeta3.activo{
-        display: block;
-        border:solid 2px #F9C931;
-        height: 60%;
-        width: 30%;
-        padding: 5% 1.5%;
-        border-radius: 5px;
-        font-weight: bold;
-        margin: 5% 3% 0% 3%;
-        p{
-            font-size: 0.8vw;
-            text-align: center;
-            color: #1A1E1E;
-        }
-    }
-    #tarjeta4.activo{
-        display: block;
-        border:solid 2px #0C8F5A;
-        //display:none;
-        height: 60%;
-        width: 30%;
-        padding: 1.25% 1.5%;
-        border-radius: 5px;
-        font-weight: bold;
-        margin: 15% 0% 5% 0%;
-        p{
-            font-size: 0.8vw;
-            text-align: center;
-            color: #1A1E1E;
-        }
-    }
-    #tarjeta5.activo{
-        display: block;
-        border:solid 2px #002F87;
-        height: 60%;
-        width: 30%;
-        padding: 2.55% 1.5%;
-        border-radius: 5px;
-        font-weight: bold;
-        margin: 5% 0% 0% 3%;
-        p{
-            font-size: 0.8vw;
-            text-align: center;
-            color: #1A1E1E;
-        }
-    }
-    #tarjeta1,#tarjeta2,#tarjeta3,#tarjeta4,#tarjeta5{
-        display: none;
     }
 }
 
