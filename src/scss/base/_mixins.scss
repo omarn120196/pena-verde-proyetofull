@@ -372,6 +372,28 @@
     }
 }
 
+@mixin botonesPag22 ($fondo, $fuente){
+    display: block;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: $fondo;
+    transition: all .3s ease;
+    width: 100%;
+    color: $fuente;
+    font-weight: 700;
+    margin-top: -2rem;
+
+    &:hover{
+        background: darken($fondo, 5);
+        transform: scale(1.1);
+        box-shadow: 0px 10px 18px -5px rgba(0,0,0,0.75);
+    }
+
+    @include escritorio{
+        font-size: 1.2rem;
+    }
+}
+
 @mixin botonesPag07 ($fondo){
     display: block;
     text-align: center;
@@ -553,6 +575,34 @@
         @include escritorioHD{
             top: -12%;
         }
+    }
+}
+
+
+@mixin infoPag22 ($fondo){
+    position: relative;
+    text-align: center;
+    width: 90%;
+    height: 65%;
+    background: $fondo;
+    border-radius: 2rem;
+    top: 1rem;
+    margin-left: 3rem;
+    padding: 2rem;
+    @include resaltar(v.$colorFuente, 600);
+
+    @include escritorioHD{
+        top: 1rem;
+        height: 72%;
+    }
+
+    @include tablet{
+        top: 2rem;
+        height: 36rem;
+    }
+
+    @include telefono(){
+        height: auto;
     }
 }
 
