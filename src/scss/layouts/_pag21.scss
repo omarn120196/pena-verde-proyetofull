@@ -145,58 +145,99 @@
                 p{
                     padding: 3% 3%;
                 }
+                &:hover{
+                    @include m.parpadeo();
+                }
             }
             #respuesta2pag21{
                 p{
                     padding: 3% 3%;
                 }
+                &:hover{
+                    @include m.parpadeo();
+                }
             }
             #respuesta3pag21{
                 p{
                     padding: 3% 3%;
+            
+                }
+                &:hover{
+                    @include m.parpadeo();
                 }
             }
             #respuesta4pag21{
                 p{
                     padding: 2.5% 3%;
                 }
+                &:hover{
+                    @include m.parpadeo();
+                }
             }
+
             #respuesta5pag21{
                 p{
                     padding: 3% 3%;
                 }
+                &:hover{
+                    @include m.parpadeo();
+                }
             }
+            
 
             .cuadroC1#respuesta1pag21{
                 p{
                     @include m.parpadeo();
                 }
+                &:hover{
+                    @include m.parpadeo0();
+                }
             }
+            
             .cuadroC1#respuesta1pag21.correcto{
                 p{
                     background-color: #E96247;
                 }
+                &:hover{
+                    @include m.parpadeo0();
+                }
             }
+            
             .cuadroC1#respuesta2pag21.correcto{
                 p{
                     background-color: #870051;
                 }
+                &:hover{
+                    @include m.parpadeo0();
+                }
             }
+
             .cuadroC1#respuesta3pag21.correcto{
                 p{
                     background-color: #F9C931;
                 }
+                &:hover{
+                    @include m.parpadeo0();
+                }
             }
+            
             .cuadroC1#respuesta4pag21.correcto{
                 p{
                     background-color: #7AA0DD;
+                }
+                &:hover{
+                    @include m.parpadeo0();
                 }
             }
             .cuadroC1#respuesta5pag21.correcto{
                 p{
                     background-color: #002F87;
                 }
+                &:hover{
+                    @include m.parpadeo0();
+                }
             }
+
         }
         .columna2{
             width: 100%;
@@ -252,54 +293,6 @@
                 }
             }
         }
-        /*.lineas{
-            
-            #linea-nj{
-                position: absolute;
-                left:42.5%;
-                top: 38%;
-                img{
-                    height: 350px;
-                    width: 322px;
-                }
-            }
-            #linea-am{
-                position: absolute;
-                left: 38%;
-                top: 37.5%;
-                img{
-                    width: 332px;
-                    height: 300px;
-                }
-            }
-            #linea-az{
-                position: absolute;
-                left: 38%;
-                top: 37.5%;
-                img{
-                    width: 332px;
-                    height: 300px;
-                }
-            }
-            #linea-af{
-                position: absolute;
-                left: 38%;
-                top: 37.5%;
-                img{
-                    width: 332px;
-                    height: 300px;
-                }
-            }
-            #linea-vd{
-                position: absolute;
-                left: 38%;
-                top: 37.5%;
-                img{
-                    width: 332px;
-                    height: 300px;
-                }
-            }
-        }*/
     }
 }
 
