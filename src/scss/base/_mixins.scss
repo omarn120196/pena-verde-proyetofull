@@ -676,6 +676,7 @@
          50% { opacity: 0.0; }
         100% { opacity: 1.0; }
       }
+
 } 
 @mixin parpadeo0(){
     &{
@@ -689,7 +690,9 @@
         -webkit-animation-timing-function: linear;
         -webkit-animation-iteration-count: 2;
     }
-} 
+}
+
+      
 @mixin conceptual($color){
     background: v.$colorFuente;
 
