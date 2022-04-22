@@ -6,7 +6,6 @@ window.addEventListener('load', function(){
     const contRes1=document.getElementById('contenedor1pag22');
     const contRes2=document.getElementById('contenedor2pag22');
     const contRes3=document.getElementById('contenedor3pag22');
-    console.log('compilo')
     this.window.onload=function inciarR(){
         setTimeout('iniciarRel',1000);
     }
