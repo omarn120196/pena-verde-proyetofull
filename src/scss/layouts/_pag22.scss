@@ -41,60 +41,63 @@
 .contenido1pag22{
     background-color: #D2DEE8;
     height: 70%;
-    min-height: 60%;
-    padding:2% 4% ;
+    padding:2% 0%;
     .contenido1_1pag22{
-        display: flex;
         margin-top: 3%;
         text-align: center;
-        .cuadro-amarillo22{
-            @include m.parpadeo();
-            background-color: rgb(249, 201, 49);
-            border-radius: 10px;
-            height: 90px;
-            padding: 18.75%;
-            width: 247%;
-            p{
-                color: #1A1E1E;
-                font-size: 1.5vw;
-                font-weight: bold;
+        height: 90%;
+        @include m.grid(3,1%);
+        a{  
+            margin: 2%;
+            .cuadro-amarillo22{
+                @include m.parpadeo();
+                background-color: rgb(249, 201, 49);
+                border-radius: 10px;
+                padding: 3% 3%;
+                p{
+                    color: #1A1E1E;
+                    font-weight: bold;
+                    font-size: 1vw;
+                }
             }
-        }
-        .cuadro-verde22{
-            background-color: rgb(12, 143, 90);
-            border-radius: 10px;
-            height: 90px;
-            margin-left: 60%;
-            margin-right: 5%;
-            padding: 4% 1.2%;
-            width: 75%;
-            p{
-                color: #fff;
-                font-weight: bold;
-                font-size: 1.5vw;
+            &:hover{
+                @include m.parpadeo();
             }
-        }
-        .cuadro-azul22-2{
-            background-color: #7aa0dd;
-            border-radius: 10px;
-            height: 90px;
-            margin-left: 75%;
-            padding: 10% 3%;
-            width: 119%;
-            p{
-                color: #002F87;
-                font-size: 1.5vw;
-                font-weight: bold;
-                max-height: 90px!important;
+
+            .cuadro-verde22{
+                background-color: rgb(12, 143, 90);
+                border-radius: 10px;
+                padding: 3% 3%;
+                p{
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 1vw;
+                }
+            }
+            &:hover{
+                @include m.parpadeo();
+            }
+            .cuadro-azul22-2{
+                background-color: #7aa0dd;
+                border-radius: 10px;
+                padding: 3% 3%;
+                p{
+                    color: #002F87;
+                    font-weight: bold;
+                    font-size: 1vw;
+                }
+            }
+            &:hover{
+                @include m.parpadeo();
             }
         }
     }
 
     .contenido1_2-22{
-        display: flex;
+        height: 80%;
+        @include m.grid(3,1%);
         .cuadro2-amarillo22{
             display: block;
-            width: 35%;
             .minicuadro-claro{
                 display: none;
                 margin:5% 5% 0% 0%;
@@ -107,12 +110,11 @@
             }
             .minicuadro-amarillo{
                 display: none;
-                width: 90%;
-                height:60%;
-                min-height: 400px;
+                width: 95%;
+                height:100%;
                 background-color: #FFF2CA;
-                margin:5% 5% 0% 0%;
-                padding: 10%;
+                margin:0% 2.5%;
+                padding: 5%;
                 border-bottom-left-radius: 10px;
                 border-bottom-right-radius: 10px;
                 .triangulo{
@@ -123,14 +125,14 @@
                     }
                 }
                 p{
+                    padding: 3.5% 2%;
                     text-align: center;
-                    font-size: 1.5vw;
+                    //font-size: 1vw;
                 }
             }
         }
         .cuadro2-verde22{
             display: block;
-            width: 35%;
             .minicuadro-claro{
                 display:none;
                 margin:5% 1% 0% 1%;
@@ -143,12 +145,11 @@
             }
             .minicuadro-verde{
                 display: none;
-                width: 85%;
-                height: 60%;
-                min-height: 400px;
+                width: 95%;
+                height: 100%;
                 background-color: #D8FFEF;
-                margin:5% 1% 0% 5%;
-                padding: 10%;
+                margin:0% 2.5%;
+                padding: 5%;
                 border-bottom-left-radius: 10px;
                 border-bottom-right-radius: 10px;
                 .triangulo{
@@ -160,14 +161,14 @@
                     }
                 }
                 p{
+                    padding: 3% 2%;
                     text-align: center;
-                    font-size: 1.5vw;
+                    //font-size: 1vw;
                 }
             }
         }
         .cuadro2-azul22{
             display: block;
-            width: 35%;
             .minicuadro-claro{
                 display:none;
                 margin:5% 0% 0% 6%;
@@ -181,15 +182,13 @@
             }
             .minicuadro-azul{
                 display:none;
-                width: 90%;
-                height: 60%;
-                min-height: 400px;
+                width: 95%;
+                height: 100%;
                 background-color: #D1DFF6;
-                margin:5% 0% 0% 6%;
+                margin:0% 2.5%;
                 border-bottom-left-radius: 10px;
                 border-bottom-right-radius: 10px;
-                padding: 10%;
-                z-index: 1;
+                padding: 5%;
                 .triangulo{
                     img{
                         margin:0% 0% 0% 49%;
@@ -198,8 +197,9 @@
                     }
                 }
                 p{
+                    padding: 3% 2%;
                     text-align: center;
-                    font-size: 1.5vw;
+                    //font-size: 1vw;
                 }
             }
         }
