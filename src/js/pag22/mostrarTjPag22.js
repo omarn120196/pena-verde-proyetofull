@@ -1,29 +1,28 @@
 function mostrarEtapa1Pag22(){
-    var elemento1 = document.getElementById("infoAmarilloPag22");
-    if (elemento1.style.display == "none") {
-        elemento1.style.display = "block"
+    const amarillo = document.getElementById("info1EtapaPag22");
+    if (amarillo.style.display == "none") {
+        amarillo.style.display = "block"
     }
     else{
-        elemento1.style.display = "none"
+        amarillo.style.display = "none"
     };
 }
-
 function mostrarEtapa2Pag22(){
-    var elemento2 = document.getElementById("infoVerdePag22");
-    if (elemento2.style.display == "none") {
-        elemento2.style.display = "block"
+    const verde = document.getElementById("info2EtapaPag22");
+    if (verde.style.display == "none") {
+        verde.style.display = "block"
     }
     else{
-        elemento2.style.display = "none"
+        verde.style.display = "none"
     };
 }
 
 function mostrarEtapa3Pag22(){
-    var elemento3 = document.getElementById("infoAzulPag22");
-    if (elemento3.style.display == "none") {
-        elemento3.style.display = "block"
+    const azul = document.getElementById("info3EtapaPag22");
+    if (azul.style.display == "none") {
+        azul.style.display = "block"
     }
     else{
-        elemento.style.display = "none"
+        azul.style.display = "none"
     };
 }
