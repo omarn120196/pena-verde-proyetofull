@@ -113,6 +113,9 @@ function visualizarPagina(){
             //Script página14
             visualizarInfo14();
 
+            //Script página23
+            desplegar();
+
             //Script página24
             voltearCardsPag20();
 

@@ -161,12 +161,25 @@
             }
             &:hover{
                 opacity: 0.5;
+                @include m.parpadeo();
             }
             #cuadro-c1{
                 @include m.parpadeo();
+                -webkit-animation-iteration-count: 4 !important;
             }
             .cuadro-c.activo{
                 display: block;
+            }
+            .activo:hover{
+                animation-name: parpadeo2;
+                animation-duration: 0s;
+                animation-timing-function: linear;
+                animation-iteration-count: 0;
+
+                -webkit-animation-name:parpadeo2;
+                -webkit-animation-duration: 0s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-iteration-count: 0;
             }
            .res-c{
                display:none;
