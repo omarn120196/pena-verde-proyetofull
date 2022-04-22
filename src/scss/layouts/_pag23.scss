@@ -162,49 +162,14 @@
             margin-bottom: 2rem;
             flex-wrap: wrap;
 
-            &#fila1{
-                .imagen{
-                    background: v.$fondo5;
-                }
-
-                .info{
-                    background: v.$fondo5;
-                }
-            }
-
-            &#fila2{
-                .imagen{
-                    background: v.$fondo4;
-                }
-
-                .info{
-                    background: v.$fondo4;
-                }
-            }
-
-            &#fila3{
-                .imagen{
-                    background: v.$fondo6;
-                }
-
-                .info{
-                    background: v.$fondo6;
-                }
-            }
-
-            &#fila4{
-                .imagen{
-                    background: v.$fondo9;
-                }
-
-                .info{
-                    background: v.$fondo9;
-                }
-            }
-
             a{
                 display: block;
                 width: 20%;
+                transition: all .3s ease;
+
+                &:hover{
+                    @include m.parpadeo();
+                }
 
                 @include m.tablet{
                     width: 90%;
@@ -234,6 +199,73 @@
                     }
                 }
             }
+
+            &#fila1{
+                .imagen{
+                    background: v.$fondo5;
+
+                    .cont-imagen{
+                        width: 30%;
+
+                        @include m.escritorio{
+                            width: 50%;
+                        }
+                    }
+                }
+
+                .info{
+                    background: v.$fondo5;
+                }
+            }
+
+            &#fila2{
+                .imagen{
+                    background: v.$fondo4;
+
+                    .cont-imagen{
+                        width: 55%;
+
+                        @include m.escritorio{
+                            width: 90%;
+                        }
+                    }
+                }
+
+                .info{
+                    background: v.$fondo4;
+                }
+            }
+
+            &#fila3{
+                .imagen{
+                    background: v.$fondo6;
+
+                    .cont-imagen{
+                        height: 6rem;
+                        width: 30%;
+
+                        @include m.escritorio{
+                            width: 50%;
+                        }
+                    }
+                }
+
+                .info{
+                    background: v.$fondo6;
+                }
+            }
+
+            &#fila4{
+                .imagen{
+                    background: v.$fondo9;
+                }
+
+                .info{
+                    background: v.$fondo9;
+                }
+            }
+
+            
 
             .info{
                 width: 70%;
