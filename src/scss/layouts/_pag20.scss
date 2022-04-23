@@ -310,146 +310,175 @@
                 }
             }
         }
-    
-        
-        #maletin-amarillo{
-            @include m.parpadeo();
-            display:flex;
-            a{
-                .i-maletin{
-                    margin-left: 15%;
-                    img{
-                        width: 60% !important;
-                        height: 30%;
-                    }
-                }
-            }
-            &:hover{
-                opacity: 0.5;
-                transition: all 0.4s ease-in ;
-            }
-            .mensajeSem{
-                display: none;
-                img{
-                    width: 30%;
-                }
-                p{
-                    background-color: #fdf5eb;
-                    display: block;
-                    font-size: 1.7vw;
-                    height: 83%;
-                    margin-left: 2%;
-                    padding: 1% 6%;
-                    text-align: center;
-                    width: 127%;
-                    margin-left: 3.2%;
-                }
-            }
-            .mensajeSem.activo{
-                display: block;
-            }
-        }
-        
-        #maletin-verde{
+        .contenedorFinalPag20{
             display: flex;
-            a{
-                .i-maletin{
-                    margin-left: 15%;
-                    img{
-                        width: 60% !important;
-                        height: 30%;
+            .conjuntoMaletin{
+                display: grid;
+                width: 20%;
+                height: 60%;
+                #maletin-amarillo{
+                    height:90%;
+                    width: 100%;
+                    
+                    display:flex;
+                    a{
+                        .i-maletin{
+                            margin-left: 15%;
+                            @include m.parpadeo();
+                            img{
+                                width: 100%;
+                                height: 30%;
+                            }
+                        }
+                        &:hover{
+                            @include m.parpadeo();
+                        }
+                    }
+                    
+                }
+                #maletin-verde{
+                    height: 90%;
+                    width: 100%;
+                    display: flex;
+                    a{
+                        .i-maletin{
+                            margin-left: 15%;
+                            img{
+                                width: 100%;
+                                height: 30%;
+                            }
+                        }
+                    }
+                    &:hover{
+                        @include m.parpadeo();
                     }
                 }
-            }
-            &:hover{
-                opacity: 0.5;
-                transition: all 0.4s ease-in ;
-            }
-            .mensajeSem{
-                display: none;
-                p{
-                    background-color: #fdf5eb;
-                    display: block;
-                    font-size: 1.7vw;
-                    height: 83%;
-                    margin-left: 2%;
-                    padding: 1% 6%;
-                    text-align: center;
-                    width: 122%;
-                    margin-left: 3.2%;
+               
+                #maletin-azul{
+                    height: 90%;
+                    width: 100%;
+                    display: flex;
+                    a{
+                        .i-maletin{
+                            margin-left: 15%;
+                            img{
+                                width: 100%;
+                                height:30%;
+                            }
+                        }
+                    }
+                    &:hover{
+                        @include m.parpadeo();
+                    }
+                    
                 }
-            }
-            .mensajeSem.activo{
-                display: block;
-            }
-        }
-       
-        #maletin-azul{
-            display: flex;
-            a{
-                .i-maletin{
-                    margin-left: 28%;
-                    img{
-                        width: 75px;
-                        height: 75px;
+                
+                #maletin-rojo{
+                    height: 90%;
+                    width: 100%;
+                    padding-left:5%;
+                    display: flex;
+                    a{
+                        .i-maletin{
+                            padding-left: 1.5%;
+                            margin-left: 14.5%;
+                            img{
+                                width:100%;
+                                height:30%;
+                            }
+                        }
+                    }
+                    &:hover{
+                        @include m.parpadeo();
                     }
                 }
-            }
-            &:hover{
-                opacity: 0.5;
-                transition: all 0.4s ease-in ;
-            }
-            .mensajeSem{
-                display: none;
-                p{
-                    background-color: #fdf5eb;
-                    display: block;
-                    font-size: 1.65vw;
-                    height: 83%;
-                    margin-left: 5%;
-                    padding: 1% 5.5%;
-                    text-align: center;
-                    width: 86.5%;
-                    margin-left: 8.4%;
-                }
-            }
-            .mensajeSem.activo{
-                display: block;
-            }
-        }
-        
-        #maletin-rojo{
-            display: flex;
-            a{
-                .i-maletin{
-                    margin-left: 25%;
-                    img{
-                        width: 75px;
-                        height: 75px;
+            }    
+            .conjuntoTexto{
+                display: grid;
+                height: 100%;
+                width: 80%;
+                #msj1{
+                    position: relative;
+                    margin: 0% 0% 2% 0%;
+                    height:90%;
+                    width: 95%;
+                    p{
+                        background-color: #E6E6E6;
+                        color: #E6E6E6;
+                        height: 100%;
+                        margin:0.5% 0% 0% 2%;
+                        padding: 4% 7%;
+                        text-align: center;
+                        width: 95%;
+                    }
+                    #mAmarillo.activo{
+                        background-color: #fdf5eb;
+                        color:#1A1E1E
                     }
                 }
-            }
-            &:hover{
-                opacity: 0.5;
-                transition: all 0.4s ease-in ;
-            }
-            .mensajeSem{
-                display: none;
-                p{
-                    background-color: #fdf5eb;
-                    display: block;
-                    font-size: 1.7vw;
-                    height: 83%;
-                    margin-left: 2%;
-                    padding: 1% 6%;
-                    text-align: center;
-                    width: 110%;
-                    margin-left: 11%;
+                #msj2{
+                    position: relative;
+                    margin: 0.5% 0% 2% 0%;
+                    height:90%;
+                    width: 95%;
+                    top: 2%;
+                    p{
+                        background-color: #E6E6E6;
+                        color: #E6E6E6;
+                        height: 100%;
+                        margin:0.5% 0% 0% 2%;
+                        padding: 4% 7%;
+                        text-align: center;
+                        width: 95%;
+                    }
+                    #mVerde.activo{
+                        background-color: #fdf5eb;
+                        color:#1A1E1E
+                    }
                 }
-            }
-            .mensajeSem.activo{
-                display: block;
-            }
+                #msj3{
+                    position: relative;
+                    margin: 1% 0% 1.5% 0%;
+                    height:85%;
+                    width: 95%;
+                    top: 2%;
+                    p{
+                        background-color: #E6E6E6;
+                        color: #E6E6E6;
+                        height: 95%;
+                        margin:0.5% 0% 0% 2%;
+                        padding: 4% 7%;
+                        text-align: center;
+                        width: 95%;
+                    }
+                    #mAzul.activo{
+                        background-color: #fdf5eb;
+                        color:#1A1E1E
+                    }
+                }
+                
+                
+                #msj4{
+                    position: relative;
+                    width: 95%;
+                    margin: 0.5% 0% 0% 0%;
+                    height:95%;
+                    top: 2%;
+                    p{
+                        background-color: #E6E6E6;
+                        color: #E6E6E6;
+                        height: 100%;
+                        margin:0.5% 0% 0% 2%;
+                        padding: 4% 7%;
+                        text-align: center;
+                        width: 95%;
+                    }
+                    #mRojo.activo{
+                        background-color: #fdf5eb;
+                        color:#1A1E1E
+                    }
+                }
+            }    
         }
     }
 }
