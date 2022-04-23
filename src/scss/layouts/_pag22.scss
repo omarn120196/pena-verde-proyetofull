@@ -167,12 +167,29 @@
             color: #fff;
             padding: 2% 1%;
             margin: 1% 0% 0% 45%;
+            z-index: 2;
+            //overflow: hidden;
             @include m.telefono{
                 margin-left: 35%;
                 margin-top: 10%;
                 height: 40px;
                 width: 100px;
             }
+        }
+        input:after{
+            content:"";
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: calc(-100%);
+            opacity: 0.3;
+            transition: .4s ease-in-out all;
+            border-bottom:5% solid #4428f9;
+        }
+        input:hover{
+            @include m.parpadeo();
+            left: 0;
         }
     }
     .contenido2nv2pag22{
