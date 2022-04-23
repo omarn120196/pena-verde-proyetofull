@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página 22</title>
 </head>
+
 <body>
     <div class="cuadro-azul22">
         <p>
@@ -17,72 +19,39 @@
             <img src="/build/img/contenido/Pag22/i-click.svg" alt="icono click">
         </figure>
         <p>
-            Da clic 2 veces zen cada etapa para conocer más.
+            Da clic en cada etapa para conocer más.
         </p>
     </div>
-    <div class="contenido1pag22">
-        <div class="contenido1_1pag22">
-            <a href="javascript:mostrarEtapa1Pag22()">
-                <div class="cuadro-amarillo22">
-                    <p>
-                        Colocación
-                    </p>
-                </div>
-            </a>
-            <a href="javascript:mostrarEtapa2Pag22()">
-                <div class="cuadro-verde22">
-                    <p>
-                        Estratificación o enmascaramiento
-                    </p>
-                </div>
-            </a>
-            <a href="javascript:mostrarEtapa3Pag22()">
-                <div class="cuadro-azul22-2">
-                    <p>
-                        Integración o reingreso 
-                    </p>
-                </div>
-            </a>
+    <div id="botonesPag22">
+        <div id="btn-01">
+            <div id="btn-colocacion">
+                <a class="btn-pag22" href="#info-colocacion">Colocación</a>
+            </div>
+            <div class="cuadros22" id="info-colocacion">
+                <span>El sujeto activo del Lavado de Dinero introduce al sistema económico formal, en efectivo,
+                    transferencias o cheques, recursos propios o ajenos de actividades ilícitas.
+                </span>
+            </div>
         </div>
-        <div class="contenido1_2-22">
-            <div class="cuadro2-amarillo22">
-                <div class="minicuadro-claro" id="claro1">
-
-                </div>
-                <div class="minicuadro-amarillo" id="info1EtapaPag22">
-                    <figure class="triangulo">
-                        <img src="/build/img/contenido/Pag22/triangulo-amarillo.svg" alt="triangulo amarillo">
-                    </figure>
-                    <p>
-                        El sujeto activo del Lavado de Dinero introduce al sistema económico formal, en efectivo, transferencias o cheques, recursos propios o ajenos de actividades ilícitas. 
-                    </p>
-                </div>
+        <div id="btn-02">
+            <div id="btn-estratificacion">
+                <a class="btn-pag22" href="#info-estratificacion">Estratificación o Enmascaramiento </a>
             </div>
-            <div class="cuadro2-verde22">
-                <div class="minicuadro-claro" id="claro2">
-
-                </div>
-                <div class="minicuadro-verde" id="info2EtapaPag22">
-                    <figure class="triangulo">
-                        <img src="/build/img/contenido/Pag22/triangulo-verde.svg" alt="triangulo verde">
-                    </figure>
-                    <p>
-                        El sujeto activo del Lavado de Dinero introduce al sistema económico formal, en efectivo, transferencias o cheques, recursos propios o ajenos de actividades ilícitas. 
-                    </p>
-                </div>
+            <div class="cuadros22" id="info-estratificacion">
+                <span>Implica el manejo legal reiterado de los recursos de procedencia ilícita para crear antecedentes
+                    legítimos y complicar que se encuentre el antecedente ilegal de
+                    los recursos.
+                </span>
             </div>
-            <div class="cuadro2-azul22">
-                <div class="minicuadro-claro" id="claro3">
-
-                </div>
-                <div class="minicuadro-azul" id="info3EtapaPag22">
-                    <figure class="triangulo">
-                        <img src="/build/img/contenido/Pag22/triangulo-azul.svg" alt="triangulo azul">
-                    </figure>
-                    <p>
-                        El sujeto activo del Lavado de Dinero introduce al sistema económico formal, en efectivo, transferencias o cheques, recursos propios o ajenos de actividades ilícitas. 
-                    </p>
-                </div>
+        </div>
+        <div id="btn-03">
+            <div id="btn-integracion">
+                <a class="btn-pag22" href="#info-integracion">Integración o Reingreso </a>
+            </div>
+            <div class="cuadros22" id="info-integracion">
+                <span>Implica la utilización de los recursos en beneficio del sujeto activo, sin el afán de ocultar el
+                    origen de los mismos porque los recursos ya cuentan con antecedente legal en la
+                    estratificación.</span>
             </div>
         </div>
     </div>
@@ -92,28 +61,29 @@
                 <img src="/build/img/contenido/Pag22/i-click.svg" alt="icono click">
             </figure>
             <p>
-                Relaciona cada concepto con la etapa del ciclo del Lavado de Dinero que le corresponde, no olvides dar en <b>Iniciar</b>
+                Relaciona cada concepto con la etapa del ciclo del Lavado de Dinero que le corresponde, no olvides dar
+                en <b>Iniciar</b>
             </p>
         </div>
         <div class="boton">
             <input type="button" value="Iniciar" onclick="iniciarRel()">
         </div>
         <div class="contenido2nv2pag22">
-            
+
             <div class="opcionescolumna1">
                 <div class="cuadro-opcion" id="contenedor1pag22">
                     <div class="titulo" id="tituloAzulPag22">
                         <p>
-                            <b>Integración o reingreso</b> 
+                            <b>Integración o reingreso</b>
                         </p>
                     </div>
                     <div class="concepto" id="correctoAzul">
                         <p>
                             Introducir ganancias ilícitas al sistema financiero.
                         </p>
-                        <figure class="img" id="imgAzulPag22"> 
+                        <figure class="img" id="imgAzulPag22">
                             <img src="/build/img/contenido/Pag22/i-carrito_azul.svg" alt="carrito azul">
-                        </figure>  
+                        </figure>
                     </div>
                 </div>
 
@@ -125,7 +95,8 @@
                     </div>
                     <div class="concepto" id="correctoVerde">
                         <p>
-                            Realizar múltiples transacciones que separan los fondos de su fuente ilegal, dificultando su rastreo.   
+                            Realizar múltiples transacciones que separan los fondos de su fuente ilegal, dificultando su
+                            rastreo.
                         </p>
                         <figure class="img" id="imgVerdePag22">
                             <img src="/build/img/contenido/Pag22/i-verde_persona.svg" alt="persona verde">
@@ -143,7 +114,8 @@
                             Los clientes usan el dinero para comprar artículos o pagar deudas, sueldos, etc.
                         </p>
                         <figure class="img" id="imgAmarilloPag22">
-                            <img src="/build/img/contenido/Pag22/i-amarillo_billete.svg" alt="tendedero billete amarillo">
+                            <img src="/build/img/contenido/Pag22/i-amarillo_billete.svg"
+                                alt="tendedero billete amarillo">
                         </figure>
                     </div>
                 </div>
@@ -175,7 +147,7 @@
                     </figure>
                     <div class="txtP-azulPag22">
                         <p>
-                            Integración o reingreso 
+                            Integración o reingreso
                         </p>
                     </div>
                 </div>
@@ -183,4 +155,5 @@
         </div>
     </div>
 </body>
+
 </html>

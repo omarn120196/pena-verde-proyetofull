@@ -372,6 +372,28 @@
     }
 }
 
+@mixin botonesPag22 ($fondo, $fuente){
+    display: block;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: $fondo;
+    transition: all .3s ease;
+    width: 100%;
+    color: $fuente;
+    font-weight: 700;
+    margin-top: -2rem;
+
+    &:hover{
+        background: darken($fondo, 5);
+        transform: scale(1.1);
+        box-shadow: 0px 10px 18px -5px rgba(0,0,0,0.75);
+    }
+
+    @include escritorio{
+        font-size: 1.2rem;
+    }
+}
+
 @mixin botonesPag07 ($fondo){
     display: block;
     text-align: center;
@@ -556,6 +578,34 @@
     }
 }
 
+
+@mixin infoPag22 ($fondo){
+    position: relative;
+    text-align: center;
+    width: 90%;
+    height: 65%;
+    background: $fondo;
+    border-radius: 2rem;
+    top: 1rem;
+    margin-left: 3rem;
+    padding: 2rem;
+    @include resaltar(v.$colorFuente, 600);
+
+    @include escritorioHD{
+        top: 1rem;
+        height: 72%;
+    }
+
+    @include tablet{
+        top: 2rem;
+        height: 36rem;
+    }
+
+    @include telefono(){
+        height: auto;
+    }
+}
+
 @mixin flip-cardsPag12 ($intensidad, $fondo, $borde) {
     background: $fondo;
     border-radius: 2rem;
@@ -587,6 +637,45 @@
         .cont-mensaje-back{
             height: 80%;
             padding-bottom: 5rem;
+            overflow-y: scroll;
+
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar{
+                opacity: 1;
+                width: .5rem;
+            }
+
+            &::-webkit-scrollbar-thumb{
+                background: v.$blanco;
+                border-radius: 1rem;
+            }
+
+        }
+    }
+}
+
+@mixin flip-cardsPag20 ($intensidad, $borde) {
+    background: v.$blanco;
+    border-radius: 2rem;
+
+    .front{
+        overflow: hidden;
+        border-radius: 2rem;
+    }
+
+    .back{
+        overflow: hidden;
+        border-radius: 2rem;
+        border: solid 0.5rem $borde;
+
+    }
+    .back{
+
+        .cont-mensaje-back{
+            height: 100%;
+            padding-bottom: 2rem;
             overflow-y: scroll;
 
             -ms-overflow-style: none;
@@ -663,20 +752,25 @@
         0% { opacity: 1.0; }
         50% { opacity: 0.0; }
         100% { opacity: 1.0; }
-      }
+    }
       
-      @-webkit-keyframes parpadeo {  
+    @-webkit-keyframes parpadeo {  
         0% { opacity: 1.0; }
         50% { opacity: 0.0; }
          100% { opacity: 1.0; }
-      }
+    }
       
-      @keyframes parpadeo {  
+    @keyframes parpadeo {  
         0% { opacity: 1.0; }
          50% { opacity: 0.0; }
         100% { opacity: 1.0; }
-      }
-} 
+    }
+}   
+
+
+      
+
+ 
 @mixin parpadeo0(){
     &{
         animation-name: parpadeo;
@@ -689,7 +783,8 @@
         -webkit-animation-timing-function: linear;
         -webkit-animation-iteration-count: 2;
     }
-} 
+}
+
 @mixin conceptual($color){
     background: v.$colorFuente;
 

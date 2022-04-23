@@ -114,6 +114,18 @@ function visualizarPagina(){
             visualizarInfo14();
 
             //Script página24
+            cuestionario();
+
+            //Script página23
+            desplegar();
+
+            //Script página 22
+            visualizarPag22();
+
+            //Script página24
+            voltearCardsPag20();
+
+            //Script página24
             flipCard();
 
             //Script página25
