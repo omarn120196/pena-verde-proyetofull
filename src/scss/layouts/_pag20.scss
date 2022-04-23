@@ -165,7 +165,6 @@
             }
             #cuadro-c1{
                 @include m.parpadeo();
-                -webkit-animation-iteration-count: 4 !important;
             }
             .cuadro-c.activo{
                 display: block;
