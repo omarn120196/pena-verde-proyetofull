@@ -67,6 +67,26 @@ function verificarRelacion() {
             bloqEnunciado.classList.add('activo');
             bloqDefinicion.classList.add('activo');
 
+            switch(noEnunciado){
+                case '1':
+                    dibujarLineas(noEnunciado, .10, .50);
+                    break;
+                case '2':
+                    dibujarLineas(noEnunciado, .30, .70);
+                    break;
+                case '3':
+                    dibujarLineas(noEnunciado, .45, .10);
+                    break;
+                case '4':
+                    dibujarLineas(noEnunciado, .65, .90);
+                    break;
+                case '5':
+                    dibujarLineas(noEnunciado, .90, .30);
+                    break;
+                default :
+                    break;
+            }
+
             setTimeout(()=>{
                 enunciado.classList.remove('seleccion');
                 definicion.classList.remove('seleccionado');
