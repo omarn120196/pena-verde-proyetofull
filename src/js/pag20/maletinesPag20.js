@@ -2,41 +2,41 @@
 
 function mostrarAmarillo(){
     var elemento = document.getElementById("mAmarillo");
-    if (elemento.style.display == "none") {
-        elemento.style.display = "block"
-    }
+    if (!elemento.classList.contains('activo')) {
+        elemento.classList.add('activo')
+        }
     else{
-        elemento.style.display = "none"
+        elemento.classList.remove('activo')
     };
 }
 
 function mostrarVerde(){
     var elemento = document.getElementById("mVerde");
-    if (elemento.style.display == "none") {
-        elemento.style.display = "block"
-    } 
+    if (!elemento.classList.contains('activo')) {
+        elemento.classList.add('activo')
+        }
     else{
-        elemento.style.display = "none"
+        elemento.classList.remove('activo')
     };
 }
 
 function mostrarAzul(){
     var elemento = document.getElementById("mAzul");
-    if (elemento.style.display == "none") {
-        elemento.style.display = "block"
-    } 
+    if (!elemento.classList.contains('activo')) {
+        elemento.classList.add('activo')
+        }
     else{
-        elemento.style.display = "none"
+        elemento.classList.remove('activo')
     };
 }
 
 function mostrarRojo(){
     var elemento = document.getElementById("mRojo");
-    if (elemento.style.display == "none") {
-        elemento.style.display = "block"
-    } 
+    if (!elemento.classList.contains('activo')) {
+        elemento.classList.add('activo')
+        }
     else{
-        elemento.style.display = "none"
+        elemento.classList.remove('activo')
     };
 }
 
