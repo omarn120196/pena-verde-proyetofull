@@ -3,6 +3,7 @@ let columnasRelacionadas = 0;
 function cuestionario() {  
     seleccionarEnunciados();
     seleccionarDefiniciones();
+    seleccionarR();
 }
 
 function seleccionarEnunciados(){

@@ -129,7 +129,7 @@ function visualizarPagina(){
             flipCard();
 
             //Script página25
-            arrastrar();
+            actividades();
 
             //Script página26
             iniciarCasos()

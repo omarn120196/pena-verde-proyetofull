@@ -13,6 +13,7 @@
 
     .cont-imagen{
         width: 20%;
+        margin: 0;
     }
 
     .instrucciones{
@@ -86,6 +87,10 @@
                 width: 100%;
             }
 
+            @include m.tablet{
+                display: none;
+            }
+
             .cont-imagen{
                 width: 6rem;
                 height: 6rem;
@@ -106,6 +111,10 @@
                 justify-content: space-between;
                 align-items: center;
                 flex-wrap: wrap;
+            }
+
+            @include m.tablet{
+                display: none;
             }
             
             p{
@@ -129,6 +138,14 @@
         }
     }
 
+    .mano-responsive{
+        display: none;
+
+        @include m.tablet{
+            display: flex;
+        }
+    }
+
     #cont-drop{
         grid-column: 2/6;
         display: flex;
@@ -142,6 +159,8 @@
             padding: 2rem 0;  
         }
 
+        
+
         .posts{
             width: 23%;
             height: 35rem;
@@ -150,6 +169,12 @@
             align-items: center;
             flex-direction: column;
             margin-bottom: 2rem;
+
+            @include m.tablet{
+                width: 90%;
+                margin: 0 auto;
+                height: auto;
+            }
 
             .cuadro{
 
@@ -162,6 +187,10 @@
                 p{
                     font-size: 1.1rem;
                     font-weight: 700;
+
+                    @include m.tablet{
+                        font-size: 1.6rem;
+                    }
                 }
 
                 &#cuadro1{
@@ -213,8 +242,42 @@
                 text-align: center;
                 font-weight: 700;
 
+                @include m.tablet{
+                    display: none;
+                }
+
                 &:hover{
                     background: darken(v.$grisFondo,  10);
+                }
+            }
+
+            .repuestas-responsive1{
+                display: none;
+
+                @include m.tablet{
+                    display: block;
+                    margin-bottom: 2rem;
+                    width: 90%;
+
+                    div{
+                        padding: 2rem;
+                        margin: 1rem 0;
+                        background: v.$colorFuente;
+                        text-align: center;
+                        color: v.$blanco;
+                        transition: all .3s ease;
+
+                        &:hover{
+                            transform: scale(1.05);
+                            box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.75);
+                            cursor: pointer;
+                        }
+
+                        &.fondoCorrecto{
+                            background: v.$verde;
+                            color: v.$blanco;
+                        }
+                    }
                 }
             }
         }
@@ -241,6 +304,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         opacity: 1;
     }
 
@@ -253,11 +317,21 @@
         top: 40%;
         left: 0;
         z-index: -1;
+
+        @include m.escritorio{
+            display: none;
+        }
     }
 
     .cont-imagen{
         width: 30%;
         align-self: flex-end;
+
+        @include m.escritorio{
+            width: 50%;
+            order: 2;
+            margin: 0 auto;   
+        }
     }
 
     .cont-mensaje{
@@ -268,5 +342,10 @@
         text-align: center;
         border: 2px solid v.$blanco;
         padding: 3.2rem;
+
+        @include m.escritorio{
+            width: 100%;
+            order: 1;   
+        }
     }
 }
