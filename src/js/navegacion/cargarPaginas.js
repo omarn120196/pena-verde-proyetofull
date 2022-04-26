@@ -113,6 +113,9 @@ function visualizarPagina(){
             //Script página14
             visualizarInfo14();
 
+            //Script página18
+            actividad1();
+
             //Script página24
             cuestionario();
 

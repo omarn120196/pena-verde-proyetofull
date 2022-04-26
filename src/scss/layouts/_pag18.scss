@@ -3,36 +3,155 @@
 
 #intro-cuestionario{
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-
-    &::after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 40%;
-        bottom: 0;
-        left: 0;
-        background: v.$azulRey;
-        z-index: -1;
+    &.desaparece{
+        display: none;
     }
 
-    .cont-imagen{
-        width: 30%;
-    }
+    .caja{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
 
-    .parrafo{
-        width: 60%;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 70%;
+            bottom: 0;
+            left: 0;
+            background: v.$azulRey;
+            z-index: -1;
+        }
 
-        p{
-            color: v.$blanco;
+        .cont-imagen{
+            width: 30%;
+        }
+
+        .parrafo{
+            padding: 2rem;
+            width: 60%;
+            align-self: flex-end;
+            margin-bottom: 4rem;
+
+            p{
+                text-align: center;
+                font-size: 2.4rem;
+                color: v.$blanco;
+            }
         }
     }
 
     .cont-boton{
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background: v.$grisFondo;
+
+        a{
+            @include m.boton(v.$amarillo);
+        }
+    }
+}
+
+#actividad-cuestionario{
+    display: none;
+
+    &.ver{
+        display: block;
+    }
+
+    .cont-preguntas{
+
+        display: none;
+
+        &.visualizar{
+            display: block;
+        }
+
+        .pregunta{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 12rem;
+
+            @include m.escritorio{
+                height: 14rem;
+            }
+
+            .cont-numero{
+                width: 10%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: v.$azulRey;
+                color: v.$blanco;
+                
+                h3{
+                    font-size: 2.8rem;
+                }
+            }
+
+            .cont-pregunta{
+                width: 90%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: v.$azulClaro2;
+
+                p{
+                    padding: 2rem;
+                    font-weight: 500;
+
+                    @include m.escritorio{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+
+        .respuestas{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+
+            .respuestas-caja{
+                width: 18rem;
+                height: 4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                color: v.$blanco;
+                background: v.$azulRey;
+                margin-bottom: 3rem;
+                cursor: pointer; 
+                transition: all .3s ease;
+                
+                &:hover{
+                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                    transform: scale(1.05);
+                }
+
+                &.fondoCorrecto{
+                    background: v.$verde;
+                    color: v.$blanco;
+                    cursor: default;
+                }
+                
+                &.fondoIncorrecto{
+                    background: v.$rojo2;
+                    color: v.$blanco;
+                    cursor: default;
+                }
+            }
+        }
     }
 }
