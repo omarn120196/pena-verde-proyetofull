@@ -14,6 +14,10 @@
         flex-wrap: wrap;
         position: relative;
 
+        @include m.escritorioHD{
+            background: v.$azulRey;
+        }
+
         &::after{
             content: '';
             position: absolute;
@@ -23,10 +27,21 @@
             left: 0;
             background: v.$azulRey;
             z-index: -1;
+
+            @include m.escritorioHD{
+                display: none;
+            }
         }
 
         .cont-imagen{
             width: 30%;
+
+            
+            @include m.tablet{
+                width: 50%;
+                margin: 0 auto;
+                order: 2;    
+            }
         }
 
         .parrafo{
@@ -35,10 +50,20 @@
             align-self: flex-end;
             margin-bottom: 4rem;
 
+            @include m.tablet{
+                width: 90%;
+                margin: 0 auto;
+                order: 1;                
+            }
+
             p{
                 text-align: center;
                 font-size: 2.4rem;
                 color: v.$blanco;
+
+                @include m.escritorioHD{
+                    font-size: 2rem;
+                }
             }
         }
     }
