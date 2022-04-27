@@ -35,17 +35,12 @@ class Actividad1{
     siguientePregunta(){
         this.pregunta++;
     }
-
-    evaluarV(){
-
-    }
 }
 
 function actividad1(){
 
     const cuestionario = new Actividad1;
     iniciarActividad1(cuestionario);
-
 }
 
 function iniciarActividad1(cuestionario) {  
@@ -61,11 +56,12 @@ function iniciarActividad1(cuestionario) {
             contActividad.classList.add('ver');
     
             contActividad.style.opacity = 0;
+            cargarCuestionario(cuestionario);
     
             setTimeout(()=>{
                 contActividad.style.opacity = 1;
-                cargarCuestionario(cuestionario);
-                verPreguntas(cuestionario);
+                cuestionario.siguientePregunta();
+                verCuestionario(cuestionario);
             }, 300);
         });
     }
@@ -105,81 +101,118 @@ function cargarCuestionario(cuestionario) {
     });
 }
 
-function verPreguntas(cuestionario){
+function verCuestionario(cuestionario){
+    
+    const {pregunta, preguntasActividad1} = cuestionario;
+    const contPregunta = document.querySelector(`#cont-pregunta${pregunta}`);
+    const btnVerdadero = document.querySelector(`#v${pregunta}`);
+    const btnFalso = document.querySelector(`#f${pregunta}`);
 
-    const preguntaActual = document.querySelector('visualizar');
+    const respuesta = preguntasActividad1[pregunta-1].respuesta;
+    
+    contPregunta.classList.add('visualizar');
+    contPregunta.style.opacity = 0;
 
-    if(preguntaActual){
-        preguntaActual.classList.remove('visualizar');
+    setTimeout(()=>{
+        contPregunta.style.opacity = 1;
+    }, 300);
+
+    if(respuesta === 'v'){
+        evaluarVerdadero(cuestionario, btnVerdadero, btnFalso, contPregunta, pregunta);
     }
+    else if(respuesta === 'f'){
+        evaluarFalso(cuestionario, btnVerdadero, btnFalso, contPregunta, pregunta);
+    }    
+}
+
+function evaluarVerdadero(cuestionario, btnVerdadero, btnFalso, contPregunta, pregunta){
 
     cuestionario.siguientePregunta();
-    const pregunta = document.querySelector(`#cont-pregunta${cuestionario.pregunta}`);
 
-    pregunta.classList.add('visualizar');
+    btnVerdadero.addEventListener('click', function(){
+        btnVerdadero.classList.add('respuesta-correcta');
+        setTimeout(()=>{
+            btnVerdadero.classList.add('fondoCorrecto');
+            setTimeout(()=>{
+                contPregunta.classList.remove('visualizar');
 
-    //Evaluar respuestas
-    const respuestas = cuestionario.preguntasActividad1;
-    if(cuestionario.contenedor){
-        
-        respuestas.forEach(pregunta=>{
-            const {noPregunta, respuesta} = pregunta;
+                if(pregunta < 5){
+                    verCuestionario(cuestionario);
+                }
+                else{
+                    retroActividad1();
+                }
+            }, 2000);
+        }, 2000);
+    });
 
-            if(respuesta === 'v'){
-                respuestaV(cuestionario, noPregunta);
-            }
-            else if(respuesta === 'f'){
-                respuestaF(cuestionario, noPregunta)
-            }
-        });
-    }
+    btnFalso.addEventListener('click', function(){
+        btnFalso.classList.add('respuesta-incorrecta');
+        setTimeout(()=>{
+            btnFalso.classList.add('fondoIncorrecto');
+            setTimeout(()=>{
+                contPregunta.classList.remove('visualizar');
 
+                if(pregunta < 5){
+                    verCuestionario(cuestionario);
+                }
+                else{
+                    retroActividad1();
+                }
+            }, 2000);
+        }, 2000);
+    });
 }
 
+function evaluarFalso(cuestionario, btnVerdadero, btnFalso, contPregunta, pregunta){
 
+    cuestionario.siguientePregunta();
 
-function respuestaV(cuestionario, noPregunta){
+    const totalPreguntas = cuestionario.preguntasActividad1.length;
 
-    const v = document.querySelector(`#v${noPregunta}`);
-    const f = document.querySelector(`#f${noPregunta}`);
-
-    if(v && f){
-        
-        v.addEventListener('click', function () { 
-            
-            v.classList.add('respuesta-correcta');
+    btnVerdadero.addEventListener('click', function(){
+        btnVerdadero.classList.add('respuesta-incorrecta');
+        setTimeout(()=>{
+            btnVerdadero.classList.add('fondoIncorrecto');
             setTimeout(()=>{
-                verPreguntas(cuestionario);
-            }, 3000);
-        });
+                contPregunta.classList.remove('visualizar');
+
+                if(pregunta < totalPreguntas){
+                    verCuestionario(cuestionario);
+                }
+                else{
+                    retroActividad1();
+                }
+            }, 2000);
+        }, 2000);
+    });
+
+    btnFalso.addEventListener('click', function(){
+        btnFalso.classList.add('respuesta-correcta');
+        setTimeout(()=>{
+            btnFalso.classList.add('fondoCorrecto');
+            setTimeout(()=>{
+                contPregunta.classList.remove('visualizar');
+
+                if(pregunta < totalPreguntas){
+                    verCuestionario(cuestionario);
+                }
+                else{
+                    retroActividad1();
+                }
+            }, 2000);
+        }, 2000);
+    });
+}
+
+function retroActividad1(){
     
-        f.addEventListener('click', function () {  
-            v.classList.add('respuesta-incorrecta');
-            setTimeout(()=>{
-                verPreguntas(cuestionario);
-            }, 3000);
-        });
-    }
+    const retro = document.querySelector('#retroActividad1');
+    retro.classList.add('visualizar');
+    retro.style.opacity = 0;
+
+    setTimeout(()=>{
+        retro.style.opacity = 1;
+    }, 300);
 }
 
-function respuestaF(cuestionario, noPregunta){
-
-    const v = document.querySelector(`#v${noPregunta}`);
-    const f = document.querySelector(`#f${noPregunta}`);
-
-    if(v && f){
-        v.addEventListener('click', function () {  
-            v.classList.add('respuesta-incorrecta');
-            setTimeout(()=>{
-                verPreguntas(cuestionario);
-            }, 3000);
-        });
-    
-        f.addEventListener('click', function () {  
-            v.classList.add('respuesta-correcta');
-            setTimeout(()=>{
-                verPreguntas(cuestionario);
-            }, 3000);
-        });
-    }
-}
