@@ -1,3 +1,8 @@
+function actividades(){
+    arrastrar();
+    seleccionarResponsive();
+}
+
 function arrastrar(){
     
     const elementosDrag = $('.p-drag');
@@ -56,23 +61,22 @@ function arrastrar(){
             }
         }
     }
-
-    function retroalimentacion(){
-        const contIntro = $('#intro-actividad25');
-        const contInicio = $('#inicioBtn');
-        const contActividad = $('#cont-actividad25');
-        const contBox = $('#box');
-
-        contIntro.addClass('retro');
-        contInicio.addClass('retro');
-        contActividad.addClass('retro');
-
-        contBox.addClass('bien');
-        contBox.css('opacity', 0);
-
-        setTimeout(()=>{
-            contBox.css('opacity', 1);
-        }, 600);
-    }
 }
 
+function retroalimentacion(){
+    const contIntro = $('#intro-actividad25');
+    const contInicio = $('#inicioBtn');
+    const contActividad = $('#cont-actividad25');
+    const contBox = $('#box');
+
+    contIntro.addClass('retro');
+    contInicio.addClass('retro');
+    contActividad.addClass('retro');
+
+    contBox.addClass('bien');
+    contBox.css('opacity', 0);
+
+    setTimeout(()=>{
+        contBox.css('opacity', 1);
+    }, 600);
+}

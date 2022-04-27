@@ -113,6 +113,9 @@ function visualizarPagina(){
             //Script página14
             visualizarInfo14();
 
+            //Script página18
+            actividad1();
+
             //Script página24
             cuestionario();
 
@@ -129,7 +132,7 @@ function visualizarPagina(){
             flipCard();
 
             //Script página25
-            arrastrar();
+            actividades();
 
             //Script página26
             iniciarCasos()

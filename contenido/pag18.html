@@ -5,175 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página 18</title>
-    <!--<script type="text/javascript">
-        function iniciarCuestionario(){
-            var qtActivar=document.getElementById("pregunta1");
-            alert('inicio encuesta' + qtActivar);
-        }
-    </script>-->
 </head>
 <body>
-    <div class="cuestionario">
-        <div class="contenedor2 activo" id="pregunta0">
-            <div class="contenedor1">
-                <figure class="persona1">
-                    <img src="./build/img/contenido/Pag18/persona1.svg" alt="persona 1">
-                </figure>
-                <div class="cuadro-azul">
-                    <p class="txt-azul">
-                        ¡Has terminado la primera parte de tu curso PLD!  Veamos cuánto aprendiste. Lee con cuidado cada enunciado que se te presentará y elige si es VERDADERO o FALSO. Si estás listo da 
-                        clic en el botón INICIAR.
-                    </p>
-                </div>
+
+    <div id="intro-cuestionario">
+        <div class="caja">
+            <div class="cont-imagen">
+                <img src="./build/img/contenido/Pag18/persona1.svg" alt="persona">
             </div>
-            <div class="iniciar" >
-                <input type="button" id="iniciar" value="Iniciar" onclick="iniciarCuestionario()">
+            <div class="parrafo">
+                <p>¡Has terminado la primera parte de tu curso PLD!  Veamos cuánto aprendiste. Lee con cuidado cada enunciado que se te presentará y elige si es VERDADERO o FALSO. Si estás listo da clic en el botón INICIAR.</p>
             </div>
         </div>
-        <div class="pregunta" id="pregunta1">
-            <div class="niv1preg">
-                <div class="num">
-                    <p>1.</p>
-                </div>
-                <div class="txt-preg">
-                    <p>
-                        Al menos una vez al año, las Compañías deben identificar que los expedientes clasificados
-                        como ALTO RIESGO estén actualizados y completos.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="cuadro-res">
-                <div class="opcion">
-                    <input type="button" value="VERDADERO" class="cuadro-txt" id="verdaderoPreg1" onclick="responder1()">
-                    <div class="resultado" id="resultadoPreg1-1">
-                        <img src="./build/img/contenido/Pag18/i-verdadero.svg">
-                    </div>
-                </div>
-                <div class="opcion">
-                    <input type="button" value="FALSO" class="cuadro-txt" id="verdaderoPreg1" onclick="responder1()">
-                    <div class="resultado" id="resultadoPreg1-2">
-                        <img src="./build/img/contenido/Pag18/i-falso.svg">
-                    </div>
-                </div>
-            </div>
+        <div class="cont-boton">
+            <a id="inicioCuestionario" href="#actividad-cuestionario">Iniciar</a>
         </div>
-        <div class="pregunta" id="pregunta2">
-            <div class="niv1preg">
-                <div class="num">
-                    <p>2.</p>
-                </div>
-                <div class="txt-preg">
-                    <p>
-                        Una Operación relevante es aquella realizada por los Colaboradores relacionadas con 
-                        el LD y FT.
-                    </p>
-                </div>
-            </div>
-            <div class="cuadro-res">
-                <div class="opcion">
-                    <input type="button" value="VERDADERO" class="cuadro-txt" id="verdaderoPreg2" onclick="responder2()">
-                    <div class="resultado" id="resultadoPreg2-1">
-                        <img src="./build/img/contenido/Pag18/i-falso.svg">
-                    </div>
-                </div>
-                <div class="opcion">
-                    <input type="button" value="FALSO" class="cuadro-txt" id="falsoPreg2" onclick="responder2()">
-                    <div class="resultado" id="resultadoPreg2-2">
-                        <img src="./build/img/contenido/Pag18/i-verdadero.svg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pregunta" id="pregunta3">
-            <div class="niv1preg">
-                <div class="num">
-                    <p>3.</p>
-                </div>
-                <div class="txt-preg">
-                    <p>
-                        La herramienta que nos permite dejar constancia de la entrevista es el Formato de Identificación del Cliente con prima anual mayor a $7,500 dólares, para el caso de General de Seguros y General de Salud. Para el caso de Reaseguradora Patria es el Formato de Identificación de la Cedente.
-                    </p>
-                </div>
-            </div>
-            <div class="cuadro-res">
-                <div class="opcion">
-                    <input type="button" value="VERDADERO" class="cuadro-txt" id="verdaderoPreg3" onclick="responder3()">
-                    <div class="resultado" id="resultadoPreg3-1">
-                        <img src="./build/img/contenido/Pag18/i-verdadero.svg">
-                    </div>
-                </div>
-                <div class="opcion">
-                    <input type="button" value="FALSO" class="cuadro-txt" id="verdaderoPreg3" onclick="responder3()">
-                    <div class="resultado" id="resultadoPreg3-2">
-                        <img src="./build/img/contenido/Pag18/i-falso.svg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pregunta" id="pregunta4">
-            <div class="niv1preg">
-                <div class="num">
-                    <p>4.</p>
-                </div>
-                <div class="txt-preg">
-                    <p>
-                        Un expediente de identificación debe resguardarse durante 5 años.
-                    </p>
-                </div>
-            </div>
-            <div class="cuadro-res">
-                <div class="opcion">
-                    <input type="button" value="VERDADERO" class="cuadro-txt" id="verdaderoPreg4" onclick="responder4()">
-                    <div class="resultado" id="resultadoPreg4-1">
-                        <img src="./build/img/contenido/Pag18/i-falso.svg">
-                    </div>
-                </div>
-                <div class="opcion">
-                    <input type="button" value="FALSO" class="cuadro-txt" id="falsoPreg4" onclick="responder4()">
-                    <div class="resultado" id="resultadoPreg4-2">
-                        <img src="./build/img/contenido/Pag18/i-verdadero.svg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pregunta" id="pregunta5">
-            <div class="niv1preg">
-                <div class="num">
-                    <p>5.</p>
-                </div>
-                <div class="txt-preg">
-                    <p>
-                        Los expedientes incompletos generan sanciones por parte de la autoridad.
-                    </p>
-                </div>
-            </div>
-            <div class="cuadro-res">
-                <div class="opcion">
-                    <input type="button" value="VERDADERO" class="cuadro-txt" id="verdaderoPreg5" onclick="responder5()">
-                    <div class="resultado" id="resultadoPreg5-1">
-                        <img src="./build/img/contenido/Pag18/i-verdadero.svg">
-                    </div>
-                </div>
-                <div class="opcion">
-                    <input type="button" value="FALSO" class="cuadro-txt" id="falsoPreg5" onclick="responder5()">
-                    <div class="resultado" id="resultadoPreg5-2">
-                        <img src="./build/img/contenido/Pag18/i-falso.svg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="contenedor3pag18" id="final-cuestionario">
-            <figure class="persona1pag18">
-                <img src="./build/img/contenido/Pag18/persona2.svg" alt="persona 1 foot">
-            </figure>
-            <div class="cuadro-verdepag18">
-                <div class="cuadro-blancopag18">
-                    <p>
-                        ¡Muy bien! Espero que esta actividad te haya refrescado la memoria, ahora continuemos con la segunda parte de tu curso PLD/CFT.
-                    </p>
-                </div>
-            </div>
+    </div>
+
+    <div id="actividad-cuestionario">
+    </div>
+   
+    <div id="retroActividad1">
+        <figure class="cont-imagen">
+            <img src="/build/img/contenido/Pag18/persona2.svg" alt="persona">
+        </figure>
+        <div class="cont-mensaje">
+            <p>¡Muy bien! Espero que esta actividad te haya refrescado la memoria, ahora continuemos con la segunda parte de tu curso PLD/CFT.</p>
         </div>
     </div>
 </body>
