@@ -389,8 +389,12 @@
         box-shadow: 0px 10px 18px -5px rgba(0,0,0,0.75);
     }
 
+    @include escritorioHD{
+        height: 8.5rem;
+    }
+
     @include escritorio{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -575,34 +579,6 @@
         @include escritorioHD{
             top: -12%;
         }
-    }
-}
-
-
-@mixin infoPag22 ($fondo){
-    position: relative;
-    text-align: center;
-    width: 90%;
-    height: 65%;
-    background: $fondo;
-    border-radius: 2rem;
-    top: 1rem;
-    margin-left: 3rem;
-    padding: 2rem;
-    @include resaltar(v.$colorFuente, 600);
-
-    @include escritorioHD{
-        top: 1rem;
-        height: 72%;
-    }
-
-    @include tablet{
-        top: 2rem;
-        height: 36rem;
-    }
-
-    @include telefono(){
-        height: auto;
     }
 }
 

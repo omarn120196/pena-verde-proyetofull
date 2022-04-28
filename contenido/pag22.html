@@ -14,17 +14,15 @@
             Etapas del Lavado de Dinero
         </p>
     </div>
-    <div class="cuadro-claro22">
-        <figure class="i-click">
-            <img src="/build/img/contenido/Pag22/i-click.svg" alt="icono click">
+    <div class="instrucciones-mano mano22">
+        <figure class="cont-imagen">
+            <img src="./build/img/contenido/Pag22/Mano.svg" alt="mano">
         </figure>
-        <p>
-            Da clic en cada etapa para conocer más.
-        </p>
+        <p>Pulsa en cada etapa para conocer más.</p>
     </div>
     <div id="botonesPag22">
-        <div id="btn-01">
-            <div id="btn-colocacion">
+        <div class="info" id="btn-01">
+            <div class="botones" id="btn-colocacion">
                 <a class="btn-pag22" href="#info-colocacion">Colocación</a>
             </div>
             <div class="cuadros22" id="info-colocacion">
@@ -33,8 +31,8 @@
                 </span>
             </div>
         </div>
-        <div id="btn-02">
-            <div id="btn-estratificacion">
+        <div class="info" id="btn-02">
+            <div class="botones" id="btn-estratificacion">
                 <a class="btn-pag22" href="#info-estratificacion">Estratificación o Enmascaramiento </a>
             </div>
             <div class="cuadros22" id="info-estratificacion">
@@ -44,8 +42,8 @@
                 </span>
             </div>
         </div>
-        <div id="btn-03">
-            <div id="btn-integracion">
+        <div class="info" id="btn-03">
+            <div class="botones" id="btn-integracion">
                 <a class="btn-pag22" href="#info-integracion">Integración o Reingreso </a>
             </div>
             <div class="cuadros22" id="info-integracion">
@@ -55,101 +53,111 @@
             </div>
         </div>
     </div>
-    <div class="contenido2pag22">
-        <div class="cuadro-claro2-22">
-            <figure class="i-click">
-                <img src="/build/img/contenido/Pag22/i-click.svg" alt="icono click">
+    <div id="actividad-relacion22">
+        <div class="instrucciones-mano">
+            <figure class="cont-imagen">
+                <img src="./build/img/contenido/Pag22/Mano.svg" alt="mano">
             </figure>
-            <p>
-                Relaciona cada concepto con la etapa del ciclo del Lavado de Dinero que le corresponde, no olvides dar
-                en <b>Iniciar</b>
+            <p id="parrafo1">Relaciona cada concepto con la etapa del ciclo del Lavado de Dinero que le corresponde</p>
+            <p id="parrafo2">Selecciona el ciclo del Lavado de Dinero que corresponde a cada concepto.
             </p>
         </div>
-        <div class="boton">
-            <input type="button" value="Iniciar" onclick="iniciarRel()">
-        </div>
-        <div class="contenido2nv2pag22">
-
-            <div class="opcionescolumna1">
-                <div class="cuadro-opcion" id="contenedor1pag22">
-                    <div class="titulo" id="tituloAzulPag22">
-                        <p>
-                            <b>Integración o reingreso</b>
+        
+        <div id="actividad">
+            <div class="cont-conceptos">
+                <div class="fila">
+                    <div class="conceptos conceptos-lavado" data-relacion="1">
+                        <p>Introducir ganancias ilícitas al sistema financiero.
                         </p>
                     </div>
-                    <div class="concepto" id="correctoAzul">
-                        <p>
-                            Introducir ganancias ilícitas al sistema financiero.
-                        </p>
-                        <figure class="img" id="imgAzulPag22">
-                            <img src="/build/img/contenido/Pag22/i-carrito_azul.svg" alt="carrito azul">
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="cuadro-opcion" id="contenedor2pag22">
-                    <div class="titulo" id="tituloVerdePag22">
-                        <p>
-                            <b>Estratificación o enmascaramiento</b>
-                        </p>
-                    </div>
-                    <div class="concepto" id="correctoVerde">
-                        <p>
-                            Realizar múltiples transacciones que separan los fondos de su fuente ilegal, dificultando su
-                            rastreo.
-                        </p>
-                        <figure class="img" id="imgVerdePag22">
-                            <img src="/build/img/contenido/Pag22/i-verde_persona.svg" alt="persona verde">
-                        </figure>
+                    <div class="bloquear" id="bloquearC1"></div>
+                    <div class="respuestas">
+                        <div class="respuesta respuestaI">
+                            <p>Estratificación o enmascaramiento</p>
+                        </div>
+                        <div class="respuesta respuestaI">
+                            <p>Colocación</p>
+                        </div>
+                        <div class="respuesta respuestaC">
+                            <p>Integración o reingreso</p>
+                        </div>
                     </div>
                 </div>
-                <div class="cuadro-opcion" id="contenedor3pag22">
-                    <div class="titulo" id="tituloAmarilloPag22">
-                        <p>
-                            <b>Colocación</b>
-                        </p>
+                <div class="fila">
+                    <div class="conceptos conceptos-lavado" data-relacion="2">
+                        <p>Realizar múltiples transacciones que separan los fondos de su fuente ilegal, dificultando su rastreo.</p>
                     </div>
-                    <div class="concepto" id="correctoAmarillo">
-                        <p>
-                            Los clientes usan el dinero para comprar artículos o pagar deudas, sueldos, etc.
-                        </p>
-                        <figure class="img" id="imgAmarilloPag22">
-                            <img src="/build/img/contenido/Pag22/i-amarillo_billete.svg"
-                                alt="tendedero billete amarillo">
-                        </figure>
+                    <div class="bloquear" id="bloquearC2"></div>
+                    <div class="respuestas">
+                        <div class="respuesta respuestaC">
+                            <p>Estratificación o enmascaramiento</p>
+                        </div>
+                        <div class="respuesta respuestaI">
+                            <p>Colocación</p>
+                        </div>
+                        <div class="respuesta respuestaI">
+                            <p>Integración o reingreso</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="conceptos conceptos-lavado" data-relacion="3">
+                        <p>Los clientes usan el dinero para comprar artículos o pagar deudas, sueldos, etc.</p>
+                    </div>
+                    <div class="bloquear" id="bloquearC3"></div>
+                    <div class="respuestas">
+                        <div class="respuesta respuestaI">
+                            <p>Estratificación o enmascaramiento</p>
+                        </div>
+                        <div class="respuesta respuestaC">
+                            <p>Colocación</p>
+                        </div>
+                        <div class="respuesta respuestaI">
+                            <p>Integración o reingreso</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="columna2-22">
-                <div class="concepto" id="concepto1" draggable="true">
-                    <figure class="img1">
-                        <img src="/build/img/contenido/Pag22/i-verde_persona.svg" alt="persona verde">
-                    </figure>
-                    <div class="txtP-verdePag22">
-                        <p>
-                            Estratificación o enmascaramiento
-                        </p>
+
+            <div class="cont-canvas">
+                <canvas class="canvasR" id="canvas1_1"></canvas>
+                <canvas class="canvasR" id="canvas2_1"></canvas>
+                <canvas class="canvasR" id="canvas3_1"></canvas>
+            </div>
+
+            <div class="cont-relacionar">
+                <div class="definicion">
+                    <div class="definicion-lavado"  data-relacion="2">
+                        <figure class="cont-imagen">
+                            <img src="/build/img/contenido/Pag22/i-verde_persona.svg" alt="persona">
+                        </figure>
+                        <div class="info" id="info1">
+                            <p>Estratificación o enmascaramiento</p>
+                        </div>
                     </div>
+                    <div class="bloquear" id="bloquearD2"></div>
                 </div>
-                <div class="concepto" id="concepto2" draggable="true">
-                    <figure class="img2">
-                        <img src="/build/img/contenido/Pag22/i-amarillo_billete.svg" alt="tendedero billete amarillo">
-                    </figure>
-                    <div class="txtP-amarilloPag22">
-                        <p>
-                            Colocación
-                        </p>
+                <div class="definicion">
+                    <div class="definicion-lavado"  data-relacion="3">
+                        <figure class="cont-imagen">
+                            <img src="/build/img/contenido/Pag22/i-amarillo_billete.svg" alt="billete">
+                        </figure>
+                        <div class="info" id="info2">
+                            <p>Colocación</p>
+                        </div>
                     </div>
+                    <div class="bloquear" id="bloquearD3"></div>
                 </div>
-                <div class="concepto" id="concepto3" draggable="true">
-                    <figure class="img3">
-                        <img src="/build/img/contenido/Pag22/i-carrito_azul.svg" alt="carrito azul">
-                    </figure>
-                    <div class="txtP-azulPag22">
-                        <p>
-                            Integración o reingreso
-                        </p>
+                <div class="definicion">
+                    <div class="definicion-lavado"  data-relacion="1">
+                        <figure class="cont-imagen">
+                            <img src="/build/img/contenido/Pag22/i-carrito_azul.svg" alt="carrito">
+                        </figure>
+                        <div class="info" id="info3">
+                            <p>Integración o reingreso</p>
+                        </div>
                     </div>
+                    <div class="bloquear" id="bloquearD1"></div>
                 </div>
             </div>
         </div>

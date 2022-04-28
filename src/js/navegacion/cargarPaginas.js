@@ -123,7 +123,7 @@ function visualizarPagina(){
             desplegar();
 
             //Script página 22
-            visualizarPag22();
+            actividadPag22();
 
             //Script página24
             voltearCardsPag20();
