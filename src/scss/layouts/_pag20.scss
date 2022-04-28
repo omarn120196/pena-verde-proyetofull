@@ -1,22 +1,35 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.cuadro2click{
-    position: relative;
-    top: 2rem;
+
+
+#instrucciones-pag20{
+    background: v.$azulClaro1;
+    height: 10rem;
     display: flex;
-    background-color: #D9EDEF;
-    align-items: center;
-    padding:0% 2.5%;
-    .icon2c{
-        padding-top: 1%;
-        width: 5%;
-        height: 5%;
+    padding: 2rem;
+
+    @include m.telefono{
+        padding: 1rem;
     }
+
     p{
-        padding-top: 1%;
-        margin-left: 2%;
-        text-align: center;
+        margin: auto;
+
+        @include m.tablet{
+            margin-left: 2rem;
+        }
+
+        @include m.telefono{
+            margin-left: 0;
+        }
+    }
+
+    img{
+        @include m.telefono{
+            width: 0;
+            height: 0;
+        }
     }
 }
 
@@ -40,6 +53,10 @@
         &#flip2{
             @include m.flip-cardsPag20(fuerte, v.$naranja);
             top: 5rem;
+
+            @include m.escritorioHD{
+                top: 0
+            }
         }
         &#flip3{
             @include m.flip-cardsPag20(fuerte, v.$amarilloPag20);
@@ -47,9 +64,29 @@
         &#flip4{
             @include m.flip-cardsPag20(fuerte, v.$verde);
             top: 5rem;
+
+            @include m.escritorioHD{
+                top: 0;
+            }
+
+            @include m.tablet{
+                top: 3rem;
+            }
+
+            @include m.telefono{
+                top: 0;
+            }
         }
         &#flip5{
             @include m.flip-cardsPag20(fuerte, v.$azulRey);
+
+            @include m.escritorioHD{
+                top: 3rem;
+            }
+
+            @include m.telefono{
+                top: 0;
+            }
         }
         
         .caras{
@@ -91,349 +128,388 @@
     }
 }
 
-.contenido1{
-    .nivel01{
-        display: flex;
-        color: #fff;
-        text-align: center;
-        display: flex;
-        color: #fff;
-        text-align: center;
-        .cuadro-negro{
-            background-color:#1A1E1E ;
-            width: 35% !important;
-            height: 4%;
-            margin-top: 2%;
-            p{
-                padding: 1% 0%;
-                font-size:1vw ;
-            }
-        }
-        .cuadro-naranja{
-            padding: 0%;
-            margin: 2% 2%;
-            background-color:#E96247 ;
-            width: 35%;
-            height: 4%;
-            p{
-                padding: 1% 0%;
-                font-size:1vw ;
-            }
-        }
-        .cuadro-azul{
-            background-color:#002F87;
-            width:35%;
-            height: 4%;
-            margin-top: 2%;
-            p{
-                padding: 1% 0%;
-                font-size:1vw ;
-            }
-        }
-    }
-
-    .nivel-inf{
-        display: flex;
-        height: 60%;
-        .cuadro-claro{
-            position: relative;
-            width: 75%;
-            height: 100%;
-            min-height: 90px;
-            background-color: #E1E7ED;
-            margin-top: 2%;
-            padding: 1.5% 3.5%;
-            font-size: 1.1vw;
-            text-align: center;
-            align-items: center;
-            z-index: -1;
-        }
-        .cuadro-central{
-            width: 60%;
-            margin: 2% 2%;
-            display: block;
-            .cuadro-c{
-                margin-bottom: -15%;
-                display:none;
-                height: 151%;
-                width: 133%;
-                margin-left: -16%;
-            }
-            &:hover{
-                opacity: 0.5;
-                @include m.parpadeo();
-            }
-            #cuadro-c1{
-                @include m.parpadeo();
-            }
-            .cuadro-c.activo{
-                display: block;
-            }
-            .activo:hover{
-                animation-name: parpadeo2;
-                animation-duration: 0s;
-                animation-timing-function: linear;
-                animation-iteration-count: 0;
-
-                -webkit-animation-name:parpadeo2;
-                -webkit-animation-duration: 0s;
-                -webkit-animation-timing-function: linear;
-                -webkit-animation-iteration-count: 0;
-            }
-           .res-c{
-               display:none;
-                img{
-                    position: relative;
-                    height: 85%;
-                    width: 133%;
-                    margin-left: -16%;
-                    z-index: 1;
-                }
-                p{
-                    position: relative;
-                    margin-top: -24%;
-                    z-index: 2;
-                    text-align: center;
-                    font-weight: bold;
-                    font-size: 0.9vw;
-                    color: #1A1E1E!important;
-                }
-            }
-            .res-c.activo{
-                display: block;
-            }
-        }
-    }
-}
-.cuadro2click2{
+#instrucciones2-pag20{
+    background: v.$azulClaro1;
+    height: 10rem;
     display: flex;
-    margin-top: 3%;
-    background-color: #D9EDEF;
-    align-items: center;
-    padding:0% 2.5%;
-    .icon2c{
-        padding-top: 1%;
-        width: 5%;
-        height: 5%;
+    margin-top: 5rem;
+    padding: 2rem;
+
+    @include m.telefono{
+        margin-top: 2rem;
+        padding: 1rem;
+        height: 13rem;
     }
+
     p{
-        padding-top: 1%;
-        margin-left: 2%;
-        text-align: center;
+        margin: auto;
+
+        @include m.tablet{
+            margin-left: 2rem;
+        }
+    }
+
+    img{
+        @include m.telefono{
+            width: 0;
+            height: 0;
+        }
     }
 }
-.contenido2{
-    display: block;
-    background-color: #E6E6E6;
-    height: 40%;
-    max-height: 660px;
-    margin-top: 0.5%;
-    .contenido3{
-        .nivel02{
-            display: flex;
-            color: #fff;
-            text-align: center;
-            .cuadro-negro{
-                background-color:#1A1E1E ;
-                width: 35% !important;
-                height: 4%;
-                margin-top: 2%;
-                p{
-                    padding: 1% 0%;
-                    font-size:1vw ;
-                }
-            }
-            .cuadro-naranja{
-                padding: 0%;
-                margin: 2% 2%;
-                background-color:#E96247 ;
-                width: 35%;
-                height: 4%;
-                p{
-                    padding: 1% 0%;
-                    font-size:1vw ;
-                }
-            }
-            .cuadro-azul{
-                background-color:#002F87;
-                width:35%;
-                height: 4%;
-                margin-top: 2%;
-                p{
-                    padding: 1% 0%;
-                    font-size:1vw ;
-                }
-            }
+
+#cont-diferencias{
+    @include m.grid(3, 1rem);
+    position: relative;
+    top: 3rem;
+
+    @include m.telefono{
+        display: none;
+    }
+
+    .info{
+        display: none;
+        opacity: 0;
+        transition: all .3s ease;
+
+        &.cuadros_activos{
+            display: block;
+            opacity: 1;
         }
-        .contenedorFinalPag20{
-            display: flex;
-            .conjuntoMaletin{
-                display: grid;
-                width: 20%;
-                height: 60%;
-                #maletin-amarillo{
-                    height:90%;
-                    width: 100%;
-                    
-                    display:flex;
-                    a{
-                        .i-maletin{
-                            margin-left: 15%;
-                            @include m.parpadeo();
-                            img{
-                                width: 100%;
-                                height: 30%;
-                            }
-                        }
-                        &:hover{
-                            @include m.parpadeo();
-                        }
-                    }
-                    
-                }
-                #maletin-verde{
-                    height: 90%;
-                    width: 100%;
-                    display: flex;
-                    a{
-                        .i-maletin{
-                            margin-left: 15%;
-                            img{
-                                width: 100%;
-                                height: 30%;
-                            }
-                        }
-                    }
-                    &:hover{
-                        @include m.parpadeo();
-                    }
-                }
-               
-                #maletin-azul{
-                    height: 90%;
-                    width: 100%;
-                    display: flex;
-                    a{
-                        .i-maletin{
-                            margin-left: 15%;
-                            img{
-                                width: 100%;
-                                height:30%;
-                            }
-                        }
-                    }
-                    &:hover{
-                        @include m.parpadeo();
-                    }
-                    
-                }
-                
-                #maletin-rojo{
-                    height: 90%;
-                    width: 100%;
-                    padding-left:5%;
-                    display: flex;
-                    a{
-                        .i-maletin{
-                            padding-left: 1.5%;
-                            margin-left: 14.5%;
-                            img{
-                                width:100%;
-                                height:30%;
-                            }
-                        }
-                    }
-                    &:hover{
-                        @include m.parpadeo();
-                    }
-                }
-            }    
-            .conjuntoTexto{
-                display: grid;
-                height: 100%;
-                width: 80%;
-                #msj1{
-                    position: relative;
-                    margin: 0% 0% 2% 0%;
-                    height:90%;
-                    width: 95%;
-                    p{
-                        background-color: #E6E6E6;
-                        color: #E6E6E6;
-                        height: 100%;
-                        margin:0.5% 0% 0% 2%;
-                        padding: 4% 7%;
-                        text-align: center;
-                        width: 95%;
-                    }
-                    #mAmarillo.activo{
-                        background-color: #fdf5eb;
-                        color:#1A1E1E
-                    }
-                }
-                #msj2{
-                    position: relative;
-                    margin: 0.5% 0% 2% 0%;
-                    height:90%;
-                    width: 95%;
-                    top: 2%;
-                    p{
-                        background-color: #E6E6E6;
-                        color: #E6E6E6;
-                        height: 100%;
-                        margin:0.5% 0% 0% 2%;
-                        padding: 4% 7%;
-                        text-align: center;
-                        width: 95%;
-                    }
-                    #mVerde.activo{
-                        background-color: #fdf5eb;
-                        color:#1A1E1E
-                    }
-                }
-                #msj3{
-                    position: relative;
-                    margin: 1% 0% 1.5% 0%;
-                    height:85%;
-                    width: 95%;
-                    top: 2%;
-                    p{
-                        background-color: #E6E6E6;
-                        color: #E6E6E6;
-                        height: 95%;
-                        margin:0.5% 0% 0% 2%;
-                        padding: 4% 7%;
-                        text-align: center;
-                        width: 95%;
-                    }
-                    #mAzul.activo{
-                        background-color: #fdf5eb;
-                        color:#1A1E1E
-                    }
-                }
-                
-                
-                #msj4{
-                    position: relative;
-                    width: 95%;
-                    margin: 0.5% 0% 0% 0%;
-                    height:95%;
-                    top: 2%;
-                    p{
-                        background-color: #E6E6E6;
-                        color: #E6E6E6;
-                        height: 100%;
-                        margin:0.5% 0% 0% 2%;
-                        padding: 4% 7%;
-                        text-align: center;
-                        width: 95%;
-                    }
-                    #mRojo.activo{
-                        background-color: #fdf5eb;
-                        color:#1A1E1E
-                    }
-                }
-            }    
+
+    }
+    .btn-pag20:hover{
+        @include m.parpadeo;
+    }
+
+    .cont-titulo{
+        padding: 1rem;
+        height: 4rem;
+        text-align: center;
+        @include m.resaltar(v.$blanco,700);
+
+        @include m.telefono{
+            padding: 0.5rem;
+            height: 7;
         }
     }
+
+    .cont-info{
+        margin-top: 3rem;
+        height: 10rem;
+
+        .info{
+            height: 100%;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.20);
+            background: v.$azulPastel; 
+
+            @include m.tablet{
+                padding: 0.5rem;
+            }
+        }
+
+    }
+    #lavado{
+        #titulo{
+            background: v.$colorFuente;
+        }
+    }
+
+    #diferencias{
+        #titulo{
+            background: v.$naranja;
+        }
+        .boton{
+            margin-top: 1rem;
+            height: 10rem;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .abajo{
+            margin-top: 3rem;
+        }
+    }
+
+    #financiamiento{
+        #titulo{
+            background: v.$azulRey;
+        }
+    }
+}
+
+// Diferencias Vista Telefono
+
+#cont-diferenciasTel{
+    display: none;
+
+    @include m.telefono{
+        display: inline;
+        margin-top: 1rem;
+
+        .info{
+            display: none;
+            opacity: 0;
+            transition: all .3s ease;
+    
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+    
+        }
+        .btn-pag20:hover{
+            @include m.parpadeo;
+        }
+
+        .boton{
+            cursor: pointer;
+        }
+
+        .titulo{
+            height: 4rem;
+            padding: 1rem;
+            text-align: center;
+            @include m.resaltar(v.$blanco, 600);
+        }
+
+        #lavado{
+            background: v.$colorFuente;
+        }
+
+        #financiamiento{
+            background: v.$azulRey;
+        }
+
+        .cont-info{
+            height: 8rem;
+            text-align: center;
+            padding: 1rem;
+            background: v.$azulPastel;
+        }
+
+        .boton{
+            text-align: center;
+            background: v.$crema5;
+        }
+    }
+}
+
+#instrucciones3-pag20{
+    background: v.$azulClaro1;
+    height: 10rem;
+    display: flex;
+    margin-top: 8rem;
+    padding: 2rem;
+
+    @include m.telefono{
+        padding: 1rem;
+        height: 13rem;
+        margin-top: 4rem;
+    }
+
+    p{
+        margin: auto;
+
+        @include m.tablet{
+            margin-left: 2rem;
+        }
+    }
+
+    img{
+        @include m.telefono{
+            width: 0;
+            height: 0;
+        }
+    }
+}
+
+
+#cont-semejanzas{
+    @include m.grid(4, 1rem);
+    height: 75rem;
+    background: v.$grisFondo3;
+    margin-top: 2rem;
+
+    @include m.telefono{
+        display: none;
+    }
+
+    #maletines{
+        grid-column: 1/2;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 4rem;
+        margin-top: 3rem;
+
+        @include m.tablet{
+            padding: 2rem;
+            margin-top: 7rem;
+        }
+            
+        .img-maletin{
+            height: 15rem;
+        }
+        
+    }
+
+    #semejanzas{
+        grid-column: 2/5;
+        overflow: hidden;
+
+        .info{
+            display: none;
+            opacity: 0;
+            transition: all .3s ease;
+        }
+    
+        .btn2-pag20:hover{
+            @include m.parpadeo;
+        }
+
+        #cont-titulos{
+            @include m.grid(3, 1rem);
+            
+            .titulo{
+                padding: 1rem;
+                height: 6rem;
+                text-align: center;
+                @include m.resaltar(v.$blanco,700);
+            }
+
+            #lavado{
+                background: v.$colorFuente;
+            }
+
+            #semejanza{
+                background: v.$naranjaFuerte;
+            }
+
+            #financiamiento{
+                background: v.$azulRey;
+            }
+        }
+
+        .cont-info{
+            height: 12rem;
+            width: 96%;
+            margin-top: 4rem;
+            margin-left: 2rem;
+
+            @include m.tablet{
+                margin-left: 1rem;
+            }
+
+            .info{
+                text-align: center;
+                padding: 4rem;
+                background: v.$crema4;
+                box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.20);
+
+                @include m.tablet{
+                    padding: 2rem;
+                }
+            }
+        }
+
+        #maletin1{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin2{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin3{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin4{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+//Vista semejanzas Telefono
+#cont-semejanzasTel{
+    display: none;
+
+    @include m.telefono{
+        display: inline;
+
+        .info{
+            display: none;
+            opacity: 0;
+            transition: all .3s ease;
+        }
+    
+        .btn2-pag20:hover{
+            @include m.parpadeo;
+        }
+
+        .titulo{
+            height: 4rem;
+            padding: 1rem;
+            text-align: center;
+            @include m.resaltar(v.$blanco, 600);
+        }
+
+        #lavado{
+            background: v.$colorFuente;
+        }
+        #semejanzas{
+            background: v.$naranjaFuerte;
+        }
+        #financiamiento{
+            background: v.$azulRey;
+        }
+
+        .info{
+            text-align: center;
+            padding: 0.5rem;
+            background: v.$crema4;
+            height: 10rem;
+        }
+        #maletin1-Tel{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin2-Tel{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin3-Tel{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin4-Tel{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+    }    
 }

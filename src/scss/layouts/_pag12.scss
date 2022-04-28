@@ -161,7 +161,7 @@
         #cont-botones{
             @include m.grid(3, 2rem);
             position: relative;
-            top: 5rem;
+            top: 3rem;
             padding: 2rem;
 
             @include m.escritorioHD{
@@ -413,7 +413,7 @@
             }
     
             &#flip1{
-                @include m.flip-cardsPag12(fuerte, v.$grisPag07, v.$azulRey);
+                @include m.flip-cardsPag12(fuerte, v.$azulPastel, v.$azulRey);
             }
             
             &#flip2{
