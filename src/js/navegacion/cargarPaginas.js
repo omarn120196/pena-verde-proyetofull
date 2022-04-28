@@ -122,8 +122,12 @@ function visualizarPagina(){
             //Script página 22
             visualizarPag22();
 
-            //Script página24
+            //Script página20
             voltearCardsPag20();
+            visualizarDifPag20();
+            visualizarDifPag202();
+            visualizarMaletines();
+            visualizarMaletinesTel()
 
             //Script página24
             flipCard();

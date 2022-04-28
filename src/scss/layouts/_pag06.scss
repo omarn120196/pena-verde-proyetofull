@@ -10,6 +10,7 @@
 #cont-pag06{
     @include m.grid(4, 0);
     height: auto;
+    overflow: hidden;
 
     @include m.tablet{
         @include m.grid(1, 0);
@@ -22,6 +23,7 @@
         align-items: center;
         flex-direction: column;
         background: v.$naranjaPag03;
+        overflow: hidden;
 
         @include m.tablet{
             height: 30rem;
@@ -96,6 +98,7 @@
         justify-content: center;
         align-items: center;
         background: v.$rosaPag06;
+        overflow: hidden;
 
         @include m.tablet{
             grid-column: 1/2;

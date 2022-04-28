@@ -8,7 +8,7 @@
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="Grupo_90" data-name="Grupo 90" transform="translate(-139 -2555)">
+  <g id="maletin-azul" transform="translate(-139 -2555)">
     <g transform="matrix(1, 0, 0, 1, 139, 2555)" filter="url(#Rectángulo_120)">
       <rect id="Rectángulo_120-2" data-name="Rectángulo 120" width="129" height="130" rx="10" transform="translate(9 3)" fill="#002f87"/>
     </g>
