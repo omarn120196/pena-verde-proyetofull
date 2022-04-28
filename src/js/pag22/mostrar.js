@@ -1,3 +1,9 @@
+function actividadPag22(){
+    visualizarPag22();
+    relacionLavado();
+    seleccionar();
+}
+
 function visualizarPag22(){
     
     const btnCuadros = document.querySelectorAll('.btn-pag22');
