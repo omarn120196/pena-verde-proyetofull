@@ -1,7 +1,6 @@
 function visualizarDifPag202(){
     
     const btnCuadros = document.querySelectorAll('.btn-pag20-2');
-    console.log(btnCuadros);
 
     btnCuadros.forEach(boton=>{
         boton.addEventListener("click", function(e){
