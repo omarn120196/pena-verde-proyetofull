@@ -1,3 +1,5 @@
+let intentosEvaluación = 1;
+
 class EvaluacionFinal{
 
     constructor(){
@@ -136,10 +138,6 @@ class EvaluacionFinal{
     acierto(){
         this.aciertos++;
     }
-
-    intento(){
-        this.intentos++;
-    }
 }
 
 function evaluacionFinal(){
@@ -172,9 +170,6 @@ function evaluacionFinal(){
 
     //Cerrar Ventana
     cerrarVentana();
-
-    //registrar
-    registrar();
     
 }
 
@@ -327,7 +322,10 @@ function calificacionFinal(evaluacion){
             if(promedio >= 80){
                 const retro = document.querySelector('#retro-positiva');       
                 retroFinal(retro);
-                calificacion.textContent = promedio; 
+                calificacion.textContent = promedio;
+                
+                //registrar
+                registrar(promedio); 
             }
             else{
                 const retro = document.querySelector('#retro-negativa');
