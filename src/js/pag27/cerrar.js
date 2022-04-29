@@ -13,16 +13,19 @@ function cerrarVentana(){
     }
 }
 
-function registrar () {  
+function registrar (promedio) {  
     
     const btnRegistrar = document.querySelector('#registrar');
     
+
     if(btnRegistrar){
 
         btnRegistrar.addEventListener('click', function (e) {  
 
             e.preventDefault();
-            console.log('registrando');
+
+            console.log(promedio);
+            asignarCalificación(promedio);
             
         });
     }
