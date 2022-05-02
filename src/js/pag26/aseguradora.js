@@ -52,24 +52,24 @@ function preguntasAseguradora1(aseguradora) {
 
    
     aseguradora.respuestaA1.addEventListener('click', function(){
-        aseguradora.respuestaA1.classList.add('respuesta-incorrecta');
+        aseguradora.respuestaA1.classList.add('respuesta-correcta');
         bloquearPregunta(aseguradora, 0);
 
         setTimeout(()=>{
-            aseguradora.respuestaA1.classList.remove('respuesta-incorrecta');
-            aseguradora.respuestaA1.classList.add('fondoIncorrecto');
+            aseguradora.respuestaA1.classList.remove('respuesta-correcta');
+            aseguradora.respuestaA1.classList.add('fondoCorrecto');
+            aseguradora.acietos++;
             
         }, 2000);
     });
    
     aseguradora.respuestaB1.addEventListener('click', function(){
-        aseguradora.respuestaB1.classList.add('respuesta-correcta');
+        aseguradora.respuestaB1.classList.add('respuesta-incorrecta');
         bloquearPregunta(aseguradora, 0);
 
         setTimeout(()=>{
-            aseguradora.respuestaB1.classList.remove('respuesta-correcta');
-            aseguradora.respuestaB1.classList.add('fondoCorrecto');
-            aseguradora.acietos++;
+            aseguradora.respuestaB1.classList.remove('respuesta-incorrecta');
+            aseguradora.respuestaB1.classList.add('fondoIncorrecto');
             
         }, 2000);
     }); 
@@ -106,24 +106,24 @@ function preguntasAseguradora3(aseguradora) {
 
    
     aseguradora.respuestaA3.addEventListener('click', function(){
-        aseguradora.respuestaA3.classList.add('respuesta-correcta');
+        aseguradora.respuestaA3.classList.add('respuesta-incorrecta');
         bloquearPregunta(aseguradora, 2);
 
         setTimeout(()=>{
-            aseguradora.respuestaA3.classList.remove('respuesta-correcta');
-            aseguradora.respuestaA3.classList.add('fondoCorrecto');
-            aseguradora.acietos++;
+            aseguradora.respuestaA3.classList.remove('respuesta-incorrecta');
+            aseguradora.respuestaA3.classList.add('fondoIncorrecto');
             
         }, 2000);
     });
    
     aseguradora.respuestaB3.addEventListener('click', function(){
-        aseguradora.respuestaB3.classList.add('respuesta-incorrecta');
+        aseguradora.respuestaB3.classList.add('respuesta-correcta');
         bloquearPregunta(aseguradora, 2);
 
         setTimeout(()=>{
-            aseguradora.respuestaB3.classList.remove('respuesta-incorrecta');
-            aseguradora.respuestaB3.classList.add('fondoIncorrecto');
+            aseguradora.respuestaB3.classList.remove('respuesta-correcta');
+            aseguradora.respuestaB3.classList.add('fondoCorrecto');
+            aseguradora.acietos++;
             
         }, 2000);
     }); 

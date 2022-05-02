@@ -145,7 +145,7 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Actividad de Reforzamiento', 
+        nombre: 'Actividad 3', 
         ruta: 'pag25.html', 
         progreso: 25,
         icono: 'fa-solid fa-pencil'

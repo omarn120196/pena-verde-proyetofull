@@ -3,11 +3,11 @@ const scorm = pipwerks.SCORM;
 
 window.onload = function(){
     conectarLMS();
-    statusCurso();
     calcularTiempo();
 }
 
 window.onunload = function(){
+    scorm.set("cmi.core.exit", "suspend");
     registrarTiempo(tiempo);
     cerrarConexion();
 }
@@ -18,8 +18,8 @@ function conectarLMS(){
 
 }
 
-function statusCurso(){
-    scorm.set("cmi.core.lesson_status", "completed");
+function statusCurso(estado){
+    scorm.set("cmi.core.lesson_status", estado);
 }
 
 function cerrarConexion(){
