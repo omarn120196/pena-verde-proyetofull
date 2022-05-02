@@ -7,7 +7,8 @@ function cerrarVentana(){
         btnCerrar.addEventListener('click', function (e) {  
 
             e.preventDefault();
-            console.log('cerrando');
+            window.close();
+            
             
         });
     }
@@ -24,7 +25,6 @@ function registrar (promedio) {
 
             e.preventDefault();
 
-            console.log(promedio);
             asignarCalificación(promedio);
             
         });

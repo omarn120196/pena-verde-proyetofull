@@ -50,7 +50,7 @@
 }
 
 @mixin fondoCirculos {
-    background-image: url('/build/img/contenido/Pag04/fondo.svg');
+    background-image: url('./build/img/contenido/Pag04/fondo.svg');
     @include fondo(center);
 }
 
