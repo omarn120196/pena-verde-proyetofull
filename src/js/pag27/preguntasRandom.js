@@ -6,7 +6,7 @@ function visualizarPreguntas(evaluacion){
 
     if(contenedor){
 
-        while(arregloPreguntas.length > 6){
+        while(arregloPreguntas.length > 5){
 
             //Crear un indice aleatorio
             const index = Math.floor(Math.random() * arregloPreguntas.length);

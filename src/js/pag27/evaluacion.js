@@ -7,7 +7,7 @@ class EvaluacionFinal{
         this.aciertos = 0;
         this.preguntasRespuestas = [
             {
-                pregunta: 'Persona de contacto entre el Comité de Comunicación y Control, las autoridades y la Compañía para la atención de obligaciones en materia de PLD/CFT.',
+                pregunta: 'Persona de contacto entre la SCHP, CNSF y CCC, para la atención de obligaciones en materia de PLD/CFT.',
                 respuestaA: 'Cualquier colaborador',
                 respuestaB: 'Auditoría Interna',
                 respuestaC: 'El Oficial de Cumplimiento',
@@ -93,33 +93,25 @@ class EvaluacionFinal{
                 respuestaCorrecta: 'C'
             },
             {
-                pregunta: 'Obligación de integrar un expediente a través del agente o colaborador de la Compañía previo a celebrar un contrato de Seguro o Reaseguro.',
-                respuestaA: 'Conocimiento del Cliente.',
-                respuestaB: 'Identificación del Cliente',
-                respuestaC: 'Clasificación de grado de riesgo',
-                numero: 12,
-                respuestaCorrecta: 'B'
-            },
-            {
                 pregunta: '¿Cuáles son las fases de la Metodología de Evaluación de Riesgos PLD/CFT?',
                 respuestaA: 'Diseño, implementación y valoración',
                 respuestaB: 'Estudio, implementación y finalización',
                 respuestaC: 'Diseño, valoración y proceso',
-                numero: 13,
+                numero: 12,
                 respuestaCorrecta: 'A'
             },
             {
                 pregunta: 'Algunas de las diferencias entre los delitos de Lavado de Dinero y Combate al Financiamiento al Terrorismo son: Propósito del delito, volumen de fondos y momento del delito.',
                 respuestaA: 'Falso',
                 respuestaB: 'Verdadero',
-                numero: 14,
+                numero: 13,
                 respuestaCorrecta: 'B'
             },
             {
                 pregunta: 'El Lavado de Dinero tiene como propósito legalizar las ganancias mientras que el del Financiamiento al Terrorismo es generar temor o terror.',
                 respuestaA: 'Falso',
                 respuestaB: 'Verdadero',
-                numero: 15, 
+                numero: 14, 
                 respuestaCorrecta: 'B'
             },
             {
@@ -127,7 +119,7 @@ class EvaluacionFinal{
                 respuestaA: 'Comisión Nacional de Seguros y Fianzas (CNSF)',
                 respuestaB: 'Secretaría de la Función Pública',
                 respuestaC: 'Banco de México',
-                numero: 16,
+                numero: 15,
                 respuestaCorrecta: 'A'
             }
         ]
@@ -320,11 +312,15 @@ function calificacionFinal(evaluacion){
             const promedio = parseInt((evaluacion.aciertos * 100) / noPreguntas);
             
             if(promedio >= 80){
-                const retro = document.querySelector('#retro-positiva');       
+                const retro = document.querySelector('#retro-positiva');
+
                 retroFinal(retro);
                 calificacion.textContent = promedio;
                 
-                //registrar
+                //Registrar estado
+                statusCurso('passed');
+
+                //registrar promedio
                 registrar(promedio); 
             }
             else{
