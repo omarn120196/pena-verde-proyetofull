@@ -4,6 +4,7 @@ const btnAdelante = $('#adelante');
 const btnHome = $('#home');
 let noPagina = 0;
 let porcentaje;
+let totalPaginas;
 
 //Clase botones
 class BotonesNavegacion{
@@ -11,6 +12,8 @@ class BotonesNavegacion{
     sigPagina(){
         if(noPagina < paginas.length - 1){
             noPagina++;
+            actualizarStatus();
+            asignarLocation();
             selectOpcion(noPagina);
             visualizarPagina();
         }
@@ -22,6 +25,8 @@ class BotonesNavegacion{
     atrasPaginas(){
         if(noPagina > 0){
             noPagina--;
+            actualizarStatus();
+            asignarLocation();
             selectOpcion(noPagina);
             visualizarPagina();
         }
@@ -32,6 +37,8 @@ class BotonesNavegacion{
 
     home(){
         noPagina = 0;
+        actualizarStatus();
+        asignarLocation();
         selectOpcion(noPagina);
         visualizarPagina();
     }
@@ -69,7 +76,7 @@ function visualizarPagina(){
     headingTitulo.text(titulo);
 
     //Actualizar el porcentaje del progreso
-    const totalPaginas = paginas.length;
+    totalPaginas = paginas.length;
     const porcentajePorPagina = 100 / totalPaginas;
     porcentaje = parseInt(porcentajePorPagina * paginas[noPagina].progreso) ;
     verificarMenu();
@@ -154,6 +161,17 @@ function selectOpcion(noPagina){
     select.classList.remove('select');
 
     enlaces[noPagina].classList.add('select');
+}
+
+//Actualizar Status del curso en Moodle
+function actualizarStatus(){
+    
+    if(noPagina != totalPaginas -1){
+        statusCurso('incomplete');
+    }
+    else{
+        statusCurso('completed');
+    }
 }
 
 //Parpadear el boton al final de la página
