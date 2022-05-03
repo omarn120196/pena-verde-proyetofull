@@ -9,112 +9,71 @@
 
 #cont-pag06{
     @include m.grid(4, 0);
-    height: auto;
-    overflow: hidden;
 
     @include m.tablet{
         @include m.grid(1, 0);
     }
 
+    @include m.telefono{
+        display: none;
+    }
+
     #cont-rojo{
         grid-column: 1/2;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: column;
         background: v.$naranjaPag03;
-        overflow: hidden;
 
         @include m.tablet{
-            height: 30rem;
-            align-items: flex-start;
+            height: 40rem;
         }
 
         #clic-pag06{
-            position: relative;
-            margin-bottom: 2rem;
-            margin-top: 1rem;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: v.$azulClaro2;
             padding: 2rem;
-            border-radius: 1rem;
-            width: 80%;
             height: 10rem;
+            background: v.$azulClaro2;
 
             @include m.tablet{
-                width: 60%;
-                height: 15rem;
-                margin-bottom: 0;
-                top: 15rem;
-                left: 20rem;
-            }
-
-            @include m.telefono{
-                left: 15rem;
-                width: 50%;
-                height: 20rem;
-                padding: 2rem;
-                top: 10rem;
-                text-align: center;
+                margin: auto;
+                height: 8rem;
             }
 
             .mano-pag06{
-                width: 60%;
-                height: 70%;
+                width: 7rem;
+                height: 5rem;
 
                 @include m.tablet{
-                    width: 20%;
-                }
-
-                @include m.telefono{
-                    position: absolute;
-                    top: 1rem;
-                    left: -3rem;
-                    width: 5rem;
-                    height: 5rem;
+                    width: 0;
+                    height: 0;
                 }
             }
-
         }
 
         .personaje{
-            @include m.tablet{
-                height: 90%;
-                width: 25%;
-            }
+            margin-top: 2rem;
 
-            @include m.telefono{
-                height: 25rem;
-                width: 40%;
+            @include m.tablet{
+                display: inline-block;
+                height: 30rem;
+                width: 20rem;
             }
         }
+        
     }
+
     #cont-rosa{
         grid-column: 2/5;
-        position: relative;
         display: flex;
-        justify-content: center;
-        align-items: center;
         background: v.$rosaPag06;
-        overflow: hidden;
 
         @include m.tablet{
             grid-column: 1/2;
         }
 
         .libros{
-            @include m.grid(3, 0);
-            position: relative;
-            overflow: hidden;
+            @include m.grid(3, 1rem);
             padding: 2rem;
             width: 100%;
-            height: 90%;
-
-            @include m.telefono{
-                @include m.grid(1, 2rem);
-            }
+            height: 100%;
 
             .cuadro-pag06{
                 display: none;
@@ -127,26 +86,25 @@
             } 
 
             .img-libro{
-                width: 80%;
-
-                @include m.telefono{
-                    width: 60%;
-                }
+                width: 40%;
+                margin: auto;
             }
 
-            a{
-                display: block;
+            h4{
+                text-align: center;
+                margin-top: 2rem;
             }
 
             #cuadro1{
-                @include m.cuadrosPag06(v.$azulPag06, v.$azulFuertePag06, center);
+                @include m.cuadrosPag06(v.$azulPag06, v.$azulFuertePag06, left);
                 @include m.resaltar(v.$azulFuente, 600);
-
+    
                 &.cuadros_activos{
                     display: block;
                     opacity: 1;
                 }
             }
+
 
             #cuadro2{
                 @include m.cuadrosPag06(v.$naranjaPag06, v.$naranjaFuertePag06, left);
@@ -165,6 +123,68 @@
                     display: block;
                     opacity: 1;
                 }
+            }
+        }
+    }
+}
+
+#cont-pag06Tel{
+    display: none;
+
+    @include m.telefono{
+        display: inline;
+        #cont-img{
+            display: flex;
+            width: 100%;
+            height: 20rem;
+            background: v.$naranjaPag03;
+
+            #clic-pag06Tel{
+                padding: 2rem;
+                width: 80%;
+                height: 50%;
+                display: flex;
+                background: v.$azulClaro2;
+                margin-left: 3rem;
+                
+                p{
+                    margin: auto;
+                }
+            }
+        }
+
+        .cuadrosPag06-tel{
+            padding: 2rem;
+            display: none;
+            opacity: 0;
+            transition: all .3s ease;
+        }
+
+        #cuadro1-tel{
+            background: v.$azulPag06;
+            @include m.resaltar(v.$azulRey, 500);
+
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+        #cuadro2-tel{
+            background: v.$naranjaPag06;
+            @include m.resaltar(v.$naranjaFuentePag06, 500);
+
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+        #cuadro3-tel{
+            background: v.$verdePag06;
+            @include m.resaltar(v.$verde, 500);
+
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
             }
         }
     }

@@ -93,6 +93,7 @@ function visualizarPagina(){
           
             // Scrip página06
             visualizarPag06();
+            visualizarTelPag06();
           
             // Scrip página07
             visualizarPag07();

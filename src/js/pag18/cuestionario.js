@@ -16,7 +16,7 @@ class Actividad1{
             },
             {
                 noPregunta: 3,
-                pregunta: 'La herramienta que nos permite dejar constancia de la entrevista es el Formato de Identificación del Cliente con prima anual mayor a $7,500 dólares, para el caso de General de Seguros y General de Salud. Para el caso de Reaseguradora Patria es el Formato de Identificación de la Cedente.',
+                pregunta: 'La herramienta que nos permite dejar constancia de la entrevista es el Formato de Identificación de Nacionalidad Extranjera o Mexicana o KYC (conocido como Formato de Identificación de la Cedente).',
                 respuesta: 'v'
             },
             {
