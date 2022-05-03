@@ -22,12 +22,16 @@
 
     #mensaje-intro5{
         width: 80%;
-        display: flex;
+        // display: flex;
         justify-content: center;
         align-items: center;
         color: v.$blanco;
         padding: 2rem 4rem;
         line-height: 1.6;
+
+        p{
+            margin-top: 2rem;
+        }
 
         @include m.telefono{
             font-size: 1.2rem;

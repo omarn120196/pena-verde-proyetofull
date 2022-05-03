@@ -153,32 +153,41 @@
         }
 
         #botones{
-            display: flex;
-            position: relative;
             align-items: center;
             background: v.$azulPastel;
             height: 40%;
+            text-align: center;
+
+            h3{
+                position: relative;
+                top: 3rem;
+            }
 
             @include m.tablet{
                 margin-top: 1rem;
             }
 
-            #btn-aseguradora{
-                margin-left: 3rem;
-                width: 50%;
+            .flex{
+                display: flex;
+                margin-top: 7rem;
 
-                @include m.telefono{
-                    margin-left: 1rem;
+                #btn-aseguradora{
+                    margin-left: 3rem;
+                    width: 50%;
+    
+                    @include m.telefono{
+                        margin-left: 1rem;
+                    }
+                    a{
+                        @include m.botones(v.$azulRey);
+                    }
                 }
-                a{
-                    @include m.botones(v.$azulRey);
-                }
-            }
-            #btn-reaseguradora{
-                width: 60%;
-
-                a{
-                    @include m.botones(v.$verde);
+                #btn-reaseguradora{
+                    width: 60%;
+    
+                    a{
+                        @include m.botones(v.$verde);
+                    }
                 }
             }
         }

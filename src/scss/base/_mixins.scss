@@ -326,28 +326,30 @@
 
 
 @mixin cuadrosPag06($color, $colorBorde, $textAling){
-    overflow: hidden;
+    position: relative;
+    top: 3rem;
     background-color: $color;
-    box-shadow: inset 0 2rem 0 0 $colorBorde;
+    border: solid 0.3rem $colorBorde;
     border-radius: 2rem;
     padding: 4rem 2rem 2rem 2rem;
     text-align: $textAling;
-    height: 80rem;
+    height: 40rem;
     width: 90%;
+    margin: auto;
+    overflow-y: scroll;
 
-    @include escritorioHD(){
-        padding: 3rem 1rem 1rem 1rem;
-        height: 90rem;
+    @include escritorioHD{
+        height: 35rem;
     }
 
-    @include tablet{
-        height: 75rem;
-    }
 
-    @include telefono{
-        height: auto;
-    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
+    &::-webkit-scrollbar{
+        opacity: 1;
+        width: .5rem;
+    }
 
 }
 

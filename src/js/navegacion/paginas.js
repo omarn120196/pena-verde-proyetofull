@@ -55,7 +55,7 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Política de conocimiento del cliente: conocimiento, clasificación de grado de riesgo escalamiento de aprobación, personas políticamente expuestas', 
+        nombre: 'Política de conocimiento del cliente: conocimiento, clasificación de grado de riesgo, escalamiento de aprobación, personas políticamente expuestas', 
         ruta: 'pag10.html', 
         progreso: 10,
         icono: 'fa-solid fa-file'
@@ -139,7 +139,7 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Marco Legal en México', 
+        nombre: 'Sanciones y penas aplicables a los delitos de Lavado de Dinero y Financiamiento al Terrorismo en México', 
         ruta: 'pag24.html', 
         progreso: 24,
         icono: 'fa-solid fa-file'

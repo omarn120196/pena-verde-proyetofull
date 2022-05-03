@@ -29,6 +29,7 @@
             @include m.globo(v.$gris2, izquierda);
 
             p{
+                @include m.resaltar(v.$colorFuente, 600);
                 @include m.tablet{
                     font-size: 1.4rem;
                 }
