@@ -98,10 +98,6 @@ function visualizarPagina(){
             //Script página05
             seleccionarInfo05();
           
-            // Scrip página06
-            visualizarPag06();
-            visualizarTelPag06();
-          
             // Scrip página07
             visualizarPag07();
           
@@ -123,6 +119,10 @@ function visualizarPagina(){
 
             //Script página18
             actividad1();
+            
+            // Scrip página19
+            visualizarPag19();
+            visualizarTelPag19();
 
             //Script página24
             cuestionario();

@@ -45,12 +45,10 @@ function asignarLocation(){
 function verificarLocation(){
 
     const status = scorm.get('cmi.core.lesson_status');
-    console.log(status);
 
     switch(status){
         case 'incomplete':
             const location = parseInt(scorm.get('cmi.core.lesson_location'));
-            console.log(location);
             noPagina = location;
             break;
         case 'completed':

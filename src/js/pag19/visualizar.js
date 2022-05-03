@@ -1,6 +1,6 @@
-function visualizarTelPag06(){
+function visualizarPag19(){
     
-    const btnCuadros = document.querySelectorAll('.btn-pag06Tel');
+    const btnCuadros = document.querySelectorAll('.btn-pag06');
 
     btnCuadros.forEach(boton=>{
         boton.addEventListener('click', function (e) {

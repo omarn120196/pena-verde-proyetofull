@@ -1,186 +1,136 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-#cont-intro08{
-
-    background: v.$naranjaPag03;
+#cont-pag09{
+    @include m.grid(2, 4rem);
+    padding: 6rem 4rem 6rem 20rem;
+    background: v.$azul2;
     position: relative;
-    padding: 2rem;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        bottom: 0;
+        left: 0;
+        background: v.$azul1;
+        z-index: 0;
+    }
+
+    @include m.escritorioHD{
+        padding: 6rem;
+        @include m.grid(2, 2rem);
+    }
 
     @include m.escritorio{
-        padding: 2rem 0;
+        @include m.grid(1, 2rem);
     }
 
-    #figura-fondo{
+    @include m.tablet{
+        padding: 2rem 3rem;
+    }
+
+    .hojas09{
+        padding: 2rem 3rem;
         width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+        background: v.$blanco;
+        border-radius: 2rem;
+        box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.75);
+        z-index: 1;
 
-    #cont-mensaje08_1{
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-bottom: 4rem;
-
-        @include m.escritorio{
-            margin-top: 12rem;
+        @include m.tablet{
+            padding: 4rem 3rem;
         }
 
         @include m.telefono{
-            margin-top: 3rem;
+            padding: 2rem;
         }
 
-
-        .cont-imagen{
-            width: 20%;
-
-            @include m.escritorio{
-                position: absolute;
-                width: 20rem;
-                top: 2rem;
-                left: 0;
-            }
-
-            @include m.telefono{
-                width: 10rem;
+        &#hoja09_1{
+            .puntos09{
+                background: v.$crema2;
             }
         }
 
-        #mensaje1{
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 75%;
-
-            @include m.escritorio{
-                width: 100%;
-            }
-
-            .caja{
-                h3{
-                    color: v.$blanco;
-                    text-align: center;
-                    background: v.$azulRey;
-                    padding: 2rem;
-                    border-bottom: 20px solid v.$azulClaro1;
-
-                    @include m.escritorio{
-                        text-align: right;
-                        padding-left: 20rem;
-                    }
-
-                    @include m.telefono{
-                        padding-left: 10rem;
-                    }
-                }
-    
-                ul{
-                    background: v.$blanco;
-                    padding: 3rem 2rem;
-                    border-bottom-left-radius: 2rem;
-                    border-bottom-right-radius: 2rem;
-                    padding: 2rem 6rem;
-
-                    @include m.escritorio{
-                        border-bottom-left-radius: 0rem;
-                        border-bottom-right-radius: 0rem;
-                    }
-                }
+        &#hoja09_2{
+            .puntos09{
+                background: v.$naranjaClaro;
             }
         }
-    }
 
-    #cont-mensaje08_2{
+        h4{
+            text-align: center;
+            padding: 2rem 3rem;
+            color: v.$blanco;
+            background: v.$naranja;
+            border-radius: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0px 2px 17px -5px rgba(0,0,0,0.68);
+        }
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-
-        #cont-alerta{
-            width: 60%;
+        .puntos09{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 2rem;
+            box-shadow: 0px 2px 17px -5px rgba(0,0,0,0.68);
 
-            @include m.escritorio{
-                width: 100%;
-                order: 2;
+            @include m.telefono{
+                padding: 2rem 1rem; 
             }
 
-            #alerta{
-                width: 100%;
+            .cont-ul{
+                width: 80%;
 
-                #titulo-mensaje{
-                    font-size: 1.4rem;
-                    text-align: center;
-                    background: v.$rojo2;
-                    color: v.$blanco;
-                    padding: 2rem 1rem;
-                    border-bottom: 20px solid v.$amarillo;
+                @include m.telefono{
+                    width: 70%;
+                }
+                
+                h5{
+                    margin-bottom: 2rem;
+                    color: v.$naranja;
                 }
 
-                #contenido{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    background: v.$blanco;
-                    padding: 3rem 2rem;
-                    border-bottom-left-radius: 2rem;
-                    border-bottom-right-radius: 2rem;
+                ul{
+                    font-size: 1.2rem;
 
-                    @include m.escritorio{
-                        border-bottom-left-radius: 0rem;
-                        border-bottom-right-radius: 0rem;
-                    }
-
-                    .cont-imagen{
-                        width: 20%;
-                    }
-
-                    #alerta-mensaje{
-                        width: 75%;
-
-                        h4{
-                            color: v.$rojo2;
-                        }
-
-                        #p1{
-                            font-weight: 700;
-                        }
+                    li{
+                        margin-left: 4rem;
+                        line-height: 1.6;
                     }
                 }
             }
-        }
 
+            p{
+                width: 80%;
+                line-height: 1.6;
+                font-size: 1.2rem;
 
-        #mensaje08_2{
-            width: 40%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            @include m.escritorio{
-                width: 100%;
-                order: 1;
-                background: v.$colorFuente;
+                @include m.telefono{
+                    width: 70%;
+                }
             }
 
-            .cont-imagen{
-                width: 45%;
-            }
-    
-            #globo{
-                width: 45%;
-                @include m.globoNegro(derecha);
+            figure{
+                width: 6rem;
+                height: 5rem;
             }
         }
     }
-}
 
+    #persona{
+        position: absolute;
+        width: 25rem;
+        height: 35rem;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+
+        @include m.escritorioHD{
+            display: none;
+        }
+    }
+}
