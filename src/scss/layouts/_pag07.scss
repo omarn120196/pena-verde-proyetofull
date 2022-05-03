@@ -1,220 +1,186 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
+#cont-intro08{
 
-#pag07{
-    overflow: hidden;
+    background: v.$naranjaPag03;
     position: relative;
-    @include m.grid(2, 0);
-    display: flex;
-    height: 30rem;
+    padding: 2rem;
 
-    @include m.telefono{
-        @include m.grid(1, 0);
+    @include m.escritorio{
+        padding: 2rem 0;
     }
 
-    #conversacion{
-        overflow: hidden;
-        position: relative;
-        width: 40%;
-        height: 100%;
-        background: v.$azul2;
-        padding: 2rem 2rem 0 2rem;
-
-        @include m.tablet{
-            width: 90%;
-            height: 32rem;
-        }
-
-        @include m.telefono{
-            width: 100%;
-            height: 25rem;
-        }
-
-    }
-    #entrevista{
-        overflow: hidden;
-        position: relative;
+    #figura-fondo{
         width: 100%;
-        background: v.$azulRey;
-        @include m.resaltar(v.$blanco, 400);
-        padding: 2rem 2rem 0 5rem;
-
-        h2{
-            padding: 2rem 2rem 4rem 2rem;
-        }
-    }
-}
-
-#pag07-2{
-    overflow: hidden;
-    position: relative;
-    background: v.$azulPastel;
-    height: 40rem;
-
-    @include m.telefono{
-        background: v.$colorFuente;
-        height: 60rem;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
-    .personaje{
-        overflow: hidden;
-        position: relative;
-        top: 2rem;
-        left: 10rem;
-        height: 50%;
-        width: 20%;
+    #cont-mensaje08_1{
 
-        @include m.escritorioHD{
-            left: 3rem;
-            height: 47%;
-            width: 18%;
-        }
-
-        @include m.tablet{
-            width: 25%;
-        }
-
-        @include m.telefono{
-            left: 22rem;
-            width: 33%;
-            height: 12rem;
-            top: 4rem;
-        }
-    }
-
-    #globo{
-        overflow: hidden;
-        position: relative;
-        width: 30rem;
-        top: 4rem;
-        left: 5rem;
-        @include m.globoNegro(arriba);
-
-        @include m.escritorioHD{
-            left: 2rem;
-            width: 20rem;
-            top: 2rem;
-        }
-
-        @include m.telefono{
-            top: -9rem;
-            left: 0;
-
-        }
-    }
-
-    #cont-blanco{
-        overflow: hidden;
-        position: relative;
         display: flex;
-        left: 40rem;
-        background: v.$blanco;
-        border-radius: 2rem;
-        width: 70rem;
-        height: 90%;
-        top: -30rem;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
 
-        @include m.escritorioHD{
-            width: 63rem;
-            left: 28rem;
-            top: -34rem;
-        }
-
-        @include m.tablet{
-            width: 43rem;
-            left: 25rem;
+        @include m.escritorio{
+            margin-top: 12rem;
         }
 
         @include m.telefono{
-            left: 0;
-            width: 34rem;
-            top: -5rem;
-            border-radius: 0;
+            margin-top: 3rem;
         }
 
-        .cuadros07{
-            display: none;
-            opacity: 0;
-            transition: all .3s ease;
-        }
 
-        .btn01{
-            overflow: hidden;
-            position: relative;
-            left: 2rem;
-            top: 2rem;
-            width: 50%;
-            #btn-seguros{
-                overflow: hidden;
-                a{
-                    @include m.botonesPag07(v.$amarillo);
-                    color: v.$colorFuente;
-                }
+        .cont-imagen{
+            width: 20%;
+
+            @include m.escritorio{
+                position: absolute;
+                width: 20rem;
+                top: 2rem;
+                left: 0;
             }
 
-            #info-seguros{
-                overflow: hidden;
-                text-align: center;
-                padding-top: 4rem;
-                height: 15rem;
-                width: 90%;
-                top: 5rem;
-                position: relative;
-                background: v.$amarilloPag07;
-
-                @include m.tablet{
-                    top: 2rem;
-                    height: 18rem;
-                }
-
-                @include m.telefono{
-                    height: 20rem;
-                }
-            
-
-                &.cuadros_activos{
-                    display: block;
-                    opacity: 1;
-                }
-            }
-        }
-        .btn02{
-            overflow: hidden;
-            position: relative;
-            top: 2rem;
-            width: 50%;
-            #btn-reaseguradora{
-                overflow: hidden;
-                a{
-                    @include m.botonesPag07(v.$azulRey);
-                }
-            }
-            #info-reaseguradora{
-                overflow: hidden;
-                text-align: center;
-                padding-top: 4rem;
-                height: 15rem;
-                width: 90%;
-                top: 5rem;
-                position: relative;
-                background: v.$azulPag07;
-
-                @include m.tablet{
-                    top: 2rem;
-                    height: 18rem;
-                }
-
-                @include m.telefono{
-                    height: 20rem;
-                }
-                
-                &.cuadros_activos{
-                    display: block;
-                    opacity: 1;
-                }
+            @include m.telefono{
+                width: 10rem;
             }
         }
 
-    }    
+        #mensaje1{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 75%;
+
+            @include m.escritorio{
+                width: 100%;
+            }
+
+            .caja{
+                h3{
+                    color: v.$blanco;
+                    text-align: center;
+                    background: v.$azulRey;
+                    padding: 2rem;
+                    border-bottom: 20px solid v.$azulClaro1;
+
+                    @include m.escritorio{
+                        text-align: right;
+                        padding-left: 20rem;
+                    }
+
+                    @include m.telefono{
+                        padding-left: 10rem;
+                    }
+                }
+    
+                ul{
+                    background: v.$blanco;
+                    padding: 3rem 2rem;
+                    border-bottom-left-radius: 2rem;
+                    border-bottom-right-radius: 2rem;
+                    padding: 2rem 6rem;
+
+                    @include m.escritorio{
+                        border-bottom-left-radius: 0rem;
+                        border-bottom-right-radius: 0rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #cont-mensaje08_2{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        #cont-alerta{
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include m.escritorio{
+                width: 100%;
+                order: 2;
+            }
+
+            #alerta{
+                width: 100%;
+
+                #titulo-mensaje{
+                    font-size: 1.4rem;
+                    text-align: center;
+                    background: v.$rojo2;
+                    color: v.$blanco;
+                    padding: 2rem 1rem;
+                    border-bottom: 20px solid v.$amarillo;
+                }
+
+                #contenido{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background: v.$blanco;
+                    padding: 3rem 2rem;
+                    border-bottom-left-radius: 2rem;
+                    border-bottom-right-radius: 2rem;
+
+                    @include m.escritorio{
+                        border-bottom-left-radius: 0rem;
+                        border-bottom-right-radius: 0rem;
+                    }
+
+                    .cont-imagen{
+                        width: 20%;
+                    }
+
+                    #alerta-mensaje{
+                        width: 75%;
+
+                        h4{
+                            color: v.$rojo2;
+                        }
+
+                        #p1{
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        #mensaje08_2{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include m.escritorio{
+                width: 100%;
+                order: 1;
+                background: v.$colorFuente;
+            }
+
+            .cont-imagen{
+                width: 45%;
+            }
+    
+            #globo{
+                width: 45%;
+                @include m.globoNegro(derecha);
+            }
+        }
+    }
 }
+

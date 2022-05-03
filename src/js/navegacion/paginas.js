@@ -31,85 +31,85 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Identificación de cliente, ¿en qué consiste?', 
+        nombre: 'Entrevista Personal con el cliente', 
         ruta: 'pag06.html', 
         progreso: 6,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Entrevista Personal con el cliente', 
+        nombre: 'Integración de expediente y umbrales', 
         ruta: 'pag07.html', 
         progreso: 7,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Integración de expediente y umbrales', 
+        nombre: 'Actualización de expediente', 
         ruta: 'pag08.html', 
         progreso: 8,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Actualización de expediente', 
+        nombre: 'Política de conocimiento del cliente: conocimiento, clasificación de grado de riesgo, escalamiento de aprobación, personas políticamente expuestas', 
         ruta: 'pag09.html', 
         progreso: 9,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Política de conocimiento del cliente: conocimiento, clasificación de grado de riesgo, escalamiento de aprobación, personas políticamente expuestas', 
+        nombre: 'Reportes de Operaciones', 
         ruta: 'pag10.html', 
         progreso: 10,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Reportes de Operaciones', 
+        nombre: 'Cuentas concentradoras', 
         ruta: 'pag11.html', 
         progreso: 11,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Cuentas concentradoras', 
+        nombre: 'Estructuras internas: ¿Cuáles son sus funciones?', 
         ruta: 'pag12.html', 
         progreso: 12,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Estructuras internas: ¿Cuáles son sus funciones?', 
+        nombre: 'Sistemas automatizados', 
         ruta: 'pag13.html', 
         progreso: 13,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Sistemas automatizados', 
+        nombre: 'Reserva y confidencialidad', 
         ruta: 'pag14.html', 
         progreso: 14,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Reserva y confidencialidad', 
+        nombre: 'Listas de personas bloqueadas', 
         ruta: 'pag15.html', 
         progreso: 15,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Listas de personas bloqueadas', 
-        ruta: 'pag16.html', 
-        progreso: 16,
-        icono: 'fa-solid fa-file'
-    },
-    {
         nombre: 'Metodología de Evaluación de Riesgos PLD/CFT', 
-        ruta: 'pag17.html', 
-        progreso: 17, 
+        ruta: 'pag16.html', 
+        progreso: 16, 
         icono: 'fa-solid fa-file'
     },
     {
         nombre: 'Actividad 1', 
-        ruta: 'pag18.html', 
-        progreso: 18,
+        ruta: 'pag17.html', 
+        progreso: 17,
         icono: 'fa-solid fa-pencil'
     },
     {
         nombre: 'Historia de cambios en la regulación', 
+        ruta: 'pag18.html', 
+        progreso: 18,
+        icono: 'fa-solid fa-file'
+    },
+    {
+        nombre: 'Identificación de cliente, ¿en qué consiste?', 
         ruta: 'pag19.html', 
         progreso: 19,
         icono: 'fa-solid fa-file'

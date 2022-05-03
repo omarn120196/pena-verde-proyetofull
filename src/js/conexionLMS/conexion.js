@@ -3,6 +3,7 @@ const scorm = pipwerks.SCORM;
 
 window.onload = function(){
     conectarLMS();
+    actualizarStatus();
     verificarLocation();
     calcularTiempo();
 }
@@ -23,6 +24,7 @@ function statusCurso(estado){
 }
 
 function cerrarConexion(){
+    asignarLocation();
     scorm.set("cmi.core.exit", "suspend");
     scorm.quit();
 }
@@ -46,7 +48,7 @@ function verificarLocation(){
 
     switch(status){
         case 'incomplete':
-            const location = scorm.get('cmi.core.lesson_location');
+            const location = parseInt(scorm.get('cmi.core.lesson_location'));
             noPagina = location;
             break;
         case 'completed':
