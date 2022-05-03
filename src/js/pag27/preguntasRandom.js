@@ -33,7 +33,7 @@ function visualizarPreguntas(evaluacion){
                         <div class="letras">
                             <h2>a.</h2>
                         </div>
-                        <div class="respuestaCaso" id="respuestaA${arregloPreguntas[index].numero}">
+                        <div class="respuesta" id="respuestaA${arregloPreguntas[index].numero}">
                             <p>${arregloPreguntas[index].respuestaA}</p>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ function visualizarPreguntas(evaluacion){
                         <div class="letras">
                             <h2>b.</h2>
                         </div>
-                        <div class="respuestaCaso" id="respuestaB${arregloPreguntas[index].numero}">
+                        <div class="respuesta" id="respuestaB${arregloPreguntas[index].numero}">
                             <p>${arregloPreguntas[index].respuestaB}</p>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ function visualizarPreguntas(evaluacion){
                         <div class="letras">
                             <h2>c.</h2>
                         </div>
-                        <div class="respuestaCaso" id="respuestaC${arregloPreguntas[index].numero}">
+                        <div class="respuesta" id="respuestaC${arregloPreguntas[index].numero}">
                             <p>${arregloPreguntas[index].respuestaC}</p>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ function visualizarPreguntas(evaluacion){
                         <div class="letras">
                             <h2>a.</h2>
                         </div>
-                        <div class="respuestaCaso" id="respuestaA${arregloPreguntas[index].numero}">
+                        <div class="respuesta" id="respuestaA${arregloPreguntas[index].numero}">
                             <p>${arregloPreguntas[index].respuestaA}</p>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ function visualizarPreguntas(evaluacion){
                         <div class="letras">
                             <h2>b.</h2>
                         </div>
-                        <div class="respuestaCaso" id="respuestaB${arregloPreguntas[index].numero}">
+                        <div class="respuesta" id="respuestaB${arregloPreguntas[index].numero}">
                             <p>${arregloPreguntas[index].respuestaB}</p>
                         </div>
                     </div>

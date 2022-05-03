@@ -85,6 +85,12 @@ function irPagina(){
         enlace.addEventListener('click', function(e){
             e.preventDefault();
             noPagina = parseInt(enlace.dataset.pagina);
+
+            //Actualizar Status Moodle
+            actualizarStatus();
+
+            //Asignar location en Moodle
+            asignarLocation();
             
             visualizarPagina();
 
