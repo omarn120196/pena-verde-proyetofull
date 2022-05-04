@@ -13,48 +13,60 @@
         @include m.tablet{
             margin-left: 1rem;
         }
-        .texto02{
-            margin-left: 40rem;
-            margin-top: 2rem;
-            font-size: 2rem;
-            @include m.resaltar(v.$azulRey, 800);
+        // .texto02{
+        //     margin-left: 40rem;
+        //     margin-top: 2rem;
+        //     font-size: 2rem;
+        //     @include m.resaltar(v.$azulRey, 800);
 
-            @include m.tablet{
-                margin-left: 20rem;
-                text-align: center;
-            }
-            @include m.telefono{
-                margin-left: 2rem;
-            }
-        }
+        //     @include m.tablet{
+        //         margin-left: 20rem;
+        //         text-align: center;
+        //     }
+        //     @include m.telefono{
+        //         margin-left: 2rem;
+        //     }
+        // }
     }
     #cont-billetes{
-        position: relative;
+        // position: relative;
         height: 30rem;
         margin-top: 3rem;
-        background: v.$azulClaro1;
+        // background: v.$azulClaro1;
 
         @include m.telefono{
             height: 20rem;
         }
 
-        .billetes{
+        .banner{
+            width: 50%;
+            margin: auto;
+
             @include m.tablet{
-                height: 10rem;
+                width: 70%;
+                margin-left: 20rem;
+                margin-top: 5rem;
             }
+
             @include m.telefono{
-                height: 6rem;
+                margin-left: 10rem;
             }
+        //     @include m.tablet{
+        //         height: 10rem;
+        //     }
+        //     @include m.telefono{
+        //         height: 6rem;
+        //     }
         }
         .personaje1{
             height: 40rem;
             width: 25%;
-            margin-top: -20rem;
+            margin-top: -18rem;
 
     
             @include m.tablet{
                 height: 35rem;
-                margin-top: -15rem;
+                margin-top: -13rem;
                 left: 2rem;
             }
             @include m.telefono{
@@ -225,4 +237,52 @@
 
     }
 
+}
+
+#temario{
+
+    .titulo{
+        height: 5rem;
+        padding: 1rem;
+        @include m.resaltar(v.$blanco, 700);
+        
+        @include m.telefono{
+            height: auto;
+        }
+    }
+
+    .cont-temario{
+        @include m.resaltar(v.$colorFuente,500);
+        padding: 2rem;
+    }
+
+    #antecedentes{
+        background: v.$azulRey;
+    }
+
+    #cont01{
+        background: v.$azulClaro1;
+    }
+
+    #historia{
+        background: v.$verde;
+    }
+    #cont02{
+        background: v.$fondo3;
+    }
+
+    #lavado{
+        background: v.$naranja;
+    }
+    #cont03{
+        background: v.$naranjaClaro;
+    }
+
+    #tipologias{
+        background: v.$colorFuente;
+    }
+
+    #cont04{
+        background: v.$gris3;
+    }
 }
