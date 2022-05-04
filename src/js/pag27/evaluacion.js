@@ -1,4 +1,4 @@
-let intentosEvaluación = 1;
+let intentosEvaluacion = 1;
 
 class EvaluacionFinal{
 
@@ -325,6 +325,8 @@ function calificacionFinal(evaluacion){
             }
             else{
                 const retro = document.querySelector('#retro-negativa');
+                intentosEvaluacion++;
+                asignarCalificación(promedio);
                 retroFinal(retro);
             }   
         });
@@ -338,4 +340,13 @@ function retroFinal(contenedor){
     setTimeout(()=>{
         contenedor.style.opacity = 1;
     }, 300);
+
+    const btnReintentar = document.querySelector('#reintentar');
+    const btnRegistrar = document.querySelector('#registrar');
+
+    if(intentosEvaluacion>2){
+
+        btnReintentar.style.display = 'none';
+        btnRegistrar.style.display = 'none';
+    }
 }
