@@ -7,7 +7,7 @@ function cerrarVentana(){
         btnCerrar.addEventListener('click', function (e) {  
 
             e.preventDefault();
-            window.close();
+            window.parent.close();
             
             
         });
