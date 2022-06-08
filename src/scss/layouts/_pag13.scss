@@ -1,362 +1,479 @@
-@use '../base/mixins' as m;
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
-#intro-pag13{
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#cont-gris{
     position: relative;
-    padding: 3rem 20rem;
-    background: lighten(v.$rosaPag06, 5);
+    height: 2rem;
+    background: v.$grisClaro;    
+}
+#pag12{
+    position: relative;
+    @include m.grid(2, 0);
+    display: flex;
 
     @include m.escritorioHD{
-        padding: 3rem 14rem;
+        height: 70rem;
     }
 
-    @include m.escritorio{
-        padding: 3rem 12rem 3rem 2rem;
+    @include m.tablet{
+        @include m.grid(1, 0);
+        height: 100rem;
     }
 
-    .cont-imagen{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 70%;
-        width: 18rem;
-
-        @include m.escritorioHD{
-            width: 12rem;
-            height: 50%;
-        }
-
-        @include m.escritorio{
-            bottom: 0;
-            left: calc(100% - 12rem);
-            transform: rotateY(180deg);
-        }
-
-        @include m.telefono{
-            height: 30%;
-        }
-    }   
-
-    #cont-obligaciones{
-        text-align: justify;
-
-        @include m.escritorio{
-            text-align: left;
-        }
-
-        p{
-            span{
-                @include m.resaltar(v.$colorFuente, 700);
-            }
-        }
-    }
-}
-
-#cont-comite{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    
-    @include m.escritorioHD{
-        width: 60%;        
-    }
-    
-    @include m.escritorio{
-        width: 80%;        
+    @include m.telefono{
+        height: auto;
     }
 
-    .cont-imagen{
-        width: 100%;
-    }
-
-    #definicion{
-        width: 100%;
-        padding: 2rem;
-        color: v.$blanco;
-        background: v.$colorFuente;
-        text-align: center;
-        font-weight: 700;
-        border-radius: 2rem;        
-    }
-
-    .instrucciones-mano{
-        position: absolute;
-        top: 45%;
-        left: 5%;
-        width: 25rem;
-        
-        .cont-imagen{
-            width: 6rem;
-        }
-    }
-}
-
-#carouselComite{
-    margin-top: 6rem;
-    min-height: 20rem;
-    max-height: auto;
-    text-align: center;
-    background: v.$gris1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 15%;
-    border-radius: 2rem;
-    border: 2px solid v.$azul1;
-    box-shadow: -2px 2px 18px -5px rgba(0,0,0,0.75);
-
-    p{
-        font-size: 2.4rem;
-        @include m.resaltar(v.$colorFuente, 700);
-
-        @include m.escritorio{
-            font-size: 1.8rem;
-        }
+    #cont-01{
+        position: relative;
+        width: 20%;
+        background: v.$naranja;
 
         @include m.tablet{
-            font-size: 1.6rem;
-        }
-    }
-}
-
-#oficialCumplimiento{
-
-    margin: 6rem 0;
-    
-    h3{
-        background: v.$gris1;
-        color: v.$azulRey;
-        padding: 3.2rem;
-        text-align: center;
-        font-size: 2.4rem;
-        margin-bottom: 3rem;
-    }
-
-    #contenedor-info{
-        @include m.grid(2, 0);
-
-        @include m.escritorioHD{
-            @include m.grid(1, 2rem);
+            width: 100%;
+            height: 37rem;
         }
 
-        #cont-funciones{
+        .personaje{
+            height: 80%;
+            width: 90%;
+            padding: 2rem 2rem 0 2rem;
 
+            @include m.escritorioHD{
+                width: 100%;
+                height: 70%;
+            }
+
+            @include m.tablet{
+                width: 35%;
+                height: 80%;
+                padding: 1rem 2rem 0 10rem;
+            }
+
+            @include m.telefono{
+                height: 30rem;
+                width: 25rem;
+            }
+        }
+        #clic1-pag12{
+            position: relative;
+            bottom: 4rem;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            text-align: center;
             padding: 2rem;
-            background: v.$grisClaro2;
-            flex-wrap: wrap;
+            background: v.$azulClaro1;
+            @include m.resaltar(v.$colorFuente, 400);
 
-
-            #t1{
-                width: 30%;
-
-                @include m.tablet{
-                    display: none;
-                }
-            }
-            
-            #t2{
-                display: none;
-
-                @include m.tablet{
-                    display: block;
-                    width: 30%;
-                    p{
-                        font-weight: 700;
-                    }
-                }
+            @include m.escritorioHD{
+                bottom: 0;
+                padding: 1rem;
+                top: -1rem;
+                height: 23rem;
+                padding: 4rem;
             }
 
-            #fn-intro{
-                display: none;
-
-                @include m.tablet{
-                    display: block;
-                    width: 50%;
-                }
+            @include m.tablet{
+                height: 10rem;
             }
 
-            #lista-funciones{
-                width: 60%;
-                @include m.tablet{
-                    width: 100%;
-                }
-
-                .parrafos{
-                    padding: 2rem;
-                    margin-bottom: .5rem;
-                    border: 1px solid v.$grisClaro;
-
-
-
-                    &#principal{
-                        text-align: center;
-                        @include m.resaltar(v.$colorFuente, 700);
-                        background: v.$fondo1;
-
-                        @include m.tablet{
-                            display: none;
-                        }
-                    }
-
-                    &#fn-1{
-                        @include m.resaltar(v.$colorFuente, 500);
-                        background: v.$fondo2;
-                    }
-
-                    &#fn-2{
-                        @include m.resaltar(v.$colorFuente, 500);
-                        background: v.$fondo3;
-                    }
-
-                    &#fn-3{
-                        @include m.resaltar(v.$colorFuente, 500);
-                        background: v.$fondo4;
-                    }
-
-                    &#fn-4{
-                        @include m.resaltar(v.$colorFuente, 500);
-                        background: v.$fondo5;
-                    }
-
-                    &#fn-5{
-                        @include m.resaltar(v.$colorFuente, 500);
-                        background: v.$fondo6;
-                    }
-
-                    &#fn-6{
-                        @include m.resaltar(v.$colorFuente, 500);
-                        background: v.$fondo7;
-                    }
-
-                    &#fn-7{
-                        @include m.resaltar(v.$colorFuente, 500);
-                        background: v.$blanco;
-                    }
-
-                    &#fn-8{
-                        @include m.resaltar(v.$colorFuente, 500);
-                        background: v.$fondo9;
-                    }
-                }
-            }
-        }
-
-        #cont-capacitacion{
-
-            background: v.$gris1;
-            
-            h3{
-                background: v.$colorFuente;
-                color: v.$blanco;
+            @include m.telefono{
+                top: -2rem;
             }
 
             p{
-                text-align: center;
+                @include m.tablet{
+                    position: relative;
+                    left: 10rem;
+                    top: -1rem;
+                }
+
+                @include m.telefono{
+                    width: 20rem;
+                    left: 3rem;
+                    top: -3rem;
+                }
             }
-
-            .imagen{
-
-                margin: 3rem 0;
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                height: 20rem;
-                background: v.$grisFondo;
+            .mano1-pag12{
+                position: relative;
+                top: 2rem;
+                width: 120%;
+                height: 120%;
 
                 @include m.escritorioHD{
-                    height: 30rem;
+                    left: -3rem;
+                    width: 20rem;
+                    height: 5rem;
                 }
 
-                .cont-imagen{
-                    width: 80%;
-                    height: 80%;
+                @include m.tablet{
+                    width: 5rem;
+                    height: 5rem;
+                    left: 5rem;
+                    top: -2rem;
+                }
 
-                    @include m.escritorioHD{
-                        width: 60%;
+                @include m.telefono{
+                    left: 0;
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+
+        }
+
+    }
+    #cont-02{
+        position: relative;
+        width: 100%;
+        background: v.$azul2;
+
+        .cuadros12{
+            display: none;
+            opacity: 0;
+            transition: all .3s ease;
+        }
+
+        #globo{
+            position: relative;
+            top: 3rem;
+            left: 8rem;
+            width: 80%;
+            @include m.globoNegro(izquierda);
+
+            @include m.escritorioHD{
+                left: 5rem;
+                width: 90%;
+                top: 2rem;
+            }
+            @include m.tablet{
+                left: 0;
+                top: 0;
+                right: 1rem;
+                width: 100%
+            }
+
+            @include m.telefono{
+                width: 34rem;            
+            }
+        }
+
+        #cont-botones{
+            @include m.grid(3, 2rem);
+            position: relative;
+            top: 3rem;
+            padding: 2rem;
+
+            @include m.escritorioHD{
+                @include m.grid(3, 0);
+                top: 2rem;
+            }
+
+            @include m.tablet{
+                top: 0;
+            }
+
+            @include m.telefono{
+                @include m.grid(1, 2rem);
+            }
+
+            .btn_cuadros12:hover{
+                @include m.parpadeo;
+            } 
+
+            #btn-01{
+                position: relative;
+                #btn-aplicar{
+                    padding: 2rem;
+                    margin-left: 2rem;
+
+                    a{
+                        border-radius: 1rem;
+                        border: solid white;
+                        @include m.botones(v.$azulRey);
                     }
+                }
 
-                    @include m.tablet{
-                        width: 90%;
+                #info-seguros{
+                    display: flex;
+                    @include m.resaltar(v.$azulRey, 400);
+                    @include m.cardsPag12(v.$azulRey, v.$azulRey);
+
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
                     }
                 }
             }
 
-            #cont-figuras{
+            #btn-02{
+                position: relative;
+                #btn-seguimiento{
+                    padding: 2rem;
+                    margin-left: 2rem;
 
+                    a{
+                        border-radius: 1rem;
+                        border: solid white;
+                        @include m.botones(v.$verde);
+                    }
+                }
+
+                #info-seguimiento{
+                    display: flex;
+                    @include m.resaltar(v.$verde, 400);
+                    @include m.cardsPag12(v.$verde, v.$verde);
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            #btn-03{
+                position: relative;
+                #btn-reportar{
+                    padding: 2rem;
+                    margin-left: 2rem;
+
+                    a{
+                        border-radius: 1rem;
+                        border: solid white;
+                        @include m.botones(v.$verdePag12);
+                    }
+                }
+
+                #info-reportar{
+                    display: flex;
+                    @include m.resaltar(v.$verde, 400);
+                    @include m.cardsPag12(v.$verdePag12, v.$verdePag12);
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#pag12-2{
+    position: relative;
+    #cont-01{
+        position: relative;
+        background: v.$azulPag12;
+        display: flex;
+        .personaje-2{
+            padding: 2rem 2rem 0 2rem;
+            height: 10%;
+
+            @include m.tablet{
+                height: 18rem;
+                width: 25rem;
+            }
+
+            @include m.telefono{
+                height: 25rem;
+                width: 50rem;
+            }
+        }
+
+        #globo-2{
+            @include m.globoNegro(izquierda);
+            position: relative;
+            display: flex;
+            width: 40%; 
+            height: 40%;
+            top: 5rem;
+
+            @include m.tablet{
+                height: 18rem;
+                width: 100%;
+                top: 0;
+                left: 2rem;
+                padding: 5rem 4rem 2rem 4rem;
+            }
+
+            @include m.telefono{
+                padding: 1rem;
+                height: 38rem;
+                left: 0;
+            }
+        }
+
+        #clic2-pag12{
+            position: relative;
+            display: flex;
+            background: v.$azulClaro1;
+            width: 30%;
+            height: 10%;
+            border-radius: 2rem;
+            padding: 5rem 2rem 2rem 2rem;
+            left: 5rem;
+            top: 5rem;
+            text-align: center;
+
+            @include m.tablet{
+                position: absolute;
+                top: 18rem;
+                width: 100%;
+                height: 8rem;
+                left: 0;
+                border-radius: 0;
+                padding-left: 10rem;
+            
+            }
+
+            @include m.telefono{
+                top: 36rem;
+                height: 10rem;
+                padding-top: 3rem;
+            }
+
+            p{
+                position: relative;
+                top: -2rem;
+            }
+
+
+            .mano2-pag12{
+                position: relative;
+                display: flex;
+                width: 20%;
+                height: 10%;
+
+                @include m.escritorioHD{
+                    width: 25%;
+                    height: 15%;
+                    top: -1rem;
+                }
+
+                @include m.tablet{
+                    width: 5rem;
+                    height: 5rem;
+                    left: -5rem;
+                    top: -3rem;
+                }
+
+                @include m.telefono{
+                    position: absolute;
+                    left: 2rem;
+                    top: 1rem;
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+        }
+    }
+
+    #cont-02-flipCards{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 4rem 0;
+        background: v.$azulClaro2;
+    
+        @include m.tablet{
+            justify-content: center;
+        }
+    
+        .cards{
+            width: 30%;
+            height: 40rem;
+            position: relative;
+            cursor: pointer;
+
+            #aseguradora{
+                @include m.resaltar(v.$azulRey, 400);
+            }
+
+            #transacciones{
+                @include m.resaltar(v.$naranja, 400);
+            }
+    
+            @include m.escritorio{
+                width: 48%;
+                height: 40rem;
+                margin-bottom: 3.2rem;
+            }
+    
+            @include m.tablet{
+                top: 6rem;
+                width: 60%;
+                height: 30rem;
+            }
+    
+            @include m.telefono{
+                width: 95%;
+                height: 38rem;
+            }
+    
+            &#flip1{
+                @include m.flip-cardsPag12(fuerte, v.$azulPastel, v.$azulRey);
+            }
+            
+            &#flip2{
+                @include m.flip-cardsPag12(fuerte, v.$naranjaPag12, v.$naranja);
+            }
+            
+            .cont-titulo{
+                padding: 2rem 3rem;
+                height: 8rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: v.$blanco;
-                font-weight: 700;
-                font-size: 1.2rem;
-                flex-wrap: wrap;
-
-                @include m.tablet{
-                    font-size: 1.6rem;
+    
+                h3{
+                    text-align: center;
                 }
-
-                #flecha{
-                    width: 40%;
-                    height: 25rem;
-                    background: v.$azulRey;
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    padding: 2rem 2rem 2rem 1rem;
-                    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-
-                    @include m.escritorioHD{
-                        width: 30%;
-                        height: 25rem;
-                    }
-
-                    @include m.tablet{
-                        width: 100%;
-                        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-                        padding: 2rem;
-                        justify-content: center;
-                    }
-                    
-                    p{
-                        width: 80%;
+            }
+    
+            
+            .caras{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                backface-visibility: hidden;
+                transition: all 1s ease;            
+            }
+            
+            .front{
+                transform: perspective(50rem) rotateY(0deg);
+    
+                .cont-imagen{
+                    width: 60%;
+                    height: 20rem;
+                    margin: 0 auto;
+    
+                    @include m.escritorio{
+                        height: 12rem;
                     }
                 }
-
-                #cuadro{
-                    width: 40%;
-                    height: 25rem;
-                    background: v.$verde;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 2rem 2rem 2rem 7rem;
-                    clip-path: polygon(0 10%, 0 0, 100% 0, 100% 100%, 48% 100%, 0 100%, 0 90%, 28% 48%);
-
-                    @include m.escritorioHD{
-                        width: 30%;
-                        height: 25rem;
-                    }
-
-                    @include m.tablet{
-                        width: 100%;
-                        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-                        padding: 2rem;
-                    }
-
-                    p{
-                        width: 80%;
-                    }
+            }
+    
+            .back{
+                transform: perspective(50rem) rotateY(180deg);
+    
+                .cont-mensaje-back{
+                    padding: 2rem;
+                    text-align: justify;
+                    line-height: 1.6;
+                }
+            }
+    
+            &.click{
+                .front{
+                    transform: perspective(50rem) rotateY(180deg);
+                }
+            
+                .back{
+                    transform: perspective(50rem) rotateY(360deg);
                 }
             }
         }

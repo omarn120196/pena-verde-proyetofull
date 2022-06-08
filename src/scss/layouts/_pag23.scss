@@ -1,299 +1,388 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.contenedorPag23{
-    
-    .cont-mano{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background: v.$azulClaro2;
-        padding: 2rem;
+#instrucciones2-pag20{
+    background: v.$azulClaro1;
+    height: 10rem;
+    display: flex;
+    margin-top: 1rem;
+    padding: 2rem;
 
-        .cont-imagen{
-            width: 6rem;
-            height: 6rem;
-            border: 5px solid v.$blanco;
-            padding: 1rem;
-            border-radius: 50%;
-            margin: 0;
-        }
+    @include m.telefono{
+        margin-top: 2rem;
+        padding: 1rem;
+        height: 13rem;
+    }
 
-        p{
-            width: 80%;
+    p{
+        margin: auto;
+
+        @include m.tablet{
+            margin-left: 2rem;
         }
     }
 
-    .cont-fichas{
-        width: 100%;
-        margin-top: 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        
+    img{
+        @include m.telefono{
+            width: 0;
+            height: 0;
+        }
+    }
+}
 
-        .fichas{
+#cont-diferencias{
+    @include m.grid(3, 1rem);
+    position: relative;
+    top: 3rem;
 
-            width: 18%;
-            margin-bottom: 2rem;
+    @include m.telefono{
+        display: none;
+    }
 
-            @include m.escritorio{
-                width: 45%;
-            }
+    .info{
+        display: none;
+        opacity: 0;
+        transition: all .3s ease;
+
+        &.cuadros_activos{
+            display: block;
+            opacity: 1;
+        }
+
+    }
+    .btn-pag20:hover{
+        @include m.parpadeo;
+    }
+
+    .cont-titulo{
+        padding: 1rem;
+        height: 4rem;
+        text-align: center;
+        @include m.resaltar(v.$blanco,700);
+
+        @include m.telefono{
+            padding: 0.5rem;
+            height: 7;
+        }
+    }
+
+    .cont-info{
+        margin-top: 3rem;
+        height: 10rem;
+
+        .info{
+            height: 100%;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.20);
+            background: v.$azulPastel; 
 
             @include m.tablet{
-                width: 100%;
-                padding: 2rem;
+                padding: 0.5rem;
             }
+        }
 
-            a{
-                display: block;
-                height: 20rem;
-
-                .caja{
-                    
-                    margin-bottom: 2rem;
-                    box-shadow: 0px 1px 16px 0px rgba(0,0,0,0.41);
-        
-                    .titulo{
-                        text-align: center;
-                        padding: 2rem .5rem;
-                        height: 8rem;
-                        background: v.$verde;
-                        color: v.$blanco;
-                        font-size: 1.6rem;
-                    }
-        
-                    .cont-imagen{
-                        width: 100%;
-                        height: 12rem;
-    
-                        @include m.tablet{
-                            width: 30%;
-                            margin: 0 auto;
-                        }
-    
-                        @include m.telefono{
-                            width: 45%;
-                            margin: 0 auto;
-                        }
-        
-                        &.mitad{
-                            width: 50%;
-                            margin: 0 auto;
-    
-                            @include m.escritorioHD{
-                                width: 70%;       
-                            }
-    
-                            @include m.escritorio{
-                                width: 50%;       
-                            }
-    
-                            @include m.tablet{
-                                width: 25%;       
-                            }
-    
-                            @include m.tablet{
-                                width: 45%;       
-                            }
-    
-                            img{
-                                padding: 2rem;
-    
-                                
-                            }
-                        }
-                    }
-                }    
-            }
-            
-
-            .cont-info{
-                padding: 2rem;
-                background: v.$fondo6;
-                height: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                opacity: 0;
-                transition: all .3s ease;
-
-                p{
-                    text-align: center;
-                    display: none;
-                }
-
-                li{
-                    display: none;
-                }
-
-                &.visualizar{
-                    height: 45rem;
-                    opacity: 1;
-
-                    p{
-                        display: block;
-                    }
-
-                    li{
-                        display: block;
-                    }
-
-                    @include m.tablet{
-                        height: auto;
-                    }
-                }
-
-                
-            }
+    }
+    #lavado{
+        #titulo{
+            background: v.$colorFuente;
         }
     }
 
-    .organismos{
-        margin-top: 2rem;
+    #diferencias{
+        #titulo{
+            background: v.$naranja;
+        }
+        .boton{
+            margin-top: 1rem;
+            height: 10rem;
+            text-align: center;
+            cursor: pointer;
+        }
 
-        .filas{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-left: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
+        .abajo{
+            margin-top: 3rem;
+        }
+    }
 
-            a{
+    #financiamiento{
+        #titulo{
+            background: v.$azulRey;
+        }
+    }
+}
+
+// Diferencias Vista Telefono
+
+#cont-diferenciasTel{
+    display: none;
+
+    @include m.telefono{
+        display: inline;
+        margin-top: 1rem;
+
+        .info{
+            display: none;
+            opacity: 0;
+            transition: all .3s ease;
+    
+            &.cuadros_activos{
                 display: block;
-                width: 20%;
-                transition: all .3s ease;
-
-                &:hover{
-                    @include m.parpadeo();
-                }
-
-                @include m.tablet{
-                    width: 90%;
-                    margin-bottom: 2rem;
-                }
-
-                .imagen{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 2rem;
-                    border-radius: 2rem;
-                    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.35);
-                    
-                    .cont-imagen{
-                        width: 40%;
-                        height: 8rem;
-                        margin: 0;
-
-                        @include m.tablet{
-                            width: 25%;
-                        }
-
-                        @include m.telefono{
-                            width: 40%;
-                        }
-                    }
-                }
+                opacity: 1;
             }
+    
+        }
+        .btn-pag20:hover{
+            @include m.parpadeo;
+        }
 
-            &#fila1{
-                .imagen{
-                    background: v.$fondo5;
+        .boton{
+            cursor: pointer;
+        }
 
-                    .cont-imagen{
-                        width: 30%;
+        .titulo{
+            height: 4rem;
+            padding: 1rem;
+            text-align: center;
+            @include m.resaltar(v.$blanco, 600);
+        }
 
-                        @include m.escritorio{
-                            width: 50%;
-                        }
-                    }
-                }
+        #lavado{
+            background: v.$colorFuente;
+        }
 
-                .info{
-                    background: v.$fondo5;
-                }
-            }
+        #financiamiento{
+            background: v.$azulRey;
+        }
 
-            &#fila2{
-                .imagen{
-                    background: v.$fondo4;
+        .cont-info{
+            height: 8rem;
+            text-align: center;
+            padding: 1rem;
+            background: v.$azulPastel;
+        }
 
-                    .cont-imagen{
-                        width: 55%;
+        .boton{
+            text-align: center;
+            background: v.$crema5;
+        }
+    }
+}
 
-                        @include m.escritorio{
-                            width: 90%;
-                        }
-                    }
-                }
+#instrucciones3-pag20{
+    background: v.$azulClaro1;
+    height: 10rem;
+    display: flex;
+    margin-top: 8rem;
+    padding: 2rem;
 
-                .info{
-                    background: v.$fondo4;
-                }
-            }
+    @include m.telefono{
+        padding: 1rem;
+        height: 13rem;
+        margin-top: 4rem;
+    }
 
-            &#fila3{
-                .imagen{
-                    background: v.$fondo6;
+    p{
+        margin: auto;
 
-                    .cont-imagen{
-                        height: 6rem;
-                        width: 30%;
+        @include m.tablet{
+            margin-left: 2rem;
+        }
+    }
 
-                        @include m.escritorio{
-                            width: 50%;
-                        }
-                    }
-                }
+    img{
+        @include m.telefono{
+            width: 0;
+            height: 0;
+        }
+    }
+}
 
-                .info{
-                    background: v.$fondo6;
-                }
-            }
 
-            &#fila4{
-                .imagen{
-                    background: v.$fondo9;
-                }
+#cont-semejanzas{
+    @include m.grid(4, 1rem);
+    height: 75rem;
+    background: v.$grisFondo3;
+    margin-top: 2rem;
 
-                .info{
-                    background: v.$fondo9;
-                }
-            }
+    @include m.telefono{
+        display: none;
+    }
 
+    #maletines{
+        grid-column: 1/2;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 4rem;
+        margin-top: 3rem;
+
+        @include m.tablet{
+            padding: 2rem;
+            margin-top: 7rem;
+        }
             
+        .img-maletin{
+            height: 15rem;
+        }
+        
+    }
+
+    #semejanzas{
+        grid-column: 2/5;
+        overflow: hidden;
+
+        .info{
+            display: none;
+            opacity: 0;
+            transition: all .3s ease;
+        }
+    
+        .btn2-pag20:hover{
+            @include m.parpadeo;
+        }
+
+        #cont-titulos{
+            @include m.grid(3, 1rem);
+            
+            .titulo{
+                padding: 1rem;
+                height: 6rem;
+                text-align: center;
+                @include m.resaltar(v.$blanco,700);
+            }
+
+            #lavado{
+                background: v.$colorFuente;
+            }
+
+            #semejanza{
+                background: v.$naranjaFuerte;
+            }
+
+            #financiamiento{
+                background: v.$azulRey;
+            }
+        }
+
+        .cont-info{
+            height: 12rem;
+            width: 96%;
+            margin-top: 4rem;
+            margin-left: 2rem;
+
+            @include m.tablet{
+                margin-left: 1rem;
+            }
 
             .info{
-                width: 70%;
-                padding: 2rem;
-                border-radius: 2rem;
-                box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.35);
-                opacity: 0;
-                transition: all .3s ease;
-                
-
-                p{
-                    opacity: 0;
-                    transition: all .3s ease;
-                }
-
-                &.visualizar{
-                    opacity: 1;
-
-                    p{
-                        opacity: 1;
-                    }
-                    
-                }
+                text-align: center;
+                padding: 4rem;
+                background: v.$crema4;
+                box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.20);
 
                 @include m.tablet{
-                    width: 90%;
+                    padding: 2rem;
                 }
             }
         }
+
+        #maletin1{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin2{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin3{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin4{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
     }
+}
+
+//Vista semejanzas Telefono
+#cont-semejanzasTel{
+    display: none;
+
+    @include m.telefono{
+        display: inline;
+
+        .info{
+            display: none;
+            opacity: 0;
+            transition: all .3s ease;
+        }
+    
+        .btn2-pag20:hover{
+            @include m.parpadeo;
+        }
+
+        .titulo{
+            height: 4rem;
+            padding: 1rem;
+            text-align: center;
+            @include m.resaltar(v.$blanco, 600);
+        }
+
+        #lavado{
+            background: v.$colorFuente;
+        }
+        #semejanzas{
+            background: v.$naranjaFuerte;
+        }
+        #financiamiento{
+            background: v.$azulRey;
+        }
+
+        .info{
+            text-align: center;
+            padding: 0.5rem;
+            background: v.$crema4;
+            height: 10rem;
+        }
+        #maletin1-Tel{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin2-Tel{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin3-Tel{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        #maletin4-Tel{
+            &.cuadros_activos{
+                display: block;
+                opacity: 1;
+            }
+        }
+    }    
 }

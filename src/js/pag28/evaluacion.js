@@ -31,10 +31,10 @@ class EvaluacionFinal{
                 respuestaCorrecta: 'A'
             },
             {
-                pregunta: 'En esta etapa, el dinero lavado vuelve a la circulación integrándose a la economía formal aparentando que se obtuvo legalmente, volviéndose extremadamente difícil distinguir si el dinero lavado tuvo un origen lícito o ilícito.',
+                pregunta: 'En esta etapa, se introducen las ganancias ilícitas al sistema financiero.',
                 respuestaA: 'Colocación',
-                respuestaB: 'Integración',
-                respuestaC: 'Diversificación',
+                respuestaB: 'Integración o reingreso',
+                respuestaC: 'Estratificación o enmascaramiento',
                 numero: 4,
                 respuestaCorrecta: 'B'
             },

@@ -18,6 +18,7 @@ function visualizarPag06(){
             }
             else{
                 visualizarCuadro.classList.remove('cuadros_activos');
+                
             }
         });
     });

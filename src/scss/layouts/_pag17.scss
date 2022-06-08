@@ -2,252 +2,241 @@
 @use '../base/mixins' as m;
 
 
-
-#cont1-pag17{
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    background: v.$colorFuente;
-    height: 20rem;
-
-    @include m.telefono{
-        height: 40rem;
-    }
-    .img-personaje1{
-        position: relative;
-        height: 100%;
-        width: 10%;
-
-        @include m.tablet{
-            width: 15%;
-        }
-
-        @include m.telefono{
-            position: absolute;
-            height: 15rem;
-            width: 10rem;
-            top: 25rem;
-        }
-    }
-
-    #text-personaje1{
-        display: flex;
-        position: relative;
-        text-align: center;
-        @include m.resaltar(v.$blanco,500);
-        width: 70%;
-        height: 50%;
-        top: 5rem;
-        left: 6rem;
-
-        @include m.tablet{
-            top: 3rem;
-        }
-
-        @include m.telefono{
-            width: 100%;
-            padding: 2rem;
-            left: 0;
-            top: 0;
-        }
-    }
-}
-
-#cont2-pag17{
+#cont-pag16{
     @include m.grid(2, 0);
 
     @include m.tablet{
         @include m.grid(1, 0);
     }
 
-    #cont-graficaPastel{
-        background: v.$azulPastel;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    #cont-izquierda{
+        height: 60rem;
 
-    }
-
-    #cont-buzon{
-        #buzon{
-            display: flex;
-            height: 15rem;
-            background: v.$azulPag17;
-            padding: 2rem;
-
-            #text-buzon{
-                text-align: center;
-                padding: 2rem;
-                @include m.resaltar(v.$colorFuente, 700);
-            }
+        @include m.escritorioHD{
+            height: 80rem;
         }
-
-        #personaje{
-            display: flex;
-            background: v.$crema;
-            height: 40rem;
-            justify-content: flex-end;
-
-            @include m.telefono{
-                height: 60rem;
-                display: grid;
-            }
-
-            #text-personaje2{
-                padding: 2rem;
-                width: 60%;
-
-                @include m.telefono{
-                    width: 100%;
-                    text-align: justify;
-                }
-
-            }
-
-            .img-personaje2{
-                @include m.telefono{
-                    height: 25rem;
-                    width: 18rem;
-                    margin-left: 5rem;
-                }
-            }
-        }
-    }
-}
-
-#cont3-pag17{
-    background: v.$crema3;
-    height: 20rem;
-    display: flex;
-
-    @include m.telefono{
-        display: grid;
-        height: 42rem
-    }
-
-    .img-personaje3{
-        @include m.telefono{
-            height: 17rem;
-            width: 30rem
-        }
-    }
-
-    #text-personaje3{
-        @include m.globoNegro(izquierda);
-        width: 70%;
-        height: 80%;
-        margin: auto;
 
         @include m.tablet{
-            height: 100%;
-            margin-left: 2rem;
+            height: 50rem;
         }
 
         @include m.telefono{
-            width: 100%;
-            margin: 0;
+            height: 80rem;
         }
-    }
-}
 
-#instrucciones-pag17{
-    background: v.$azulClaro1;
-    height: 10rem;
-    display: flex;
-    padding: 2rem;
-
-    @include m.telefono{
-        height: 20rem;
-    }
-    
-    p{
-        margin-left: 2rem;
-
-        @include m.telefono{
-            margin-left: 0;
-            text-align: justify;
-        }
-    }
-
-    .img-clic{
-        @include m.telefono{
-            position: absolute;
-            width: 5rem;
-            height: 5rem;
-            left: 29rem;
-            margin-top: 12rem;
-
-        }
-    }
-}
-
-#cont-carrusel{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50rem;
-
-    @include m.telefono{
-        height: 65rem;
-    }
-
-    #carouselExampleControls{
-        width: 80rem;
-        height: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .carousel-inner{
-            width: 90%;
-            height: 90%;
+        #cont-img{
             display: flex;
-            background: v.$grisFondo2;
+            background: v.$azul2;
+            height: 60%;
 
-            .carousel-item{
-                .slide{
-                    .txt-slide{
-                        text-align: center;
-                        height: 10rem;
-                        width: 100%;
-                        padding: 2rem;
-                        background: v.$vino2 ;
-                        @include m.resaltar(v.$blanco,500);
+            .personaje{
+                height: 70%;
+                margin-top: 11rem;
 
-                        @include m.telefono{
-                            height: auto;
-                        }
-                    }
-    
-                    .img-slide{
-                        height: 30rem;
-                        width: 27rem;
-                        padding: 2rem;
-                        margin-left: 30%;
+                @include m.escritorioHD{
+                    height: 60%;
+                    margin-top: 20rem;
+                }
 
-                        @include m.telefono{
-                            margin-left: 5%;
-                            margin-top: 5%;
-                        }
-                    }
+                @include m.tablet{
+                    margin-top: 11rem;
+                    height: 65%;
+                }
 
-                    .img-maletin{
-                        height: 20rem;
-                        width: 33rem;
-                        padding: 2rem;
-                        margin-left: 25%;
-                        margin-top: 5%;
-
-                        @include m.telefono{
-                            margin-left: 5%;
-                            width: 28rem;
-                            margin-top: 10rem;
-                        }
-                    }
+                @include m.telefono{
+                    position: absolute;
+                    overflow: hidden;
+                    margin-top: 28rem;
+                    height: 20rem;
+                    width: 20rem;
                 }
             }
 
+            #globo1{
+                @include m.globoNegro(izquierda);
+                width: 50%;
+                height: 75%;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                margin-bottom: 1rem;
+
+                @include m.escritorioHD{
+                    height: 100%;
+                    margin-top: 0;
+                }
+
+                @include m.tablet{
+                    margin-right: 0;
+                    margin-left: 0;
+                    height: 50%;
+                    width: 100%;
+                }
+            }
         }
 
+        #cont-gris{
+            position: relative;
+            background: v.$grisClaro;
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            #globo2{
+                @include m.globo(v.$vino, arriba);
+                @include m.resaltar(v.$blanco, 500);
+                width: 95%;
+                height: 85%;
+
+                @include m.escritorioHD{
+                    height: 90%;
+                    width: 90%;
+                }
+
+                @include m.tablet{
+                    width: 100%;
+                    height: 100%;
+                }
+                
+            }
+        }
+    }
+
+    #cont-derecha{
+        #cont-vino{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            background: v.$vino;
+            height: 30%;
+            @include m.resaltar(v.$blanco, 500);
+
+            @include m.telefono{
+                margin-top: 1rem;
+            }
+        }
+
+        #clic-pag16{
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 30%;
+            background: v.$azulClaro1;
+            text-align: center;
+
+            @include m.tablet{
+                height: 7rem;
+            }
+
+            .mano-pag16{
+                position: relative;
+                left: -2rem;
+                width: 9%;
+                height: 25%;
+
+                @include m.escritorioHD{
+                    width: 12%;
+                }
+                @include m.tablet{
+                    height: 5rem;
+                    width: 6rem;
+                    margin-top: 1rem;
+                }
+
+                @include m.telefono{
+                    left: 1rem;
+                }
+            }
+        }
+
+        #botones{
+            align-items: center;
+            background: v.$azulPastel;
+            height: 40%;
+            text-align: center;
+
+            h3{
+                position: relative;
+                top: 3rem;
+            }
+
+            @include m.tablet{
+                margin-top: 1rem;
+            }
+
+            .flex{
+                display: flex;
+                margin-top: 7rem;
+
+                #btn-aseguradora{
+                    margin-left: 3rem;
+                    width: 50%;
+    
+                    @include m.telefono{
+                        margin-left: 1rem;
+                    }
+                    a{
+                        @include m.botones(v.$azulRey);
+                    }
+                }
+                #btn-reaseguradora{
+                    width: 60%;
+    
+                    a{
+                        @include m.botones(v.$verde);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#cards-pag16{
+
+    @include m.tablet{
+        margin-top: 1rem;
+    }
+    .mapa-pag16{
+        display: none;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    #aseguradora{
+        @include m.conceptual(v.$azulRey);
+        height: 80rem;
+
+        @include m.tablet{
+            height: 95rem;
+        }
+
+        @include m.telefono{
+            height: auto;
+        }
+
+        &.cuadros_activos{
+            display: block;
+            opacity: 1;
+        }
+    }
+    #reaseguradora{
+        @include m.conceptual(v.$verde);
+        height: 70rem;
+
+        @include m.tablet{
+            height: 80rem;
+        }
+
+        @include m.telefono{
+            height: auto;
+            margin-top: 1rem;
+        }
+
+        &.cuadros_activos{
+            display: block;
+            opacity: 1;
+        }
     }
 }

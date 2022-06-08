@@ -1,94 +1,72 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-#intro-actividad25{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: v.$grisFondo;
+#cont-intro24{
 
-    &.retro{
-        display: none;
+    @include m.grid(3, 0);
+
+    @include m.escritorio{
+        @include m.grid(1, 0);
     }
 
-    .cont-imagen{
-        width: 20%;
-        margin: 0;
-    }
+    #cont-mensaje1{
+        grid-column: 1/2;
+        padding: 4rem 4rem 0 4rem;
+        background: v.$azul1;
 
-    .instrucciones{
-        width: 70%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 2rem;
+        @include m.escritorio{
+            grid-column: 1/2;
+        }
 
-        p{
-            text-align: center;
-            color: v.$blanco;
-            font-weight: 700;
+        .cont-globo{
+
+            .globo{
+                @include m.globoNegro(abajo);
+                margin-bottom: 5rem;
+
+                @include m.tablet{
+                
+                    &::after{
+                        width: 4rem;
+                        height: 3rem;
+                        clip-path: polygon(0 0, 50% 100%, 100% 0);
+                        top: 99%;
+                        left: 20%;
+                    }
+                }
+            }
+        }
+
+        .cont-imagen{
+            @include m.escritorio{
+                width: 50%;
+                height: 25rem;
+                margin: 0 auto;
+            }
+
+            @include m.telefono{
+                width: 80%;
+            }
         }
     }
-}
 
-.cont-inicio{
-    width: 100%;
-    height: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: v.$azul1;
+    #cont-info24{
+        grid-column: 2/4;
+        background: v.$grisFondo;
 
-    &.retro{
-        display: none;
-    }
+        @include m.escritorio{
+            grid-column: 1/2;
+        }
 
-    a{
-        @include m.boton(v.$amarillo);
-
-    }
-}
-
-#cont-actividad25{
-    
-    margin-top: 4rem;
-    @include m.grid(5, 1rem);
-    position: relative;
-
-    &.retro{
-        display: none;
-    }
-
-    @include m.escritorioHD{
-        @include m.grid(1, 1rem);
-    }
-    
-
-    #cont-definiciones{
-        grid-column: 1/2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        
-
-        .cont-mano{
-            background: v.$azulClaro2;
+        .indicaciones{
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             padding: 2rem;
-            margin-bottom: 2rem;
+            background: v.$azulClaro1;
 
-            @include m.escritorioHD{
-                width: 100%;
-            }
-
-            @include m.tablet{
-                display: none;
+            @include m.telefono{
+                flex-direction: column;
             }
 
             .cont-imagen{
@@ -96,256 +74,315 @@
                 height: 6rem;
                 border: 5px solid v.$blanco;
                 border-radius: 50%;
+                margin-right: 1rem;
                 padding: 1rem;
             }
-            
-            p{
-                text-align: center;
+
+            .parrafos{
+                font-weight: 500;
             }
         }
 
-        .cont-drag{
+        #cont-flipcard{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2rem 0;
+            flex-wrap: wrap;
+            background: v.$blanco;
 
-            @include m.escritorioHD{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-wrap: wrap;
-            }
-
-            @include m.tablet{
-                display: none;
-            }
-            
-            p{
-                font-size: 1.4rem;
-                padding: 1rem 2rem;
-                text-align: center;
-                border: 1px solid v.$blanco;
-                font-weight: 700;
-                background: v.$colorFuente;
-                color: v.$blanco;
+            .flipcard{
+                width: 20%;
+                height: 20rem;
+                position: relative;
                 cursor: pointer;
 
-                @include m.escritorioHD{
-                    width: 24%;
-                    height: 6rem;
+                @include m.tablet{
+                    width: 40%;
+                    margin-bottom: 2rem;
+                }
+
+                @include m.telefono{
+                    width: 90%;
+                }
+
+                &.click{
+                    .front{
+                        transform: perspective(50rem) rotateY(180deg);
+                    }
+                
+                    .back{
+                        transform: perspective(50rem) rotateY(360deg);
+                    }
+                }
+                
+                
+                &#flip1{
+                    .front{
+                        background: v.$amarilloPastel;
+                    }
+                    .back{
+                        background: v.$amarilloPastel;
+                    }
+                }
+
+                &#flip2{
+                    .front{
+                        background: v.$rosaPastel;
+                    }
+                    .back{
+                        background: v.$rosaPastel;
+                    }
+                }
+
+                &#flip3{
+                    .front{
+                        background: v.$azulPastel;
+                    }
+                    .back{
+                        background: v.$azulPastel;
+                    }
+                }
+
+                &#flip4{
+                    .front{
+                        background: v.$verdePastel;
+                    }
+                    .back{
+                        background: v.$verdePastel;
+                    }
+                }
+
+                .caras{
+
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    backface-visibility: hidden;
+                    transition: all 1s ease; 
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    padding: 0 1rem;
                 }
-            }
-        }
-    }
 
-    .mano-responsive{
-        display: none;
+                .front{
+                    transform: perspective(50rem) rotateY(0deg);
+                    box-shadow: 0px 1px 6px 3px rgba(0,0,0,0.4);
+                    border-radius: 2rem;
+                    overflow: hidden;
+                }
 
-        @include m.tablet{
-            display: flex;
-        }
-    }
+                .back{
+                    transform: perspective(50rem) rotateY(180deg);
+                    box-shadow: 0px 1px 6px 3px rgba(0,0,0,0.2);
+                    border-radius: 2rem;
+                    overflow: hidden;
+                    text-align: center;
+                    font-weight: 500;
 
-    #cont-drop{
-        grid-column: 2/6;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 6rem 2rem;
-        flex-wrap: wrap;
-
-        @include m.escritorioHD{
-            grid-column: 1/2; 
-            padding: 2rem 0;  
-        }
-
-        
-
-        .posts{
-            width: 23%;
-            height: 35rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: column;
-            margin-bottom: 2rem;
-
-            @include m.tablet{
-                width: 90%;
-                margin: 0 auto;
-                height: auto;
-            }
-
-            .cuadro{
-
-                height: 27rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 2rem;
-
-                p{
-                    font-size: 1.1rem;
-                    font-weight: 700;
+                    @include m.escritorioHD{
+                        font-size: 1.3rem;
+                    }
 
                     @include m.tablet{
                         font-size: 1.6rem;
                     }
                 }
+            }
+        }
 
-                &#cuadro1{
-                    @include m.posit(v.$amarillo);
-                }
+        .titulo{
+            padding: 2rem;
+            font-size: 2.4rem;
+            text-align: center;
+            background: v.$verde;
+            color: v.$blanco;
+        }
 
-                &#cuadro2{
-                    @include m.posit(v.$naranjaPag03);
-                }
+        #cont-mensaje2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: v.$grisFondo;
 
-                &#cuadro3{
-                    @include m.posit(v.$azul1);
-                }
-
-                &#cuadro4{
-                    @include m.posit(v.$verde);
-                }
-
-                &#cuadro5{
-                    @include m.posit(v.$grisFuerte);
-                }
-
-                &#cuadro6{
-                    @include m.posit(v.$lila);
-                }
-
-                &#cuadro7{
-                    @include m.posit(v.$naranja);
-                }
-
-                &#cuadro8{
-                    @include m.posit(v.$azulPag03);
-                }
-
-                p{
-                    text-align: center;
-                }
+            @include m.tablet{
+                flex-direction: column;
             }
 
-            .drop{
-                background: v.$grisFondo;
-                width: 100%;
-                height: 8rem;
-                transition: all .3s ease;
-                overflow: hidden;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                font-weight: 700;
+            #cont-globo{
 
-                @include m.tablet{
-                    display: none;
-                }
+                width: 70%;
+                padding: 2rem;
 
-                &:hover{
-                    background: darken(v.$grisFondo,  10);
-                }
-            }
+                .globo{
+                    @include m.globoNegro(derecha);
 
-            .repuestas-responsive1{
-                display: none;
-
-                @include m.tablet{
-                    display: block;
-                    margin-bottom: 2rem;
-                    width: 90%;
-
-                    div{
-                        padding: 2rem;
-                        margin: 1rem 0;
-                        background: v.$colorFuente;
-                        text-align: center;
-                        color: v.$blanco;
-                        transition: all .3s ease;
-
-                        &:hover{
-                            transform: scale(1.05);
-                            box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.75);
-                            cursor: pointer;
-                        }
-
-                        &.fondoCorrecto{
-                            background: v.$verde;
-                            color: v.$blanco;
+                    @include m.tablet{
+                
+                        &::after{
+                            width: 4rem;
+                            height: 3rem;
+                            clip-path: polygon(0 0, 50% 100%, 100% 0);
+                            top: 99%;
+                            left: 20%;
                         }
                     }
                 }
+            }
+
+            .cont-imagen{
+                height: 100%;
             }
         }
     }
 }
 
+#cont-lavado-dinero{
 
+    margin-top: 4rem;
+    @include m.grid(2, 4rem);
+    background: v.$grisFondo;
+    padding: 6rem 2rem;
 
-#box{
-    display: none;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75vh;
-    background: v.$azul1;
-    z-index: 10;
-    padding: 6rem 3rem 0 3rem;
-    opacity: 0;
-    transition: all .6s ease;
-
-
-    &.bien{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        opacity: 1;
+    @include m.escritorio{
+        @include m.grid(1, 4rem);
     }
 
-    &::after{
-        content: '';
-        width: 100%;
-        height: 20rem;
-        position: absolute;
-        background: v.$azulRey;
-        top: 40%;
-        left: 0;
-        z-index: -1;
+    #cont-lavado{
+        
+        .visual{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include m.tablet{
+                margin-bottom: 2rem;
+                background: v.$colorFuente;
+            }
+
+            .cont-titulo{
+                width: 50%;
+                
+                h3{
+                    text-align: right;
+                    padding: 2rem;
+                    background: v.$colorFuente;
+                    color: v.$blanco;
+                }
+            }
+
+            .cont-imagen{
+                width: 50%;
+                height: 20rem;
+                background: v.$amarillo;
+                border-radius: 2rem;
+
+                @include m.tablet{
+                    border-radius: 0;
+                }
+            }
+        }
+
+        .lista-info{
+            padding: 2rem 2rem 6rem 2rem;
+            background: v.$colorFuente;
+            color: v.$blanco;
+            font-weight: 500;
+        }
+    }
+
+    #cont-terrorismo{
 
         @include m.escritorio{
-            display: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column-reverse;
         }
+
+        .visual{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;
+
+            @include m.tablet{
+                margin-bottom: 2rem;
+                background: v.$colorFuente;
+            }
+
+            .cont-titulo{
+                width: 50%;
+                
+                h3{
+                    padding: 2rem;
+                    background: v.$colorFuente;
+                    color: v.$blanco;
+                }
+            }
+
+            .cont-imagen{
+                width: 50%;
+                height: 25rem;
+                background: v.$gris1;
+                padding: 2rem 4rem 2rem 2rem;
+            }
+        }
+
+        .lista-info{
+            padding: 2rem 2rem 6rem 2rem;
+            background: v.$naranja;
+            color: v.$blanco;
+        }
+    }
+}
+
+#cont-final24{
+
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: v.$verdeMenta;
+
+    @include m.tablet{
+        flex-direction: column-reverse;
     }
 
     .cont-imagen{
-        width: 30%;
-        align-self: flex-end;
+        width: 50%;
+        padding: 2rem;
 
-        @include m.escritorio{
-            width: 50%;
-            order: 2;
-            margin: 0 auto;   
+        @include m.tablet{
+            width: 80%;
+            margin: 0 auto;
         }
     }
 
-    .cont-mensaje{
-        width: 60%;
-        font-size: 2rem;
-        font-weight: 700;
-        color: v.$blanco;
-        text-align: center;
-        border: 2px solid v.$blanco;
-        padding: 3.2rem;
+    .cont-globo{
+        width: 50%;
+        padding: 2rem;
 
-        @include m.escritorio{
+        @include m.tablet{
             width: 100%;
-            order: 1;   
+        }
+
+        .globo{
+            @include m.globoNegro(izquierda);
+
+            @include m.tablet{
+                
+                &::after{
+                    width: 4rem;
+                    height: 3rem;
+                    clip-path: polygon(0 0, 50% 100%, 100% 0);
+                    top: 99%;
+                    left: 20%;
+                }
+            }
         }
     }
 }

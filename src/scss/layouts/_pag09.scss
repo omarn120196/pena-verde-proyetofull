@@ -1,136 +1,130 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-#cont-pag09{
-    @include m.grid(2, 4rem);
-    padding: 6rem 4rem 6rem 20rem;
-    background: v.$azul2;
-    position: relative;
 
-    &::after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 30%;
-        bottom: 0;
-        left: 0;
-        background: v.$azul1;
-        z-index: 0;
+
+#instrucciones-pag20{
+    background: v.$azulClaro1;
+    height: 10rem;
+    display: flex;
+    padding: 2rem;
+
+    @include m.telefono{
+        padding: 1rem;
     }
 
-    @include m.escritorioHD{
-        padding: 6rem;
-        @include m.grid(2, 2rem);
-    }
-
-    @include m.escritorio{
-        @include m.grid(1, 2rem);
-    }
-
-    @include m.tablet{
-        padding: 2rem 3rem;
-    }
-
-    .hojas09{
-        padding: 2rem 3rem;
-        width: 100%;
-        background: v.$blanco;
-        border-radius: 2rem;
-        box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.75);
-        z-index: 1;
+    p{
+        margin: auto;
 
         @include m.tablet{
-            padding: 4rem 3rem;
+            margin-left: 2rem;
         }
 
         @include m.telefono{
-            padding: 2rem;
-        }
-
-        &#hoja09_1{
-            .puntos09{
-                background: v.$crema2;
-            }
-        }
-
-        &#hoja09_2{
-            .puntos09{
-                background: v.$naranjaClaro;
-            }
-        }
-
-        h4{
-            text-align: center;
-            padding: 2rem 3rem;
-            color: v.$blanco;
-            background: v.$naranja;
-            border-radius: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0px 2px 17px -5px rgba(0,0,0,0.68);
-        }
-
-        .puntos09{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding: 2rem;
-            border-radius: 2rem;
-            box-shadow: 0px 2px 17px -5px rgba(0,0,0,0.68);
-
-            @include m.telefono{
-                padding: 2rem 1rem; 
-            }
-
-            .cont-ul{
-                width: 80%;
-
-                @include m.telefono{
-                    width: 70%;
-                }
-                
-                h5{
-                    margin-bottom: 2rem;
-                    color: v.$naranja;
-                }
-
-                ul{
-                    font-size: 1.2rem;
-
-                    li{
-                        margin-left: 4rem;
-                        line-height: 1.6;
-                    }
-                }
-            }
-
-            p{
-                width: 80%;
-                line-height: 1.6;
-                font-size: 1.2rem;
-
-                @include m.telefono{
-                    width: 70%;
-                }
-            }
-
-            figure{
-                width: 6rem;
-                height: 5rem;
-            }
+            margin-left: 0;
         }
     }
 
-    #persona{
-        position: absolute;
-        width: 25rem;
-        height: 35rem;
-        bottom: 0;
-        left: 0;
-        z-index: 2;
-
-        @include m.escritorioHD{
-            display: none;
+    img{
+        @include m.telefono{
+            width: 0;
+            height: 0;
         }
     }
 }
+
+#flipCards-pag09{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+
+    .cards{
+        width: 22rem;
+        height: 40rem;
+        position: relative;
+        cursor: pointer;
+
+        &#flip1{
+            @include m.flip-cardsPag20(fuerte, v.$azul2);
+        }
+        
+        &#flip2{
+            @include m.flip-cardsPag20(fuerte, v.$naranja);
+            top: 5rem;
+
+            @include m.escritorioHD{
+                top: 0
+            }
+        }
+        &#flip3{
+            @include m.flip-cardsPag20(fuerte, v.$amarilloPag20);
+        }
+        &#flip4{
+            @include m.flip-cardsPag20(fuerte, v.$verde);
+            top: 5rem;
+
+            @include m.escritorioHD{
+                top: 0;
+            }
+
+            @include m.tablet{
+                top: 3rem;
+            }
+
+            @include m.telefono{
+                top: 0;
+            }
+        }
+        &#flip5{
+            @include m.flip-cardsPag20(fuerte, v.$azulRey);
+
+            @include m.escritorioHD{
+                top: 3rem;
+            }
+
+            @include m.telefono{
+                top: 0;
+            }
+        }
+        
+        .caras{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transition: all 1s ease;            
+        }
+        
+        .front{
+            transform: perspective(50rem) rotateY(0deg);
+
+            .cont-imagen{
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
+
+        .back{
+            transform: perspective(50rem) rotateY(180deg);
+
+            .cont-mensaje-back{
+                padding: 2rem;
+                text-align: justify;
+            }
+        }
+
+        &.click{
+            .front{
+                transform: perspective(50rem) rotateY(180deg);
+            }
+        
+            .back{
+                transform: perspective(50rem) rotateY(360deg);
+            }
+        }
+    }
+}
+

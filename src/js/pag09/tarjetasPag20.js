@@ -1,5 +1,5 @@
 function voltearCardsPag20(){
-    const tarjetas = document.querySelectorAll('#flipCards-pag20 .cards');
+    const tarjetas = document.querySelectorAll('#flipCards-pag09 .cards');
 
     tarjetas.forEach(tarjeta=>{
         tarjeta.addEventListener('click', function () {  

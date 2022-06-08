@@ -1,420 +1,151 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-#cont-evaluacion{
-    background: v.$fondo6;
+#cont-pagina26{
 
-    
-    #intro-evaluacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: v.$grisFondo;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        flex-wrap: wrap;
+    @include m.tablet{
+        flex-direction: column-reverse;
+    }
+
+    &.salida{
+        display: none;
+    }
+
+
+    .cont-imagen{
+        width: 30%;
 
         @include m.tablet{
-            justify-content: center;   
+            width: 40%;
+            height: 30rem;
         }
-        
-        &::after{
-            content: '';
-            background: v.$blanco;
-            width: 100%;
-            height: 30%;
-            top: 0;
-            left: 0;
-            position: absolute;
-        }
-    
-        .cont-imagen{
-            width: 30%;
-            z-index: 1;
-        }
-    
-        .cont-mensaje{
+
+        @include m.telefono{
             width: 60%;
-            padding: 2rem;
-            text-align: center;
-            font-size: 2.8rem;
-            font-weight: 700;
-            z-index: 1;
-            align-self: flex-end;
-
-            @include m.escritorioHD{
-                font-size: 2.2rem;
-            }
-            
-            @include m.escritorio{
-                font-size: 1.8rem;
-            }
-
-            @include m.tablet{
-                width: 100%;
-                font-size: 2.2rem;
-            }
-        }
-
-        &.ocultar{
-            display: none;
         }
     }
 
-    #instruccionEvaluacion{
-        text-align: center;
-        padding: 2rem;
-        color: v.$blanco;
-        font-weight: 700;
-        background: v.$azul1;
+    .cont-instrucciones{
+        width: 60%;
+        align-self: flex-start;
 
-        &.ocultar{
-            display: none;
-        }
-    }
-
-    #cont-inicioEvaluacion{
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         
-        a{
-            @include m.boton(v.$amarillo);
+        @include m.escritorioHD{
+            width: 65%;    
         }
 
-        &.ocultar{
-            display: none;
+        @include m.tablet{
+            width: 100%;
         }
-    }
-
-    #cont-preguntas{
-
-        #instruccion{
-
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            background: v.$azulClaro2;
-            padding: 2rem;
-
-            .cont-imagen{
-                width: 6rem;
-                height: 6rem;
-                border: 5px solid v.$blanco;
-                border-radius: 50%;
-                padding: 1rem;
-            }
-
-            #parrafo{
-                font-weight: 700;
-
-                @include m.telefono{
-                    width: 60%;
-                }
-            }
-        }
-
-        &.ocultar{
-            display: none;
-        }
-
-        .preguntas{
-
-            padding: 2rem 4rem;
-
-           .cont-preguntas{
-
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin: 4rem 0;
-
-                .numero-Pregunta{
-                    width: 10%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: v.$azulRey;
-
-                    h2{
-                        font-weight: 700;
-                    }
-                }
-
-                .pregunta{
-                    width: 90%;
-                    padding: 2rem;
-                    background: v.$blanco;
-
-                    p{
-                        font-weight: 700;
-                    }
-                }
-           }
-
-            .cont-respuestas{
-                
-                position: relative;
-                
-                .incisos{
-
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin: 2rem 0;
-                    
-                    .letras{
-                        width: 10%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: v.$azulRey;
-
-                        h2{
-                            font-weight: 700;
-                        }
-                    }
-
-                    .respuesta{
-                        width: 90%;
-                        padding: 2rem;
-                        background: v.$fondo1;
-                        transition: all .3s ease;
-                        cursor: pointer;
-
-                        &.fondoCorrecto{
-                            background: v.$verde;
-                            color: v.$blanco;
-                            cursor: default;
-                        }
-                        
-                        &.fondoIncorrecto{
-                            background: v.$rojo2;
-                            color: v.$blanco;
-                            cursor: default;
-                        }
-    
-                        p{
-                            font-weight: 700;
-                        }
-
-                        &:hover{
-
-                            box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.44);
-                            transform: scale(1.01);
-                        }
-                    }
-                }
-
-                .bloquear-respuesta{
-
-                    position: absolute;
-                    background: transparent;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    display: none;
-
-                    &.activado{
-                        display: block;
-                    }
-
-                }                
-            }
-        }
-    }
-
-    .cont-btnEvaluar{
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        a{
-            @include m.boton(v.$amarillo);
-        }
-
-        &.ocultar{
-            display: none;
-        }
-    }
-
-    #retro-positiva{
-
-        display: none;
-        transition: all .3s ease;
-
-        &.visualizar{
-            display: block;
-        }
-
-        .mensaje{
-            padding: 2rem;
-            background: v.$azulRey;
-
-            p{
-                text-align: center;
-                color: v.$blanco;
-                font-size: 2.4rem;
-                font-weight: 700;
-            }
-        }
-
-        .cont-calificacion{
-            padding: 2rem;
-
-            p{
-                text-align: center;
-                font-size: 4.2rem;
-                font-weight: 700;
-            }
-        }
-
-        .final{
-
-            @include m.grid(2, 2rem);
-
-            @include m.tablet{
-                @include m.grid(1, 2rem);
-            }
-
-            .cont-imagen{
-                margin: 0;
-            }
-
-            .cont-info{
-                display: flex;
-                flex-direction: column;
-
-                .parrafo{
-                    height: 50%;
-                    background: v.$amarillo;
-                    padding: 2rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    p{
-                        text-align: center;
-                        font-weight: 500;
-                        color: v.$blanco;
-                        font-size: 2rem;
-                    }
-
-                    @include m.tablet{
-                        margin-bottom: 2rem;
-                    }
-                }
-
-                .botones{
-                    height: 50%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-evenly;
-                    
-                    @include m.tablet{
-                        width: 100%;
-                        flex-direction: row;
-                        padding: 2rem;
-                    }
-
-                    @include m.telefono{
-                        flex-direction: column;
-                    }
-
-                    #registrar{
-                        @include m.boton(v.$verde);
-                        width: 18rem;
-                        text-align: center;
-
-                        @include m.telefono{
-                            margin-bottom: 2rem;
-                        }
-                    }
-
-                    #cerrar{
-                        @include m.boton(v.$azulRey);
-                        width: 18rem;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-    }
-
-    #retro-negativa{
-
-        display: none;
-        transition: all .3s ease;
-
-        &.visualizar{
-            display: block;
-
-            @include m.escritorio{
-                display: flex;
-                flex-direction: column-reverse;
-            }
-        }
-
-        .mensaje{
+        
+        #revisar{
             padding: 2rem;
             background: v.$colorFuente;
+            color: v.$blanco;
+            text-align: center;
 
             p{
-                color: v.$blanco;
-                font-size: 2.4rem;
-                text-align: center;
+                font-weight: 700;
+
+                &:last-of-type{
+                    color: v.$amarillo;
+                }
             }
         }
 
-        .final{
-            @include m.grid(2, 2rem);
+        #lista{
+            padding: 2rem;
+            background: v.$azul1;
+            color: v.$blanco;
+            font-weight: 700;
+        }
 
-            @include m.escritorio{
-                @include m.grid(1, 2rem);
-                margin-bottom: 4rem;
+        #suerte{
+            padding: 2rem;
+            color: v.$blanco;
+            text-align: center;
+            background: v.$naranja;
+
+            h4{
+                font-size: 3.2rem;
             }
+        }
 
-            .cont-imagen{
-                width: 35rem;
-                height: 50rem;
-                margin: 0;
+        .cont-botones{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2rem;
+            flex-wrap: wrap;
 
-                @include m.escritorio{
-                    margin: 0 auto;
-                }
-
-                @include m.tablet{
-                    width: 25rem;
-                    height: 35rem;
-                }
-            }
-
-            
-            .botones{
+            a{
+                width: 18rem;
+                height: 8rem;
+                text-align: center;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-bottom: 2rem;
+            }
 
-                #reintentar{
-                    @include m.boton(v.$rojo);
-                    transform: scale(2);
+            #aseguradora{
+                @include m.boton(v.$azulRey);
+            }
 
-                    @include m.escritorio{
-                        transform: scale(1.4);
-                    }
+            #patria{
+                @include m.boton(v.$amarillo);
+            }
 
-                    &:hover{
-                        transform: scale(2.01);
-
-                        @include m.escritorio{
-                            transform: scale(1.5);   
-                        }
-                    }
-                }
+            #reaseguradora{
+                @include m.boton(v.$verde);
             }
         }
+    }
+}
+
+.cont-casos{
+
+    display: none;
+    transition: all .3s ease;
+
+    &.caso-activo{
+        display: block;
+    }
+}
+
+.respuesta-correcta{
+    animation: parpadeaVerde 2s 1;    
+}
+
+.respuesta-incorrecta{
+    animation: parpadeaRojo 2s 1;
+}
+
+
+
+@keyframes parpadeaVerde {
+    0%, 50%, 100%{
+        background: v.$verde;
+        color: v.$blanco;
+    }
+    25%, 75%{
+        background: v.$blanco;
+        color: v.$colorFuente;
+    }
+}
+
+@keyframes parpadeaRojo {
+    0%, 50%, 100%{
+        background: v.$rojo2;
+        color: v.$blanco;
+    }
+    25%, 75%{
+        background: v.$blanco;
+        color: v.$colorFuente;
     }
 }
