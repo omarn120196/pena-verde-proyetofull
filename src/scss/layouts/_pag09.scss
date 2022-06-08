@@ -1,122 +1,130 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-#cont-pag10{
 
+
+#instrucciones-pag20{
+    background: v.$azulClaro1;
+    height: 10rem;
     display: flex;
-    justify-content: center;
+    padding: 2rem;
+
+    @include m.telefono{
+        padding: 1rem;
+    }
+
+    p{
+        margin: auto;
+
+        @include m.tablet{
+            margin-left: 2rem;
+        }
+
+        @include m.telefono{
+            margin-left: 0;
+        }
+    }
+
+    img{
+        @include m.telefono{
+            width: 0;
+            height: 0;
+        }
+    }
+}
+
+#flipCards-pag09{
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    background: v.$gris1;
+    padding: 4rem 0;
 
-    #cont-mensaje10{
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 4rem 4rem 0 4rem;
-        background: v.$amarilloPastel;
-        overflow: hidden;
+    .cards{
+        width: 22rem;
+        height: 40rem;
         position: relative;
-        flex-wrap: wrap;
-        
-        @include m.escritorio{
-            padding: 4rem 0 0 0;
-            justify-content: center;
-        }
-        
-        &::after{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            clip-path: polygon(40% 0, 80% 0, 60% 100%, 20% 100%);
-            background: v.$verde;
-            z-index: 0;
-        }
-        
-        &::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            clip-path: polygon(70% 0, 100% 0, 100% 100%, 50% 100%);
-            background: v.$verdeFuerte;
-            z-index: 0;
-        }
+        cursor: pointer;
 
-        .cont-imagen{
-            width: 30%;
-            height: 30rem;
-            z-index: 1;
+        &#flip1{
+            @include m.flip-cardsPag20(fuerte, v.$azul2);
+        }
+        
+        &#flip2{
+            @include m.flip-cardsPag20(fuerte, v.$naranja);
+            top: 5rem;
 
-            @include m.escritorio{
-                width: 70%;
+            @include m.escritorioHD{
+                top: 0
+            }
+        }
+        &#flip3{
+            @include m.flip-cardsPag20(fuerte, v.$amarilloPag20);
+        }
+        &#flip4{
+            @include m.flip-cardsPag20(fuerte, v.$verde);
+            top: 5rem;
+
+            @include m.escritorioHD{
+                top: 0;
             }
 
             @include m.tablet{
-                width: 100%;
-                align-self: center;
-                padding: 0 4rem;
-            }
-            
-        }
-    
-        #mensaje{
-            z-index: 1;
-            width: 70%;
-
-            
-            
-            @include m.escritorio{
-                width: 100%;
-                background: v.$colorFuente;
-            }
-
-            #globo{
-                @include m.globoNegro(izquierda);
-            }
-        }
-    }
-
-    #cont-descarga{
-        margin-top: 4rem;
-        width: 50%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-        background: v.$gris1;
-        padding: 4rem;
-
-        @include m.escritorioHD{
-            width: 100%;
-        }
-
-        a{
-            display: block;
-            transition: all .3s ease;
-            opacity: .8;
-
-            figure{
-                height: 8rem;
+                top: 3rem;
             }
 
             @include m.telefono{
-                margin-top: 2rem;
+                top: 0;
+            }
+        }
+        &#flip5{
+            @include m.flip-cardsPag20(fuerte, v.$azulRey);
+
+            @include m.escritorioHD{
+                top: 3rem;
             }
 
-            &:hover{
-                opacity: 1;
-                padding: 1rem;
-                transform: scale(.9);
-                box-shadow: 1px 2px 11px -4px rgba(0,0,0,0.75);
+            @include m.telefono{
+                top: 0;
+            }
+        }
+        
+        .caras{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transition: all 1s ease;            
+        }
+        
+        .front{
+            transform: perspective(50rem) rotateY(0deg);
+
+            .cont-imagen{
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
+
+        .back{
+            transform: perspective(50rem) rotateY(180deg);
+
+            .cont-mensaje-back{
+                padding: 2rem;
+                text-align: justify;
+            }
+        }
+
+        &.click{
+            .front{
+                transform: perspective(50rem) rotateY(180deg);
+            }
+        
+            .back{
+                transform: perspective(50rem) rotateY(360deg);
             }
         }
     }
-    
 }
+

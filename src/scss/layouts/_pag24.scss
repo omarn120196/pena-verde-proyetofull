@@ -1,386 +1,297 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-#cont-intro24{
-
-    @include m.grid(3, 0);
-
-    @include m.escritorio{
-        @include m.grid(1, 0);
-    }
-
-    #cont-mensaje1{
-        grid-column: 1/2;
-        padding: 4rem 4rem 0 4rem;
-        background: v.$azul1;
-
-        @include m.escritorio{
-            grid-column: 1/2;
-        }
-
-        .cont-globo{
-
-            .globo{
-                @include m.globoNegro(abajo);
-                margin-bottom: 5rem;
-
-                @include m.tablet{
-                
-                    &::after{
-                        width: 4rem;
-                        height: 3rem;
-                        clip-path: polygon(0 0, 50% 100%, 100% 0);
-                        top: 99%;
-                        left: 20%;
-                    }
-                }
-            }
-        }
+.contenedorPag23{
+    
+    .cont-mano{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: v.$azulClaro2;
+        padding: 2rem;
 
         .cont-imagen{
+            width: 6rem;
+            height: 6rem;
+            border: 5px solid v.$blanco;
+            padding: 1rem;
+            border-radius: 50%;
+            margin: 0;
+        }
+
+        p{
+            width: 80%;
+        }
+    }
+
+    .cont-fichas{
+        width: 100%;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        
+
+        .fichas{
+
+            width: 18%;
+            margin-bottom: 2rem;
+
             @include m.escritorio{
-                width: 50%;
-                height: 25rem;
-                margin: 0 auto;
+                width: 45%;
             }
 
-            @include m.telefono{
-                width: 80%;
+            @include m.tablet{
+                width: 100%;
+                padding: 2rem;
+            }
+
+            a{
+                display: block;
+                height: 20rem;
+
+                .caja{
+                    
+                    margin-bottom: 2rem;
+                    box-shadow: 0px 1px 16px 0px rgba(0,0,0,0.41);
+        
+                    .titulo{
+                        text-align: center;
+                        padding: 2rem .5rem;
+                        height: 8rem;
+                        background: v.$verde;
+                        color: v.$blanco;
+                        font-size: 1.6rem;
+                    }
+        
+                    .cont-imagen{
+                        width: 100%;
+                        height: 12rem;
+    
+                        @include m.tablet{
+                            width: 30%;
+                            margin: 0 auto;
+                        }
+    
+                        @include m.telefono{
+                            width: 45%;
+                            margin: 0 auto;
+                        }
+        
+                        &.mitad{
+                            width: 50%;
+                            margin: 0 auto;
+    
+                            @include m.escritorioHD{
+                                width: 70%;       
+                            }
+    
+                            @include m.escritorio{
+                                width: 50%;       
+                            }
+    
+                            @include m.tablet{
+                                width: 25%;       
+                            }
+    
+                            @include m.tablet{
+                                width: 45%;       
+                            }
+    
+                            img{
+                                padding: 2rem;
+    
+                                
+                            }
+                        }
+                    }
+                }    
+            }
+            
+
+            .cont-info{
+                padding: 2rem;
+                background: v.$fondo6;
+                height: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: all .3s ease;
+
+                p{
+                    text-align: center;
+                    display: none;
+                }
+
+                li{
+                    display: none;
+                }
+
+                &.visualizar{
+                    height: 45rem;
+                    opacity: 1;
+
+                    p{
+                        display: block;
+                    }
+
+                    li{
+                        display: block;
+                    }
+
+                    @include m.tablet{
+                        height: auto;
+                    }
+                }
+
+                
             }
         }
     }
 
-    #cont-info24{
-        grid-column: 2/4;
-        background: v.$grisFondo;
+    .organismos{
+        margin-top: 2rem;
 
-        @include m.escritorio{
-            grid-column: 1/2;
-        }
-
-        .indicaciones{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            background: v.$azulClaro1;
-
-            @include m.telefono{
-                flex-direction: column;
-            }
-
-            .cont-imagen{
-                width: 6rem;
-                height: 6rem;
-                border: 5px solid v.$blanco;
-                border-radius: 50%;
-                margin-right: 1rem;
-                padding: 1rem;
-            }
-
-            .parrafos{
-                font-weight: 500;
-            }
-        }
-
-        #cont-flipcard{
+        .filas{
             display: flex;
             justify-content: space-around;
             align-items: center;
-            padding: 2rem 0;
+            margin-left: 1rem;
+            margin-bottom: 2rem;
             flex-wrap: wrap;
-            background: v.$blanco;
 
-            .flipcard{
+            a{
+                display: block;
                 width: 20%;
-                height: 20rem;
-                position: relative;
-                cursor: pointer;
+                transition: all .3s ease;
+
+                &:hover{
+                    @include m.parpadeo();
+                }
 
                 @include m.tablet{
-                    width: 40%;
+                    width: 90%;
                     margin-bottom: 2rem;
                 }
 
-                @include m.telefono{
-                    width: 90%;
-                }
-
-                &.click{
-                    .front{
-                        transform: perspective(50rem) rotateY(180deg);
-                    }
-                
-                    .back{
-                        transform: perspective(50rem) rotateY(360deg);
-                    }
-                }
-                
-                
-                &#flip1{
-                    .front{
-                        background: v.$amarilloPastel;
-                    }
-                    .back{
-                        background: v.$amarilloPastel;
-                    }
-                }
-
-                &#flip2{
-                    .front{
-                        background: v.$rosaPastel;
-                    }
-                    .back{
-                        background: v.$rosaPastel;
-                    }
-                }
-
-                &#flip3{
-                    .front{
-                        background: v.$azulPastel;
-                    }
-                    .back{
-                        background: v.$azulPastel;
-                    }
-                }
-
-                &#flip4{
-                    .front{
-                        background: v.$verdePastel;
-                    }
-                    .back{
-                        background: v.$verdePastel;
-                    }
-                }
-
-                .caras{
-
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    backface-visibility: hidden;
-                    transition: all 1s ease; 
+                .imagen{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    padding: 0 1rem;
-                }
-
-                .front{
-                    transform: perspective(50rem) rotateY(0deg);
-                    box-shadow: 0px 1px 6px 3px rgba(0,0,0,0.4);
+                    padding: 2rem;
                     border-radius: 2rem;
-                    overflow: hidden;
-                }
+                    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.35);
+                    
+                    .cont-imagen{
+                        width: 40%;
+                        height: 8rem;
+                        margin: 0;
 
-                .back{
-                    transform: perspective(50rem) rotateY(180deg);
-                    box-shadow: 0px 1px 6px 3px rgba(0,0,0,0.2);
-                    border-radius: 2rem;
-                    overflow: hidden;
-                    text-align: center;
-                    font-weight: 500;
+                        @include m.tablet{
+                            width: 25%;
+                        }
 
-                    @include m.escritorioHD{
-                        font-size: 1.3rem;
-                    }
-
-                    @include m.tablet{
-                        font-size: 1.6rem;
-                    }
-                }
-            }
-        }
-
-        .titulo{
-            padding: 2rem;
-            font-size: 2.4rem;
-            text-align: center;
-            background: v.$verde;
-            color: v.$blanco;
-        }
-
-        #cont-mensaje2{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: v.$grisFondo;
-
-            @include m.tablet{
-                flex-direction: column;
-            }
-
-            #cont-globo{
-
-                width: 70%;
-                padding: 2rem;
-
-                .globo{
-                    @include m.globoNegro(derecha);
-
-                    @include m.tablet{
-                
-                        &::after{
-                            width: 4rem;
-                            height: 3rem;
-                            clip-path: polygon(0 0, 50% 100%, 100% 0);
-                            top: 99%;
-                            left: 20%;
+                        @include m.telefono{
+                            width: 40%;
                         }
                     }
                 }
             }
 
-            .cont-imagen{
-                height: 100%;
-            }
-        }
-    }
-}
+            &#fila1{
+                .imagen{
+                    background: v.$fondo5;
 
-#cont-lavado-dinero{
+                    .cont-imagen{
+                        width: 30%;
 
-    margin-top: 4rem;
-    @include m.grid(2, 4rem);
-    background: v.$grisFondo;
-    padding: 6rem 2rem;
+                        @include m.escritorio{
+                            width: 50%;
+                        }
+                    }
+                }
 
-    @include m.escritorio{
-        @include m.grid(1, 4rem);
-    }
-
-    #cont-lavado{
-        
-        .visual{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            @include m.tablet{
-                margin-bottom: 2rem;
-                background: v.$colorFuente;
-            }
-
-            .cont-titulo{
-                width: 50%;
-                
-                h3{
-                    text-align: right;
-                    padding: 2rem;
-                    background: v.$colorFuente;
-                    color: v.$blanco;
+                .info{
+                    background: v.$fondo5;
                 }
             }
 
-            .cont-imagen{
-                width: 50%;
-                height: 20rem;
-                background: v.$amarillo;
+            &#fila2{
+                .imagen{
+                    background: v.$fondo4;
+
+                    .cont-imagen{
+                        width: 55%;
+
+                        @include m.escritorio{
+                            width: 90%;
+                        }
+                    }
+                }
+
+                .info{
+                    background: v.$fondo4;
+                }
+            }
+
+            &#fila3{
+                .imagen{
+                    background: v.$fondo6;
+
+                    .cont-imagen{
+                        height: 6rem;
+                        width: 30%;
+
+                        @include m.escritorio{
+                            width: 50%;
+                        }
+                    }
+                }
+
+                .info{
+                    background: v.$fondo6;
+                }
+            }
+
+            &#fila4{
+                .imagen{
+                    background: v.$fondo9;
+                }
+
+                .info{
+                    background: v.$fondo9;
+                }
+            }
+
+            
+
+            .info{
+                width: 70%;
+                padding: 2rem;
                 border-radius: 2rem;
+                box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.35);
+                opacity: 0;
+                transition: all .3s ease;
+                
+
+                p{
+                    opacity: 0;
+                    transition: all .3s ease;
+                }
+
+                &.visualizar{
+                    opacity: 1;
+
+                    p{
+                        opacity: 1;
+                    }
+                    
+                }
 
                 @include m.tablet{
-                    border-radius: 0;
-                }
-            }
-        }
-
-        .lista-info{
-            padding: 2rem 2rem 6rem 2rem;
-            background: v.$colorFuente;
-            color: v.$blanco;
-            font-weight: 500;
-        }
-    }
-
-    #cont-terrorismo{
-
-        @include m.escritorio{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column-reverse;
-        }
-
-        .visual{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row-reverse;
-
-            @include m.tablet{
-                margin-bottom: 2rem;
-                background: v.$colorFuente;
-            }
-
-            .cont-titulo{
-                width: 50%;
-                
-                h3{
-                    padding: 2rem;
-                    background: v.$colorFuente;
-                    color: v.$blanco;
-                }
-            }
-
-            .cont-imagen{
-                width: 50%;
-                height: 25rem;
-                background: v.$gris1;
-                padding: 2rem 4rem 2rem 2rem;
-            }
-        }
-
-        .lista-info{
-            padding: 2rem 2rem 6rem 2rem;
-            background: v.$naranja;
-            color: v.$blanco;
-        }
-    }
-}
-
-#cont-final24{
-
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: v.$verdeMenta;
-
-    @include m.tablet{
-        flex-direction: column-reverse;
-    }
-
-    .cont-imagen{
-        width: 50%;
-        padding: 2rem;
-
-        @include m.tablet{
-            width: 80%;
-            margin: 0 auto;
-        }
-    }
-
-    .cont-globo{
-        width: 50%;
-        padding: 2rem;
-
-        @include m.tablet{
-            width: 100%;
-        }
-
-        .globo{
-            @include m.globoNegro(izquierda);
-
-            @include m.tablet{
-                
-                &::after{
-                    width: 4rem;
-                    height: 3rem;
-                    clip-path: polygon(0 0, 50% 100%, 100% 0);
-                    top: 99%;
-                    left: 20%;
+                    width: 90%;
                 }
             }
         }

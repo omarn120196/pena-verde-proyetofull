@@ -1,231 +1,242 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-#intro-cuestionario{
 
-    &.desaparece{
-        display: none;
+#cont-pag16{
+    @include m.grid(2, 0);
+
+    @include m.tablet{
+        @include m.grid(1, 0);
     }
 
-    .caja{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        position: relative;
+    #cont-izquierda{
+        height: 60rem;
 
         @include m.escritorioHD{
-            background: v.$azulRey;
+            height: 80rem;
         }
 
-        &::after{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 70%;
-            bottom: 0;
-            left: 0;
-            background: v.$azulRey;
-            z-index: -1;
-
-            @include m.escritorioHD{
-                display: none;
-            }
+        @include m.tablet{
+            height: 50rem;
         }
 
-        .cont-imagen{
-            width: 30%;
-
-            
-            @include m.tablet{
-                width: 50%;
-                margin: 0 auto;
-                order: 2;    
-            }
+        @include m.telefono{
+            height: 80rem;
         }
 
-        .parrafo{
-            padding: 2rem;
-            width: 60%;
-            align-self: flex-end;
-            margin-bottom: 4rem;
+        #cont-img{
+            display: flex;
+            background: v.$azul2;
+            height: 60%;
 
-            @include m.tablet{
-                width: 90%;
-                margin: 0 auto;
-                order: 1;                
-            }
-
-            p{
-                text-align: center;
-                font-size: 2.4rem;
-                color: v.$blanco;
+            .personaje{
+                height: 70%;
+                margin-top: 11rem;
 
                 @include m.escritorioHD{
-                    font-size: 2rem;
+                    height: 60%;
+                    margin-top: 20rem;
+                }
+
+                @include m.tablet{
+                    margin-top: 11rem;
+                    height: 65%;
+                }
+
+                @include m.telefono{
+                    position: absolute;
+                    overflow: hidden;
+                    margin-top: 28rem;
+                    height: 20rem;
+                    width: 20rem;
+                }
+            }
+
+            #globo1{
+                @include m.globoNegro(izquierda);
+                width: 50%;
+                height: 75%;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                margin-bottom: 1rem;
+
+                @include m.escritorioHD{
+                    height: 100%;
+                    margin-top: 0;
+                }
+
+                @include m.tablet{
+                    margin-right: 0;
+                    margin-left: 0;
+                    height: 50%;
+                    width: 100%;
                 }
             }
         }
-    }
 
-    .cont-boton{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-        background: v.$grisFondo;
-
-        a{
-            @include m.boton(v.$amarillo);
-        }
-    }
-}
-
-#actividad-cuestionario{
-    display: none;
-
-    &.ver{
-        display: block;
-    }
-
-    .cont-preguntas{
-
-        display: none;
-
-        &.visualizar{
-            display: block;
-        }
-
-        .pregunta{
-
+        #cont-gris{
+            position: relative;
+            background: v.$grisClaro;
+            height: 40%;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            height: 12rem;
+            justify-content: center;
+            
+            #globo2{
+                @include m.globo(v.$vino, arriba);
+                @include m.resaltar(v.$blanco, 500);
+                width: 95%;
+                height: 85%;
 
-            @include m.escritorio{
-                height: 14rem;
+                @include m.escritorioHD{
+                    height: 90%;
+                    width: 90%;
+                }
+
+                @include m.tablet{
+                    width: 100%;
+                    height: 100%;
+                }
+                
+            }
+        }
+    }
+
+    #cont-derecha{
+        #cont-vino{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            background: v.$vino;
+            height: 30%;
+            @include m.resaltar(v.$blanco, 500);
+
+            @include m.telefono{
+                margin-top: 1rem;
+            }
+        }
+
+        #clic-pag16{
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 30%;
+            background: v.$azulClaro1;
+            text-align: center;
+
+            @include m.tablet{
+                height: 7rem;
             }
 
-            .cont-numero{
-                width: 10%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: v.$azulRey;
-                color: v.$blanco;
-                
-                h3{
-                    font-size: 2.8rem;
+            .mano-pag16{
+                position: relative;
+                left: -2rem;
+                width: 9%;
+                height: 25%;
+
+                @include m.escritorioHD{
+                    width: 12%;
+                }
+                @include m.tablet{
+                    height: 5rem;
+                    width: 6rem;
+                    margin-top: 1rem;
+                }
+
+                @include m.telefono{
+                    left: 1rem;
                 }
             }
+        }
 
-            .cont-pregunta{
-                width: 90%;
-                height: 100%;
+        #botones{
+            align-items: center;
+            background: v.$azulPastel;
+            height: 40%;
+            text-align: center;
+
+            h3{
+                position: relative;
+                top: 3rem;
+            }
+
+            @include m.tablet{
+                margin-top: 1rem;
+            }
+
+            .flex{
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                background: v.$azulClaro2;
+                margin-top: 7rem;
 
-                p{
-                    padding: 2rem;
-                    font-weight: 500;
-
-                    @include m.escritorio{
-                        font-size: 1.4rem;
+                #btn-aseguradora{
+                    margin-left: 3rem;
+                    width: 50%;
+    
+                    @include m.telefono{
+                        margin-left: 1rem;
+                    }
+                    a{
+                        @include m.botones(v.$azulRey);
+                    }
+                }
+                #btn-reaseguradora{
+                    width: 60%;
+    
+                    a{
+                        @include m.botones(v.$verde);
                     }
                 }
             }
         }
-
-        .respuestas{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 2rem;
-
-            .respuestas-caja{
-                width: 18rem;
-                height: 4rem;
-                display: flex;
-                justify-content: center;
-                align-items: center; 
-                color: v.$blanco;
-                background: v.$azulRey;
-                margin-bottom: 3rem;
-                cursor: pointer; 
-                transition: all .3s ease;
-                
-                &:hover{
-                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-                    transform: scale(1.05);
-                }
-
-                &.fondoCorrecto{
-                    background: v.$verde;
-                    color: v.$blanco;
-                    cursor: default;
-                }
-                
-                &.fondoIncorrecto{
-                    background: v.$rojo2;
-                    color: v.$blanco;
-                    cursor: default;
-                }
-            }
-        }
     }
 }
 
-#retroActividad1{
-
-    display: none;
-    background: v.$azul2;
-
-    &.visualizar{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;        
-    }
+#cards-pag16{
 
     @include m.tablet{
-
+        margin-top: 1rem;
     }
-
-    .cont-imagen{
-        width: 30%;
-        margin: 0;
+    .mapa-pag16{
+        display: none;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    #aseguradora{
+        @include m.conceptual(v.$azulRey);
+        height: 80rem;
 
         @include m.tablet{
-            width: 50%;
-            margin: 0 auto;
-            order: 2;   
+            height: 95rem;
+        }
+
+        @include m.telefono{
+            height: auto;
+        }
+
+        &.cuadros_activos{
+            display: block;
+            opacity: 1;
         }
     }
-
-    .cont-mensaje{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-        width: 60%;
+    #reaseguradora{
+        @include m.conceptual(v.$verde);
+        height: 70rem;
 
         @include m.tablet{
-            width: 90%;
-            margin: 0 auto;
-            order: 1;   
+            height: 80rem;
         }
 
-        p{
-            text-align: center;
-            color: v.$blanco;
-            font-size: 2.4rem;
-            border: 1px solid v.$blanco;
-            padding: 2rem;
+        @include m.telefono{
+            height: auto;
+            margin-top: 1rem;
+        }
+
+        &.cuadros_activos{
+            display: block;
+            opacity: 1;
         }
     }
 }

@@ -1,276 +1,362 @@
 @use '../base/mixins' as m;
 @use '../base/variables' as v;
 
+#intro-pag13{
 
-// #instrucciones{
-//     position: relative;
-//     display: flex;
-//     background: v.$azulClaro2;
-//     overflow: visible;
-//     height: 30%;
-//     width: 50%;
-
-//     @include m.tablet{
-//         width: 100%;
-//     }
-
-//     @include m.telefono{
-//         height: 15rem;
-//     }
-
-//     .mano{
-//         padding: 2rem;
-//         height: 10rem;
-//         width: 13rem;
-
-//         @include m.telefono{
-//             width: 20rem;
-//         }
-//     }
-
-//     p{
-//         padding: 2rem;
-//         text-align: center;
-//     }
-// }
-
-#cont-verde{
-    position: relative;
     display: flex;
-    overflow: hidden;
-    background: v.$verde;
-    height: 20%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 3rem 20rem;
+    background: lighten(v.$rosaPag06, 5);
 
-    @include m.telefono{
-        height: 40rem;
+    @include m.escritorioHD{
+        padding: 3rem 14rem;
     }
 
-    // .globos12{
-    //     display: none;
-    //     opacity: 0;
-    //     transition: all .3s ease;
-    // }
+    @include m.escritorio{
+        padding: 3rem 12rem 3rem 2rem;
+    }
 
-    .personaje1{
-        position: relative;
-        height: 100%;
-        width: 100%;
+    .cont-imagen{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 70%;
+        width: 18rem;
 
         @include m.escritorioHD{
-            width: 90%;
-        }
-
-        @include m.telefono{
+            width: 12rem;
             height: 50%;
-            top: 20rem;
-        }
-    }
-
-    #globo1{
-        display: flex;
-        @include m.globoNegro(izquierda);
-        width: 70%;
-        height: 50%;
-        top: 2rem;
-
-        @include m.escritorioHD{
-            height: 70%;
         }
 
-        @include m.tablet{
-            width: 100%;
-            height: 100%;
-            top: 2rem;
+        @include m.escritorio{
+            bottom: 0;
+            left: calc(100% - 12rem);
+            transform: rotateY(180deg);
         }
 
         @include m.telefono{
-            top: 0;
+            height: 30%;
+        }
+    }   
+
+    #cont-obligaciones{
+        text-align: justify;
+
+        @include m.escritorio{
+            text-align: left;
         }
 
-        // &.cuadros_activos{
-        //     display: block;
-        //     opacity: 1;
-        // }
-
+        p{
+            span{
+                @include m.resaltar(v.$colorFuente, 700);
+            }
+        }
     }
 }
 
-#columnas{
-    position: relative;
-    @include m.grid(2, 0);
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+#cont-comite{
 
-    @include m.tablet{
-        @include m.grid(1, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    
+    @include m.escritorioHD{
+        width: 60%;        
+    }
+    
+    @include m.escritorio{
+        width: 80%;        
     }
 
-    // .globos12{
-    //     display: none;
-    //     opacity: 0;
-    //     transition: all .3s ease;
-    // }
+    .cont-imagen{
+        width: 100%;
+    }
 
-    #cont-azul{
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        width: 70%;
-        height: 60rem;
-        background: v.$azul2;
+    #definicion{
+        width: 100%;
+        padding: 2rem;
+        color: v.$blanco;
+        background: v.$colorFuente;
+        text-align: center;
+        font-weight: 700;
+        border-radius: 2rem;        
+    }
+
+    .instrucciones-mano{
+        position: absolute;
+        top: 45%;
+        left: 5%;
+        width: 25rem;
+        
+        .cont-imagen{
+            width: 6rem;
+        }
+    }
+}
+
+#carouselComite{
+    margin-top: 6rem;
+    min-height: 20rem;
+    max-height: auto;
+    text-align: center;
+    background: v.$gris1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 15%;
+    border-radius: 2rem;
+    border: 2px solid v.$azul1;
+    box-shadow: -2px 2px 18px -5px rgba(0,0,0,0.75);
+
+    p{
+        font-size: 2.4rem;
+        @include m.resaltar(v.$colorFuente, 700);
+
+        @include m.escritorio{
+            font-size: 1.8rem;
+        }
 
         @include m.tablet{
-            height: 20rem;
-            width: 100%;
-        }
-
-        @include m.telefono{
-            height: 35rem;
-        }
-
-        .personaje2{
-            position: relative;
-            height: 70%;
-            top: 18rem;
-
-            @include m.tablet{
-                height: 90%;
-                width: 70%;
-                top: 2rem
-            }
-
-            @include m.telefono{
-                height: 50%;
-                top: 18rem;
-            }
-        }
-
-        #globo2{
-            @include m.globoNegro(izquierda);
-            width: 50%;
-            height: 60%;
-            display: flex;
-            padding: 2rem;
-            margin-top: 2rem;
-            margin-right: 2rem;
-
-            @include m.escritorioHD{
-                height: 70%;
-            }
-
-            @include m.tablet{
-                width: 100%;
-                height: 80%;
-                margin-top: 2rem;
-                margin-right: 0;
-            }
-            @include m.telefono{
-                height: 100%;
-                margin-top: 0;
-            }
-
-            // &.cuadros_activos{
-            //     display: block;
-            //     opacity: 1;
-            // }
+            font-size: 1.6rem;
         }
     }
+}
 
-    #cont-gris{
-        overflow: hidden;
-        position: relative;
-        display: block;
-        width: 100%;
-        height: 60rem;
-        background: v.$azulPastel;
+#oficialCumplimiento{
 
-        @include m.telefono{
-            height: auto;
+    margin: 6rem 0;
+    
+    h3{
+        background: v.$gris1;
+        color: v.$azulRey;
+        padding: 3.2rem;
+        text-align: center;
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+    }
+
+    #contenedor-info{
+        @include m.grid(2, 0);
+
+        @include m.escritorioHD{
+            @include m.grid(1, 2rem);
         }
 
-        #cont-img{
-            height: 75%;
+        #cont-funciones{
 
-            #globo3{
-                @include m.globoNegro(derecha);
-                display: flex;
-                width: 60%;
-                margin-top: 8%;
-                margin-left: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            background: v.$grisClaro2;
+            flex-wrap: wrap;
 
-                @include m.telefono{
-                    width: 100%;
-                    margin-top: 0;
-                    margin-left: 0;
-                
-                }
 
-                // &.cuadros_activos{
-                //     display: block;
-                //     opacity: 1;
-                // }
-            }
-
-            #correo{
-                background: v.$blanco;
-                position: relative;
-                width: auto;
-                margin-top: 2rem;
-                padding: 2rem;
-                @include m.resaltar(v.$azulRey, 500);
-
-                @include m.telefono{
-                    padding: 1rem;
-                    font-size: 15px;
-                }
-            }
-
-            .personaje3{
-                position: relative;
-                top: -23rem;
-                left: 47rem;
-                height: 80%;
+            #t1{
                 width: 30%;
 
-                @include m.escritorioHD{
-                    left: 70%;
+                @include m.tablet{
+                    display: none;
+                }
+            }
+            
+            #t2{
+                display: none;
+
+                @include m.tablet{
+                    display: block;
+                    width: 30%;
+                    p{
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            #fn-intro{
+                display: none;
+
+                @include m.tablet{
+                    display: block;
+                    width: 50%;
+                }
+            }
+
+            #lista-funciones{
+                width: 60%;
+                @include m.tablet{
+                    width: 100%;
                 }
 
-                @include m.telefono{
-                    top: 2rem;
-                    left: 10rem;
+                .parrafos{
+                    padding: 2rem;
+                    margin-bottom: .5rem;
+                    border: 1px solid v.$grisClaro;
+
+
+
+                    &#principal{
+                        text-align: center;
+                        @include m.resaltar(v.$colorFuente, 700);
+                        background: v.$fondo1;
+
+                        @include m.tablet{
+                            display: none;
+                        }
+                    }
+
+                    &#fn-1{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo2;
+                    }
+
+                    &#fn-2{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo3;
+                    }
+
+                    &#fn-3{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo4;
+                    }
+
+                    &#fn-4{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo5;
+                    }
+
+                    &#fn-5{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo6;
+                    }
+
+                    &#fn-6{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo7;
+                    }
+
+                    &#fn-7{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$rosaPastel;
+                    }
+
+                    &#fn-8{
+                        @include m.resaltar(v.$colorFuente, 500);
+                        background: v.$fondo9;
+                    }
                 }
             }
         }
 
-        #cont-rojo{
-            position: relative;
-            display: flex;
-            background: v.$warning;
-            top: -3rem;
-            height: 21%;
-            width: 100%;
+        #cont-capacitacion{
 
-            @include m.telefono{
-                top: 0;
+            background: v.$gris1;
+            
+            h3{
+                background: v.$colorFuente;
+                color: v.$blanco;
             }
 
             p{
-                @include m.resaltar(v.$blanco, 500);
-                padding: 2rem;
+                text-align: center;
             }
 
-            .warning{
-                padding: 3rem;
+            .imagen{
 
-                @include m.telefono{
-                    position: relative;
-                    width: 20rem;
-                    top: 2rem;
-                    height: 10rem;
-                    padding: 1rem;
+                margin: 3rem 0;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                height: 20rem;
+                background: v.$grisFondo;
+
+                @include m.escritorioHD{
+                    height: 30rem;
+                }
+
+                .cont-imagen{
+                    width: 80%;
+                    height: 80%;
+
+                    @include m.escritorioHD{
+                        width: 60%;
+                    }
+
+                    @include m.tablet{
+                        width: 90%;
+                    }
+                }
+            }
+
+            #cont-figuras{
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: v.$blanco;
+                font-weight: 700;
+                font-size: 1.2rem;
+                flex-wrap: wrap;
+
+                @include m.tablet{
+                    font-size: 1.6rem;
+                }
+
+                #flecha{
+                    width: 40%;
+                    height: 25rem;
+                    background: v.$azulRey;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 2rem 2rem 2rem 1rem;
+                    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+
+                    @include m.escritorioHD{
+                        width: 30%;
+                        height: 25rem;
+                    }
+
+                    @include m.tablet{
+                        width: 100%;
+                        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                        padding: 2rem;
+                        justify-content: center;
+                    }
+                    
+                    p{
+                        width: 80%;
+                    }
+                }
+
+                #cuadro{
+                    width: 40%;
+                    height: 25rem;
+                    background: v.$verde;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 2rem 2rem 2rem 7rem;
+                    clip-path: polygon(0 10%, 0 0, 100% 0, 100% 100%, 48% 100%, 0 100%, 0 90%, 28% 48%);
+
+                    @include m.escritorioHD{
+                        width: 30%;
+                        height: 25rem;
+                    }
+
+                    @include m.tablet{
+                        width: 100%;
+                        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                        padding: 2rem;
+                    }
+
+                    p{
+                        width: 80%;
+                    }
                 }
             }
         }

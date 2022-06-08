@@ -1,192 +1,231 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
+#intro-cuestionario{
 
-#cont-azul{
-    background: v.$azulRey;
-    height: 5rem;
-}
-
-#cont-pag06{
-    @include m.grid(4, 0);
-
-    @include m.tablet{
-        @include m.grid(1, 0);
-    }
-
-    @include m.telefono{
+    &.desaparece{
         display: none;
     }
 
-    #cont-rojo{
-        grid-column: 1/2;
-        background: v.$naranjaPag03;
+    .caja{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
 
-        @include m.tablet{
-            height: 40rem;
+        @include m.escritorioHD{
+            background: v.$azulRey;
         }
 
-        #clic-pag06{
-            display: flex;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 70%;
+            bottom: 0;
+            left: 0;
+            background: v.$azulRey;
+            z-index: -1;
+
+            @include m.escritorioHD{
+                display: none;
+            }
+        }
+
+        .cont-imagen{
+            width: 30%;
+
+            
+            @include m.tablet{
+                width: 50%;
+                margin: 0 auto;
+                order: 2;    
+            }
+        }
+
+        .parrafo{
             padding: 2rem;
-            height: 10rem;
-            background: v.$azulClaro2;
+            width: 60%;
+            align-self: flex-end;
+            margin-bottom: 4rem;
 
             @include m.tablet{
-                margin: auto;
-                height: 8rem;
+                width: 90%;
+                margin: 0 auto;
+                order: 1;                
             }
 
-            .mano-pag06{
-                width: 7rem;
-                height: 5rem;
+            p{
+                text-align: center;
+                font-size: 2.4rem;
+                color: v.$blanco;
 
-                @include m.tablet{
-                    width: 0;
-                    height: 0;
+                @include m.escritorioHD{
+                    font-size: 2rem;
                 }
             }
         }
-
-        .personaje{
-            margin-top: 2rem;
-
-            @include m.tablet{
-                display: inline-block;
-                height: 30rem;
-                width: 20rem;
-            }
-        }
-        
     }
 
-    #cont-rosa{
-        grid-column: 2/5;
+    .cont-boton{
+        width: 100%;
         display: flex;
-        background: v.$rosaPag06;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background: v.$grisFondo;
 
-        @include m.tablet{
-            grid-column: 1/2;
-        }
-
-        .libros{
-            @include m.grid(3, 1rem);
-            padding: 2rem;
-            width: 100%;
-            height: 100%;
-
-            .cuadro-pag06{
-                display: none;
-                opacity: 0;
-                transition: all .3s ease;
-            }
-
-            .btn-pag06:hover{
-                @include m.parpadeo;
-            } 
-
-            .img-libro{
-                width: 40%;
-                margin: auto;
-            }
-
-            h4{
-                text-align: center;
-                margin-top: 2rem;
-            }
-
-            #cuadro1{
-                @include m.cuadrosPag06(v.$azulPag06, v.$azulFuertePag06, left);
-                @include m.resaltar(v.$azulFuente, 600);
-    
-                &.cuadros_activos{
-                    display: block;
-                    opacity: 1;
-                }
-            }
-
-
-            #cuadro2{
-                @include m.cuadrosPag06(v.$naranjaPag06, v.$naranjaFuertePag06, left);
-                @include m.resaltar(v.$naranjaFuentePag06, 600);
-
-                &.cuadros_activos{
-                    display: block;
-                    opacity: 1;
-                }
-            }
-            #cuadro3{
-                @include m.cuadrosPag06(v.$verdeClaroPag03, v.$verdeFuertePag06, center);
-                @include m.resaltar(v.$verde, 600);
-
-                &.cuadros_activos{
-                    display: block;
-                    opacity: 1;
-                }
-            }
+        a{
+            @include m.boton(v.$amarillo);
         }
     }
 }
 
-#cont-pag06Tel{
+#actividad-cuestionario{
     display: none;
 
-    @include m.telefono{
-        display: inline;
-        #cont-img{
-            display: flex;
-            width: 100%;
-            height: 20rem;
-            background: v.$naranjaPag03;
+    &.ver{
+        display: block;
+    }
 
-            #clic-pag06Tel{
-                padding: 2rem;
-                width: 80%;
-                height: 50%;
+    .cont-preguntas{
+
+        display: none;
+
+        &.visualizar{
+            display: block;
+        }
+
+        .pregunta{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 12rem;
+
+            @include m.escritorio{
+                height: 14rem;
+            }
+
+            .cont-numero{
+                width: 10%;
+                height: 100%;
                 display: flex;
-                background: v.$azulClaro2;
-                margin-left: 3rem;
+                justify-content: center;
+                align-items: center;
+                background: v.$azulRey;
+                color: v.$blanco;
                 
+                h3{
+                    font-size: 2.8rem;
+                }
+            }
+
+            .cont-pregunta{
+                width: 90%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: v.$azulClaro2;
+
                 p{
-                    margin: auto;
+                    padding: 2rem;
+                    font-weight: 500;
+
+                    @include m.escritorio{
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }
 
-        .cuadrosPag06-tel{
+        .respuestas{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             padding: 2rem;
-            display: none;
-            opacity: 0;
-            transition: all .3s ease;
-        }
 
-        #cuadro1-tel{
-            background: v.$azulPag06;
-            @include m.resaltar(v.$azulRey, 500);
+            .respuestas-caja{
+                width: 18rem;
+                height: 4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                color: v.$blanco;
+                background: v.$azulRey;
+                margin-bottom: 3rem;
+                cursor: pointer; 
+                transition: all .3s ease;
+                
+                &:hover{
+                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                    transform: scale(1.05);
+                }
 
-            &.cuadros_activos{
-                display: block;
-                opacity: 1;
-            }
-        }
-        #cuadro2-tel{
-            background: v.$naranjaPag06;
-            @include m.resaltar(v.$naranjaFuentePag06, 500);
-
-            &.cuadros_activos{
-                display: block;
-                opacity: 1;
-            }
-        }
-        #cuadro3-tel{
-            background: v.$verdePag06;
-            @include m.resaltar(v.$verde, 500);
-
-            &.cuadros_activos{
-                display: block;
-                opacity: 1;
+                &.fondoCorrecto{
+                    background: v.$verde;
+                    color: v.$blanco;
+                    cursor: default;
+                }
+                
+                &.fondoIncorrecto{
+                    background: v.$rojo2;
+                    color: v.$blanco;
+                    cursor: default;
+                }
             }
         }
     }
 }
 
+#retroActividad1{
+
+    display: none;
+    background: v.$azul2;
+
+    &.visualizar{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;        
+    }
+
+    @include m.tablet{
+
+    }
+
+    .cont-imagen{
+        width: 30%;
+        margin: 0;
+
+        @include m.tablet{
+            width: 50%;
+            margin: 0 auto;
+            order: 2;   
+        }
+    }
+
+    .cont-mensaje{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        width: 60%;
+
+        @include m.tablet{
+            width: 90%;
+            margin: 0 auto;
+            order: 1;   
+        }
+
+        p{
+            text-align: center;
+            color: v.$blanco;
+            font-size: 2.4rem;
+            border: 1px solid v.$blanco;
+            padding: 2rem;
+        }
+    }
+}

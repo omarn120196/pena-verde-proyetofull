@@ -1,481 +1,122 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
+#cont-pag10{
 
-#cont-gris{
-    position: relative;
-    height: 2rem;
-    background: v.$grisClaro;    
-}
-#pag12{
-    position: relative;
-    @include m.grid(2, 0);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: v.$gris1;
 
-    @include m.escritorioHD{
-        height: 70rem;
-    }
+    #cont-mensaje10{
 
-    @include m.tablet{
-        @include m.grid(1, 0);
-        height: 100rem;
-    }
-
-    @include m.telefono{
-        height: auto;
-    }
-
-    #cont-01{
-        position: relative;
-        width: 20%;
-        background: v.$naranja;
-
-        @include m.tablet{
-            width: 100%;
-            height: 37rem;
-        }
-
-        .personaje{
-            height: 80%;
-            width: 90%;
-            padding: 2rem 2rem 0 2rem;
-
-            @include m.escritorioHD{
-                width: 100%;
-                height: 70%;
-            }
-
-            @include m.tablet{
-                width: 35%;
-                height: 80%;
-                padding: 1rem 2rem 0 10rem;
-            }
-
-            @include m.telefono{
-                height: 30rem;
-                width: 25rem;
-            }
-        }
-        #clic1-pag12{
-            position: relative;
-            bottom: 4rem;
-            display: flex;
-            text-align: center;
-            padding: 2rem;
-            background: v.$azulClaro1;
-            @include m.resaltar(v.$colorFuente, 400);
-
-            @include m.escritorioHD{
-                bottom: 0;
-                padding: 1rem;
-                top: -1rem;
-                height: 23rem;
-                padding: 4rem;
-            }
-
-            @include m.tablet{
-                height: 10rem;
-            }
-
-            @include m.telefono{
-                top: -2rem;
-            }
-
-            p{
-                @include m.tablet{
-                    position: relative;
-                    left: 10rem;
-                    top: -1rem;
-                }
-
-                @include m.telefono{
-                    width: 20rem;
-                    left: 3rem;
-                    top: -3rem;
-                }
-            }
-            .mano1-pag12{
-                position: relative;
-                top: 2rem;
-                width: 120%;
-                height: 120%;
-
-                @include m.escritorioHD{
-                    left: -3rem;
-                    width: 20rem;
-                    height: 5rem;
-                }
-
-                @include m.tablet{
-                    width: 5rem;
-                    height: 5rem;
-                    left: 5rem;
-                    top: -2rem;
-                }
-
-                @include m.telefono{
-                    left: 0;
-                    width: 5rem;
-                    height: 5rem;
-                }
-            }
-
-        }
-
-    }
-    #cont-02{
-        position: relative;
-        width: 100%;
-        background: v.$azul2;
-
-        .cuadros12{
-            display: none;
-            opacity: 0;
-            transition: all .3s ease;
-        }
-
-        #globo{
-            position: relative;
-            top: 3rem;
-            left: 8rem;
-            width: 80%;
-            @include m.globoNegro(izquierda);
-
-            @include m.escritorioHD{
-                left: 5rem;
-                width: 90%;
-                top: 2rem;
-            }
-            @include m.tablet{
-                left: 0;
-                top: 0;
-                right: 1rem;
-                width: 100%
-            }
-
-            @include m.telefono{
-                width: 34rem;            
-            }
-        }
-
-        #cont-botones{
-            @include m.grid(3, 2rem);
-            position: relative;
-            top: 3rem;
-            padding: 2rem;
-
-            @include m.escritorioHD{
-                @include m.grid(3, 0);
-                top: 2rem;
-            }
-
-            @include m.tablet{
-                top: 0;
-            }
-
-            @include m.telefono{
-                @include m.grid(1, 2rem);
-            }
-
-            .btn_cuadros12:hover{
-                @include m.parpadeo;
-            } 
-
-            #btn-01{
-                position: relative;
-                #btn-aplicar{
-                    padding: 2rem;
-                    margin-left: 2rem;
-
-                    a{
-                        border-radius: 1rem;
-                        border: solid white;
-                        @include m.botones(v.$azulRey);
-                    }
-                }
-
-                #info-seguros{
-                    display: flex;
-                    @include m.resaltar(v.$azulRey, 400);
-                    @include m.cardsPag12(v.$azulRey, v.$azulRey);
-
-
-                    &.cuadros_activos{
-                        display: block;
-                        opacity: 1;
-                    }
-                }
-            }
-
-            #btn-02{
-                position: relative;
-                #btn-seguimiento{
-                    padding: 2rem;
-                    margin-left: 2rem;
-
-                    a{
-                        border-radius: 1rem;
-                        border: solid white;
-                        @include m.botones(v.$verde);
-                    }
-                }
-
-                #info-seguimiento{
-                    display: flex;
-                    @include m.resaltar(v.$verde, 400);
-                    @include m.cardsPag12(v.$verde, v.$verde);
-
-                    &.cuadros_activos{
-                        display: block;
-                        opacity: 1;
-                    }
-                }
-            }
-
-            #btn-03{
-                position: relative;
-                #btn-reportar{
-                    padding: 2rem;
-                    margin-left: 2rem;
-
-                    a{
-                        border-radius: 1rem;
-                        border: solid white;
-                        @include m.botones(v.$verdePag12);
-                    }
-                }
-
-                #info-reportar{
-                    display: flex;
-                    @include m.resaltar(v.$verde, 400);
-                    @include m.cardsPag12(v.$verdePag12, v.$verdePag12);
-
-                    &.cuadros_activos{
-                        display: block;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
-}
-
-#pag12-2{
-    position: relative;
-    #cont-01{
-        position: relative;
-        background: v.$azulPag12;
         display: flex;
-        .personaje-2{
-            padding: 2rem 2rem 0 2rem;
-            height: 10%;
-
-            @include m.tablet{
-                height: 18rem;
-                width: 25rem;
-            }
-
-            @include m.telefono{
-                height: 25rem;
-                width: 50rem;
-            }
-        }
-
-        #globo-2{
-            @include m.globoNegro(izquierda);
-            position: relative;
-            display: flex;
-            width: 40%; 
-            height: 40%;
-            top: 5rem;
-
-            @include m.tablet{
-                height: 18rem;
-                width: 100%;
-                top: 0;
-                left: 2rem;
-                padding: 5rem 4rem 2rem 4rem;
-            }
-
-            @include m.telefono{
-                padding: 1rem;
-                height: 38rem;
-                left: 0;
-            }
-        }
-
-        #clic2-pag12{
-            position: relative;
-            display: flex;
-            background: v.$azulClaro1;
-            width: 30%;
-            height: 10%;
-            border-radius: 2rem;
-            padding: 5rem 2rem 2rem 2rem;
-            left: 5rem;
-            top: 5rem;
-            text-align: center;
-
-            @include m.tablet{
-                position: absolute;
-                top: 18rem;
-                width: 100%;
-                height: 8rem;
-                left: 0;
-                border-radius: 0;
-                padding-left: 10rem;
-            
-            }
-
-            @include m.telefono{
-                top: 36rem;
-                height: 10rem;
-                padding-top: 3rem;
-            }
-
-            p{
-                position: relative;
-                top: -2rem;
-            }
-
-
-            .mano2-pag12{
-                position: relative;
-                display: flex;
-                width: 20%;
-                height: 10%;
-
-                @include m.escritorioHD{
-                    width: 25%;
-                    height: 15%;
-                    top: -1rem;
-                }
-
-                @include m.tablet{
-                    width: 5rem;
-                    height: 5rem;
-                    left: -5rem;
-                    top: -3rem;
-                }
-
-                @include m.telefono{
-                    position: absolute;
-                    left: 2rem;
-                    top: 1rem;
-                    width: 6rem;
-                    height: 6rem;
-                }
-            }
-        }
-    }
-
-    #cont-02-flipCards{
-        display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        padding: 4rem 4rem 0 4rem;
+        background: v.$amarilloPastel;
+        overflow: hidden;
+        position: relative;
         flex-wrap: wrap;
-        padding: 4rem 0;
-        background: v.$azulClaro2;
-    
-        @include m.tablet{
+        
+        @include m.escritorio{
+            padding: 4rem 0 0 0;
             justify-content: center;
         }
-    
-        .cards{
+        
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(40% 0, 80% 0, 60% 100%, 20% 100%);
+            background: v.$verde;
+            z-index: 0;
+        }
+        
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(70% 0, 100% 0, 100% 100%, 50% 100%);
+            background: v.$verdeFuerte;
+            z-index: 0;
+        }
+
+        .cont-imagen{
             width: 30%;
-            height: 40rem;
-            position: relative;
-            cursor: pointer;
+            height: 30rem;
+            z-index: 1;
 
-            #aseguradora{
-                @include m.resaltar(v.$azulRey, 400);
-            }
-
-            #transacciones{
-                @include m.resaltar(v.$naranja, 400);
-            }
-    
             @include m.escritorio{
-                width: 48%;
-                height: 40rem;
-                margin-bottom: 3.2rem;
+                width: 70%;
             }
-    
+
             @include m.tablet{
-                top: 6rem;
-                width: 60%;
-                height: 30rem;
-            }
-    
-            @include m.telefono{
-                width: 95%;
-                height: 38rem;
-            }
-    
-            &#flip1{
-                @include m.flip-cardsPag12(fuerte, v.$azulPastel, v.$azulRey);
-            }
-            
-            &#flip2{
-                @include m.flip-cardsPag12(fuerte, v.$naranjaPag12, v.$naranja);
-            }
-            
-            .cont-titulo{
-                padding: 2rem 3rem;
-                height: 8rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-    
-                h3{
-                    text-align: center;
-                }
-            }
-    
-            
-            .caras{
-                position: absolute;
                 width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                backface-visibility: hidden;
-                transition: all 1s ease;            
+                align-self: center;
+                padding: 0 4rem;
             }
             
-            .front{
-                transform: perspective(50rem) rotateY(0deg);
+        }
     
-                .cont-imagen{
-                    width: 60%;
-                    height: 20rem;
-                    margin: 0 auto;
-    
-                    @include m.escritorio{
-                        height: 12rem;
-                    }
-                }
-            }
-    
-            .back{
-                transform: perspective(50rem) rotateY(180deg);
-    
-                .cont-mensaje-back{
-                    padding: 2rem;
-                    text-align: justify;
-                    line-height: 1.6;
-                }
-            }
-    
-            &.click{
-                .front{
-                    transform: perspective(50rem) rotateY(180deg);
-                }
+        #mensaje{
+            z-index: 1;
+            width: 70%;
+
             
-                .back{
-                    transform: perspective(50rem) rotateY(360deg);
-                }
+            
+            @include m.escritorio{
+                width: 100%;
+                background: v.$colorFuente;
+            }
+
+            #globo{
+                @include m.globoNegro(izquierda);
             }
         }
     }
+
+    #cont-descarga{
+        margin-top: 4rem;
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        background: v.$gris1;
+        padding: 4rem;
+
+        @include m.escritorioHD{
+            width: 100%;
+        }
+
+        a{
+            display: block;
+            transition: all .3s ease;
+            opacity: .8;
+
+            figure{
+                height: 8rem;
+            }
+
+            @include m.telefono{
+                margin-top: 2rem;
+            }
+
+            &:hover{
+                opacity: 1;
+                padding: 1rem;
+                transform: scale(.9);
+                box-shadow: 1px 2px 11px -4px rgba(0,0,0,0.75);
+            }
+        }
+    }
+    
 }
