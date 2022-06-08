@@ -73,16 +73,16 @@ function verificarRelacion() {
                     dibujarLineas(noEnunciado, .10, .50);
                     break;
                 case '2':
-                    dibujarLineas(noEnunciado, .33, .70);
+                    dibujarLineas(noEnunciado, .30, .70);
                     break;
                 case '3':
-                    dibujarLineas(noEnunciado, .55, .12);
+                    dibujarLineas(noEnunciado, .45, .10);
                     break;
                 case '4':
-                    dibujarLineas(noEnunciado, .73, .88);
+                    dibujarLineas(noEnunciado, .65, .90);
                     break;
                 case '5':
-                    dibujarLineas(noEnunciado, .93, .30);
+                    dibujarLineas(noEnunciado, .90, .30);
                     break;
                 default :
                     break;

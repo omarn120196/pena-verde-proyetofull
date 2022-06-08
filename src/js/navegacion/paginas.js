@@ -31,91 +31,91 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Entrevista Personal con el cliente', 
+        nombre: 'Integración de expediente de la Cedente y medidas simplificadas de identificación', 
         ruta: 'pag06.html', 
         progreso: 6,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Integración de expediente y umbrales', 
+        nombre: 'Entrevista Personal con el cliente', 
         ruta: 'pag07.html', 
         progreso: 7,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Actualización de expediente', 
+        nombre: 'Integración de expediente y umbrales', 
         ruta: 'pag08.html', 
         progreso: 8,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Política de conocimiento del cliente: conocimiento, clasificación de grado de riesgo, escalamiento de aprobación, personas políticamente expuestas', 
+        nombre: 'Relación entre la regulación y nuestro Manual de Cumplimiento de PLD/CFT', 
         ruta: 'pag09.html', 
         progreso: 9,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Reportes de Operaciones', 
+        nombre: 'Actualización de expediente', 
         ruta: 'pag10.html', 
         progreso: 10,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Cuentas concentradoras', 
+        nombre: 'Política de conocimiento del cliente: conocimiento, clasificación de grado de riesgo, escalamiento de aprobación, personas políticamente expuestas', 
         ruta: 'pag11.html', 
         progreso: 11,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Estructuras internas: ¿Cuáles son sus funciones?', 
+        nombre: 'Reportes de Operaciones', 
         ruta: 'pag12.html', 
         progreso: 12,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Sistemas automatizados', 
+        nombre: 'Cuentas concentradoras', 
         ruta: 'pag13.html', 
         progreso: 13,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Reserva y confidencialidad', 
+        nombre: 'Estructuras internas: ¿Cuáles son sus funciones?', 
         ruta: 'pag14.html', 
         progreso: 14,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Listas de personas bloqueadas', 
+        nombre: 'Sistemas automatizados', 
         ruta: 'pag15.html', 
         progreso: 15,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Metodología de Evaluación de Riesgos PLD/CFT', 
+        nombre: 'Reserva y confidencialidad', 
         ruta: 'pag16.html', 
-        progreso: 16, 
+        progreso: 16,
+        icono: 'fa-solid fa-file'
+    },
+    {
+        nombre: 'Listas de personas bloqueadas', 
+        ruta: 'pag17.html', 
+        progreso: 17,
+        icono: 'fa-solid fa-file'
+    },
+    {
+        nombre: 'Metodología de Evaluación de Riesgos PLD/CFT', 
+        ruta: 'pag18.html', 
+        progreso: 18, 
         icono: 'fa-solid fa-file'
     },
     {
         nombre: 'Actividad 1', 
-        ruta: 'pag17.html', 
-        progreso: 17,
+        ruta: 'pag19.html', 
+        progreso: 19,
         icono: 'fa-solid fa-pencil'
     },
     {
         nombre: 'Historia de cambios en la regulación', 
-        ruta: 'pag18.html', 
-        progreso: 18,
-        icono: 'fa-solid fa-file'
-    },
-    {
-        nombre: 'Identificación de cliente, ¿en qué consiste?', 
-        ruta: 'pag19.html', 
-        progreso: 19,
-        icono: 'fa-solid fa-file'
-    },
-    {
-        nombre: 'Relación entre la regulación y nuestro Manual de Cumplimiento de PLD/CFT', 
         ruta: 'pag20.html', 
         progreso: 20,
         icono: 'fa-solid fa-file'
@@ -133,33 +133,39 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Organismos y autoridades que participan en la prevención del Lavado de Dinero y Combate al Financiamiento al Terrorismo', 
+        nombre: 'Diferencias y similitudes entre Lavado de Dinero y Financiamiento al Terrorismo', 
         ruta: 'pag23.html', 
         progreso: 23,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Sanciones y penas aplicables a los delitos de Lavado de Dinero y Financiamiento al Terrorismo en México', 
+        nombre: 'Organismos y autoridades que participan en la prevención del Lavado de Dinero y Combate al Financiamiento al Terrorismo', 
         ruta: 'pag24.html', 
         progreso: 24,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Actividad 3', 
+        nombre: 'Marco Legal en México', 
         ruta: 'pag25.html', 
         progreso: 25,
+        icono: 'fa-solid fa-file'
+    },
+    {
+        nombre: 'Actividad 3', 
+        ruta: 'pag26.html', 
+        progreso: 26,
         icono: 'fa-solid fa-pencil'
     },
     {
         nombre: 'Tipologías y casos', 
-        ruta: 'pag26.html', 
-        progreso: 26,
+        ruta: 'pag27.html', 
+        progreso: 27,
         icono: 'fa-solid fa-file'
     },
     {
         nombre: 'Evaluación', 
-        ruta: 'pag27.html', 
-        progreso: 27, 
+        ruta: 'pag28.html', 
+        progreso: 28, 
         icono: 'fa-solid fa-file-lines' 
     }
 ]
