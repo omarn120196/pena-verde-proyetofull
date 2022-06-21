@@ -3,6 +3,7 @@
 
 #cont-intro5{
     width: 100%;
+    margin-top: 5rem;
     background: v.$verde;
     display: flex;
     justify-content: space-between;
@@ -399,4 +400,79 @@
             }
         }
     }
+}
+
+
+#cont-columnas{
+    @include m.grid(2, 3rem);
+    margin-top: 3rem;
+
+    @include m.telefono{
+        @include m.grid(1, 0);
+    }
+
+    .textColorWhite{
+        @include m.resaltar(v.$blanco, 600);
+    }
+
+    .alingCenter{
+        text-align: center;
+    }
+
+    .contenedor{
+        height: 5rem;
+        width: 100%;
+    }
+
+    .cont-naranja{
+        background: v.$naranja;
+    }
+
+    .maxWidth{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .texto01{
+        background: v.$crema6;
+        @include m.resaltar(v.$colorFuente, 500);
+        padding: 2rem;
+    }
+    .texto02{
+        background: v.$azulClaro3;
+        @include m.resaltar(v.$colorFuente, 500);
+        padding: 2rem;
+    }
+
+    .cont-azul{
+        background: v.$azulRey;
+    }
+
+    .espacio{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .personaje{
+        padding-top: 30rem;
+
+        @include m.tablet{
+            padding-top: 75rem;
+        }
+        @include m.telefono{
+            padding-top: 10rem;
+        }
+
+    }
+
+    .contenido{
+        top: 2rem;
+        position: relative;
+        width: 80%;
+
+        @include m.tablet{
+            width: 100%;
+        }
+    }
+
 }
