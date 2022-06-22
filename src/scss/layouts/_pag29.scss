@@ -1,0 +1,151 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+#cont-pagina26{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: v.$grisFondo;
+
+    @include m.tablet{
+        flex-direction: column-reverse;
+    }
+
+    &.salida{
+        display: none;
+    }
+
+
+    .cont-imagen{
+        width: 30%;
+
+        @include m.tablet{
+            width: 40%;
+            height: 30rem;
+        }
+
+        @include m.telefono{
+            width: 60%;
+        }
+    }
+
+    .cont-instrucciones{
+        width: 60%;
+        align-self: flex-start;
+
+        
+        @include m.escritorioHD{
+            width: 65%;    
+        }
+
+        @include m.tablet{
+            width: 100%;
+        }
+        
+        #revisar{
+            padding: 2rem;
+            background: v.$colorFuente;
+            color: v.$blanco;
+            text-align: center;
+
+            p{
+                font-weight: 700;
+
+                &:last-of-type{
+                    color: v.$amarillo;
+                }
+            }
+        }
+
+        #lista{
+            padding: 2rem;
+            background: v.$azul1;
+            color: v.$blanco;
+            font-weight: 700;
+        }
+
+        #suerte{
+            padding: 2rem;
+            color: v.$blanco;
+            text-align: center;
+            background: v.$naranja;
+
+            h4{
+                font-size: 3.2rem;
+            }
+        }
+
+        .cont-botones{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2rem;
+            flex-wrap: wrap;
+
+            a{
+                width: 18rem;
+                height: 8rem;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2rem;
+            }
+
+            #aseguradora{
+                @include m.boton(v.$azulRey);
+            }
+
+            #patria{
+                @include m.boton(v.$amarillo);
+            }
+
+            #reaseguradora{
+                @include m.boton(v.$verde);
+            }
+        }
+    }
+}
+
+.cont-casos{
+
+    display: none;
+    transition: all .3s ease;
+
+    &.caso-activo{
+        display: block;
+    }
+}
+
+.respuesta-correcta{
+    animation: parpadeaVerde 2s 1;    
+}
+
+.respuesta-incorrecta{
+    animation: parpadeaRojo 2s 1;
+}
+
+
+
+@keyframes parpadeaVerde {
+    0%, 50%, 100%{
+        background: v.$verde;
+        color: v.$blanco;
+    }
+    25%, 75%{
+        background: v.$blanco;
+        color: v.$colorFuente;
+    }
+}
+
+@keyframes parpadeaRojo {
+    0%, 50%, 100%{
+        background: v.$rojo2;
+        color: v.$blanco;
+    }
+    25%, 75%{
+        background: v.$blanco;
+        color: v.$colorFuente;
+    }
+}

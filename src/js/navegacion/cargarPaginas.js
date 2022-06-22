@@ -143,13 +143,16 @@ function visualizarPagina(){
             //Script página24
             flipCard();
 
-            //Script página25
+            //Script página27
+            abrirConceptosSeguros();
+
+            //Script página28
             actividades();
 
-            //Script página26
+            //Script página29
             iniciarCasos()
 
-            //Script página27
+            //Script página30
             evaluacionFinal();
         });
     }

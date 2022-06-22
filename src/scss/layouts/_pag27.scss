@@ -1,151 +1,144 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-#cont-pagina26{
-
+.cont-mano{
+    background: v.$azulClaro2;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background: v.$grisFondo;
-
-    @include m.tablet{
-        flex-direction: column-reverse;
-    }
-
-    &.salida{
-        display: none;
-    }
-
+    padding: 2rem;
+    margin-bottom: 2rem;
 
     .cont-imagen{
-        width: 30%;
+        width: 6rem;
+        height: 6rem;
+        border: 5px solid v.$blanco;
+        border-radius: 50%;
+        padding: 1rem;
+        margin-right: 4rem;
+    }
 
+    p{
         @include m.tablet{
-            width: 40%;
-            height: 30rem;
-        }
-
-        @include m.telefono{
             width: 60%;
         }
     }
+}
 
-    .cont-instrucciones{
-        width: 60%;
-        align-self: flex-start;
+.contSeguro{
+    h1{
+        text-align: center;
+        background: v.$azulRey;
+        color: v.$blanco;
+        padding: 1rem;
+    }
 
-        
-        @include m.escritorioHD{
-            width: 65%;    
-        }
+    .cajas{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
 
-        @include m.tablet{
-            width: 100%;
-        }
-        
-        #revisar{
-            padding: 2rem;
-            background: v.$colorFuente;
+        .numero{
+            width: 10%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: v.$azulRey;
             color: v.$blanco;
-            text-align: center;
+            border-radius: 1rem;
+            padding: 2rem;
+            cursor: pointer;
 
-            p{
-                font-weight: 700;
+            @include m.tablet{
+                width: 100%;
+                border-radius: 0;
+            }
+        }
 
-                &:last-of-type{
-                    color: v.$amarillo;
+        .concepto{
+            width: 85%;
+            height: 100%;
+            padding: 2rem;
+            background: v.$fondo2;
+            font-weight: 700;
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            transition: all .3s ease-in-out;
+
+            &.abrirConcepto{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            @include m.tablet{
+                width: 100%;
+                text-align: center;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+                ol{
+                    padding: 3rem 6rem;
+                    text-align: left;
                 }
             }
         }
-
-        #lista{
-            padding: 2rem;
-            background: v.$azul1;
-            color: v.$blanco;
-            font-weight: 700;
-        }
-
-        #suerte{
-            padding: 2rem;
-            color: v.$blanco;
-            text-align: center;
-            background: v.$naranja;
-
-            h4{
-                font-size: 3.2rem;
-            }
-        }
-
-        .cont-botones{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 2rem;
-            flex-wrap: wrap;
-
-            a{
-                width: 18rem;
-                height: 8rem;
-                text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-bottom: 2rem;
-            }
-
-            #aseguradora{
-                @include m.boton(v.$azulRey);
-            }
-
-            #patria{
-                @include m.boton(v.$amarillo);
-            }
-
-            #reaseguradora{
-                @include m.boton(v.$verde);
-            }
-        }
     }
 }
 
-.cont-casos{
-
-    display: none;
-    transition: all .3s ease;
-
-    &.caso-activo{
-        display: block;
-    }
-}
-
-.respuesta-correcta{
-    animation: parpadeaVerde 2s 1;    
-}
-
-.respuesta-incorrecta{
-    animation: parpadeaRojo 2s 1;
-}
-
-
-
-@keyframes parpadeaVerde {
-    0%, 50%, 100%{
+.contReaseguro{
+    h1{
+        text-align: center;
         background: v.$verde;
         color: v.$blanco;
+        padding: 1rem;
     }
-    25%, 75%{
-        background: v.$blanco;
-        color: v.$colorFuente;
-    }
-}
+    .cajas{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
 
-@keyframes parpadeaRojo {
-    0%, 50%, 100%{
-        background: v.$rojo2;
-        color: v.$blanco;
-    }
-    25%, 75%{
-        background: v.$blanco;
-        color: v.$colorFuente;
+        .numero{
+            width: 10%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: v.$verde;
+            color: v.$blanco;
+            border-radius: 1rem;
+            padding: 2rem;
+            cursor: pointer;
+
+            @include m.tablet{
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+
+        .concepto{
+            width: 85%;
+            height: 100%;
+            padding: 2rem;
+            background: v.$fondo3;
+            font-weight: 700;clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            transition: all .3s ease-in-out;
+
+            &.abrirConcepto{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            @include m.tablet{
+                width: 100%;
+                text-align: center;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+                ol{
+                    padding: 3rem 6rem;
+                    text-align: left;
+                }
+            }
+        }
     }
 }
