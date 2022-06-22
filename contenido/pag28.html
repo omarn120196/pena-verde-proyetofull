@@ -7,78 +7,352 @@
     <title>Página 28</title>
 </head>
 <body>
-    <div id="cont-evaluacion">
-        <div id="intro-evaluacion">
+    <div id="intro-actividad25">
+        <figure class="cont-imagen">
+            <img src="./build/img/contenido/Pag26/mujer.svg" alt="mujer">
+        </figure>
+        <div class="instrucciones">
+            <p>¡Ha llegado el momento de realizar la última  actividad! Relaciona el nombre del concepto con la definición del mismo, arrastrando las etiquetas donde corresponda.</p>
+            <p>Da clic en el botón cuando estés listo(a).</p>
+        </div>
+    </div>
+
+    <div id="inicioBtn" class="cont-inicio">
+        <a href="#cont-actividad25">Iniciar</a>
+    </div>
+
+    <div id="cont-actividad25">
+        <div id="cont-definiciones">
+            <div class="cont-mano">
+                <figure class="cont-imagen">
+                    <img src="./build/img/contenido/Pag26/Mano.svg" alt="mano">
+                </figure>
+                <p>
+                    Arrastra las etiquetas debajo de la definición que le corresponda.
+                </p>
+            </div>
+
+            <div class="cont-drag">
+                <p class="p-drag" id="p-drag1" data-id="1">CNSF</p>
+                <p class="p-drag" id="p-drag2" data-id="2">Integración</p>
+                <p class="p-drag" id="p-drag3" data-id="3">SHCP</p>
+                <p class="p-drag" id="p-drag4" data-id="4">Financiamiento al Terrorismo</p>
+                <p class="p-drag" id="p-drag5" data-id="5">Organismo internacional (GAFI)</p>
+                <p class="p-drag" id="p-drag6" data-id="6">Colocación</p>
+                <p class="p-drag" id="p-drag7" data-id="7">Estratificación</p>
+                <p class="p-drag" id="p-drag8" data-id="8">Lavado de Dinero</p>
+            </div>
+        </div>
+
+        <div class="mano-responsive instrucciones-mano">
             <div class="cont-imagen">
-                <img src="./build/img/contenido/Pag28/mujer.svg" alt="mujer">
+                <img src="./build/img/contenido/Pag26/Mano.svg" alt="mano">
             </div>
-            <div class="cont-mensaje">
-                <p>Hemos llegado a la Evaluación Final del curso.</p>
-                <p>Si estás listo haz clic en el botón "INICIAR".</p>
-                <p>¡Mucho Éxito!</p>
-            </div>
+            <p>Pulsa el nombre del concepto que corresponda a la definición.</p>
         </div>
-        <div id="instruccionEvaluacion">
-            <p>Lee cuidadosamente cada pregunta y da clic en la respuesta que consideras correcta.</p>
-        </div>
-        <div id="cont-inicioEvaluacion">
-            <a href="#cont-preguntas" class="btnEvaluacion">Iniciar</a>
-        </div> 
 
-        <div id="cont-preguntas">
-            <div id="instruccion">
-                <div class="cont-imagen">
-                    <img src="./build/img/contenido/Pag28/Mano.svg" alt="mano">
+        <div id="cont-drop">
+            <div class="posts">
+                <div class="cuadro" id="cuadro1">
+                    <p>Son los actos u operaciones que consisten en hacer que los fondos obtenidos a través de las comisiones de delitos, aparezcan como el fruto de actividades legales  y circulen sin problema en el sistema financiero.</p>
                 </div>
-                <div id="parrafo">
-                    <p>Selecciona el inciso que consideres correcto.</p>
+
+                <div class="drop" id="drop8" data-id="8">
+
                 </div>
-            </div>
-        </div>
-        
-        <div class="cont-btnEvaluar">
-            <a id="evaluarCuestionario" href="#">Evaluar</a>
-        </div>
 
-        <div id="retro-positiva">
-            <div class="mensaje">
-                <p>¡FELICIDADES!</p>
-                <p>Has concluido el curso con la calificación final de:</p>
-            </div>
-            <div class="cont-calificacion">
-                <p id="calificacion"></p>
-            </div>
 
-            <div class="final">
-                <figure class="cont-imagen">
-                    <img src="./build/img/contenido/Pag28/personas-medalla.svg" alt="medalla">
-                </figure>
-                <div class="cont-info">
-                    <div class="parrafo">
-                        <p>¡No dejes de utilizar tus habilidades y continúa atento a cualquier conducta sospechosa a tu alrededor!</p>
+                <div class="repuestas-responsive1">
+                    <div class="cont-resp1 select1"  data-id="4">
+                        <p>CNSF</p>
                     </div>
-                    <div class="botones">
-                        <a href="" id="registrar">Registrar</a>
-                        <a href="" id="cerrar">Cerrar</a>
+                    <div class="cont-resp2 select1"  data-id="8">
+                        <p>Integración</p>
+                    </div>
+                    <div class="cont-resp3 select1"  data-id="6">
+                        <p>SHCP</p>
+                    </div>
+                    <div class="cont-resp4 select1"  data-id="7">
+                        <p>Financiamiento al Terrorismo</p>
+                    </div>
+                    <div class="cont-resp5 select1"  data-id="2">
+                        <p>Organismo internacional (GAFI)</p>
+                    </div>
+                    <div class="cont-resp6 select1"  data-id="3">
+                        <p>Colocación</p>
+                    </div>
+                    <div class="cont-resp7 select1"  data-id="5">
+                        <p>Estratificación</p>
+                    </div>
+                    <div class="cont-resp8 select1"  data-id="1">
+                        <p>Lavado de Dinero</p>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="posts">
+                <div class="cuadro" id="cuadro2">
+                    <p>Promulga un marco internacional  de las normas de PLD/CFT y ha emitido las 40 Recomendaciones.</p>
+                </div>
 
-        <div id="retro-negativa">
-            <div class="mensaje">
-                <p>Oh, no! No alcanzaste el mínimo para aprobar el curso</p>
-                <p>¡vuelve a intentarlo!</p>
-            </div>
-            <div class="final">
-                <figure class="cont-imagen">
-                    <img src="./build/img/contenido/Pag28/chica.svg" alt="chica">
-                </figure>
-                <div class="botones">
-                    <a href="" id="reintentar">Reintentar</a>
+                <div class="drop" id="drop5" data-id="5">
+                    
+                </div>
+
+                <div class="repuestas-responsive1">
+                    <div class="cont-resp1 select2" data-id="4">
+                        <p>CNSF</p>
+                    </div>
+                    <div class="cont-resp2 select2" data-id="8">
+                        <p>Integración</p>
+                    </div>
+                    <div class="cont-resp3 select2" data-id="6">
+                        <p>SHCP</p>
+                    </div>
+                    <div class="cont-resp4 select2" data-id="7">
+                        <p>Financiamiento al Terrorismo</p>
+                    </div>
+                    <div class="cont-resp5 select2" data-id="2">
+                        <p>Organismo internacional (GAFI)</p>
+                    </div>
+                    <div class="cont-resp6 select2" data-id="3">
+                        <p>Colocación</p>
+                    </div>
+                    <div class="cont-resp7 select2" data-id="5">
+                        <p>Estratificación</p>
+                    </div>
+                    <div class="cont-resp8 select2" data-id="1">
+                        <p>Lavado de Dinero</p>
+                    </div>
                 </div>
             </div>
+            <div class="posts">
+                <div class="cuadro" id="cuadro3">
+                    <p>El sujeto activo del Lavado de Dinero introduce al sistema económico formal, en efectivo, transferencias o cheques, recursos propios o ajenos de actividades ilícitas.</p>
+                </div>
+
+                <div class="drop" id="drop6" data-id="6">
+                    
+                </div>
+
+                <div class="repuestas-responsive1">
+                    <div class="cont-resp1 select3" data-id="4">
+                        <p>CNSF</p>
+                    </div>
+                    <div class="cont-resp2 select3" data-id="8">
+                        <p>Integración</p>
+                    </div>
+                    <div class="cont-resp3 select3" data-id="6">
+                        <p>SHCP</p>
+                    </div>
+                    <div class="cont-resp4 select3" data-id="7">
+                        <p>Financiamiento al Terrorismo</p>
+                    </div>
+                    <div class="cont-resp5 select3" data-id="2">
+                        <p>Organismo internacional (GAFI)</p>
+                    </div>
+                    <div class="cont-resp6 select3" data-id="3">
+                        <p>Colocación</p>
+                    </div>
+                    <div class="cont-resp7 select3" data-id="5">
+                        <p>Estratificación</p>
+                    </div>
+                    <div class="cont-resp8 select3" data-id="1">
+                        <p>Lavado de Dinero</p>
+                    </div>
+                </div>
+            </div>
+            <div class="posts">
+                <div class="cuadro" id="cuadro4">
+                    <p>Autoridad que supervisa que los sujetos obligados cumplan con sus obligaciones por medio de acciones de vigilancia e inspección.</p>
+                </div>
+
+                <div class="drop" id="drop1" data-id="1">
+                    
+                </div>
+
+                <div class="repuestas-responsive1">
+                    <div class="cont-resp1 select4" data-id="4">
+                        <p>CNSF</p>
+                    </div>
+                    <div class="cont-resp2 select4" data-id="8">
+                        <p>Integración</p>
+                    </div>
+                    <div class="cont-resp3 select4" data-id="6">
+                        <p>SHCP</p>
+                    </div>
+                    <div class="cont-resp4 select4" data-id="7">
+                        <p>Financiamiento al Terrorismo</p>
+                    </div>
+                    <div class="cont-resp5 select4" data-id="2">
+                        <p>Organismo internacional (GAFI)</p>
+                    </div>
+                    <div class="cont-resp6 select4" data-id="3">
+                        <p>Colocación</p>
+                    </div>
+                    <div class="cont-resp7 select4" data-id="5">
+                        <p>Estratificación</p>
+                    </div>
+                    <div class="cont-resp8 select4" data-id="1">
+                        <p>Lavado de Dinero</p>
+                    </div>
+                </div>
+            </div>
+            <div class="posts">
+                <div class="cuadro" id="cuadro5">
+                    <p>Implica el manejo legal reiterado de los recursos de procedencia ilícita dentro de la Compañía para crear antecedentes legítimos y complicar que se encuentre el antecedente ilegal de los recursos.</p>
+                </div>
+
+                <div class="drop" id="drop7" data-id="7">
+                    
+                </div>
+
+                <div class="repuestas-responsive1">
+                    <div class="cont-resp1 select5" data-id="4">
+                        <p>CNSF</p>
+                    </div>
+                    <div class="cont-resp2 select5" data-id="8">
+                        <p>Integración</p>
+                    </div>
+                    <div class="cont-resp3 select5" data-id="6">
+                        <p>SHCP</p>
+                    </div>
+                    <div class="cont-resp4 select5" data-id="7">
+                        <p>Financiamiento al Terrorismo</p>
+                    </div>
+                    <div class="cont-resp5 select5" data-id="2">
+                        <p>Organismo internacional (GAFI)</p>
+                    </div>
+                    <div class="cont-resp6 select5" data-id="3">
+                        <p>Colocación</p>
+                    </div>
+                    <div class="cont-resp7 select5" data-id="5">
+                        <p>Estratificación</p>
+                    </div>
+                    <div class="cont-resp8 select5" data-id="1">
+                        <p>Lavado de Dinero</p>
+                    </div>
+                </div>
+            </div>
+            <div class="posts">
+                <div class="cuadro" id="cuadro6">
+                    <p>Es la autoridad que crea el marco jurídico relativo a la PLD/CFT por medio de la formulación de políticas de promoción, regulación y supervisión, así como la interpretación del Marco Normativo.</p>
+                </div>
+
+                <div class="drop" id="drop3" data-id="3">
+                    
+                </div>
+
+                <div class="repuestas-responsive1">
+                    <div class="cont-resp1 select6" data-id="4">
+                        <p>CNSF</p>
+                    </div>
+                    <div class="cont-resp2 select6" data-id="8">
+                        <p>Integración</p>
+                    </div>
+                    <div class="cont-resp3 select6" data-id="6">
+                        <p>SHCP</p>
+                    </div>
+                    <div class="cont-resp4 select6" data-id="7">
+                        <p>Financiamiento al Terrorismo</p>
+                    </div>
+                    <div class="cont-resp5 select6" data-id="2">
+                        <p>Organismo internacional (GAFI)</p>
+                    </div>
+                    <div class="cont-resp6 select6" data-id="3">
+                        <p>Colocación</p>
+                    </div>
+                    <div class="cont-resp7 select6" data-id="5">
+                        <p>Estratificación</p>
+                    </div>
+                    <div class="cont-resp8 select6" data-id="1">
+                        <p>Lavado de Dinero</p>
+                    </div>
+                </div>
+            </div>
+            <div class="posts">
+                <div class="cuadro" id="cuadro7">
+                    <p>Proceso para obtener los bienes o recursos de procedencia lícita o ilícita, para presionar a los gobiernos generando terror o temor en la población a través de actos que ponen en peligro la vida, la integridad física, libertad, etc., valiéndose de instrumentos capaces de causar estragos.</p>
+                </div>
+
+                <div class="drop" id="drop4" data-id="4">
+                    
+                </div>
+
+                <div class="repuestas-responsive1">
+                    <div class="cont-resp1 select7" data-id="4">
+                        <p>CNSF</p>
+                    </div>
+                    <div class="cont-resp2 select7" data-id="8">
+                        <p>Integración</p>
+                    </div>
+                    <div class="cont-resp3 select7" data-id="6">
+                        <p>SHCP</p>
+                    </div>
+                    <div class="cont-resp4 select7" data-id="7">
+                        <p>Financiamiento al Terrorismo</p>
+                    </div>
+                    <div class="cont-resp5 select7" data-id="2">
+                        <p>Organismo internacional (GAFI)</p>
+                    </div>
+                    <div class="cont-resp6 select7" data-id="3">
+                        <p>Colocación</p>
+                    </div>
+                    <div class="cont-resp7 select7" data-id="5">
+                        <p>Estratificación</p>
+                    </div>
+                    <div class="cont-resp8 select7" data-id="1">
+                        <p>Lavado de Dinero</p>
+                    </div>
+                </div>
+            </div>
+            <div class="posts">
+                <div class="cuadro" id="cuadro8">
+                        <p>Etapa del LD que Implica la utilización de los recursos en beneficio del sujeto activo, sin el afán de ocultar el origen de los mismos porque los recursos ya cuentan con antecedente legal en la estratificación.</p>
+                    </div>
+    
+                    <div class="drop" id="drop2" data-id="2">
+                        
+                    </div>
+
+                    <div class="repuestas-responsive1">
+                        <div class="cont-resp1 select8" data-id="4">
+                            <p>CNSF</p>
+                        </div>
+                        <div class="cont-resp2 select8" data-id="8">
+                            <p>Integración</p>
+                        </div>
+                        <div class="cont-resp3 select8" data-id="6">
+                            <p>SHCP</p>
+                        </div>
+                        <div class="cont-resp4 select8" data-id="7">
+                            <p>Financiamiento al Terrorismo</p>
+                        </div>
+                        <div class="cont-resp5 select8" data-id="2">
+                            <p>Organismo internacional (GAFI)</p>
+                        </div>
+                        <div class="cont-resp6 select8" data-id="3">
+                            <p>Colocación</p>
+                        </div>
+                        <div class="cont-resp7 select8" data-id="5">
+                            <p>Estratificación</p>
+                        </div>
+                        <div class="cont-resp8 select8" data-id="1">
+                            <p>Lavado de Dinero</p>
+                        </div>
+                    </div>
+            </div>
         </div>
-    </div>  
+    </div>
+
+
+    <div id="box">
+        <div class="cont-imagen">
+            <img src="./build/img/contenido/Pag26/mujer-bien.svg" alt="Bien">
+        </div>
+        <div class="cont-mensaje">
+            <p>¡Excelente! Has terminado de colocar todas las etiquetas de conceptos con su definición correctamente.</p>
+        </div>
+    </div>
+
 </body>
 </html>

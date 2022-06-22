@@ -151,21 +151,33 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Actividad 3', 
+        nombre: 'Diferencias entre el Aseguro y Reaseguro I', 
         ruta: 'pag26.html', 
         progreso: 26,
-        icono: 'fa-solid fa-pencil'
+        icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Tipologías y casos', 
+        nombre: 'Diferencias entre el Aseguro y Reaseguro II', 
         ruta: 'pag27.html', 
         progreso: 27,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Evaluación', 
+        nombre: 'Actividad 3', 
         ruta: 'pag28.html', 
-        progreso: 28, 
+        progreso: 28,
+        icono: 'fa-solid fa-pencil'
+    },
+    {
+        nombre: 'Tipologías y casos', 
+        ruta: 'pag29.html', 
+        progreso: 29,
+        icono: 'fa-solid fa-file'
+    },
+    {
+        nombre: 'Evaluación', 
+        ruta: 'pag30.html', 
+        progreso: 30, 
         icono: 'fa-solid fa-file-lines' 
     }
 ]
