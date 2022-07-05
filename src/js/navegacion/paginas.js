@@ -151,13 +151,13 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Diferencias entre el Aseguro y Reaseguro I', 
+        nombre: 'Diferencias entre la prevención del LD entre las Aseguradoras y la Reaseguradora', 
         ruta: 'pag26.html', 
         progreso: 26,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Diferencias entre el Aseguro y Reaseguro II', 
+        nombre: 'Diferencias entre el Aseguro y Reaseguro', 
         ruta: 'pag27.html', 
         progreso: 27,
         icono: 'fa-solid fa-file'
