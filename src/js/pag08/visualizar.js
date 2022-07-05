@@ -1,10 +1,10 @@
-function visualizarPag07(){
+function visualizarPag06(){
     
-    const btnCuadros = document.querySelectorAll('.btn_cuadros07');
+    const btnCuadros = document.querySelectorAll('.btn-pag06');
 
     btnCuadros.forEach(boton=>{
-        boton.addEventListener('click', function (e) {  
-            e.preventDefault();
+        boton.addEventListener('click', function (e) {
+            e.preventDefault();  
             const cuadro = boton.getAttribute('href');
             const visualizarCuadro = document.querySelector(cuadro);
 
@@ -18,6 +18,7 @@ function visualizarPag07(){
             }
             else{
                 visualizarCuadro.classList.remove('cuadros_activos');
+                
             }
         });
     });
