@@ -31,19 +31,19 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Integración de expediente de la Cedente y medidas simplificadas de identificación', 
+        nombre: 'Entrevista Personal con el cliente', 
         ruta: 'pag06.html', 
         progreso: 6,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Entrevista Personal con el cliente', 
+        nombre: 'Integración de expediente y umbrales', 
         ruta: 'pag07.html', 
         progreso: 7,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Integración de expediente y umbrales', 
+        nombre: 'Integración de expediente de la Cedente y medidas simplificadas de identificación', 
         ruta: 'pag08.html', 
         progreso: 8,
         icono: 'fa-solid fa-file'
@@ -151,13 +151,13 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Diferencias entre el Aseguro y Reaseguro I', 
+        nombre: 'Diferencias entre la prevención del LD entre las Aseguradoras y la Reaseguradora', 
         ruta: 'pag26.html', 
         progreso: 26,
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Diferencias entre el Aseguro y Reaseguro II', 
+        nombre: 'Diferencias entre el Aseguro y Reaseguro', 
         ruta: 'pag27.html', 
         progreso: 27,
         icono: 'fa-solid fa-file'

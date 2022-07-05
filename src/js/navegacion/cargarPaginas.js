@@ -104,6 +104,9 @@ function visualizarPagina(){
           
             // Scrip página07
             visualizarPag07();
+
+            //Script página09
+            voltearCardsPag09();
           
             //Script página11
             voltearCards();
@@ -134,7 +137,6 @@ function visualizarPagina(){
             actividadPag22();
 
             //Script página20
-            voltearCardsPag20();
             visualizarDifPag20();
             visualizarDifPag202();
             visualizarMaletines();

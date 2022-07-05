@@ -1,4 +1,4 @@
-function voltearCardsPag20(){
+function voltearCardsPag09(){
     const tarjetas = document.querySelectorAll('#flipCards-pag09 .cards');
 
     tarjetas.forEach(tarjeta=>{
