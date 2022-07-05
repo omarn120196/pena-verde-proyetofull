@@ -16,7 +16,7 @@ class Actividad1{
             },
             {
                 noPregunta: 3,
-                pregunta: 'La herramienta que nos permite dejar constancia de la entrevista es el Formato de Identificación de Nacionalidad Extranjera o Mexicana o KYC (conocido como Formato de Identificación de la Cedente).Es el Formato de Identificación del Cliente de $7,500 dólares o el Formato de Nacionalidad.',
+                pregunta: 'La herramienta que nos permite dejar constancia de la entrevista es el Formato de Identificación de Nacionalidad Extranjera o Mexicana o KYC (conocido como Formato de Identificación de la Cedente). Es el Formato de Identificación del Cliente de $7,500 dólares o el Formato de Nacionalidad Extranjera o Mexicana.',
                 respuesta: 'v'
             },
             {
