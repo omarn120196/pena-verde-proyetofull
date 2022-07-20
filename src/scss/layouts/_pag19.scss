@@ -1,231 +1,566 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-#intro-cuestionario{
+#cont-intro19{
 
-    &.desaparece{
-        display: none;
-    }
-
-    .caja{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        position: relative;
-
-        @include m.escritorioHD{
-            background: v.$azulRey;
-        }
-
-        &::after{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 70%;
-            bottom: 0;
-            left: 0;
-            background: v.$azulRey;
-            z-index: -1;
-
-            @include m.escritorioHD{
-                display: none;
-            }
-        }
-
-        .cont-imagen{
-            width: 30%;
-
-            
-            @include m.tablet{
-                width: 50%;
-                margin: 0 auto;
-                order: 2;    
-            }
-        }
-
-        .parrafo{
-            padding: 2rem;
-            width: 60%;
-            align-self: flex-end;
-            margin-bottom: 4rem;
-
-            @include m.tablet{
-                width: 90%;
-                margin: 0 auto;
-                order: 1;                
-            }
-
-            p{
-                text-align: center;
-                font-size: 2.4rem;
-                color: v.$blanco;
-
-                @include m.escritorioHD{
-                    font-size: 2rem;
-                }
-            }
-        }
-    }
-
-    .cont-boton{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .titulo{
         padding: 2rem;
-        background: v.$grisFondo;
-
-        a{
-            @include m.boton(v.$amarillo);
-        }
+        text-align: center;
+        color: v.$blanco;
+        background: v.$azulRey;
+        font-weight: 700;
     }
-}
-
-#actividad-cuestionario{
-    display: none;
-
-    &.ver{
-        display: block;
+    .titulo2{
+        margin-top: 1rem;
+        padding: 2rem;
+        text-align: center;
+        color: v.$blanco;
+        background: v.$verde;
+        font-weight: 700;
     }
 
-    .cont-preguntas{
+    .tarjetas{
+        margin-top: 2rem;
+        min-height: 40rem;
+        @include m.grid(3, 2rem);
 
-        display: none;
-
-        &.visualizar{
-            display: block;
+        @include m.escritorio{
+            @include m.grid(2, 2rem);
         }
 
-        .pregunta{
+        @include m.tablet{
+            @include m.grid(1, 2rem);
+        }
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 12rem;
+        .tarjeta{
+            border-radius: 1rem;
+            padding: 2rem;
+            font-weight: 500;
 
-            @include m.escritorio{
-                height: 14rem;
-            }
+            &#tarjeta1{
+                background: v.$fondo6;
 
-            .cont-numero{
-                width: 10%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: v.$azulRey;
-                color: v.$blanco;
-                
-                h3{
-                    font-size: 2.8rem;
+                @include m.tablet{
+                    grid-column: 1/2;
                 }
             }
 
-            .cont-pregunta{
-                width: 90%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: v.$azulClaro2;
+            &#tarjeta2{
+                background: v.$fondo4;
 
-                p{
+                @include m.tablet{
+                    grid-column: 1/2;
+                }
+            }
+
+            &#tarjeta3{
+                background: v.$fondo1;
+
+                @include m.escritorio{
+                    grid-column: 1/3;
+                }
+
+                @include m.tablet{
+                    grid-column: 1/2;
+                }
+            }
+        }
+    }
+
+    #titulo2{
+        margin-top: 2rem;
+        width: 100%;
+        padding: 2rem;
+        background: v.$naranja;
+        color: v.$blanco;
+    }
+
+    #columnas{
+
+        @include m.grid(2, 0);
+
+        @include m.telefono{
+            @include m.grid(1, 0);
+        }
+
+        #columna1{
+            background: v.$fondo2;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .cont-imagen{
+                width: 45%;
+                margin: 0;
+
+                @include m.escritorio{
+                    order: 2;
+                }
+            }
+
+            .cuadro{
+                width: 45%;
+                box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+
+                @include m.escritorio{
+                    width: 80%;
+                    order: 1;
+                }
+
+                .titulo{
+                    background: v.$azulRey;
+                }
+
+                .info{
                     padding: 2rem;
-                    font-weight: 500;
+                    background: v.$blanco;
 
-                    @include m.escritorio{
-                        font-size: 1.4rem;
+                    p{
+                        @include m.resaltar(v.$azulRey, 700);
+                    }
+                }
+
+            }
+
+        }
+
+        #columna2{
+
+            #caja1{
+
+                .titulo{
+                    text-align: left;
+                }
+
+                .contenedor1_1{
+
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    .cont-globo{
+                        width: 48%;
+                        padding: 2rem;
+
+                        @include m.escritorio{
+                            width: 80%;
+                        }
+
+                        .globo{
+                            @include m.globoNegro(derecha);
+                        }
+                    }
+
+                    .cont-imagen{
+                        width: 48%;
+                        margin: 0;
+                    }
+                }
+            }
+
+            #caja2{
+                padding: 2rem;
+                background: v.$fondo4;
+
+                .globo{
+                    @include m.globoNegro(arriba);
+
+                    &::after{
+                        left: 80%;
+                        top: -15%;
                     }
                 }
             }
         }
+    }
 
-        .respuestas{
+    #cards{
+
+        margin-top: 2rem;
+        background: v.$fondo2;
+        padding: 2rem;
+        @include m.grid(4, 2rem);
+
+        @include m.escritorioHD{
+            @include m.grid(2, 2rem);
+        }
+
+        @include m.telefono{
+            @include m.grid(1, 2rem);
+        }
+
+        .operaciones{
+            grid-column: 1/3;
+
+            @include m.telefono{
+                grid-column: 1/2;
+            }
+
+            .titulo{
+                min-height: 8.5rem;
+                background: v.$naranja;
+                border-radius: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .columnas{
+                @include m.grid(2, 2rem);
+
+                @include m.telefono{
+                    @include m.grid(1, 2rem);
+                }
+            }
+        }
+
+        .estructuras{
+            grid-column: 3/4;
+
+            @include m.escritorioHD{
+                grid-column: 1/2;
+            }
+
+            .titulo{
+                min-height: 8.5rem;
+                background: v.$amarillo;
+                border-radius: 1rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .capacitacion{
+            grid-column: 4/5;
+
+            @include m.escritorioHD{
+                grid-column: 2/3;
+            }
+
+            @include m.telefono{
+                grid-column: 1/2;
+            }
+
+            .titulo{
+                min-height: 8.5rem;
+                background: v.$azulRey;
+                border-radius: 1rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .tarjetas1_1{
+
+            .cont-imagen{
+                width: 20rem;
+                height: 20rem;
+                margin: 0 auto;
+            }
+        }
+
+        .info{
+            padding: 2rem;
+            min-height: 35rem;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+            background: v.$blanco;
+
+            p{
+                text-align: center;
+
+                span{
+                    font-weight: 700;
+                }
+            }
+
+            &#info1{
+                border: 1px solid v.$naranja;
+            }
+            
+            &#info2{
+                border: 1px solid v.$naranja;
+            }
+
+            &#info3{
+                border: 1px solid v.$amarillo;
+            }
+
+            &#info4{
+                border: 1px solid v.$azulRey;
+            }
+        }
+    }
+}
+
+#subtitulo20{
+    margin: 2rem;
+    padding: 2rem;
+    text-align: center;
+    color: v.$azul1;
+}
+
+#pag12{
+    position: relative;
+    @include m.grid(2, 0);
+    display: flex;
+
+    @include m.escritorioHD{
+        height: 70rem;
+    }
+
+    @include m.tablet{
+        @include m.grid(1, 0);
+        height: 100rem;
+    }
+
+    @include m.telefono{
+        height: auto;
+    }
+
+    #cont-01{
+        position: relative;
+        width: 20%;
+        background: v.$naranja;
+
+        @include m.tablet{
+            width: 100%;
+            height: 37rem;
+        }
+
+        .personaje{
+            height: 80%;
+            width: 90%;
+            padding: 2rem 2rem 0 2rem;
+
+            @include m.escritorioHD{
+                width: 100%;
+                height: 70%;
+            }
+
+            @include m.tablet{
+                width: 35%;
+                height: 80%;
+                padding: 1rem 2rem 0 10rem;
+            }
+
+            @include m.telefono{
+                height: 30rem;
+                width: 25rem;
+            }
+        }
+        #clic1-pag12{
+            position: relative;
+            bottom: 4rem;
+            display: flex;
+            text-align: center;
+            padding: 2rem;
+            background: v.$azulClaro1;
+            @include m.resaltar(v.$colorFuente, 400);
+
+            @include m.escritorioHD{
+                bottom: 0;
+                padding: 1rem;
+                top: -1rem;
+                height: 23rem;
+                padding: 4rem;
+            }
+
+            @include m.tablet{
+                height: 10rem;
+            }
+
+            @include m.telefono{
+                top: -2rem;
+            }
+
+            p{
+                @include m.tablet{
+                    position: relative;
+                    left: 10rem;
+                    top: -1rem;
+                }
+
+                @include m.telefono{
+                    width: 20rem;
+                    left: 3rem;
+                    top: -3rem;
+                }
+            }
+            .mano1-pag12{
+                position: relative;
+                top: 2rem;
+                width: 120%;
+                height: 120%;
+
+                @include m.escritorioHD{
+                    left: -3rem;
+                    width: 20rem;
+                    height: 5rem;
+                }
+
+                @include m.tablet{
+                    width: 5rem;
+                    height: 5rem;
+                    left: 5rem;
+                    top: -2rem;
+                }
+
+                @include m.telefono{
+                    left: 0;
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+
+        }
+
+    }
+    #cont-02{
+        position: relative;
+        width: 100%;
+        background: v.$azul2;
+
+        .cuadros12{
+            display: none;
+            opacity: 0;
+            transition: all .3s ease;
+        }
+
+        #globo{
+            position: relative;
+            top: 3rem;
+            left: 8rem;
+            width: 80%;
+            @include m.globoNegro(izquierda);
+
+            @include m.escritorioHD{
+                left: 5rem;
+                width: 90%;
+                top: 2rem;
+            }
+            @include m.tablet{
+                left: 0;
+                top: 0;
+                right: 1rem;
+                width: 100%
+            }
+
+            @include m.telefono{
+                width: 34rem;            
+            }
+        }
+
+        #cont-botones{
+            @include m.grid(3, 2rem);
+            position: relative;
+            top: 3rem;
             padding: 2rem;
 
-            .respuestas-caja{
-                width: 18rem;
-                height: 4rem;
-                display: flex;
-                justify-content: center;
-                align-items: center; 
-                color: v.$blanco;
-                background: v.$azulRey;
-                margin-bottom: 3rem;
-                cursor: pointer; 
-                transition: all .3s ease;
-                
-                &:hover{
-                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-                    transform: scale(1.05);
+            @include m.escritorioHD{
+                @include m.grid(3, 0);
+                top: 2rem;
+            }
+
+            @include m.tablet{
+                top: 0;
+            }
+
+            @include m.telefono{
+                @include m.grid(1, 2rem);
+            }
+
+            .btn_cuadros12:hover{
+                @include m.parpadeo;
+            } 
+
+            #btn-01{
+                position: relative;
+                #btn-aplicar{
+                    padding: 2rem;
+                    margin-left: 2rem;
+
+                    a{
+                        border-radius: 1rem;
+                        border: solid white;
+                        @include m.botones(v.$azulRey);
+                    }
                 }
 
-                &.fondoCorrecto{
-                    background: v.$verde;
-                    color: v.$blanco;
-                    cursor: default;
+                #info-seguros{
+                    display: flex;
+                    @include m.resaltar(v.$azulRey, 400);
+                    @include m.cardsPag12(v.$azulRey, v.$azulRey);
+
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
+                    }
                 }
-                
-                &.fondoIncorrecto{
-                    background: v.$rojo2;
-                    color: v.$blanco;
-                    cursor: default;
+            }
+
+            #btn-02{
+                position: relative;
+                #btn-seguimiento{
+                    padding: 2rem;
+                    margin-left: 2rem;
+
+                    a{
+                        border-radius: 1rem;
+                        border: solid white;
+                        @include m.botones(v.$verde);
+                    }
+                }
+
+                #info-seguimiento{
+                    display: flex;
+                    @include m.resaltar(v.$verde, 400);
+                    @include m.cardsPag12(v.$verde, v.$verde);
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            #btn-03{
+                position: relative;
+                #btn-reportar{
+                    padding: 2rem;
+                    margin-left: 2rem;
+
+                    a{
+                        border-radius: 1rem;
+                        border: solid white;
+                        @include m.botones(v.$verdePag12);
+                    }
+                }
+
+                #info-reportar{
+                    display: flex;
+                    @include m.resaltar(v.$verde, 400);
+                    @include m.cardsPag12(v.$verdePag12, v.$verdePag12);
+
+                    &.cuadros_activos{
+                        display: block;
+                        opacity: 1;
+                    }
                 }
             }
         }
     }
 }
 
-#retroActividad1{
-
-    display: none;
-    background: v.$azul2;
-
-    &.visualizar{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;        
-    }
-
-    @include m.tablet{
-
-    }
-
-    .cont-imagen{
-        width: 30%;
-        margin: 0;
-
-        @include m.tablet{
-            width: 50%;
-            margin: 0 auto;
-            order: 2;   
-        }
-    }
-
-    .cont-mensaje{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-        width: 60%;
-
-        @include m.tablet{
-            width: 90%;
-            margin: 0 auto;
-            order: 1;   
-        }
-
-        p{
-            text-align: center;
-            color: v.$blanco;
-            font-size: 2.4rem;
-            border: 1px solid v.$blanco;
-            padding: 2rem;
-        }
-    }
+.mensaje20{
+    padding: 2rem;
+    color: white;
+    background: v.$colorFuente;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 1rem;
 }

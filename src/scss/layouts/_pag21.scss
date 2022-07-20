@@ -1,377 +1,108 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.intro-pagina21{
-
+.versus{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: v.$azul2;
-    position: relative;
 
-    &.ocultar{
+    @include m.tablet{
+        font-size: 1.4rem;
+    }
+
+    .seguro{
+        width: 45%;
+        background: v.$azulRey;
+        color: v.$blanco;
+        text-align: center;
+    }
+
+    .vs{
+        width: 10%;
+        background: v.$amarillo;
+        color: v.$azulRey;
+        text-align: center;
+    }
+
+    .reaseguro{
+        width: 45%;
+        background: v.$verde;
+        color: v.$blanco;
+        text-align: center;
+    }
+}
+
+.tablaComparacion{
+
+    @include m.grid(2, 0);
+
+    @include m.tablet{
+        @include m.grid(1, 0);
+    }
+
+    .tituloSeguro, .tituloReaseguro{
         display: none;
     }
 
-    .cont-imagen{
-        width: 20%;
-        margin: 0;
+    .elementos{
+        width: 100%;
+        padding: 2rem 8rem;
+        text-align: left;
+        font-size: 2.4rem;
+        font-weight: 700;
+
+        @include m.escritorioHD(){
+            padding: 2rem 4rem;
+            font-size: 1.8rem;
+        }
+
+        &.seguro{
+            color: v.$azulRey;
+            background: v.$fondo2;
+
+            @include m.tablet{
+                &:nth-of-type(2){
+                    grid-row: 2/3;
+                }
+            }
+
+            ul, ol{
+                li{
+                    margin-left: 6rem;
+                    text-align: left;
+                }
+            }
+        }
+
+        &.reaseguro{
+            color: v.$verde;
+
+            ul, ol{
+                li{
+                    margin-left: 6rem;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    figure{
+        grid-column: 2/3;
 
         @include m.tablet{
-            width: 30%;
-            align-self: flex-end;
+            grid-column: 1/2;
         }
     }
 
-    .cont-mensaje{
-        width: 70%;
-        padding: 2rem;
-
-        p{
-            color: v.$blanco;
-
-            @include m.telefono{
-                font-size: 1.4rem;
-            }
-        }
-    }
-}
-
-.cont-btnInicio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-
-    &.ocultar{
+    .separacionVS{
         display: none;
-    }
 
-    a{
-        @include m.boton(v.$amarillo);
-    }
-}
-
-#cont-actividadRelacion{
-
-    &.ocultar{
-        display: none;
-    }
-
-    .instrucciones-mano{
-        border-radius: 0;
-
-        &.instrucciones1{
-            
-            @include m.telefono{
-                display: none;
-            }
-        }
-        
-        &.instrucciones2{
-            display: none;
-
-            @include m.telefono{
-                display: flex;
-            }
+        @include m.tablet{
+            display: block;
+                text-align: center;
+                color: v.$azulRey;
+                background: v.$amarillo;
         }
     }
-
-    .actividad{
-
-        background: v.$fondo2;
-        @include m.grid(4, 1rem);
-        padding: 1rem;
-
-
-        .cont-enunciados{
-            grid-column: 1/3;
-
-            @include m.telefono{
-                grid-column: 1/5;
-            }
-
-            .filas{
-                position: relative;
-
-                .enunciados{
-                    padding: 2rem;
-                    margin-bottom: 2rem;
-                    background: v.$blanco;
-                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-                    cursor: pointer;
-                    position: relative;
-                    z-index: 1;
-                    transition: all .3s ease;
-
-                    @include m.telefono{
-                        cursor: default;
-                    }
-    
-                    &::after{
-                        content: '';
-                        background: v.$amarillo;
-                        position: absolute;
-                        top: 40%;
-                        left: 90%;
-                        width: 2rem;
-                        height: 2rem;
-                        border-radius: 50%;
-                        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-                        opacity: 0;
-                        transition: all .3s ease;   
-                    }
-    
-                    &.seleccion{
-                        border: 1px solid v.$amarillo;
-    
-                        &::after{
-                            opacity: 1;
-                            left: 102%;
-                        }
-
-                        @include m.telefono{
-                            border: 0;
-                            
-                            &::after{
-                                display: none;
-                            }
-                        }
-    
-                    }
-                }
-
-                .bloquear{
-                    display: none;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    z-index: 10;
-                    position: absolute;
-
-                    &.activo{
-                        display: block;
-                    }
-                }
-    
-                .correcto{
-                    padding: 2rem;
-                    margin-bottom: 2rem;
-                    background: v.$verde;
-                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-                    color: v.$blanco;
-                }
-
-                .cont-conceptos{
-                    display: none;
-
-                    .filas{
-                        
-                        div{
-                            padding: 2rem;
-                            text-align: center;
-                            color: v.$blanco;
-                            background: v.$azul1;
-                            cursor: pointer;
-
-                            &.fondoCorrecto{
-                                background: v.$verde;
-                                color: v.$blanco;
-                            }
-                        }
-                    }
-
-                    @include m.telefono{
-                        display: block;
-
-                        .filas{
-                            margin: 1rem 0;
-                        }
-                    }
-                }
-            }
-        }
-
-        .cont-canvas{
-            grid-column: 3/4;
-            height: 100%;
-            position: relative;
-
-            .canvas{
-                width: 100%;
-                height: 100%;
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-
-            @include m.telefono{
-                display: none;
-            }
-        }
-
-        .cont-conceptos{
-            grid-column: 4/5;
-            display: flex;
-            justify-content: space-evenly;
-            flex-direction: column;
-            align-items: center;
-
-            @include m.telefono{
-                display: none;
-            }
-
-            .filas{
-
-                width: 100%;
-                position: relative;
-
-                .conceptos{
-                    height: 10rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background: v.$azul1;
-                    padding: 2rem;
-                    color: v.$blanco;
-                    text-align: center;
-                    cursor: pointer;
-                    position: relative;
-    
-                    &::after{
-                        content: '';
-                        background: v.$amarillo;
-                        position: absolute;
-                        top: 40%;
-                        left: 10%;
-                        width: 2rem;
-                        height: 2rem;
-                        border-radius: 50%;
-                        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-                        opacity: 0;
-                        transition: all .3s ease;   
-                    }
-    
-                    &.seleccionado{
-                        border: 1px solid v.$amarillo;
-    
-                        @include m.telefono{
-                            border: none;
-                        }
-
-                        &::after{
-                            opacity: 1;
-                            left: -10%;
-
-                            
-                            @include m.telefono{
-                                display: none;        
-                            }
-                        }
-                    }
-                    
-                }
-
-                .bloquear{
-                    display: none;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 10;
-                    top: 0;
-                    left: 0;
-                    position: absolute;
-
-                    &.activo{
-                        display: block;
-                    }
-                }
-    
-                .correcto{
-                    width: 100%;
-                    height: 10rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background: v.$verde;
-                    padding: 2rem;
-                    color: v.$blanco;
-                    text-align: center;
-                }
-            }
-        }
-    }
-}
-
-#mensaje21{
-    display: none;
-    position: relative;
-    z-index: 1;
-
-    &.ver{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: v.$amarillo;
-        flex-wrap: wrap;
-    }
-
-    .cont-imagen{
-        width: 30%;
-        margin: 0;
-
-        @include m.escritorio{
-            width: 50%;
-            height: 40rem;
-            margin: 0 auto;
-            order: 2;   
-        }
-
-        @include m.telefono{
-            width: 70%;
-        }
-    }
-
-    &::after{
-        content: '';
-        width: 100%;
-        height: 40%;
-        top: 30%;
-        left: 0;
-        position: absolute;
-        background: v.$azulRey;
-        z-index: -1;
-
-        @include m.escritorio{
-            display: none;   
-        }
-    }
-
-    .cont-mensaje{
-        width: 60%;
-        padding: 2rem;
-
-        @include m.escritorio{
-            width: 100%;
-            order: 1;   
-            background: v.$azulRey;
-            margin-bottom: 2rem;
-        }
-
-        p{
-            padding: 2rem;
-            text-align: center;
-            color: v.$blanco;
-            font-size: 2.4rem;
-            font-weight: 700;
-            border: 1px solid v.$blanco;
-
-            @include m.escritorio{
-                font-size: 1.8rem;   
-            }
-
-        }
-    }
-    
 }
