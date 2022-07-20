@@ -1,187 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página 24</title>
+    <title>Pagina 24</title>
 </head>
+
 <body>
-    <div class="contenedorPag23">
-        <div class="cont-mano">
-            <figure class="cont-imagen">
-                <img src="./build/img/contenido/Pag24/Mano.svg" alt="icono click">
+    <div id="instrucciones2-pag20">
+        <figure class="img-clic">
+            <img src="./build/img/contenido/Pag22/icon2click.svg" alt="Mano">
+        </figure>
+        <p>
+            Da clic en el icono de cada Diferencia para conocer en qué se distinguen el Lavado de Dinero del
+            Financiamiento al Terrorismo.
+        </p>
+    </div>
+
+
+    <div id="cont-diferencias">
+        <div id="lavado">
+            <div class="cont-titulo" id="titulo">LAVADO DE DINERO</div>
+            <div class="cont-info">
+                <div class="info" id="l-cuadro1">
+                    Legalizar las ganancias
+                </div>
+            </div>
+            <div class="cont-info">
+                <div class="info" id="l-cuadro2">
+                    Recursos ilegales
+                </div>
+            </div>
+            <div class="cont-info">
+                <div class="info" id="l-cuadro3">
+                    El dinero utilizado por las actividades delincuenciales llega a ser mayor.
+                </div>
+            </div>
+            <div class="cont-info">
+                <div class="info" id="l-cuadro4">
+                    Para que se genere este delito, existen delitos previos.
+                </div>
+            </div>
+        </div>
+        <div id="diferencias">
+            <div class="cont-titulo" id="titulo">DIFERENCIAS</div>
+            <div class="boton">
+                <p>Propósito del Delito</p>
+                <a class="btn-pag20" data-cuadro="1">
+                    <figure class="cont-imagen">
+                        <img src="./build/img/contenido/Pag22/cuadro-front.svg" alt="Boton">
+                    </figure>
+                </a>
+            </div>
+            <div class="boton abajo">
+                <p>Fuente o procedencia de los fondos</p>
+                <a class="btn-pag20" data-cuadro="2">
+                    <figure class="cont-imagen">
+                        <img src="./build/img/contenido/Pag22/cuadro-front.svg" alt="Boton">
+                    </figure>
+                </a>
+            </div>
+            <div class="boton abajo">
+                <p>Volumen de fondos</p>
+                <a class="btn-pag20" data-cuadro="3">
+                    <figure class="cont-imagen">
+                        <img src="./build/img/contenido/Pag22/cuadro-front.svg" alt="Boton">
+                    </figure>
+                </a>
+            </div>
+            <div class="boton abajo">
+                <p>Momento del Delito</p>
+                <a class="btn-pag20" data-cuadro="4">
+                    <figure class="cont-imagen">
+                        <img src="./build/img/contenido/Pag22/cuadro-front.svg" alt="Boton">
+                    </figure>
+                </a>
+            </div>
+        </div>
+        <div id="financiamiento">
+            <div class="cont-titulo" id="titulo">FINANCIAMIENTO AL TERRORISMO</div>
+            <div class="cont-info">
+                <div class="info" id="f-cuadro1">
+                    Generar temor o terror
+                </div>
+            </div>
+            <div class="cont-info">
+                <div class="info" id="f-cuadro2">
+                    Recursos ilegales o legales
+                </div>
+            </div>
+            <div class="cont-info">
+                <div class="info" id="f-cuadro3">
+                    El volumen de fondos que manejan los terroristas es mucho menor.
+                </div>
+            </div>
+            <div class="cont-info">
+                <div class="info" id="f-cuadro4">
+                    No ha habido delitos previos
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diferencias vista Telefono -->
+    <div id="cont-diferenciasTel">
+        <div class="titulo" id="lavado">
+            <p>LAVADO DE DINERO</p>
+        </div>
+        <div class="cont-info">
+            <div class="info" id="l2-cuadro1">
+                Legalizar las ganancias
+            </div>
+        </div>
+        <div class="boton">
+            <b>Momento del Delito</b>
+            <a class="btn-pag20-2" data-cuadro="1">
+                <figure class="cont-imagen">
+                    <img src="./build/img/contenido/Pag22/boton-tel.svg" alt="Boton">
+                </figure>
+            </a>
+        </div>
+        <div class="titulo" id="financiamiento">
+            <b>FINANCIAMIENTO AL TERRORISMO</b>
+        </div>
+        <div class="cont-info">
+            <div class="info" id="f2-cuadro1">
+                Generar temor/terror
+            </div>
+        </div>
+
+        <div class="titulo" id="lavado">
+            <p>LAVADO DE DINERO</p>
+        </div>
+        <div class="cont-info">
+            <div class="info" id="l2-cuadro2">
+                Recursos ilegales
+            </div>
+        </div>
+        <div class="boton">
+            <b>Momento del Delito</b>
+            <a class="btn-pag20-2" data-cuadro="2">
+                <figure class="cont-imagen">
+                    <img src="./build/img/contenido/Pag22/boton-tel.svg" alt="Boton">
+                </figure>
+            </a>
+        </div>
+        <div class="titulo" id="financiamiento">
+            <b>FINANCIAMIENTO AL TERRORISMO</b>
+        </div>
+        <div class="cont-info">
+            <div class="info" id="f2-cuadro2">
+                Recursos ilegales o legales
+            </div>
+        </div>
+
+        <div class="titulo" id="lavado">
+            <p>LAVADO DE DINERO</p>
+        </div>
+        <div class="cont-info">
+            <div class="info" id="l2-cuadro3">
+                El dinero utilizado por las actividades delincuenciales llega a ser mayor.
+            </div>
+        </div>
+        <div class="boton">
+            <p><b>Momento del Delito</b></p>
+            <a class="btn-pag20-2" data-cuadro="3">
+                <figure class="cont-imagen">
+                    <img src="./build/img/contenido/Pag22/boton-tel.svg" alt="Boton">
+                </figure>
+            </a>
+        </div>
+        <div class="titulo" id="financiamiento">
+            <b>FINANCIAMIENTO AL TERRORISMO</b>
+        </div>
+        <div class="cont-info">
+            <div class="info" id="f2-cuadro3">
+                El volumen de fondos que manejan los terroristas es mucho menor.
+            </div>
+        </div>
+
+        <div class="titulo" id="lavado">
+            <p>LAVADO DE DINERO</p>
+        </div>
+        <div class="cont-info">
+            <div class="info" id="l2-cuadro4">
+                Para que se genere este delito, existen delitos previos.
+            </div>
+        </div>
+        <div class="boton">
+            <p><b>Momento del Delito</b></p>
+            <a class="btn-pag20-2" data-cuadro="4">
+                <figure class="cont-imagen">
+                    <img src="./build/img/contenido/Pag22/boton-tel.svg" alt="Boton">
+                </figure>
+            </a>
+        </div>
+        <div class="titulo" id="financiamiento">
+            <b>FINANCIAMIENTO AL TERRORISMO</b>
+        </div>
+        <div class="cont-info">
+            <div class="info" id="f2-cuadro4">
+                No ha habido delitos previos
+            </div>
+        </div>
+    </div>
+
+    <div id="instrucciones3-pag20">
+        <figure class="img-clic">
+            <img src="./build/img/contenido/Pag22/icon2click.svg" alt="Mano">
+        </figure>
+        <p>
+            Da clic en cada icono para conocer las semejanzas entre el Lavado de Dinero y el Financiamiento al
+            Terrorismo.
+        </p>
+    </div>
+
+    <div id="cont-semejanzas">
+        <div id="maletines">
+            <a class="btn2-pag20" href="#maletin1">
+                <figure class="img-maletin">
+                    <img src="./build/img/contenido/Pag22/maletin-amarillo.svg" alt="Maletin">
+                </figure>
+            </a>
+            <a class="btn2-pag20" href="#maletin2">
+                <figure class="img-maletin">
+                    <img src="./build/img/contenido/Pag22/maletin-verde.svg" alt="Maletin">
+                </figure>
+            </a>
+            <a class="btn2-pag20" href="#maletin3">
+                <figure class="img-maletin">
+                    <img src="./build/img/contenido/Pag22/maletin-azul.svg" alt="Maletin">
+                </figure>
+            </a>
+            <a class="btn2-pag20" href="#maletin4">
+                <figure class="img-maletin">
+                    <img src="./build/img/contenido/Pag22/maletin-rojo.svg" alt="Maletin">
+                </figure>
+            </a>
+        </div>
+        <div id="semejanzas">
+            <div id="cont-titulos">
+                <div class="titulo" id="lavado">
+                    <p>LAVADO DE DINERO</p>
+                </div>
+                <div class="titulo" id="semejanza">
+                    <p>SEMEJANZAS</p>
+                </div>
+                <div class="titulo" id="financiamiento">
+                    <p>FINANCIAMIENTO AL TERRORISMO</p>
+                </div>
+            </div>
+            <div class="cont-info">
+                <div class="info" id="maletin1">
+                    <p>Son delitos financieros que tienen consecuencias económicas.</p>
+                </div>
+            </div>
+            <div class="cont-info">
+                <div class="info" id="maletin2">
+                    <p>Pueden amenazar su estabilidad del sector financiero de un país.</p>
+                </div>
+            </div>
+            <div class="cont-info">
+                <div class="info" id="maletin3">
+                    <p>La prevención es esencial para salvaguardar la integridad de los mercados y del marco financiero
+                        mundial.</p>
+                </div>
+            </div>
+            <div class="cont-info">
+                <div class="info" id="maletin4">
+                    <p>Propician el anonimato y la falta de transparencia en sus transacciones.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Semejanzas vista Telefono -->
+    <div id="cont-semejanzasTel">
+        <div class="titulo" id="lavado">
+            <p>LAVADO DE DINERO</p>
+        </div>
+        <div class="titulo" id="semejanzas">
+            <p>SEMEJANZAS</p>
+        </div>
+        <div class="titulo" id="financiamiento">
+            <p>FINANCIAMIENTO AL TERRORISMO</p>
+        </div>
+        <a class="btn2-pag20Tel" href="#maletin1-Tel">
+            <figure class="img-maletin">
+                <img src="./build/img/contenido/Pag22/maletin-amarilloTel.svg" alt="Maletin Tel">
             </figure>
-            <p>
-                Da clic en el nombre de cada organismo para conocer sus funciones.
-            </p>
+        </a>
+        <div class="info" id="maletin1-Tel">
+            Son delitos financieros que tienen consecuencias económicas.
         </div>
-
-        <div class="cont-fichas">
-            <div class="fichas">
-                <a href="#cont-ficha1" class="btnFichas">
-                    <div class="caja">
-                        <h3 class="titulo">
-                            Sistema Financiero Mexicano
-                        </h3>
-                        <figure class="cont-imagen">
-                            <img src="./build/img/contenido/Pag24/mapa.svg"   alt="">
-                        </figure>
-                    </div>
-                </a>
-
-                <div class="cont-info" id="cont-ficha1">
-                    <ul>
-                        <li>Compuesto por los sujetos obligados (S0).</li><br>
-                        <li>Identifican y conocen a los clientes.</li><br>
-                        <li>Monitorean operaciones.</li><br>
-                        <li>Detectan operaciones de riesgo.</li><br>
-                        <li>Envían reportes.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="fichas">
-                <a href="#cont-ficha2" class="btnFichas">
-                    <div class="caja">
-                        <h3 class="titulo">
-                            Organismo Internacional
-                        </h3>
-                        <figure class="cont-imagen mitad">
-                            <img src="./build/img/contenido/Pag24/gafi.svg" alt="">
-                        </figure>
-                    </div>
-                </a>
-
-                <div class="cont-info" id="cont-ficha2">
-                    <p>
-                        Promulga un marco mínimo internacional  de las normas de PLD/CFT.
-                    </p>
-                </div>
-            </div>
-            <div class="fichas">
-                <a href="#cont-ficha3" class="btnFichas">
-                    <div class="caja">
-                        <h3 class="titulo">
-                            Organismos Reguladores
-                        </h3>
-                        <figure class="cont-imagen">
-                            <img src="./build/img/contenido/Pag24/grupo1.svg" alt="">
-                        </figure>
-                    </div>
-                </a>
-
-                <div class="cont-info" id="cont-ficha3">
-                    <ul>
-                        <li>Creación del marco jurídico nacional relativo a PLD/CFT por medio de políticas.</li><br>
-                        <li>Interpretación del marco normativo.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="fichas">
-                <a href="#cont-ficha4" class="btnFichas">
-                    <div class="caja">
-                        <h3 class="titulo">
-                            Organismos Supervisores
-                        </h3>
-                        <figure class="cont-imagen">
-                            <img src="./build/img/contenido/Pag24/grupo2.svg" alt="">
-                        </figure>
-                    </div>
-                </a>
-
-                <div class="cont-info" id="cont-ficha4">
-                    <p>Supervisan que los SO del régimen PLD/CFT cumplan con sus obligaciones  (Vigilancia e Inspección).
-                    </p>
-                </div>
-            </div>
-            <div class="fichas">
-                <a href="#cont-ficha5" class="btnFichas">
-                    <div class="caja">
-                        <h3 class="titulo">
-                            Unidad de Inteligencia Financiera
-                        </h3>
-                        <figure class="cont-imagen mitad">
-                            <img src="./build/img/contenido/Pag24/uif.svg" alt="">
-                        </figure>
-                    </div>
-                </a>
-
-                <div class="cont-info" id="cont-ficha5">
-                    <ul>
-                        <li>Recibe reportes.</li><br>
-                        <li>Analiza la información recibida para detectar posibles conductas.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="cont-mano">
-            <figure class="cont-imagen">
-                <img src="./build/img/contenido/Pag24/Mano.svg" alt="icono click">
+        <a class="btn2-pag20Tel" href="#maletin2-Tel">
+            <figure class="img-maletin">
+                <img src="./build/img/contenido/Pag22/maletin-verdeTel.svg" alt="Maletin Tel">
             </figure>
-            <p>
-                Da clic en el nombre de cada organismo para conocer sus funciones.
-            </p>
+        </a>
+        <div class="info" id="maletin2-Tel">
+            Pueden amenazar su estabilidad del sector financiero de un país.
         </div>
-
-        <div class="organismos">
-            <div class="filas" id="fila1">
-                <a class="btnImagen" href="#gafi">
-                    <div class="imagen">
-                        <figure class="cont-imagen">
-                            <img id="img-GAFI" src="./build/img/contenido/Pag24/gafi.svg" alt="">
-                        </figure>
-                    </div>
-                </a>
-                <div class="info" id="gafi">
-                    <p>
-                        El Financial Action Task Force o Grupo de Acción Financiera Internacional, promueve la implementación efectiva de medidas, regulaciones y operaciones para combatir el Lavado de Dinero y el Financiamiento al Terrorismo a través de sus “40 Recomendaciones”. 
-                    </p>
-                </div>
-            </div>
-            <div class="filas" id="fila2">
-                <a class="btnImagen" href="#shcp">
-                    <div class="imagen">
-                        <figure class="cont-imagen">
-                            <img id="img-SHPC" src="./build/img/contenido/Pag24/shcp.svg" alt="">
-                        </figure>
-                    </div>
-                </a>
-                <div class="info" id="shcp">
-                    <p>
-                        La Secretaría de Hacienda y Crédito Público, a través de la Unidad de Seguros, Pensiones y Seguridad Social, crea el marco jurídico relativo a la PLD/CFT por medio de la formulación de políticas de promoción, regulación y supervisión, así como la interpretación del Marco Normativo.
-                    </p>
-                </div>
-            </div>
-            <div class="filas" id="fila3">
-                <a class="btnImagen" href="#uif">
-                    <div class="imagen">
-                        <figure class="cont-imagen">
-                            <img id="img-UIF" src="./build/img/contenido/Pag24/uif.svg" alt="">
-                        </figure>
-                    </div>
-                </a>
-                <div class="info" id="uif">
-                    <p>
-                        La Unidad de Inteligencia Financiera de México, perteneciente a la SHCP, es la responsable de recibir, analizar e informar a las autoridades competentes sobre información de índole financiera.
-                    </p>
-                </div>
-            </div>
-            <div class="filas" id="fila4">
-                <a class="btnImagen" href="#cnsf">
-                    <div class="imagen">
-                        <figure class="cont-imagen">
-                            <img id="img-CNSF" src="./build/img/contenido/Pag24/cnsf.svg" alt="">
-                        </figure>
-                    </div>
-                </a>
-                <div class="info" id="cnsf">
-                    <p>
-                        La Comisión Nacional de Seguros y Fianzas, supervisa que los sujetos obligados, cumplan con sus obligaciones por medio de acciones de vigilancia e inspección. 
-                    </p>
-                </div>
-            </div>
+        <a class="btn2-pag20Tel" href="#maletin3-Tel">
+            <figure class="img-maletin">
+                <img src="./build/img/contenido/Pag22/maletin-azulTel.svg" alt="Maletin Tel">
+            </figure>
+        </a>
+        <div class="info" id="maletin3-Tel">
+            La prevención es esencial para salvaguardar la integridad de los mercados y del marco financiero mundial.
         </div>
-    </div>    
+        <a class="btn2-pag20Tel" href="#maletin4-Tel">
+            <figure class="img-maletin">
+                <img src="./build/img/contenido/Pag22/maletin-rojoTel.svg" alt="Maletin Tel">
+            </figure>
+        </a>
+        <div class="info" id="maletin4-Tel">
+            Propician el anonimato y la falta de transparencia en sus transacciones.
+        </div>
+    </div>
 </body>
+
 </html>

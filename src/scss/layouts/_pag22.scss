@@ -1,221 +1,193 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.cuadro-azul22{
-    width: 100%;
-    height: 2%;
-    max-height: 70px;
-    background-color: v.$azulRey;
-    p{
-        text-align: center;
-        padding: 2%;
-        color: v.$blanco;
+.intro-pagina21{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: v.$azul2;
+    position: relative;
+
+    &.ocultar{
+        display: none;
+    }
+
+    .cont-imagen{
+        width: 20%;
+        margin: 0;
+
+        @include m.tablet{
+            width: 30%;
+            align-self: flex-end;
+        }
+    }
+
+    .cont-mensaje{
+        width: 70%;
+        padding: 2rem;
+
+        p{
+            color: v.$blanco;
+
+            @include m.telefono{
+                font-size: 1.4rem;
+            }
+        }
     }
 }
 
-.mano22{
-    border-radius: 0;
-}
-
-#botonesPag22{
-    background: v.$azulPag22;
-    @include m.grid(3, 1rem);
-    position: relative;
+.cont-btnInicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
 
-    @include m.tablet{
-        @include m.grid(1, 1rem);
+    &.ocultar{
+        display: none;
     }
 
-    .info{
-
-        .botones{
-            padding: 2rem;
-
-            a{
-                border-radius: 1rem;
-            }
-
-            &#btn-colocacion{
-                a{
-                    @include m.botonesPag22(v.$amarilloPag20, v.$colorFuente);
-                }
-            }
-
-            
-            &#btn-estratificacion{
-                a{
-                    @include m.botonesPag22(v.$verde, v.$blanco);
-                }
-            }
-
-            
-            &#btn-integracion{
-                a{
-                    @include m.botonesPag22(v.$azul2, v.$azulRey);
-                }
-            }
-        }
-
-        .cuadros22{
-            width: 90%;
-            height: 30rem;
-            margin: 0 auto;
-            display: none;
-            opacity: 0;
-            transition: all .3s ease;
-            border-radius: 2rem;
-            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-            padding: 2rem;
-
-            @include m.escritorio{
-                height: 38rem;
-
-                span{
-                    text-align: center;
-                }
-            }
-
-            @include m.tablet{
-                height: auto;
-            }
-
-            &.cuadros_activos{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                opacity: 1;
-            }
-
-            &#info-colocacion{
-                background: v.$amarilloPag20;
-            }
-
-            &#info-estratificacion{
-                background: v.$verdePag22;
-            }
-
-            &#info-integracion{
-                background: v.$fondo1;
-            }
-        }
+    a{
+        @include m.boton(v.$amarillo);
     }
 }
 
-#actividad-relacion22{
+#cont-actividadRelacion{
+
+    &.ocultar{
+        display: none;
+    }
 
     .instrucciones-mano{
         border-radius: 0;
 
-        #parrafo1{
-
+        &.instrucciones1{
+            
             @include m.telefono{
                 display: none;
             }
         }
         
-        #parrafo2{
+        &.instrucciones2{
             display: none;
 
             @include m.telefono{
-                display: block;
+                display: flex;
             }
         }
     }
 
-    #actividad{
-        margin-top: 2rem;
-        padding: 2rem;
-        @include m.grid(5, 0);
-        background: v.$fondo1;
+    .actividad{
 
-        @include m.telefono{
-            @include m.grid(1, 0);
-        }
+        background: v.$fondo2;
+        @include m.grid(4, 1rem);
+        padding: 1rem;
 
-        .cont-conceptos{
+
+        .cont-enunciados{
             grid-column: 1/3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
 
             @include m.telefono{
-                grid-column: 1/2;
+                grid-column: 1/5;
             }
 
-            .fila{
+            .filas{
                 position: relative;
-                width: 100%;
 
-                .conceptos{
-                    margin: 2rem 0;
+                .enunciados{
                     padding: 2rem;
-                    width: 100%;
+                    margin-bottom: 2rem;
                     background: v.$blanco;
-                    box-shadow: 1px 0px 5px 2px rgba(0,0,0,0.31);
+                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
                     cursor: pointer;
-
-                    @include m.escritorioHD{
-                        margin: 6rem 0;
-                    }
-
-                    @include m.escritorio{
-                        margin: 3rem 0;
-                    }
-
-                    @include m.tablet{
-                        margin: 1rem 0;
-                    }
-    
-                    &.seleccionC{
-                        border: 2px solid v.$amarillo;
-                    }
-                }
-
-                .respuestas{
-                    display: none;
+                    position: relative;
+                    z-index: 1;
+                    transition: all .3s ease;
 
                     @include m.telefono{
-                        display: block;
+                        cursor: default;
                     }
-
-                    .respuesta{
-                        padding: 2rem;
-                        background: v.$azul2;
-                        margin: 1rem 0;
-                        cursor: pointer;
-                        
-                        p{
-                            color: v.$blanco;
-                            text-align: center;
+    
+                    &::after{
+                        content: '';
+                        background: v.$amarillo;
+                        position: absolute;
+                        top: 40%;
+                        left: 90%;
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 50%;
+                        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+                        opacity: 0;
+                        transition: all .3s ease;   
+                    }
+    
+                    &.seleccion{
+                        border: 1px solid v.$amarillo;
+    
+                        &::after{
+                            opacity: 1;
+                            left: 102%;
                         }
 
-                        &.fondoCorrecto{
-                            background: v.$verde;
-                            color: v.$blanco;
-                            cursor: default;
+                        @include m.telefono{
+                            border: 0;
+                            
+                            &::after{
+                                display: none;
+                            }
                         }
-                        
-                        &.fondoIncorrecto{
-                            background: v.$rojo2;
-                            color: v.$blanco;
-                            cursor: default;
-                        }
+    
                     }
                 }
 
                 .bloquear{
-                    position: absolute;
+                    display: none;
                     width: 100%;
                     height: 100%;
                     top: 0;
                     left: 0;
-                    background: transparent;
-                    display: none;
+                    z-index: 10;
+                    position: absolute;
 
                     &.activo{
                         display: block;
+                    }
+                }
+    
+                .correcto{
+                    padding: 2rem;
+                    margin-bottom: 2rem;
+                    background: v.$verde;
+                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+                    color: v.$blanco;
+                }
+
+                .cont-conceptos{
+                    display: none;
+
+                    .filas{
+                        
+                        div{
+                            padding: 2rem;
+                            text-align: center;
+                            color: v.$blanco;
+                            background: v.$azul1;
+                            cursor: pointer;
+
+                            &.fondoCorrecto{
+                                background: v.$verde;
+                                color: v.$blanco;
+                            }
+                        }
+                    }
+
+                    @include m.telefono{
+                        display: block;
+
+                        .filas{
+                            margin: 1rem 0;
+                        }
                     }
                 }
             }
@@ -226,7 +198,7 @@
             height: 100%;
             position: relative;
 
-            .canvasR{
+            .canvas{
                 width: 100%;
                 height: 100%;
                 display: block;
@@ -240,84 +212,166 @@
             }
         }
 
-        .cont-relacionar{
-            grid-column: 4/6;
+        .cont-conceptos{
+            grid-column: 4/5;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
 
             @include m.telefono{
                 display: none;
             }
 
-            .definicion{
+            .filas{
+
                 width: 100%;
                 position: relative;
-                
-                .definicion-lavado{
+
+                .conceptos{
+                    height: 10rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    flex-wrap: wrap;                
-                    margin-bottom: 2rem;
+                    background: v.$azul1;
+                    padding: 2rem;
+                    color: v.$blanco;
+                    text-align: center;
                     cursor: pointer;
-
-                    &.seleccionD{
-                        border: 2px solid v.$amarillo;
+                    position: relative;
+    
+                    &::after{
+                        content: '';
+                        background: v.$amarillo;
+                        position: absolute;
+                        top: 40%;
+                        left: 10%;
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 50%;
+                        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+                        opacity: 0;
+                        transition: all .3s ease;   
                     }
-
-
-                    .cont-imagen{
-                        width: 16rem;
-                        height: 16rem;
-
-                        @include m.tablet{
-                            width: 12rem;
-                            height: 12rem;
-                        }
-                    }
-
-                    .info{
-                        width: 60%;
-                        padding: 2rem;
-                        text-align: center;
-                        @include m.resaltar(v.$blanco, 700);
-                        border-radius: 2rem;
-
-                        @include m.escritorio{
-                            width: 100%;
+    
+                    &.seleccionado{
+                        border: 1px solid v.$amarillo;
+    
+                        @include m.telefono{
+                            border: none;
                         }
 
-                        @include m.tablet{
+                        &::after{
+                            opacity: 1;
+                            left: -10%;
 
-                            font-size: 1.4rem;
-                        }
-
-                        &#info1{
-                            background: v.$verde;
-                        }
-
-                        &#info2{
-                            background: v.$amarillo;
-                        }
-
-                        &#info3{
-                            background: v.$azul2;
+                            
+                            @include m.telefono{
+                                display: none;        
+                            }
                         }
                     }
+                    
                 }
 
                 .bloquear{
-                    position: absolute;
+                    display: none;
                     width: 100%;
                     height: 100%;
+                    z-index: 10;
                     top: 0;
                     left: 0;
-                    background: transparent;
-                    display: none;
+                    position: absolute;
 
                     &.activo{
                         display: block;
                     }
                 }
+    
+                .correcto{
+                    width: 100%;
+                    height: 10rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: v.$verde;
+                    padding: 2rem;
+                    color: v.$blanco;
+                    text-align: center;
+                }
             }
         }
     }
+}
+
+#mensaje21{
+    display: none;
+    position: relative;
+    z-index: 1;
+
+    &.ver{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: v.$amarillo;
+        flex-wrap: wrap;
+    }
+
+    .cont-imagen{
+        width: 30%;
+        margin: 0;
+
+        @include m.escritorio{
+            width: 50%;
+            height: 40rem;
+            margin: 0 auto;
+            order: 2;   
+        }
+
+        @include m.telefono{
+            width: 70%;
+        }
+    }
+
+    &::after{
+        content: '';
+        width: 100%;
+        height: 40%;
+        top: 30%;
+        left: 0;
+        position: absolute;
+        background: v.$azulRey;
+        z-index: -1;
+
+        @include m.escritorio{
+            display: none;   
+        }
+    }
+
+    .cont-mensaje{
+        width: 60%;
+        padding: 2rem;
+
+        @include m.escritorio{
+            width: 100%;
+            order: 1;   
+            background: v.$azulRey;
+            margin-bottom: 2rem;
+        }
+
+        p{
+            padding: 2rem;
+            text-align: center;
+            color: v.$blanco;
+            font-size: 2.4rem;
+            font-weight: 700;
+            border: 1px solid v.$blanco;
+
+            @include m.escritorio{
+                font-size: 1.8rem;   
+            }
+
+        }
+    }
+    
 }

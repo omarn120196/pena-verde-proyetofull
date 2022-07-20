@@ -1,388 +1,323 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-#instrucciones2-pag20{
-    background: v.$azulClaro1;
-    height: 10rem;
-    display: flex;
-    margin-top: 1rem;
-    padding: 2rem;
-
-    @include m.telefono{
-        margin-top: 2rem;
-        padding: 1rem;
-        height: 13rem;
-    }
-
+.cuadro-azul22{
+    width: 100%;
+    height: 2%;
+    max-height: 70px;
+    background-color: v.$azulRey;
     p{
-        margin: auto;
-
-        @include m.tablet{
-            margin-left: 2rem;
-        }
-    }
-
-    img{
-        @include m.telefono{
-            width: 0;
-            height: 0;
-        }
+        text-align: center;
+        padding: 2%;
+        color: v.$blanco;
     }
 }
 
-#cont-diferencias{
+.mano22{
+    border-radius: 0;
+}
+
+#botonesPag22{
+    background: v.$azulPag22;
     @include m.grid(3, 1rem);
     position: relative;
-    top: 3rem;
+    padding: 2rem;
 
-    @include m.telefono{
-        display: none;
+    @include m.tablet{
+        @include m.grid(1, 1rem);
     }
 
     .info{
-        display: none;
-        opacity: 0;
-        transition: all .3s ease;
 
-        &.cuadros_activos{
-            display: block;
-            opacity: 1;
-        }
-
-    }
-    .btn-pag20:hover{
-        @include m.parpadeo;
-    }
-
-    .cont-titulo{
-        padding: 1rem;
-        height: 4rem;
-        text-align: center;
-        @include m.resaltar(v.$blanco,700);
-
-        @include m.telefono{
-            padding: 0.5rem;
-            height: 7;
-        }
-    }
-
-    .cont-info{
-        margin-top: 3rem;
-        height: 10rem;
-
-        .info{
-            height: 100%;
+        .botones{
             padding: 2rem;
-            text-align: center;
-            box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.20);
-            background: v.$azulPastel; 
 
-            @include m.tablet{
-                padding: 0.5rem;
+            a{
+                border-radius: 1rem;
             }
-        }
 
-    }
-    #lavado{
-        #titulo{
-            background: v.$colorFuente;
-        }
-    }
-
-    #diferencias{
-        #titulo{
-            background: v.$naranja;
-        }
-        .boton{
-            margin-top: 1rem;
-            height: 10rem;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .abajo{
-            margin-top: 3rem;
-        }
-    }
-
-    #financiamiento{
-        #titulo{
-            background: v.$azulRey;
-        }
-    }
-}
-
-// Diferencias Vista Telefono
-
-#cont-diferenciasTel{
-    display: none;
-
-    @include m.telefono{
-        display: inline;
-        margin-top: 1rem;
-
-        .info{
-            display: none;
-            opacity: 0;
-            transition: all .3s ease;
-    
-            &.cuadros_activos{
-                display: block;
-                opacity: 1;
+            &#btn-colocacion{
+                a{
+                    @include m.botonesPag22(v.$amarilloPag20, v.$colorFuente);
+                }
             }
-    
-        }
-        .btn-pag20:hover{
-            @include m.parpadeo;
-        }
 
-        .boton{
-            cursor: pointer;
-        }
-
-        .titulo{
-            height: 4rem;
-            padding: 1rem;
-            text-align: center;
-            @include m.resaltar(v.$blanco, 600);
-        }
-
-        #lavado{
-            background: v.$colorFuente;
-        }
-
-        #financiamiento{
-            background: v.$azulRey;
-        }
-
-        .cont-info{
-            height: 8rem;
-            text-align: center;
-            padding: 1rem;
-            background: v.$azulPastel;
-        }
-
-        .boton{
-            text-align: center;
-            background: v.$crema5;
-        }
-    }
-}
-
-#instrucciones3-pag20{
-    background: v.$azulClaro1;
-    height: 10rem;
-    display: flex;
-    margin-top: 8rem;
-    padding: 2rem;
-
-    @include m.telefono{
-        padding: 1rem;
-        height: 13rem;
-        margin-top: 4rem;
-    }
-
-    p{
-        margin: auto;
-
-        @include m.tablet{
-            margin-left: 2rem;
-        }
-    }
-
-    img{
-        @include m.telefono{
-            width: 0;
-            height: 0;
-        }
-    }
-}
-
-
-#cont-semejanzas{
-    @include m.grid(4, 1rem);
-    height: 75rem;
-    background: v.$grisFondo3;
-    margin-top: 2rem;
-
-    @include m.telefono{
-        display: none;
-    }
-
-    #maletines{
-        grid-column: 1/2;
-        align-items: center;
-        flex-direction: column;
-        overflow: hidden;
-        padding: 4rem;
-        margin-top: 3rem;
-
-        @include m.tablet{
-            padding: 2rem;
-            margin-top: 7rem;
-        }
             
-        .img-maletin{
-            height: 15rem;
-        }
-        
-    }
+            &#btn-estratificacion{
+                a{
+                    @include m.botonesPag22(v.$verde, v.$blanco);
+                }
+            }
 
-    #semejanzas{
-        grid-column: 2/5;
-        overflow: hidden;
-
-        .info{
-            display: none;
-            opacity: 0;
-            transition: all .3s ease;
-        }
-    
-        .btn2-pag20:hover{
-            @include m.parpadeo;
-        }
-
-        #cont-titulos{
-            @include m.grid(3, 1rem);
             
-            .titulo{
-                padding: 1rem;
-                height: 6rem;
-                text-align: center;
-                @include m.resaltar(v.$blanco,700);
-            }
-
-            #lavado{
-                background: v.$colorFuente;
-            }
-
-            #semejanza{
-                background: v.$naranjaFuerte;
-            }
-
-            #financiamiento{
-                background: v.$azulRey;
-            }
-        }
-
-        .cont-info{
-            height: 12rem;
-            width: 96%;
-            margin-top: 4rem;
-            margin-left: 2rem;
-
-            @include m.tablet{
-                margin-left: 1rem;
-            }
-
-            .info{
-                text-align: center;
-                padding: 4rem;
-                background: v.$crema4;
-                box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.20);
-
-                @include m.tablet{
-                    padding: 2rem;
+            &#btn-integracion{
+                a{
+                    @include m.botonesPag22(v.$azul2, v.$azulRey);
                 }
             }
         }
 
-        #maletin1{
+        .cuadros22{
+            width: 90%;
+            height: 30rem;
+            margin: 0 auto;
+            display: none;
+            opacity: 0;
+            transition: all .3s ease;
+            border-radius: 2rem;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            padding: 2rem;
+
+            @include m.escritorio{
+                height: 38rem;
+
+                span{
+                    text-align: center;
+                }
+            }
+
+            @include m.tablet{
+                height: auto;
+            }
+
             &.cuadros_activos{
-                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 opacity: 1;
             }
-        }
 
-        #maletin2{
-            &.cuadros_activos{
-                display: block;
-                opacity: 1;
+            &#info-colocacion{
+                background: v.$amarilloPag20;
             }
-        }
 
-        #maletin3{
-            &.cuadros_activos{
-                display: block;
-                opacity: 1;
+            &#info-estratificacion{
+                background: v.$verdePag22;
             }
-        }
 
-        #maletin4{
-            &.cuadros_activos{
-                display: block;
-                opacity: 1;
+            &#info-integracion{
+                background: v.$fondo1;
             }
         }
     }
 }
 
-//Vista semejanzas Telefono
-#cont-semejanzasTel{
-    display: none;
+#actividad-relacion22{
 
-    @include m.telefono{
-        display: inline;
+    .instrucciones-mano{
+        border-radius: 0;
 
-        .info{
+        #parrafo1{
+
+            @include m.telefono{
+                display: none;
+            }
+        }
+        
+        #parrafo2{
             display: none;
-            opacity: 0;
-            transition: all .3s ease;
+
+            @include m.telefono{
+                display: block;
+            }
         }
+    }
+
+    #actividad{
+        margin-top: 2rem;
+        padding: 2rem;
+        @include m.grid(5, 0);
+        background: v.$fondo1;
+
+        @include m.telefono{
+            @include m.grid(1, 0);
+        }
+
+        .cont-conceptos{
+            grid-column: 1/3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            @include m.telefono{
+                grid-column: 1/2;
+            }
+
+            .fila{
+                position: relative;
+                width: 100%;
+
+                .conceptos{
+                    margin: 2rem 0;
+                    padding: 2rem;
+                    width: 100%;
+                    background: v.$blanco;
+                    box-shadow: 1px 0px 5px 2px rgba(0,0,0,0.31);
+                    cursor: pointer;
+
+                    @include m.escritorioHD{
+                        margin: 6rem 0;
+                    }
+
+                    @include m.escritorio{
+                        margin: 3rem 0;
+                    }
+
+                    @include m.tablet{
+                        margin: 1rem 0;
+                    }
     
-        .btn2-pag20:hover{
-            @include m.parpadeo;
-        }
+                    &.seleccionC{
+                        border: 2px solid v.$amarillo;
+                    }
+                }
 
-        .titulo{
-            height: 4rem;
-            padding: 1rem;
-            text-align: center;
-            @include m.resaltar(v.$blanco, 600);
-        }
+                .respuestas{
+                    display: none;
 
-        #lavado{
-            background: v.$colorFuente;
-        }
-        #semejanzas{
-            background: v.$naranjaFuerte;
-        }
-        #financiamiento{
-            background: v.$azulRey;
-        }
+                    @include m.telefono{
+                        display: block;
+                    }
 
-        .info{
-            text-align: center;
-            padding: 0.5rem;
-            background: v.$crema4;
-            height: 10rem;
-        }
-        #maletin1-Tel{
-            &.cuadros_activos{
-                display: block;
-                opacity: 1;
+                    .respuesta{
+                        padding: 2rem;
+                        background: v.$azul2;
+                        margin: 1rem 0;
+                        cursor: pointer;
+                        
+                        p{
+                            color: v.$blanco;
+                            text-align: center;
+                        }
+
+                        &.fondoCorrecto{
+                            background: v.$verde;
+                            color: v.$blanco;
+                            cursor: default;
+                        }
+                        
+                        &.fondoIncorrecto{
+                            background: v.$rojo2;
+                            color: v.$blanco;
+                            cursor: default;
+                        }
+                    }
+                }
+
+                .bloquear{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: transparent;
+                    display: none;
+
+                    &.activo{
+                        display: block;
+                    }
+                }
             }
         }
 
-        #maletin2-Tel{
-            &.cuadros_activos{
+        .cont-canvas{
+            grid-column: 3/4;
+            height: 100%;
+            position: relative;
+
+            .canvasR{
+                width: 100%;
+                height: 100%;
                 display: block;
-                opacity: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            @include m.telefono{
+                display: none;
             }
         }
 
-        #maletin3-Tel{
-            &.cuadros_activos{
-                display: block;
-                opacity: 1;
-            }
-        }
+        .cont-relacionar{
+            grid-column: 4/6;
 
-        #maletin4-Tel{
-            &.cuadros_activos{
-                display: block;
-                opacity: 1;
+            @include m.telefono{
+                display: none;
+            }
+
+            .definicion{
+                width: 100%;
+                position: relative;
+                
+                .definicion-lavado{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;                
+                    margin-bottom: 2rem;
+                    cursor: pointer;
+
+                    &.seleccionD{
+                        border: 2px solid v.$amarillo;
+                    }
+
+
+                    .cont-imagen{
+                        width: 16rem;
+                        height: 16rem;
+
+                        @include m.tablet{
+                            width: 12rem;
+                            height: 12rem;
+                        }
+                    }
+
+                    .info{
+                        width: 60%;
+                        padding: 2rem;
+                        text-align: center;
+                        @include m.resaltar(v.$blanco, 700);
+                        border-radius: 2rem;
+
+                        @include m.escritorio{
+                            width: 100%;
+                        }
+
+                        @include m.tablet{
+
+                            font-size: 1.4rem;
+                        }
+
+                        &#info1{
+                            background: v.$verde;
+                        }
+
+                        &#info2{
+                            background: v.$amarillo;
+                        }
+
+                        &#info3{
+                            background: v.$azul2;
+                        }
+                    }
+                }
+
+                .bloquear{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: transparent;
+                    display: none;
+
+                    &.activo{
+                        display: block;
+                    }
+                }
             }
         }
-    }    
+    }
 }
