@@ -127,10 +127,10 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Actividad 2', 
+        nombre: 'Diferencias entre el Seguro y Reaseguro', 
         ruta: 'pag22.html', 
         progreso: 22,
-        icono: 'fa-solid fa-pencil'
+        icono: 'fa-solid fa-file'
     },
     {
         nombre: 'Lavado de Dinero', 
@@ -157,10 +157,10 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Diferencias entre el Seguro y Reaseguro', 
+        nombre: 'Actividad 2', 
         ruta: 'pag27.html', 
         progreso: 27,
-        icono: 'fa-solid fa-file'
+        icono: 'fa-solid fa-pencil'
     },
     {
         nombre: 'Actividad 3', 
