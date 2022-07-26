@@ -157,7 +157,7 @@ const paginas = [
         icono: 'fa-solid fa-file'
     },
     {
-        nombre: 'Diferencias entre el Aseguro y Reaseguro', 
+        nombre: 'Diferencias entre el Seguro y Reaseguro', 
         ruta: 'pag27.html', 
         progreso: 27,
         icono: 'fa-solid fa-file'
