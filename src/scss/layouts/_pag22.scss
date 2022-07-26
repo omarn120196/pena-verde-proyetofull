@@ -1,377 +1,144 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.intro-pagina21{
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: v.$azul2;
-    position: relative;
-
-    &.ocultar{
-        display: none;
-    }
-
-    .cont-imagen{
-        width: 20%;
-        margin: 0;
-
-        @include m.tablet{
-            width: 30%;
-            align-self: flex-end;
-        }
-    }
-
-    .cont-mensaje{
-        width: 70%;
-        padding: 2rem;
-
-        p{
-            color: v.$blanco;
-
-            @include m.telefono{
-                font-size: 1.4rem;
-            }
-        }
-    }
-}
-
-.cont-btnInicio{
+.cont-mano{
+    background: v.$azulClaro2;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    margin-bottom: 2rem;
 
-    &.ocultar{
-        display: none;
-    }
-
-    a{
-        @include m.boton(v.$amarillo);
-    }
-}
-
-#cont-actividadRelacion{
-
-    &.ocultar{
-        display: none;
-    }
-
-    .instrucciones-mano{
-        border-radius: 0;
-
-        &.instrucciones1{
-            
-            @include m.telefono{
-                display: none;
-            }
-        }
-        
-        &.instrucciones2{
-            display: none;
-
-            @include m.telefono{
-                display: flex;
-            }
-        }
-    }
-
-    .actividad{
-
-        background: v.$fondo2;
-        @include m.grid(4, 1rem);
+    .cont-imagen{
+        width: 6rem;
+        height: 6rem;
+        border: 5px solid v.$blanco;
+        border-radius: 50%;
         padding: 1rem;
+        margin-right: 4rem;
+    }
 
-
-        .cont-enunciados{
-            grid-column: 1/3;
-
-            @include m.telefono{
-                grid-column: 1/5;
-            }
-
-            .filas{
-                position: relative;
-
-                .enunciados{
-                    padding: 2rem;
-                    margin-bottom: 2rem;
-                    background: v.$blanco;
-                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-                    cursor: pointer;
-                    position: relative;
-                    z-index: 1;
-                    transition: all .3s ease;
-
-                    @include m.telefono{
-                        cursor: default;
-                    }
-    
-                    &::after{
-                        content: '';
-                        background: v.$amarillo;
-                        position: absolute;
-                        top: 40%;
-                        left: 90%;
-                        width: 2rem;
-                        height: 2rem;
-                        border-radius: 50%;
-                        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-                        opacity: 0;
-                        transition: all .3s ease;   
-                    }
-    
-                    &.seleccion{
-                        border: 1px solid v.$amarillo;
-    
-                        &::after{
-                            opacity: 1;
-                            left: 102%;
-                        }
-
-                        @include m.telefono{
-                            border: 0;
-                            
-                            &::after{
-                                display: none;
-                            }
-                        }
-    
-                    }
-                }
-
-                .bloquear{
-                    display: none;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    z-index: 10;
-                    position: absolute;
-
-                    &.activo{
-                        display: block;
-                    }
-                }
-    
-                .correcto{
-                    padding: 2rem;
-                    margin-bottom: 2rem;
-                    background: v.$verde;
-                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-                    color: v.$blanco;
-                }
-
-                .cont-conceptos{
-                    display: none;
-
-                    .filas{
-                        
-                        div{
-                            padding: 2rem;
-                            text-align: center;
-                            color: v.$blanco;
-                            background: v.$azul1;
-                            cursor: pointer;
-
-                            &.fondoCorrecto{
-                                background: v.$verde;
-                                color: v.$blanco;
-                            }
-                        }
-                    }
-
-                    @include m.telefono{
-                        display: block;
-
-                        .filas{
-                            margin: 1rem 0;
-                        }
-                    }
-                }
-            }
-        }
-
-        .cont-canvas{
-            grid-column: 3/4;
-            height: 100%;
-            position: relative;
-
-            .canvas{
-                width: 100%;
-                height: 100%;
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-
-            @include m.telefono{
-                display: none;
-            }
-        }
-
-        .cont-conceptos{
-            grid-column: 4/5;
-            display: flex;
-            justify-content: space-evenly;
-            flex-direction: column;
-            align-items: center;
-
-            @include m.telefono{
-                display: none;
-            }
-
-            .filas{
-
-                width: 100%;
-                position: relative;
-
-                .conceptos{
-                    height: 10rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background: v.$azul1;
-                    padding: 2rem;
-                    color: v.$blanco;
-                    text-align: center;
-                    cursor: pointer;
-                    position: relative;
-    
-                    &::after{
-                        content: '';
-                        background: v.$amarillo;
-                        position: absolute;
-                        top: 40%;
-                        left: 10%;
-                        width: 2rem;
-                        height: 2rem;
-                        border-radius: 50%;
-                        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-                        opacity: 0;
-                        transition: all .3s ease;   
-                    }
-    
-                    &.seleccionado{
-                        border: 1px solid v.$amarillo;
-    
-                        @include m.telefono{
-                            border: none;
-                        }
-
-                        &::after{
-                            opacity: 1;
-                            left: -10%;
-
-                            
-                            @include m.telefono{
-                                display: none;        
-                            }
-                        }
-                    }
-                    
-                }
-
-                .bloquear{
-                    display: none;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 10;
-                    top: 0;
-                    left: 0;
-                    position: absolute;
-
-                    &.activo{
-                        display: block;
-                    }
-                }
-    
-                .correcto{
-                    width: 100%;
-                    height: 10rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background: v.$verde;
-                    padding: 2rem;
-                    color: v.$blanco;
-                    text-align: center;
-                }
-            }
+    p{
+        @include m.tablet{
+            width: 60%;
         }
     }
 }
 
-#mensaje21{
-    display: none;
-    position: relative;
-    z-index: 1;
+.contSeguro{
+    h1{
+        text-align: center;
+        background: v.$azulRey;
+        color: v.$blanco;
+        padding: 1rem;
+    }
 
-    &.ver{
+    .cajas{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: v.$amarillo;
+        margin-bottom: 2rem;
         flex-wrap: wrap;
-    }
 
-    .cont-imagen{
-        width: 30%;
-        margin: 0;
-
-        @include m.escritorio{
-            width: 50%;
-            height: 40rem;
-            margin: 0 auto;
-            order: 2;   
-        }
-
-        @include m.telefono{
-            width: 70%;
-        }
-    }
-
-    &::after{
-        content: '';
-        width: 100%;
-        height: 40%;
-        top: 30%;
-        left: 0;
-        position: absolute;
-        background: v.$azulRey;
-        z-index: -1;
-
-        @include m.escritorio{
-            display: none;   
-        }
-    }
-
-    .cont-mensaje{
-        width: 60%;
-        padding: 2rem;
-
-        @include m.escritorio{
-            width: 100%;
-            order: 1;   
+        .numero{
+            width: 10%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background: v.$azulRey;
-            margin-bottom: 2rem;
+            color: v.$blanco;
+            border-radius: 1rem;
+            padding: 2rem;
+            cursor: pointer;
+
+            @include m.tablet{
+                width: 100%;
+                border-radius: 0;
+            }
         }
 
-        p{
+        .concepto{
+            width: 85%;
+            height: 100%;
             padding: 2rem;
-            text-align: center;
-            color: v.$blanco;
-            font-size: 2.4rem;
+            background: v.$fondo2;
             font-weight: 700;
-            border: 1px solid v.$blanco;
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            transition: all .3s ease-in-out;
 
-            @include m.escritorio{
-                font-size: 1.8rem;   
+            &.abrirConcepto{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             }
 
+            @include m.tablet{
+                width: 100%;
+                text-align: center;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+                ol{
+                    padding: 3rem 6rem;
+                    text-align: left;
+                }
+            }
         }
     }
-    
+}
+
+.contReaseguro{
+    h1{
+        text-align: center;
+        background: v.$verde;
+        color: v.$blanco;
+        padding: 1rem;
+    }
+    .cajas{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+
+        .numero{
+            width: 10%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: v.$verde;
+            color: v.$blanco;
+            border-radius: 1rem;
+            padding: 2rem;
+            cursor: pointer;
+
+            @include m.tablet{
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+
+        .concepto{
+            width: 85%;
+            height: 100%;
+            padding: 2rem;
+            background: v.$fondo3;
+            font-weight: 700;clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            transition: all .3s ease-in-out;
+
+            &.abrirConcepto{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            @include m.tablet{
+                width: 100%;
+                text-align: center;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+                ol{
+                    padding: 3rem 6rem;
+                    text-align: left;
+                }
+            }
+        }
+    }
 }
