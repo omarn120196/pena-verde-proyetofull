@@ -36,7 +36,7 @@ class EvaluacionFinal{
                 respuestaB: 'Integración o reingreso',
                 respuestaC: 'Estratificación o enmascaramiento',
                 numero: 4,
-                respuestaCorrecta: 'B'
+                respuestaCorrecta: 'A'
             },
             {
                 pregunta: 'Si un Cliente realiza una transacción superior a los $7,500 dólares en efectivo, corresponde a una operación:',

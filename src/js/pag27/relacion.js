@@ -67,13 +67,13 @@ function evaluarRelacion(){
 
             switch(noEnunciado){
                 case '1':
-                    relacionarLineas(noEnunciado, .25, .80);
+                    relacionarLineas(noEnunciado, .25, .50);
                     break;
                 case '2':
                     relacionarLineas(noEnunciado, .45, .15);
                     break;
                 case '3':
-                    relacionarLineas(noEnunciado, .75, .50);
+                    relacionarLineas(noEnunciado, .75, .80);
                     break;
                 default :
                     break;
