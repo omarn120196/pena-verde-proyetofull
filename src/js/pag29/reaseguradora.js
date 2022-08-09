@@ -187,7 +187,7 @@ function retroReaseguradora(puntos){
 
             //Pasar automaticamente a la evaluacion
             setTimeout(()=>{
-                noPagina = 26
+                noPagina = 30
                 selectOpcion(noPagina);
                 visualizarPagina();
             }, 7000);

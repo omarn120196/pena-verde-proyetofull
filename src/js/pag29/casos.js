@@ -134,7 +134,7 @@ function irEvaluacionFinal(){
         
         cuadernos.forEach(cuaderno=>{
             cuaderno.addEventListener('click', function () {
-                noPagina = 26
+                noPagina = 30
                 selectOpcion(noPagina);
                 visualizarPagina();
             });
