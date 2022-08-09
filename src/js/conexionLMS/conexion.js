@@ -50,10 +50,10 @@ function verificarLocation(){
             noPagina = location;
             break;
         case 'completed':
-            noPagina = 26;
+            noPagina = 29;
             break;
         case 'passed':
-            noPagina = 26;
+            noPagina = 29;
             break;
         default:
             noPagina = 0;
