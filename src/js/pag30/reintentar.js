@@ -8,7 +8,7 @@ function reintentarCuestionario() {
             
             e.preventDefault();
 
-            noPagina = 26;
+            noPagina = 29;
             selectOpcion(noPagina);
             visualizarPagina();
         });

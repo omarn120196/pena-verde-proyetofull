@@ -321,7 +321,7 @@ function calificacionFinal(evaluacion){
                 statusCurso('passed');
 
                 //registrar promedio
-                registrar(promedio); 
+                asignarCalificación(promedio);
             }
             else{
                 const retro = document.querySelector('#retro-negativa');

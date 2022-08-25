@@ -187,7 +187,7 @@ function retroPatria(puntos){
 
             //Pasar automaticamente a la evaluacion
             setTimeout(()=>{
-                noPagina = 26
+                noPagina = 29
                 selectOpcion(noPagina);
                 visualizarPagina();
             }, 7000);
@@ -195,10 +195,16 @@ function retroPatria(puntos){
         }, 300);
     }
     else{
+        const botonEval = document.querySelector('#btnEval2');
         mal.classList.add('visualizar');
         mal.style.opacity = 0;
         setTimeout(()=>{
             mal.style.opacity = 1;
+            botonEval.addEventListener('click', function(){
+                noPagina = 29
+                selectOpcion(noPagina);
+                visualizarPagina();
+            });
         }, 300);
     }
 }
